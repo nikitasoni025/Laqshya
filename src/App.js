@@ -2,7 +2,7 @@
 import './App.scss';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Homepage from './Pages/Homepage/Homepage';
-import "./Assets/fonts/SAMAN___.TTF";
+import "./Assets/fonts/stylesheet.scss";
 
 function App() {
   return (
