@@ -10,7 +10,7 @@ const Eventpage = () => {
                     <li><a href='#'>Shaurya Robotics</a></li>
                     <li><a href='#'>Kaushalya Sports</a></li>
                     <li><a href='#'>Bouddhiki Brain Teaser</a></li>
-                    <li><a href='#'>Parakral Technical </a></li>
+                    <li><a href='#'>Parakram Technical </a></li>
                     <li><a href='#'>Natraja Cultural</a></li>
                     <li><a href='#'>Kautilya Acedmics</a></li>
                 </ul>
@@ -21,4 +21,4 @@ const Eventpage = () => {
   )
 }
 
-export default Eventpage
+export default Eventpage;
