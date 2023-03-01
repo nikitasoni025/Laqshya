@@ -9,8 +9,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
-        .left-navbar{
+
+        .left-navbar {
             width: 50%;
             height: 100%;
             // border: 1px solid yellowgreen;
@@ -19,27 +19,30 @@
             justify-content: flex-start;
             align-items: center;
 
-            .logo{
+            .logo {
                 margin-left: 50px;
+                font-family: "Samankaran";
+                
             }
 
-            .menu{
-              display: flex;
-              justify-content: flex-start;
-              align-items: center; 
-              gap: 80px;
-              list-style: none; 
-              padding-left: 30px;
+            .menu {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 80px;
+                list-style: none;
+                padding-left: 30px;
             }
         }
 
-        .right-navbar{
+        .right-navbar {
             width: 50%;
             height: 100%;
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            a{
+
+            a {
                 margin-right: 40px;
                 border: 1px solid;
                 text-decoration: none;

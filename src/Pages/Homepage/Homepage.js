@@ -5,7 +5,16 @@ import "./homepage.scss";
 const Homepage = () => {
   return (
     <div className='homepage'>
-        <Navbar/>
+      <div className="wrap-home">
+        <Navbar />
+        <div className="section">
+          <div className="wrap-section">
+            <div className="header">
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
