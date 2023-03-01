@@ -9,10 +9,10 @@ const Navbar = () => {
             <div className="left-navbar">
               <div className="logo"><h1>LAQSHYA</h1></div>
               <ul className="menu">
-                <li>Home</li>
-                <li>Events</li>
-                <li>Gallery</li>
-                <li>Contact</li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/">Events</a></li>
+                <li><a href="/">Gallery</a></li>
+                <li><a href="/">Contact</a></li>
               </ul>
 
               
