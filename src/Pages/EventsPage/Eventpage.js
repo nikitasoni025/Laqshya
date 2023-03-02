@@ -32,6 +32,9 @@ const Eventpage = () => {
             <div className='event-shaurya'>
               <h1> <span className='diff-font'>Shaurya</span> </h1>
               <h2>ROBOTICS</h2>
+              <div className='shaurya-details'>
+                <p></p>
+              </div>
             </div>
           </div>
 
