@@ -12,8 +12,8 @@ const Navbar = () => {
         <div className="left-navbar">
           <div className="logo"><h1>LAQSHYA</h1></div>
           <ul className="menu">
-            <li><a href="/">HOME</a></li>
-            <li><a href="/">Events</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/events">Events</a></li>
             <li><a href="/">Gallery</a></li>
             <li><a href="/">Contact</a></li>
           </ul>
@@ -21,7 +21,10 @@ const Navbar = () => {
 
         </div>
         <div className="right-navbar">
-          <a href="#">Register <CgUserlane /></a>
+          <a href="#">Register <CgUserlane />
+          <div className="L-border"></div>
+          <div className="R-border"></div>
+          </a>
           <button onClick={() => { setIsSideBarOpened(!isSideBarOpened) }} className='side-bar-btn'>
             <FaBars />
           </button>

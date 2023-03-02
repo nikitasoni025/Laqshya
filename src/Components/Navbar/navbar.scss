@@ -59,6 +59,7 @@
                     a {
                         color: white;
                         text-decoration: none;
+                        font-family: 'Mulish', sans-serif;
                     }
                 }
             }
@@ -85,17 +86,123 @@
 
             a {
                 margin-right: 40px;
-                border: 1px solid var(--secondary-color);
                 text-decoration: none;
                 color: black;
                 padding: 10px;
-                border-radius: 10px;
+                border-radius: 5px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 3px;
-                color: white;
+                color: var(--secondary-color);
+                font-family: 'Mulish', sans-serif;
+                position: relative;
+                z-index: 1;
+                display: block;
 
+
+                &:hover {
+                    .L-border {
+                        &::before {
+                            height: 100%;
+                            transition: height 0.5s ease;
+                        }
+
+                        &::after {
+                            width: 100%;
+                            transition: width 0.5s ease;
+                        }
+
+                    }
+
+                    .R-border {
+                        &::before {
+                            height: 100%;
+                            transition: height 0.5s ease;
+                        }
+
+                        &::after {
+                            width: 100%;
+                            transition: width 0.5s ease;
+                        }
+
+                    }
+                }
+
+
+                .L-border {
+                    z-index: 2;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+
+                    &::before {
+                        content: "";
+                        position: relative;
+                        bottom: 0;
+                        left: 0;
+                        width: 2px;
+                        height: 0;
+                        background-color: var(--secondary-color);
+                        display: block;
+                        transition: height 0.5s ease;
+
+                    }
+
+                    &::after {
+                        content: "";
+                        position: relative;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 2px;
+                        background-color: var(--secondary-color);
+                        display: block;
+                        transition: width 0.5s ease;
+
+                    }
+                }
+
+                .R-border {
+                    z-index: 2;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+
+                    &::before {
+                        content: "";
+                        position: relative;
+                        top: 0;
+                        right: -98%;
+                        width: 2px;
+                        height: 0;
+                        background-color: var(--secondary-color);
+                        display: block;
+                        transition: height 0.5s ease;
+
+                    }
+
+                    &::after {
+                        content: "";
+                        position: relative;
+                        right: 0;
+                        top: -100%;
+                        width: 0;
+                        height: 2px;
+                        background-color: var(--secondary-color);
+                        display: block;
+                        transition: width 0.5s ease;
+
+                    }
+                }
             }
         }
 
@@ -110,7 +217,7 @@
         border: 1px solid wheat;
         position: absolute;
         top: 0;
-        right: -100%; 
+        right: -100%;
 
         // transparancy
         background: rgba(255, 255, 255, 0.249);
@@ -119,22 +226,23 @@
         -webkit-backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0.18);
         transition: 0.5s ease-in-out;
-        &.opened{
+
+        &.opened {
             right: 0;
             transition: 0.5s ease-in-out;
         }
 
 
-        .side-menu{
+        .side-menu {
             list-style: none;
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
             flex-direction: column;
-            gap:20px;
+            gap: 20px;
 
 
-            li{
+            li {
                 width: 100%;
                 height: 35px;
                 font-size: 20px;
@@ -154,35 +262,40 @@
                     align-items: center;
                 }
 
-                a{
+                a {
                     width: 100%;
                     height: 100%;
-                    color:white;
+                    color: white;
                     text-decoration: none;
                     font-weight: bold;
                     font-family: sans-serif;
                     translate: 110% 0 0;
-                    &.anim1{
+
+                    &.anim1 {
                         transition: translate 1s ease;
                         translate: 0 0 0;
                     }
-                    &.anim2{
+
+                    &.anim2 {
                         transition: translate 1.2s ease;
                         translate: 0;
                     }
-                    &.anim3{
+
+                    &.anim3 {
                         transition: translate 1.4s ease;
                         translate: 0;
                     }
-                    &.anim4{
+
+                    &.anim4 {
                         transition: translate 1.6s ease;
                         translate: 0;
                     }
-                    &.anim5{
+
+                    &.anim5 {
                         transition: translate 1.7s ease;
                         translate: 0;
                     }
-                    
+
                 }
             }
         }
@@ -193,14 +306,15 @@
 // ANIMATION FOR SIDE BAR
 
 @keyframes rtl {
-    0%{
-        translate:110% 0 0;
+    0% {
+        translate: 110% 0 0;
         opacity: 0;
     }
-    100%{
+
+    100% {
         translate: 0 0 0;
     }
-    
+
 }
 
 
@@ -223,9 +337,10 @@
             }
 
             .right-navbar {
-                .side-bar-btn{
+                .side-bar-btn {
                     display: flex;
                 }
+
                 a {
                     display: none;
                 }

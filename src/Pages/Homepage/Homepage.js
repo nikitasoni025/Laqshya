@@ -19,11 +19,7 @@ const Homepage = () => {
             {/* header section */}
 
             <div className="header">
-              {/* <div className="overlay">
-              </div> */}
-
               <img className='headerfade-lft' src={smokeimg} alt="smokeimg" />
-              <img className='headerfade-right' src={smokeimg} alt="smokeimg" />
             </div>
 
             {/* sections 1 start here */}
@@ -31,7 +27,7 @@ const Homepage = () => {
             <div className="section-1">
 
               <div className="banner">
-                <h1>"      JAI SHIVAJI HALLA BOL       "</h1>
+                <h1>JAI SHIVAJI HALLA BOL</h1>
 
               </div>
 
