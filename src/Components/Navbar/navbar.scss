@@ -78,7 +78,7 @@
                 outline: none;
                 border: none;
                 font-size: 20px;
-                display: flex;
+                display: none;
                 justify-content: center;
                 align-items: center;
             }
@@ -223,6 +223,9 @@
             }
 
             .right-navbar {
+                .side-bar-btn{
+                    display: flex;
+                }
                 a {
                     display: none;
                 }
