@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 import "./homepage.scss";
 
-let smokeimg="https://ik.imagekit.io/dexo68yudb/image.png?ik-sdk-version=javascript-1.4.3&updatedAt=1677697561319";
+let smokeimg = "https://ik.imagekit.io/dexo68yudb/image.png?ik-sdk-version=javascript-1.4.3&updatedAt=1677697561319";
 
 const Homepage = () => {
   return (
@@ -18,8 +18,8 @@ const Homepage = () => {
             {/* header section */}
 
             <div className="header">
-              <div className="overlay">
-              </div>
+              {/* <div className="overlay">
+              </div> */}
 
               <img className='headerfade-lft' src={smokeimg} alt="smokeimg" />
               <img className='headerfade-right' src={smokeimg} alt="smokeimg" />
@@ -28,7 +28,12 @@ const Homepage = () => {
             {/* sections 1 start here */}
 
             <div className="section-1">
-              
+
+              <div className="banner">
+                <h1>"      JAI SHIVAJI HALLA BOL       "</h1>
+
+              </div>
+
             </div>
 
 

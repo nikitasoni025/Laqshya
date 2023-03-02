@@ -37,6 +37,11 @@
                 letter-spacing: 3px;
                 transition: scale 0.5s ease;
                 cursor: pointer;
+                user-select: none;
+                &::selection{
+                    color: none;
+                    background: none;
+                }
 
 
                 &:hover{
@@ -70,6 +75,18 @@
             justify-content: flex-end;
             align-items: center;
 
+            .side-bar-btn{
+                margin-right: 20px;
+                background: transparent;
+                color: white;
+                outline: none;
+                border: none;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
             a {
                 margin-right: 40px;
                 border: 1px solid var(--secondary-color);
@@ -87,4 +104,32 @@
         }
 
     }
+}
+
+
+// FOR REPONSIVE
+
+@media screen and (max-width:990px){
+
+    .navbar{
+        .main-navbar{
+            .left-navbar{
+                .menu{
+                    display: none;
+                }
+
+                .logo{
+                    margin-left: 20px;
+                    font-size: 15px;
+                }
+
+            }
+            .right-navbar{
+                a{
+                    display: none;
+                }
+            }
+        }
+    }
+    
 }
