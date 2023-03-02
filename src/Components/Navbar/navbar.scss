@@ -60,6 +60,18 @@
                         color: white;
                         text-decoration: none;
                         font-family: 'Mulish', sans-serif;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 3px 10px;
+                        position: relative;
+
+                        
+
+                        &:hover{
+                            animation: glow 0.5s ease-in-out infinite alternate;
+                        }
+
                     }
                 }
             }
@@ -88,121 +100,106 @@
                 margin-right: 40px;
                 text-decoration: none;
                 color: black;
-                padding: 10px;
-                border-radius: 5px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 3px;
+                display: inline-block;
+                overflow: hidden;
                 color: var(--secondary-color);
                 font-family: 'Mulish', sans-serif;
                 position: relative;
                 z-index: 1;
-                display: block;
-
+                
 
                 &:hover {
-                    .L-border {
-                        &::before {
-                            height: 100%;
-                            transition: height 0.5s ease;
-                        }
-
-                        &::after {
-                            width: 100%;
-                            transition: width 0.5s ease;
-                        }
-
-                    }
-
-                    .R-border {
-                        &::before {
-                            height: 100%;
-                            transition: height 0.5s ease;
-                        }
-
-                        &::after {
-                            width: 100%;
-                            transition: width 0.5s ease;
-                        }
-
-                    }
-                }
-
-
-                .L-border {
-                    z-index: 2;
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 5px;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    display: block;
-
                     &::before {
-                        content: "";
-                        position: relative;
-                        bottom: 0;
-                        left: 0;
-                        width: 2px;
-                        height: 0;
-                        background-color: var(--secondary-color);
-                        display: block;
-                        transition: height 0.5s ease;
-
+                        transform: translate(0, 0);
+                        transition-delay: 0s;
                     }
 
                     &::after {
-                        content: "";
-                        position: relative;
-                        bottom: 0;
-                        left: 0;
-                        width: 0;
-                        height: 2px;
-                        background-color: var(--secondary-color);
-                        display: block;
-                        transition: width 0.5s ease;
+                        transform: translate(0, 0);
+                        transition-delay: .3s;
+                    }
+
+                    span {
+                        &::before {
+                            transform: translate(0, 0);
+                            transition-delay: .6s;
+                        }
+
+                        &::after {
+                            transform: translate(0, 0);
+                            transition-delay: .9s;
+                        }
 
                     }
                 }
 
-                .R-border {
-                    z-index: 2;
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 5px;
+                &::before {
+                    content: "";
                     position: absolute;
-                    top: 0;
-                    left: 0;
-                    display: block;
+                    right: 0;
+                    bottom: 0;
+                    background: var(--secondary-color);
+                    transition: transform .3s ease;
+                    width: 100%;
+                    height: 2px;
+                    transform: translateX(-100%);
+                    transition-delay: .9s;
+
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    background: var(--secondary-color);
+                    transition: transform .3s ease;
+                    width: 2px;
+                    height: 100%;
+                    transform: translateY(100%);
+                    transition-delay: .6s;
+
+                }
+
+                span {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 3px;
+                    overflow: hidden;
+                    padding: 10px;
 
                     &::before {
-                        content: "";
-                        position: relative;
+                        content: '';
+                        position: absolute;
                         top: 0;
-                        right: -98%;
-                        width: 2px;
-                        height: 0;
-                        background-color: var(--secondary-color);
-                        display: block;
-                        transition: height 0.5s ease;
-
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: var(--secondary-color);
+                        transform: translateX(100%);
+                        transition: transform .3s ease;
+                        transition-delay: .3s;
                     }
 
                     &::after {
-                        content: "";
-                        position: relative;
-                        right: 0;
-                        top: -100%;
-                        width: 0;
-                        height: 2px;
-                        background-color: var(--secondary-color);
-                        display: block;
-                        transition: width 0.5s ease;
-
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 2px;
+                        height: 100%;
+                        background: var(--secondary-color);
+                        transition: transform .3s ease;
+                        transform: translateY(-100%);
+                        transition-delay: 0s;
                     }
+
                 }
+
+
+
             }
         }
 

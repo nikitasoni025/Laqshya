@@ -10,7 +10,8 @@
 
 :root {
   --main-color: #1b0509;
-  --secondary-color: #f5a403;
+  // --secondary-color: #f5a403;
+  --secondary-color: #a5730e;
   --main-font: sans-serif;
 }
 
@@ -25,3 +26,13 @@ code {
     monospace;
 }
 
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white;
+  }
+}

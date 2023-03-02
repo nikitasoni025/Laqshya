@@ -18,10 +18,10 @@
                 .header {
                     width: 100%;
                     height: 84vh;
-                    
+
                     background: url("https://ik.imagekit.io/dexo68yudb/Picsart_23-03-02_01-19-45-013.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677700210455");
                     background-size: cover;
-                    background-position:center;
+                    background-position: center;
                     position: relative;
 
 
@@ -38,13 +38,14 @@
                         position: absolute;
                         left: 0;
                         top: 0;
-                        object-position:center 68%;
+                        object-position: center 68%;
                         object-fit: cover;
                         opacity: 0.2;
                         width: 100%;
                         height: 100%;
                         z-index: 5;
                     }
+
                     .headerfade-right {
                         position: absolute;
                         right: 0;
@@ -62,11 +63,12 @@
                 }
 
                 // BANNER
-                .section-1{
+                .section-1 {
                     // margin-top: 50px;
                     width: 100%;
+
                     // height: 30vh;
-                    .banner{
+                    .banner {
                         width: 100%;
                         height: 100%;
                         display: flex;
@@ -75,16 +77,17 @@
                         // border: 1px solid lightgoldenrodyellow;
                         font-family: "samarkan";
                         color: var(--secondary-color);
-                        font-size: 2vw;
                         margin-top: 115px;
-                        h1{
+
+                        h1 {
                             position: relative;
                             padding: 20px 170px;
                             letter-spacing: 3px;
+                            font-size: 5vw;
 
-                            &::after{
+                            &::after {
                                 content: '”';
-                                font-size:90px;
+                                font-size: 90px;
                                 position: absolute;
                                 bottom: 0;
                                 right: 0;
@@ -92,9 +95,10 @@
                                 height: 30px;
                                 width: 30px;
                             }
-                            &::before{
+
+                            &::before {
                                 content: '“';
-                                font-size:90px;
+                                font-size: 90px;
                                 position: absolute;
                                 top: 0;
                                 left: 0;
@@ -111,29 +115,79 @@
 }
 
 
-@media screen  and (max-width:991px){
-    .homepage{
-        .wrap-home{
-            .section{
-                .wrap-section{
-                    .header{
+@media screen and (max-width:991px) {
+    .homepage {
+        .wrap-home {
+            .section {
+                .wrap-section {
+                    .header {
                         background: url("https://ik.imagekit.io/dexo68yudb/Picsart_23-03-02_01-44-34-069.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677701794986");
                         background-size: cover;
                         background-position: center;
-                        .overlay{
+
+                        .overlay {
                             opacity: 0.12;
                         }
-                        .headerfade-lft{
+
+                        .headerfade-lft {
                             width: 100%;
                             height: 100%;
                         }
-                        .headerfade-right{
+
+                        .headerfade-right {
                             display: none;
+                        }
+                    }
+
+                    .section-1 {
+                        .banner {
+                            margin-top: 20px;
+                            overflow: hidden;
+                            h1 {
+                               
+                                padding: 0;
+                                width: 100%;
+                               
+                                text-align: center;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 8vw;
+                                z-index: 2;
+                                &::before{
+                                    content: '';
+                                    width: 100%;
+                                    left: 0;
+                                    height: 1px;
+                                    background: var(--secondary-color);
+                                    top: 27%;
+                                    rotate: -8deg;
+                                    opacity: 0.3;
+                                    z-index: 1;
+
+
+                                }
+                                &::after{
+                                    content: '';
+                                    width: 100%;
+                                    left: 0;
+                                    height: 1px;
+                                    background: var(--secondary-color);
+                                    top: 27%;
+                                    rotate: 8deg;
+                                    opacity: 0.3;
+                                    z-index: 1;
+
+
+                                }
+                                
+
+                            }
                         }
                     }
                 }
             }
         }
     }
-    
+
 }

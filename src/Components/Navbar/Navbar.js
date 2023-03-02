@@ -21,10 +21,7 @@ const Navbar = () => {
 
         </div>
         <div className="right-navbar">
-          <a href="#">Register <CgUserlane />
-          <div className="L-border"></div>
-          <div className="R-border"></div>
-          </a>
+          <a href="#"><span>Register <CgUserlane /></span></a>
           <button onClick={() => { setIsSideBarOpened(!isSideBarOpened) }} className='side-bar-btn'>
             <FaBars />
           </button>
