@@ -6,7 +6,14 @@ const Eventpage = () => {
   return (
     <div className='Eventpage'>
         <div className="eventpage-wrap">
+          {/* Navbar  */}
           <Navbar/>
+
+
+          <div className="event-banner">
+
+          </div>
+
             <div className="eventnav">
                 <ul className="event-navmenu">
                     <li><a href='#'><span className='diff-font'>Shaurya</span> Robotics</a></li>
@@ -17,10 +24,6 @@ const Eventpage = () => {
                     <li><a href='#'><span className='diff-font'>Kautilya</span> Acedmics</a></li>
                 </ul>
                 
-            </div>
-            <div className='event-banner'>
-            
-
             </div>
         </div>
     </div>

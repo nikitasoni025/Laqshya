@@ -2,7 +2,8 @@ import React from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 import "./homepage.scss";
 
-let smokeimg = "https://ik.imagekit.io/dexo68yudb/image.png?ik-sdk-version=javascript-1.4.3&updatedAt=1677697561319";
+// let smokeimg = "https://ik.imagekit.io/dexo68yudb/image.png?ik-sdk-version=javascript-1.4.3&updatedAt=1677697561319";
+let smokeimg = "https://ik.imagekit.io/dexo68yudb/giphy.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1677770580940";
 
 const Homepage = () => {
   return (
