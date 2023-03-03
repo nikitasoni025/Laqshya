@@ -35,8 +35,8 @@ const Navbar = () => {
       <div className={isSideBarOpened ? "side-bar opened" : "side-bar"}>
         <ul className="side-menu">
           <li><button onClick={() => { setIsSideBarOpened(false) }} className='side-bar-btn'><FaTimes /></button></li>
-          <li><a className={isSideBarOpened? "anim1" :""} href="#">Home</a></li>
-          <li><a className={isSideBarOpened? "anim2" :""} href="#">Events</a></li>
+          <li><a className={isSideBarOpened? "anim1" :""} href="/">Home</a></li>
+          <li><a className={isSideBarOpened? "anim2" :""} href="/events">Events</a></li>
           <li><a className={isSideBarOpened? "anim3" :""} href="#">Gallery</a></li>
           <li><a className={isSideBarOpened? "anim4" :""} href="#">Contact</a></li>
           <li><a className={isSideBarOpened? "anim5" :""} href="#">Register</a></li>

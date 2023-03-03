@@ -10,9 +10,15 @@
 
 :root {
   --main-color: #1b0509;
+
   // --secondary-color: #f5a403;
   --secondary-color: #a5730e;
+  --third-color:#75674c;
+  --text-color:rgb(186, 186, 186);
   --main-font: sans-serif;
+  --secondary-font:"Mulish";
+
+  
 }
 
 * {
@@ -35,4 +41,12 @@ code {
   to {
     text-shadow: 0 0 20px #fff, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white;
   }
+}
+
+// UTILItY CLASSES
+
+.main-highlight{
+  color: var(--main-color);
+  font-style: italic;
+  font-weight: bold;
 }

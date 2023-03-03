@@ -109,6 +109,101 @@
                         }
                     }
                 }
+
+                // CONTENT SECTION 
+                .section-2 {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    margin-top: 100px;
+                    background: var(--third-color);
+                    padding: 80px 0;
+
+                    .details-wrap {
+                        width: 93%;
+
+                        .about-lakshya-details {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            gap: 35px;
+
+                            h1 {
+                                font-family: 'samarkan';
+                                color: var(--main-color);
+                                font-size: 4vw;
+                                letter-spacing: 3px;
+                                font-weight: bold;
+
+                            }
+
+                            h3 {
+                                font-family: var(--secondary-font);
+                                color: white;
+                                font-size: 2vw;
+                                position: relative;
+                                padding: 20px 0;
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 3px;
+                                    background: var(--main-color);
+
+                                }
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 30%;
+                                    height: 6px;
+                                    background: whitesmoke;
+
+                                }
+                            }
+
+                            .about-wrap {
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: flex-start;
+
+                                .abt-wrap-left {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: flex-start;
+                                    flex-direction: column;
+                                    gap: 25px;
+
+                                    p {
+                                        font-size: 22px;
+                                        color: white;
+                                        text-align: justify;
+                                        font-family: var(--secondary-font);
+
+
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                    }
+                }
+
+                
+                
             }
         }
     }
@@ -139,22 +234,26 @@
                         }
                     }
 
+                    // SECTION 1
+
                     .section-1 {
                         .banner {
                             margin-top: 20px;
                             overflow: hidden;
+
                             h1 {
-                               
+
                                 padding: 0;
                                 width: 100%;
-                               
+
                                 text-align: center;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 font-size: 8vw;
                                 z-index: 2;
-                                &::before{
+
+                                &::before {
                                     content: '';
                                     width: 100%;
                                     left: 0;
@@ -167,7 +266,8 @@
 
 
                                 }
-                                &::after{
+
+                                &::after {
                                     content: '';
                                     width: 100%;
                                     left: 0;
@@ -180,10 +280,39 @@
 
 
                                 }
-                                
+
 
                             }
                         }
+                    }
+
+                    // SECTION 2
+                    .section-2 {
+                        .details-wrap {
+                            .about-lakshya-details {
+                                gap: 10px;
+
+                                h1 {
+                                    font-size: 40px;
+                                }
+
+                                h3 {
+                                    font-size: 20px;
+                                }
+
+                                .about-wrap {
+                                    margin-top: 20px;
+
+                                    .abt-wrap-left {
+                                        p {
+                                            font-size: 15px;
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
                     }
                 }
             }
