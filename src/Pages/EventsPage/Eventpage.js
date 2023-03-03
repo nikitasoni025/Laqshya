@@ -1,8 +1,40 @@
 import React from 'react';
+import Eventcarousel from '../../Components/Eventcarousel/Eventcarousel';
 import Navbar from '../../Components/Navbar/Navbar';
 import './Eventpage.scss';
 
-const Eventpage = () => {
+const Eventpage = (props) => {
+
+  let Shauryas=[
+    {
+      title:"Xxcelerate",
+      img:"https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+    },
+    {
+      title:"Robo Soccer League",
+      img:"https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+    },
+    {
+      title:"Robo Go Karting",
+      img:"https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+    },
+    {
+      title:"Robo Sumo",
+      img:"https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+    },
+    {
+      title:"Deep Blue",
+      img:"https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+    },
+    {
+      title:"Robo Fire Fighting",
+      img:"https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+    },
+    {
+      title:"Drone Race",
+      img:"https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+    },
+  ]
   return (
     <div className='Eventpage'>
       <div className="eventpage-wrap">
@@ -33,7 +65,13 @@ const Eventpage = () => {
               <h1> <span className='diff-font'>Shaurya</span> </h1>
               <h2>ROBOTICS</h2>
               <div className='shaurya-details'>
-                <p></p>
+                <p>Shaurya is an exciting robotic event that brings together various competitions, including xxcelerate, robo soccer league, robo go-karting, robo sumo, deep blue, and robo fire fighting. Participants showcase their innovative designs and programming skills as they compete in these challenging and thrilling events. Whether you're a robotics enthusiast or just looking for some high-tech entertainment, Shaurya is an event that's sure to impress.</p>
+              </div>
+              <div className='shaurya-events'>
+                <Eventcarousel
+                events={Shauryas}
+                windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
+                />
               </div>
             </div>
           </div>

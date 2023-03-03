@@ -94,7 +94,7 @@
 
             .event-wrapdetail {
                 width: 95%;
-                border: 2px solid white;
+                // border: 2px solid white;
 
                 .event-shaurya {
                     width: 100%;
@@ -109,6 +109,18 @@
                     color: aliceblue;
                     font-size: 2vw;
                     font-family:"Mulish";
+                }
+                .shaurya-details{
+                    width: 100%;
+                    position: relative;
+                    top: 40px;
+                p{
+                    color:aliceblue;
+                    text-align:left;
+                    font-size: 20px;
+                    font-family:var(--secondary-font
+                    );
+                }
                 }
                 }
                 
