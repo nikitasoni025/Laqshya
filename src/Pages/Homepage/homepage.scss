@@ -19,19 +19,24 @@
                     width: 100%;
                     height: 84vh;
 
-                    background: url("https://ik.imagekit.io/dexo68yudb/Picsart_23-03-02_01-19-45-013.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677700210455");
+                    background: url("https://ik.imagekit.io/egjzyz51e/Picsart_23-03-03_20-43-27-047.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677856473920");
                     background-size: cover;
                     background-position: center;
                     position: relative;
 
+                    // SHADOW LOGO DESIGN
+                    .shadow-logo {
 
-                    .overlay {
-                        width: 100%;
-                        height: 100%;
-                        background: url("https://ik.imagekit.io/egjzyz51e/19Nx.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1677688142789");
-                        background-size: cover;
-                        background-position: center;
-                        opacity: 0.03;
+                        position: absolute;
+                        top: -30px;
+                        left: 0;
+                        font-size: 90px;
+                        font-family: "Secular One", sans-serif;
+                        color: rgba(213, 213, 213, 0.123);
+                        text-align: start;
+                        display: flex;
+                        justify-content: flex-start;
+
                     }
 
                     .headerfade-lft {
@@ -117,7 +122,7 @@
                     justify-content: center;
                     align-items: flex-start;
                     margin-top: 100px;
-                    background: var(--third-color);
+                    background: var(--main-color);
                     padding: 80px 0;
 
                     .details-wrap {
@@ -134,7 +139,7 @@
 
                             h1 {
                                 font-family: 'samarkan';
-                                color: var(--main-color);
+                                color: var(--text-color);
                                 font-size: 4vw;
                                 letter-spacing: 3px;
                                 font-weight: bold;
@@ -143,7 +148,7 @@
 
                             h3 {
                                 font-family: var(--secondary-font);
-                                color: white;
+                                color: var(--text-color);
                                 font-size: 2vw;
                                 position: relative;
                                 padding: 20px 0;
@@ -155,7 +160,7 @@
                                     left: 0;
                                     width: 100%;
                                     height: 3px;
-                                    background: var(--main-color);
+                                    background: white;
 
                                 }
 
@@ -166,7 +171,7 @@
                                     left: 0;
                                     width: 30%;
                                     height: 6px;
-                                    background: whitesmoke;
+                                    background: var(--secondary-color);
 
                                 }
                             }
@@ -187,7 +192,7 @@
 
                                     p {
                                         font-size: 22px;
-                                        color: white;
+                                        color: var(--text-color);
                                         text-align: justify;
                                         font-family: var(--secondary-font);
 
@@ -202,8 +207,8 @@
                     }
                 }
 
-                
-                
+
+
             }
         }
     }
@@ -216,7 +221,7 @@
             .section {
                 .wrap-section {
                     .header {
-                        background: url("https://ik.imagekit.io/dexo68yudb/Picsart_23-03-02_01-44-34-069.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677701794986");
+                        background: url("https://ik.imagekit.io/egjzyz51e/Picsart_23-03-03_21-13-11-411.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677859040876");
                         background-size: cover;
                         background-position: center;
 

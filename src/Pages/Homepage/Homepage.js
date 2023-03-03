@@ -20,6 +20,7 @@ const Homepage = () => {
 
             <div className="header">
               <img className='headerfade-lft' src={smokeimg} alt="smokeimg" />
+              <span className='shadow-logo'>LAQSHYA</span>
             </div>
 
             {/* SECTION 1 start here */}
@@ -52,6 +53,9 @@ const Homepage = () => {
                       </p>
                       <p>Apart from technical, management, and sports events, the cultural events were the highlights of the festival. There were music and dance performances, and various other cultural activities that showcased the diverse talents and cultural heritage of the region.</p>
                     </div>
+                    <div className="abt-wrap-right">
+
+                    </div>
 
                   </div>
                 </div>
@@ -61,7 +65,7 @@ const Homepage = () => {
               </div>
             </div>
 
-            {/* SECTION  */}
+            {/* SECTION 3  */}
 
            
 
