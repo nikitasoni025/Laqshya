@@ -1,6 +1,6 @@
 .Eventpage {
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     overflow: hidden;
 
     .eventpage-wrap {
@@ -96,7 +96,7 @@
                 width: 95%;
                 // border: 2px solid white;
 
-                .event-shaurya {
+                .event-row {
                     width: 100%;
 
                 h1{
@@ -110,7 +110,7 @@
                     font-size: 2vw;
                     font-family:"Mulish";
                 }
-                .shaurya-details{
+                .row-details{
                     width: 100%;
                     position: relative;
                     top: 40px;
@@ -122,8 +122,12 @@
                     );
                 }
                 }
+                .row-events{
+                    width: 100%;
+
                 }
-                
+                }
+           
             }
 
         }
