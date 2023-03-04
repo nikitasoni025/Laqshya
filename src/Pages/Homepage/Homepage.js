@@ -1,12 +1,13 @@
 import React from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
+import PostCarousel from '../../Components/PostCarousel/PostCarousel';
 import "./homepage.scss";
 
 
 // let smokeimg = "https://ik.imagekit.io/dexo68yudb/image.png?ik-sdk-version=javascript-1.4.3&updatedAt=1677697561319";
 let smokeimg = "https://ik.imagekit.io/dexo68yudb/giphy.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1677770580940";
 
-const Homepage = () => {
+const Homepage = (props) => {
   return (
     <div className='homepage'>
       <div className="wrap-home">
@@ -62,11 +63,11 @@ const Homepage = () => {
                     <div className="row">
                       <img className='animated-float' src="https://ik.imagekit.io/egjzyz51e/img_5_1677915210110.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915371515" alt="" /></div>
                     <div className="row">
-                      <img style={{animationDelay:"0.2s"}} className='animated-float' src="https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915392553" alt="" /></div>
+                      <img style={{ animationDelay: "0.2s" }} className='animated-float' src="https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915392553" alt="" /></div>
                     <div className="row">
-                      <img style={{animationDelay:"0.5s"}} className='animated-float' src="https://ik.imagekit.io/egjzyz51e/img_2_1677915120207.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915356389" alt="" /></div>
+                      <img style={{ animationDelay: "0.5s" }} className='animated-float' src="https://ik.imagekit.io/egjzyz51e/img_2_1677915120207.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915356389" alt="" /></div>
                     <div className="row">
-                      <img style={{animationDelay:"0.9s"}} className='animated-float' src="https://ik.imagekit.io/egjzyz51e/img_4_1677915173888.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915472669" alt="" /></div>
+                      <img style={{ animationDelay: "0.9s" }} className='animated-float' src="https://ik.imagekit.io/egjzyz51e/img_4_1677915173888.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915472669" alt="" /></div>
                   </div>
                 </div>
 
@@ -75,10 +76,18 @@ const Homepage = () => {
 
             {/* SECTION 3  */}
 
-            .
+            <div className="section-3">
+              <div className="section3-wrap">
+                <h1>Latest Post</h1>
+                LATEST POST CARDS
+                <div className="post-card">
+                  <PostCarousel windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined} />
+                </div>
+              </div>
+            </div>
 
 
-            
+
 
 
 
