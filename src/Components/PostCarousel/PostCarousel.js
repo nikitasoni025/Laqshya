@@ -25,6 +25,7 @@ const PostCarousel = () => {
           modifier: 1,
           slideShadows: true,
         }}
+        loop={true}
         pagination={true}
         modules={[EffectCoverflow, Pagination]} 
         className="mySwiper"
@@ -34,7 +35,7 @@ const PostCarousel = () => {
         {post.map((item,index)=>{
           return(
             <SwiperSlide>
-            <img width={200} src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
           </SwiperSlide>
           )
         })}
