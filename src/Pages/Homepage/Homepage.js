@@ -37,7 +37,7 @@ const Homepage = () => {
             <div className="section-2">
               {/* DETAILS WRAP */}
               <div className="details-wrap">
-                
+
                 <div className="about-lakshya-details">
                   <div className="upper-about">
                     <h1>LAQSHYA <span>2K23</span></h1>
@@ -60,13 +60,13 @@ const Homepage = () => {
                 <div className="collage">
                   <div className="collage-wrap">
                     <div className="row">
-                      <img src="https://ik.imagekit.io/egjzyz51e/img_5_1677915210110.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915371515" alt="" /></div>
+                      <img className='animated-float' src="https://ik.imagekit.io/egjzyz51e/img_5_1677915210110.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915371515" alt="" /></div>
                     <div className="row">
-                      <img src="https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915392553" alt="" /></div>
+                      <img style={{animationDelay:"0.2s"}} className='animated-float' src="https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915392553" alt="" /></div>
                     <div className="row">
-                      <img src="https://ik.imagekit.io/egjzyz51e/img_2_1677915120207.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915356389" alt="" /></div>
+                      <img style={{animationDelay:"0.5s"}} className='animated-float' src="https://ik.imagekit.io/egjzyz51e/img_2_1677915120207.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915356389" alt="" /></div>
                     <div className="row">
-                      <img src="https://ik.imagekit.io/egjzyz51e/img_4_1677915173888.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915472669" alt="" /></div>
+                      <img style={{animationDelay:"0.9s"}} className='animated-float' src="https://ik.imagekit.io/egjzyz51e/img_4_1677915173888.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915472669" alt="" /></div>
                   </div>
                 </div>
 
@@ -74,6 +74,8 @@ const Homepage = () => {
             </div>
 
             {/* SECTION 3  */}
+
+            .
 
 
             

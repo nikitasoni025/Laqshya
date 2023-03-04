@@ -59,4 +59,21 @@ code {
   font-weight: bold;
 }
 
-// background: linear-gradient(239deg, #5aae48 -51.76%, rgba(90,174,72,0) 75.15%);
+.animated-float{
+
+  animation: floaty 1s infinite alternate-reverse ease-in-out;
+
+}
+
+@keyframes floaty {
+  from{
+    transform: translateY(-5px);
+  }
+  to{
+    transform: translateY(5px);
+  }
+}
+
+
+  
+
