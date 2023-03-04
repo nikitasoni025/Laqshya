@@ -86,6 +86,7 @@ const Homepage = (props) => {
                   <li>U</li>
                   <li>R</li>
                   <li>E</li>
+                  <li>D</li>
                 </ul>
                 <ul className="sec-3-title2">
                   <li>M</li>
@@ -94,6 +95,7 @@ const Homepage = (props) => {
                   <li>E</li>
                   <li>N</li>
                   <li>T</li>
+                  <li>S</li>
                 </ul>
                 {/* LATEST POST CARDS */}
                 <div className="wrap-carousel">

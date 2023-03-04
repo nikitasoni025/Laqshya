@@ -20,7 +20,7 @@ const Eventcarousel = (props) => {
                                     </div>
                                 </div>
                                 <div className="card-bottom">
-                                    <h1 className='card-title'>{event.title}</h1>
+                                    <h2 className='card-title'>{event.title}</h2>
                                     <a href="#">Read More</a>
                                 </div>
                             </div>

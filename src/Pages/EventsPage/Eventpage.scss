@@ -94,28 +94,34 @@
 
             .event-wrapdetail {
                 width: 95%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 200px;
                 // border: 2px solid white;
 
-                .event-row {
+                .event-row{
                     width: 100%;
+                    // border: 2px solid white;
 
                     h1 {
                         color: var(--secondary-color);
                         font-family: "samarkan";
                         font-size: 5vw;
                         letter-spacing: 3px;
+                        margin-top: 20px;
                     }
 
                     h2 {
                         color: aliceblue;
                         font-size: 2vw;
                         font-family: "Mulish";
+                        margin: 20px 0;
                     }
 
                     .row-details {
                         width: 100%;
-                        position: relative;
-                        top: 40px;
 
                         p {
                             color: aliceblue;
