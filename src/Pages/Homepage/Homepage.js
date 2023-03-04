@@ -78,9 +78,25 @@ const Homepage = (props) => {
 
             <div className="section-3">
               <div className="section3-wrap">
-                <h1>Latest Post</h1>
-                LATEST POST CARDS
-                <div className="post-card">
+                <ul className="sec-3-title">
+                  <li>C</li>
+                  <li>A</li>
+                  <li>P</li>
+                  <li>T</li>
+                  <li>U</li>
+                  <li>R</li>
+                  <li>E</li>
+                </ul>
+                <ul className="sec-3-title2">
+                  <li>M</li>
+                  <li>O</li>
+                  <li>M</li>
+                  <li>E</li>
+                  <li>N</li>
+                  <li>T</li>
+                </ul>
+                {/* LATEST POST CARDS */}
+                <div className="wrap-carousel">
                   <PostCarousel windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined} />
                 </div>
               </div>

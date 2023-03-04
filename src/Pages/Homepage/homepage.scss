@@ -256,7 +256,7 @@
                             background: url("https://ik.imagekit.io/egjzyz51e/kisspng-transparency-and-translucency-line-abstract-gold-line-5b130a40d0ec97.4296720215279744648558.png?ik-sdk-version=javascript-1.4.3&updatedAt=1677914942685");
                             // border: 11px solid navajowhite;
                             background-size: cover;
-                            
+
 
                             .collage-wrap {
                                 width: 100%;
@@ -281,30 +281,33 @@
                                             border-radius: 50%;
                                             object-fit: cover;
                                             object-position: center;
-                                           
+
 
                                         }
 
                                     }
 
                                     &:nth-child(1) {
-                                        img{
-                                             translate: 100% 0 0;
+                                        img {
+                                            translate: 100% 0 0;
                                         }
                                     }
+
                                     &:nth-child(2) {
-                                        img{
-                                             translate: 90% 0 0;
+                                        img {
+                                            translate: 90% 0 0;
                                         }
                                     }
+
                                     &:nth-child(3) {
-                                        img{
-                                             translate: 130% 0 0;
+                                        img {
+                                            translate: 130% 0 0;
                                         }
                                     }
+
                                     &:nth-child(4) {
-                                        img{
-                                             translate: 130% 0 0;
+                                        img {
+                                            translate: 130% 0 0;
                                         }
                                     }
 
@@ -321,6 +324,72 @@
                                 }
                             }
 
+
+
+                        }
+                    }
+                }
+
+                // SECTION 3
+                .section-3 {
+                    width: 100%;
+                    height: 100vh;
+                    background: linear-gradient(-239deg, #ae9648 -51.76%, rgba(90, 174, 72, 0) 75.15%);
+                    // background: linear-gradient(239.59deg, rgba(44, 44, 45, 0.6705882353) -44.65%, #1a1a1e 75.57%);
+
+                    // background: var(--secondary-color);
+                    // border: 12px solid mediumvioletred;
+                    .section3-wrap {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-start;
+                        position: relative;
+                   
+                        .sec-3-title{
+                            list-style: none;
+                            position: absolute;
+                            top: 100px;
+                            left: 50px;
+                            li{
+                                font-size: 45px;
+                                font-family: var(--secondary-font);
+                                font-weight: 900;
+                            }
+                        }
+                        .sec-3-title2{
+                            list-style: none;
+                            position: absolute;
+                            top: 250px;
+                            left: 200px;
+                            li{
+                                font-size: 45px;
+                                font-family: var(--secondary-font);
+                                font-weight: 900;
+                            }
+                        }
+
+                        .wrap-carousel {
+                            width: 70%;
+                            height: 80%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            position: relative;
+                            &::before{
+                                content: "";
+                                width: 90%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                border-bottom-left-radius: 50px;                                
+                                background: linear-gradient(239.59deg, rgba(44, 44, 45, 0.6705882353) -44.65%, #1a1a1e 75.57%);
+
+                            }
+                            
+                            
 
 
                         }
@@ -413,24 +482,27 @@
                         .details-wrap {
                             flex-direction: column;
                             align-items: center;
+
                             // LEFT SIDE
                             .about-lakshya-details {
                                 gap: 10px;
                                 width: 100%;
-                                .upper-about{
+
+                                .upper-about {
                                     width: 97%;
                                     padding: 25px;
-                                    
+
                                     h1 {
                                         font-size: 40px;
                                     }
-    
+
                                     h3 {
                                         font-size: 20px;
                                     }
+
                                     .about-wrap {
                                         margin-top: 20px;
-    
+
                                         .abt-wrap-left {
                                             p {
                                                 font-size: 15px;
@@ -438,31 +510,35 @@
                                         }
                                     }
                                 }
-                                .lower-about{
+
+                                .lower-about {
                                     display: none;
                                 }
 
 
-                               
+
 
                             }
 
                             // RIGHT SIDE
-                            .collage{
+                            .collage {
                                 width: 100%;
                                 background: none;
                                 display: none;
-                                
 
-                               
-                                
+
+
+
                             }
 
                         }
 
                     }
 
-                    
+                    // SECTION 3
+
+
+
                 }
             }
         }
