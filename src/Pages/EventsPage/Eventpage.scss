@@ -99,35 +99,38 @@
                 .event-row {
                     width: 100%;
 
-                h1{
-                    color: var(--secondary-color);
-                    font-family: "samarkan";
-                    font-size: 5vw;
-                    letter-spacing: 3px;
-                }
-                h2{
-                    color: aliceblue;
-                    font-size: 2vw;
-                    font-family:"Mulish";
-                }
-                .row-details{
-                    width: 100%;
-                    position: relative;
-                    top: 40px;
-                p{
-                    color:aliceblue;
-                    text-align:left;
-                    font-size: 20px;
-                    font-family:var(--secondary-font
-                    );
-                }
-                }
-                .row-events{
-                    width: 100%;
+                    h1 {
+                        color: var(--secondary-color);
+                        font-family: "samarkan";
+                        font-size: 5vw;
+                        letter-spacing: 3px;
+                    }
 
+                    h2 {
+                        color: aliceblue;
+                        font-size: 2vw;
+                        font-family: "Mulish";
+                    }
+
+                    .row-details {
+                        width: 100%;
+                        position: relative;
+                        top: 40px;
+
+                        p {
+                            color: aliceblue;
+                            text-align: left;
+                            font-size: 20px;
+                            font-family: var(--secondary-font);
+                        }
+                    }
+
+                    .row-events {
+                        width: 100%;
+
+                    }
                 }
-                }
-           
+
             }
 
         }
