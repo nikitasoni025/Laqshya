@@ -4,14 +4,32 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Homepage from './Pages/Homepage/Homepage';
 import "./Assets/fonts/stylesheet.scss";
 import Eventpage from './Pages/EventsPage/Eventpage';
+import { useEffect, useState } from 'react';
+import music from './Assets/Audios/On my way - pubg mobile.mp3';
 
 function App() {
+  const [windowSize, setWindowSize] = useState([
+    window.innerWidth,
+    window.innerHeight,
+  ]);
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight]);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  });
   return (
     <Router>
       <div className="App">
+      <audio  autoplay id='ouraudio' controls style={{marginTop:"100px",display:"none"}}  src={music}></audio>
         <Routes>
-          <Route path='/' element={<Homepage />} />
-          <Route path='/events' element={<Eventpage />} />
+          <Route path='/' element={<Homepage windowSize={windowSize} />} />
+          <Route path='/events' element={<Eventpage windowSize={windowSize}/>} />
 
         </Routes>
       </div>
