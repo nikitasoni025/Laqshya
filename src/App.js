@@ -6,6 +6,8 @@ import "./Assets/fonts/stylesheet.scss";
 import Eventpage from './Pages/EventsPage/Eventpage';
 import { useEffect, useState } from 'react';
 import music from './Assets/Audios/On my way - pubg mobile.mp3';
+import Gallery from './Pages/Gallery/Gallery';
+import ConatctPage from './Pages/ContactPage/ConatctPage';
 
 function App() {
   const [windowSize, setWindowSize] = useState([
@@ -30,6 +32,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage windowSize={windowSize} />} />
           <Route path='/events' element={<Eventpage windowSize={windowSize}/>} />
+          <Route path='/gallery' element={<Gallery windowSize={windowSize}/>} />
+          <Route path='/contact' element={<ConatctPage windowSize={windowSize}/>} />
+          
 
         </Routes>
       </div>

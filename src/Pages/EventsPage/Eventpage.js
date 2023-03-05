@@ -282,6 +282,7 @@ const Eventpage = (props) => {
     </div>
 
   )
+ 
 }
 
 export default Eventpage;
