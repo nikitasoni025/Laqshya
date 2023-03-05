@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
 import PostCarousel from '../../Components/PostCarousel/PostCarousel';
 import "./homepage.scss";
@@ -56,7 +57,7 @@ const Homepage = (props) => {
                   <div className="lower-about"></div>
                 </div>
 
-                {/* CPLLAGE SECTION */}
+                {/* CoLLAGE SECTION */}
 
                 <div className="collage">
                   <div className="collage-wrap">
@@ -103,6 +104,11 @@ const Homepage = (props) => {
                 </div>
               </div>
             </div>
+
+            {/* FOOTER SECTION */}
+
+            <Footer windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined} />
+                 
 
 
 
