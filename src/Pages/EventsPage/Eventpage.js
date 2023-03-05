@@ -1,4 +1,5 @@
 import React from 'react';
+import Bannercarousel from '../../Components/Bannercarousel/Bannercarousel';
 import Eventcarousel from '../../Components/Eventcarousel/Eventcarousel';
 import Navbar from '../../Components/Navbar/Navbar';
 import './Eventpage.scss';
@@ -80,11 +81,11 @@ const Eventpage = (props) => {
       img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
     },
     {
-      title: "Tech Pharmacia",
+      title: "Tech farmactic",
       img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
     },
     {
-      title: "Card Master",
+      title: "Cad Master",
       img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
     },
     {
@@ -117,12 +118,49 @@ const Eventpage = (props) => {
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
       },
       {
+        title: "Pitch Your Idea",
+        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+      },
+      {
         title: "Workshops",
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
       },
    
   
   
+    ]
+    let bannerslide=[
+      {
+        title:"Shaurya",
+        img:"https://ik.imagekit.io/dexo68yudb/shaurya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678014819803",
+
+      },
+      {
+        title:"kaushalya",
+        img:"https://ik.imagekit.io/dexo68yudb/img_4_1677915173888.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1678016436549",
+
+      },
+      {
+        title:"Bouddhiki",
+        img:"https://ik.imagekit.io/dexo68yudb/bouddhiki2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678016647248",
+
+      },
+      {
+        title:"Parakram",
+        img:"https://ik.imagekit.io/dexo68yudb/debugg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678016863195",
+
+      },
+      {
+        title:"Natraja",
+        img:"https://ik.imagekit.io/dexo68yudb/DSC_0243.JPG?ik-sdk-version=javascript-1.4.3&updatedAt=1678017286992",
+
+      },
+      {
+        title:"Kautilya",
+        img:"https://ik.imagekit.io/dexo68yudb/kautilya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678017925010",
+
+      },
+     
     ]
   
   
@@ -135,25 +173,16 @@ const Eventpage = (props) => {
 
 
         <div className="event-banner">
-          <img src="https://ik.imagekit.io/dexo68yudb/giphy__1_.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1677773135214" className='event-angrybird'></img>
-          <img src="https://ik.imagekit.io/dexo68yudb/giphy__2_.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1677774324253" className='event-robot'></img>
-
+          <Bannercarousel
+          bannerSlides={bannerslide}
+          />
         </div>
 
-        <div className="eventnav">
-          <ul className="event-navmenu">
-            <li><a href='#'><span className='diff-font'>Shaurya</span> Robotics</a></li>
-            <li><a href='#'><span className='diff-font'>Kaushalya</span> Sports</a></li>
-            <li><a href='#'><span className='diff-font'>Bouddhiki</span> Brain Teaser</a></li>
-            <li><a href='#'><span className='diff-font'>Parakram</span> Technical </a></li>
-            <li><a href='#'><span className='diff-font'>Natraja</span> Cultural</a></li>
-            <li><a href='#'><span className='diff-font'>Kautilya</span> Acedmics</a></li>
-          </ul>
-
-        </div>
+      
         <div className=' event-detail'>
           <div className="event-wrapdetail">
             {/* event shaurya stars here */}
+            <a href="" id='Shaurya'></a>
             <div className='event-row'>
               <h1> <span className='diff-font'>Shaurya</span> </h1>
               <h2>ROBOTICS</h2>
@@ -168,8 +197,9 @@ const Eventpage = (props) => {
               </div>
             </div>
             {/* event kaushalya starts here */}
-            <div className='event-row'>
-              <h1><span className='diff-font'>Kautilya</span></h1>
+            <a href="" id='kaushalya'></a>
+            <div className='event-row' >
+              <h1><span className='diff-font'>Kaushalya</span></h1>
               <h2>SPORTS</h2>
               <div className='row-details'>
                 <p>Kautilya is a multi-sport event that brings together athletes and enthusiasts from various backgrounds to compete in four exciting disciplines - cricket, arm wrestling, futsal, and Angry Bird. This event promises to be a thrilling display of strength, skill, and strategy, as participants battle it out in each sport to claim the coveted Kautilya trophy. Whether you're a seasoned athlete or a casual fan, Kautilya is sure to provide an unforgettable experience for all who participate.</p>
@@ -182,6 +212,7 @@ const Eventpage = (props) => {
               </div>
             </div>
             {/* event bouddhiki starts here */}
+            <a href="" id='Bouddhiki'></a>
             <div className='event-row'>
               <h1><span className='diff-font'>Bouddhiki</span></h1>
               <h2>Brain Teaser</h2>
@@ -196,6 +227,7 @@ const Eventpage = (props) => {
               </div>
             </div>
             {/* event parakram starts here */}
+            <a href="" id='Parakram'></a>
             <div className='event-row'>
               <h1><span className='diff-font'>Parakram</span></h1>
               <h2>Technical</h2>
@@ -210,7 +242,8 @@ const Eventpage = (props) => {
               </div>
             </div>
             {/* event natraj starts here */}
-            <div className='event-row'>
+            <a href="" id='Natraja'></a>
+            <div className='event-row' >
               <h1><span className='diff-font'>Natraja</span></h1>
               <h2>Cultural</h2>
               <div className='row-details'>
@@ -224,6 +257,7 @@ const Eventpage = (props) => {
               </div>
             </div>
             {/* event kautilya */}
+            <a href="" id='Kautilya'></a>
             <div className='event-row'>
               <h1><span className='diff-font'>Kautilya</span></h1>
               <h2>Academic</h2>

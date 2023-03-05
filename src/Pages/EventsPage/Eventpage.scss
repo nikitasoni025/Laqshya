@@ -2,40 +2,19 @@
     width: 100%;
     // height: 100vh;
     overflow: hidden;
+    scroll-behavior: smooth;
 
     .eventpage-wrap {
         width: 100%;
         height: 100%;
         overflow-x: hidden;
         overflow-y: auto;
+        scroll-behavior: smooth;
 
         .event-banner {
             width: 100%;
             height: 84vh;
-            border: 2px solid white;
-            position: relative;
-
-            .event-angrybird {
-                width: 250px;
-                height: 250px;
-                // margin-top: 300px;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                opacity: 0.4;
-            }
-
-            .event-robot {
-                width: 250px;
-                height: 250px;
-                position: absolute;
-                bottom: 0%;
-                right: 0;
-                opacity: 0.4;
-
-
-            }
-
+            overflow: hidden;
         }
 
 
