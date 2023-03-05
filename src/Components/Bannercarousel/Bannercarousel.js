@@ -10,7 +10,7 @@ const Bannercarousel = (props) => {
     return (
         <div className='bannercarousel'>
             <OwlCarousel className='owl-theme' autoplay={true} autoplayHoverPause loop autoplaySpeed={5000} nav items={1}>
-                {props.bannerSlides ? props.bannerSlides.map((slides,index) => {.54
+                {props.bannerSlides ? props.bannerSlides.map((slides,index) => {
                     return (
                         <div key={index} className="item banner-slide">
                             <div className='banner-slide-wrap'>
