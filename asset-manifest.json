@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Laqshya/static/css/main.deff7c16.css",
-    "main.js": "/Laqshya/static/js/main.c51b976d.js",
+    "main.js": "/Laqshya/static/js/main.e5fd9562.js",
     "static/media/On my way - pubg mobile.mp3": "/Laqshya/static/media/On my way - pubg mobile.c12bf87f036ecff96291.mp3",
     "static/media/Sman.ttf": "/Laqshya/static/media/Sman.fcba438bef1049a04a96.ttf",
     "static/media/SamarkanNormal.woff": "/Laqshya/static/media/SamarkanNormal.28b5cade04c95fae47a6.woff",
     "static/media/SamarkanNormal.woff2": "/Laqshya/static/media/SamarkanNormal.5ae38ee34838206a0eb9.woff2",
     "index.html": "/Laqshya/index.html",
     "main.deff7c16.css.map": "/Laqshya/static/css/main.deff7c16.css.map",
-    "main.c51b976d.js.map": "/Laqshya/static/js/main.c51b976d.js.map"
+    "main.e5fd9562.js.map": "/Laqshya/static/js/main.e5fd9562.js.map"
   },
   "entrypoints": [
     "static/css/main.deff7c16.css",
-    "static/js/main.c51b976d.js"
+    "static/js/main.e5fd9562.js"
   ]
 }
