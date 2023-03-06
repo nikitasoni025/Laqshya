@@ -1,8 +1,7 @@
 {
   "name": "laq",
   "version": "0.1.0",
-  "private": false,
-  "homepage": "https://nikitasoni025.github.io/Laqshya/",
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
