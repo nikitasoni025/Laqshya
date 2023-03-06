@@ -6,8 +6,9 @@ import "./Assets/fonts/stylesheet.scss";
 import Eventpage from './Pages/EventsPage/Eventpage';
 import { useEffect, useState } from 'react';
 import music from './Assets/Audios/On my way - pubg mobile.mp3';
-import Gallery from './Pages/Gallery/Gallery';
+
 import ConatctPage from './Pages/ContactPage/ConatctPage';
+import Gallery from './Pages/Gallery/Gallery';
 
 function App() {
   const [windowSize, setWindowSize] = useState([
