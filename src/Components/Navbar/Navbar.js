@@ -38,8 +38,8 @@ const Navbar = () => {
           <button className='audio-btn' onClick={(e)=>playSound(e)}>{audioPlayed ? <FaVolumeMute/> : <FaVolumeUp /> }</button>
           <ul className="menu">
             <li><a href="/">Home</a></li>
-            <li><a href="/events">Events</a></li>
-            <li><a href="/">Gallery</a></li>
+            <li><a href="/Laqshya/events">Events</a></li>
+            <li><a href="/Laqshya/gallery">Gallery</a></li>
             <li><a href="/">Contact</a></li>
           </ul>
 
