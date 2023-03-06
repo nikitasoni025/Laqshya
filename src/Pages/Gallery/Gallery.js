@@ -14,8 +14,6 @@ const Gallery = () => {
                 <p>Catch Us</p>
                 <Link to={"/"} >Home</Link>
             </div>
-
-
         </div>
     </div>
   )

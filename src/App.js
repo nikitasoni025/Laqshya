@@ -26,10 +26,10 @@ function App() {
     };
   });
   return (
-    <Router>
+    <Router basename='/'>
       <div className="App">
       <audio  autoplay id='ouraudio' controls style={{marginTop:"100px",display:"none"}}  src={music}></audio>
-        <Routes>
+        <Routes >
           <Route path='/' element={<Homepage windowSize={windowSize} />} />
           <Route path='/events' element={<Eventpage windowSize={windowSize}/>} />
           <Route path='/gallery' element={<Gallery windowSize={windowSize}/>} />
