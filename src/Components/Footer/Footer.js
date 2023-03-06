@@ -4,25 +4,26 @@ import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import "./footer.scss";
 
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <div className='main-footer'>
       <div className="footer-wrap">
         <div className="coloumn-wrap">
           <div className="col">
-
             <img src="https://ik.imagekit.io/egjzyz51e/Picsart_23-03-05_13-29-47-340.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678003297911" alt="" />
+            <p>Copyright © CSIT 2023<br/>Techno Management Sports & Cultural Fest</p>
           </div>
           <div className="col">
             <ul className="social-link">
-              <li>Social</li>
-              <li><Link>Instagram<FaInstagram /></Link></li>
-              <li><Link>Facebook<FaFacebook /></Link></li>
-              <li><Link>Youtube<FaYoutube /></Link></li>
+              {props.windowSize[0] <= 990 ? null : <li>Social</li> }
+              <li><Link>{props.windowSize[0] <= 990 ? <FaInstagram /> : <>Instagram &nbsp; <FaInstagram /></>}</Link></li>
+              <li><Link>{props.windowSize[0] <= 990 ? <FaFacebook /> : <>Facebook &nbsp;  <FaFacebook /></>}</Link></li>
+              <li><Link>{props.windowSize[0] <= 990 ? <FaYoutube /> : <>Youtube &nbsp; <FaYoutube /></>}</Link></li>
             </ul>
           </div>
           <div className="col">
             <div className="register-link">
+              <h4>Click Here To Register</h4>
               <Link>Register</Link>
             </div>
           </div>
@@ -32,4 +33,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer;

@@ -25,6 +25,7 @@ function App() {
       window.removeEventListener('resize', handleWindowResize);
     };
   });
+  console.log(windowSize);
   return (
     <Router basename='/'>
       <div className="App">

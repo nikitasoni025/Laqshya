@@ -123,3 +123,14 @@
 
 
 }
+
+
+@media screen and (max-width:991px) {
+    .Eventpage{
+        .eventpage-wrap{
+            .event-banner{
+                height: 100vh;
+            }
+        }
+    }
+}
