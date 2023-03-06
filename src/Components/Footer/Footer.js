@@ -10,7 +10,7 @@ const Footer = (props) => {
       <div className="footer-wrap">
         <div className="coloumn-wrap">
           <div className="col">
-            <img src="https://ik.imagekit.io/egjzyz51e/Picsart_23-03-05_13-29-47-340.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678003297911" alt="" />
+            <img src="https://ik.imagekit.io/egjzyz51e/laqshya_1__2_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678109555157" alt="" />
             <p>Copyright © CSIT 2023<br/>Techno Management Sports & Cultural Fest</p>
           </div>
           <div className="col">
