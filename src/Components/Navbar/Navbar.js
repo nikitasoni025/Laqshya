@@ -40,13 +40,14 @@ const Navbar = () => {
             <li><a href="/">Home</a></li>
             <li><a href="/events">Events</a></li>
             <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/gallery">Leader Board</a></li>
             <li><a href="/">Contact</a></li>
           </ul>
 
 
         </div>
         <div className="right-navbar">
-          <a href="#"><span>Register <CgUserlane /></span></a>
+          <a href="/register"><span>Register <CgUserlane /></span></a>
           <button onClick={() => { setIsSideBarOpened(!isSideBarOpened) }} className='side-bar-btn'>
             <FaBars />
           </button>
@@ -62,9 +63,9 @@ const Navbar = () => {
           <li><button onClick={() => { setIsSideBarOpened(false) }} className='side-bar-btn'><FaTimes /></button></li>
           <li><a className={isSideBarOpened ? "anim1" : ""} href="/">Home</a></li>
           <li><a className={isSideBarOpened ? "anim2" : ""} href="/events">Events</a></li>
-          <li><a className={isSideBarOpened ? "anim3" : ""} href="#">Gallery</a></li>
+          <li><a className={isSideBarOpened ? "anim3" : ""} href="/gallery">Gallery</a></li>
           <li><a className={isSideBarOpened ? "anim4" : ""} href="#">Contact</a></li>
-          <li><a className={isSideBarOpened ? "anim5" : ""} href="#">Register</a></li>
+          <li><a className={isSideBarOpened ? "anim5" : ""} href="/register">Register</a></li>
 
         </ul>
       </div>

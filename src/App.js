@@ -9,6 +9,7 @@ import music from './Assets/Audios/On my way - pubg mobile.mp3';
 
 import ConatctPage from './Pages/ContactPage/ConatctPage';
 import Gallery from './Pages/Gallery/Gallery';
+import RegisterPage from './Pages/RegisterPage/RegisterPage';
 
 function App() {
   const [windowSize, setWindowSize] = useState([
@@ -36,6 +37,7 @@ function App() {
           <Route path='/events' element={<Eventpage windowSize={windowSize}/>} />
           <Route path='/gallery' element={<Gallery windowSize={windowSize}/>} />
           <Route path='/contact' element={<ConatctPage windowSize={windowSize}/>} />
+          <Route path='/register' element={<RegisterPage windowSize={windowSize}/>} />
           
 
         </Routes>
