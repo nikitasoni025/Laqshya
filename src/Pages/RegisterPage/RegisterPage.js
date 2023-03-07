@@ -7,7 +7,7 @@ const RegisterPage = () => {
             <div className="register-wrap">
                 <div className="left-wrap">
                     <div className="logo">
-                    <img src="https://ik.imagekit.io/egjzyz51e/laqshya_1__2_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678109555157" alt="" />
+                    <img src="https://ik.imagekit.io/egjzyz51e/IMG_20230307_200718.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678199895069" alt="" />
                     </div>
                     <div className="left-details">
                         <h1>
@@ -17,9 +17,9 @@ const RegisterPage = () => {
                             To Laqshya 2K23.
 
                         </h1>
-                        <p>
-                            ducjhdvmsascsoichvivj dncacinhaivnh ivihv NXKJ  BSBQO       HQO AMBO
-                        </p>
+                        <h3>
+                           Central India's Bigest Techno-Management-Sports & Culture Fest
+                        </h3>
 
                     </div>
                 </div>
