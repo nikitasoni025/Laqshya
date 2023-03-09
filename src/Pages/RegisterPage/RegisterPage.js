@@ -28,7 +28,9 @@ const RegisterPage = () => {
 
                     <form action="">
                         <div className="row">
-                            <input type="text" name='fullname' placeholder='Full Name' />
+                            <label htmlFor="">Full Name
+                                <input type="text" name='fullname' placeholder='Full Name' />
+                            </label>
                         </div>
                         <div className="row">
                             <input type="email" name='email' placeholder='Email' />
