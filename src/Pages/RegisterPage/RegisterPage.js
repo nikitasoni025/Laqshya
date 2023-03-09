@@ -1,8 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import "./registerpage.scss";
+import axios from "axios";
+import { API } from '../../Services/Api';
+
+
+
+const initialValue = {
+    "fullname": "",
+    "email": "",
+    "phonenumber": "",
+    "institution": "",
+    "standard": "",
+    "password": ""
+
+}
 
 const RegisterPage = () => {
+    const [formData, setFormData] = useState(initialValue)
+    const [isEyeOpened, setIsEyeOpened] = useState(false)
+
+    const handleInputChange = async (e) => {
+
+        const { name, value } = e.target;
+        setFormData((preval) => {
+            return {
+                ...preval,
+                [name]: value
+            }
+        })
+
+        console.log(formData);
+
+
+    }
+
+    const handleSubmit = async (e) => {
+
+        e.preventDefault();
+        let response = await API.registerParticipants(formData);
+        if (response.isSuccess) {
+
+            setFormData(initialValue)
+            alert("You have registered successfully");
+
+        }
+        else{
+            alert("Your Data is not submitted");
+        }
+
+
+
+
+    }
+
     return (
         <div className='register-page'>
             <div className="register-wrap">
@@ -28,28 +80,34 @@ const RegisterPage = () => {
 
                     <form action="">
                         <div className="row">
-                            <input type="text" name='fullname' placeholder='Full Name' />
+                            <input onChange={handleInputChange} type="text" name='fullname' placeholder='Full Name' />
                         </div>
                         <div className="row">
-                            <input type="email" name='email' placeholder='Email' />
+                            <input onChange={handleInputChange} type="email" name='email' placeholder='Email' />
                         </div>
                         <div className="row">
-                            <input type="tel" name='phone-number' placeholder='Phone Number' />
+                            <input onChange={handleInputChange} type="tel" name='phonenumber' placeholder='Phone Number' />
                         </div>
                         <div className="row">
-                            <input type="text" name='institution' placeholder='Institution' />
+                            <input onChange={handleInputChange} type="text" name='institution' placeholder='Institution' />
                         </div>
                         <div className="row">
-                            <input type="text" name='standard' placeholder='Standard' />
+                            <input onChange={handleInputChange} type="text" name='standard' placeholder='Standard' />
                         </div>
                         <div className="row">
                             <div className="password-wrap">
-                                <input type="password" name='password' placeholder='Password' />
-                                <button></button>
+                                <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' placeholder='Password' />
+                                <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>
                             </div>
                         </div>
                         <div className="row">
-                            <button className='register-btn'>Register</button>
+                            <div className="password-wrap">
+                                <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' placeholder='Confirm Password' />
+                                <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <button onClick={handleSubmit} className='register-btn'>Register</button>
                         </div>
                     </form>
                     <p>Already Have An Account ? <Link to={'/signin'}>Sign In</Link></p>

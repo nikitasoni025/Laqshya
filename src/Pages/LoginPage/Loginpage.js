@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './loginpage.scss';
 
 const Loginpage = () => {
-  return (
-    <div className='Loginpage'>
-        <div className="loginpage-wrap">
-        <div className="left-wrap">
+    const [isEyeOpened, setIsEyeOpened] = useState(false)
+
+    return (
+        <div className='Loginpage'>
+            <div className="loginpage-wrap">
+                <div className="left-wrap">
                     <div className="logo">
-                    <img src="https://ik.imagekit.io/egjzyz51e/IMG_20230307_200718.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678199895069" alt="" />
+                        <img src="https://ik.imagekit.io/egjzyz51e/IMG_20230307_200718.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678199895069" alt="" />
                     </div>
                     <div className="left-details">
                         <h1>
@@ -19,7 +22,7 @@ const Loginpage = () => {
 
                         </h1>
                         <h3>
-                           Central India's Bigest Techno-Management-Sports & Culture Fest
+                            Central India's Bigest Techno-Management-Sports & Culture Fest
                         </h3>
 
                     </div>
@@ -32,17 +35,20 @@ const Loginpage = () => {
                             <input type="email" name='email' placeholder='Email' />
                         </div>
                         <div className="row">
-                            <input type="password" name='password' placeholder='Password' />
+                            <div className="password-wrap">
+                                <input type={isEyeOpened ? "text" : "password"} name='password' placeholder='Confirm Password' />
+                                <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>
+                            </div>
                         </div>
                         <div className="row">
                             <button className='register-btn'>Choose Events</button>
                         </div>
                     </form>
-                    <p>Already Have An Account ? <Link>Sign In</Link></p>
+                    <p>Don't Have An Account ? <Link to={"/register"}>Sign Up</Link></p>
                 </div>
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Loginpage;
