@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./registerpage.scss";
 
 const RegisterPage = () => {
@@ -7,7 +8,7 @@ const RegisterPage = () => {
             <div className="register-wrap">
                 <div className="left-wrap">
                     <div className="logo">
-                    <img src="https://ik.imagekit.io/egjzyz51e/IMG_20230307_200718.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678199895069" alt="" />
+                        <img src="https://ik.imagekit.io/egjzyz51e/IMG_20230307_200718.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678199895069" alt="" />
                     </div>
                     <div className="left-details">
                         <h1>
@@ -18,7 +19,7 @@ const RegisterPage = () => {
 
                         </h1>
                         <h3>
-                           Central India's Bigest Techno-Management-Sports & Culture Fest
+                            Central India's Bigest Techno-Management-Sports & Culture Fest
                         </h3>
 
                     </div>
@@ -43,9 +44,16 @@ const RegisterPage = () => {
                             <input type="text" name='standard' placeholder='Standard' />
                         </div>
                         <div className="row">
-                            <button className='register-btn'>Choose Events</button>
+                            <div className="password-wrap">
+                                <input type="password" name='password' placeholder='Password' />
+                                <button></button>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <button className='register-btn'>Register</button>
                         </div>
                     </form>
+                    <p>Already Have An Account ? <Link to={'/signin'}>Sign In</Link></p>
                 </div>
             </div>
         </div>

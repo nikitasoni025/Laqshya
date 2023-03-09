@@ -9,12 +9,12 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 const Bannercarousel = (props) => {
     return (
         <div className='bannercarousel'>
-            <OwlCarousel className='owl-theme' autoplay={true} autoplayHoverPause loop autoplaySpeed={5000} nav items={1}>
+            <OwlCarousel className='owl-theme' autoplay={true} loop autoplaySpeed={5000} nav items={1}>
                 {props.bannerSlides ? props.bannerSlides.map((slides,index) => {
                     return (
                         <div key={index} className="item banner-slide">
                             <div className='banner-slide-wrap'>
-                                <img src={slides.img} width={"100%"} height={"100%"}/>
+                                <img src={slides.img} width={"100%"} height={"100%"} alt="banner"/>
                                 <div className='banner-overlay'>
                                     <div className='overlay-deatils'>
                                         <h1>{slides.title}</h1>

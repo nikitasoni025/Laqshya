@@ -6,7 +6,7 @@
     overflow: hidden;
     z-index: 2;
 
-    &::before{
+    &::before {
         content: '';
         width: 300px;
         height: 900px;
@@ -17,11 +17,12 @@
         z-index: -1;
         transform: skewX(30deg);
     }
-    &::after{
+
+    &::after {
         content: '';
         width: 300px;
         height: 900px;
-        background:linear-gradient(315deg, rgba(255, 232, 62, 0.671) -44.65%, #1a1a1e34 75.57%);
+        background: linear-gradient(315deg, rgba(255, 232, 62, 0.671) -44.65%, #1a1a1e34 75.57%);
         position: absolute;
         top: 0;
         left: -40px;
@@ -55,14 +56,20 @@
 
                 p {
                     font-size: 15px;
-                    width: 50%;
+                    // width: 50%;
                     color: rgba(197, 197, 197, 0.479);
                     font-family: var(--secondary-font);
-                    
+
                 }
 
                 img {
                     width: 200px;
+                    transition: 0.5s ease;
+
+                    &:hover {
+                        scale: 1.1;
+                        transition: 0.5s ease;
+                    }
                 }
 
                 .social-link {
@@ -78,19 +85,64 @@
                     li {
                         list-style: none;
                         color: rgba(128, 128, 128, 0.603);
-                        &:nth-child(2){
-                            a{
-                                color: #c2235e;
+
+                        &:nth-child(2) {
+                            a {
+                                color: #ff2bae;
+                                background: linear-gradient(to right,#ff2bae, #5431ff);
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                transition: 0.5s ease;
+
+                                &:hover {
+                                    background: -webkit-linear-gradient(#b7b7b7, #252234);
+                                    background-clip: text;
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                    transition: all 0.5s ease;
+
+                                }
                             }
                         }
-                        &:nth-child(3){
-                            a{
+
+                        &:nth-child(3) {
+                            a {
                                 color: #38529a;
+                                background: linear-gradient(to right,#38529a, #dedede);
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                transition: 0.5s ease;
+
+                                &:hover {
+                                    background: -webkit-linear-gradient(#b7b7b7, #252234);
+                                    background-clip: text;
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                    transition: all 0.5s ease;
+
+                                }
                             }
                         }
-                        &:nth-child(4){
-                            a{
+
+                        &:nth-child(4) {
+                            a {
                                 color: #f70000;
+                                background: linear-gradient(to right,#ff3333, #dedede);
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                transition: 0.5s ease;
+
+                                &:hover {
+                                    background: -webkit-linear-gradient(#b7b7b7, #252234);
+                                    background-clip: text;
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                    transition: all 0.5s ease;
+
+                                }
                             }
                         }
 
@@ -102,7 +154,8 @@
                             align-items: center;
                             font-size: 20px;
                             font-family: var(--secondary-font);
-                            i{
+
+                            i {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
@@ -118,10 +171,10 @@
                 }
 
                 .register-link {
-                    h4{
+                    h4 {
                         color: rgba(132, 132, 132, 0.63);
                     }
-                    
+
                     a {
                         width: 100%;
                         font-size: 20px;
@@ -131,7 +184,8 @@
                         text-decoration: none;
                         border-radius: 5px;
                         animation: sclup 0.5s infinite alternate-reverse ease-in-out;
-                        &:hover{
+
+                        &:hover {
                             border: 2px solid var(--secondary-color);
                             color: var(--secondary-color);
                         }
@@ -147,60 +201,75 @@
 }
 
 @keyframes sclup {
-    from{
+    from {
         scale: 1;
     }
-    to{
+
+    to {
         scale: 1.02;
     }
-    
+
 }
 
 @media screen and (max-width:991px) {
-    .main-footer{
+    .main-footer {
         height: auto;
-        .footer-wrap{
+
+        .footer-wrap {
             padding: 50px 0;
-            .coloumn-wrap{
+
+            .coloumn-wrap {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 gap: 50px;
-                .col{
+
+                .col {
                     width: 100%;
                     justify-content: center;
-                    .social-link{
+                    .wdth-wrap{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .social-link {
                         flex-direction: row;
-                        li{
-                            &:nth-child(1){
-                                a{
+
+                        li {
+                            &:nth-child(1) {
+                                a {
                                     color: #c2235e;
                                 }
                             }
-                            &:nth-child(2){
-                                a{
+
+                            &:nth-child(2) {
+                                a {
                                     color: #495f9e;
                                 }
                             }
-                            &:nth-child(3){
-                                a{
+
+                            &:nth-child(3) {
+                                a {
                                     color: #ff6969;
                                 }
                             }
 
-                            a{
+                            a {
                                 font-size: 35px;
                             }
                         }
                     }
-                    .register-link{
+
+                    .register-link {
                         width: 100%;
                         display: flex;
                         justify-content: center;
                         flex-direction: column;
                         align-items: center;
                         gap: 15px;
-                        a{
+
+                        a {
                             width: 60%;
                             text-align: center;
                         }
