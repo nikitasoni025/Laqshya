@@ -13,7 +13,7 @@
 
         .event-banner {
             width: 100%;
-            height: 84vh;
+            height: 94vh;
             overflow: hidden;
         }
 
@@ -77,18 +77,17 @@
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
-                gap: 200px;
+                gap: 100px;
                 // border: 2px solid white;
 
-                .event-row{
+                .event-row {
                     width: 100%;
                     // border: 2px solid white;
 
                     h1 {
                         color: var(--secondary-color);
-                        font-family: "samarkan";
+                        font-family: var(--secondary-font);
                         font-size: 5vw;
-                        letter-spacing: 3px;
                         margin-top: 20px;
                     }
 
@@ -107,6 +106,7 @@
                             text-align: left;
                             font-size: 20px;
                             font-family: var(--secondary-font);
+                            text-align: justify;
                         }
                     }
 
@@ -126,10 +126,24 @@
 
 
 @media screen and (max-width:991px) {
-    .Eventpage{
-        .eventpage-wrap{
-            .event-banner{
+    .Eventpage {
+        .eventpage-wrap {
+            .event-banner {
                 height: 100vh;
+            }
+
+            .event-detail {
+                .event-wrapdetail {
+                    .event-row {
+                        h1 {
+                            font-size: 60px;
+                        }
+                        h2{
+                            font-size: 30px;
+                        }
+                    }
+                }
+
             }
         }
     }

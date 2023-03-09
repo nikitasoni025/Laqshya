@@ -10,13 +10,15 @@ const Footer = (props) => {
       <div className="footer-wrap">
         <div className="coloumn-wrap">
           <div className="col">
-            <img src="https://ik.imagekit.io/egjzyz51e/laqshya_1__2_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678109555157" alt="" />
-            <p>Copyright © CSIT 2023<br/>Techno Management Sports & Cultural Fest</p>
+            <div className="wdth-wrap">
+              <img src="https://ik.imagekit.io/egjzyz51e/IMG_20230307_200718.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678199895069" alt="" />
+              <p>Copyright © CSIT 2023<br />Techno Management Sports & Cultural Fest</p>
+            </div>
           </div>
           <div className="col">
             <ul className="social-link">
-              {props.windowSize[0] <= 990 ? null : <li>Social</li> }
-              <li><Link>{props.windowSize[0] <= 990 ? <FaInstagram /> : <>Instagram &nbsp; <FaInstagram /></>}</Link></li>
+              {props.windowSize[0] <= 990 ? null : <li>Social</li>}
+              <li><Link>{props.windowSize[0] <= 990 ? <FaInstagram color='#ff2bae' /> : <>Instagram &nbsp; <FaInstagram /></>}</Link></li>
               <li><Link>{props.windowSize[0] <= 990 ? <FaFacebook /> : <>Facebook &nbsp;  <FaFacebook /></>}</Link></li>
               <li><Link>{props.windowSize[0] <= 990 ? <FaYoutube /> : <>Youtube &nbsp; <FaYoutube /></>}</Link></li>
             </ul>

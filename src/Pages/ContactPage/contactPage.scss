@@ -1,0 +1,66 @@
+.contact-page {
+    width: 100%;
+    font-family: var(--secondary-font);
+
+    .contact-wrap {
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        // position: absolute;
+        .greet {
+            width: 100%;
+            height: 50px;
+            // border: 1px solid white;
+            margin-top: 10%;
+
+            h1 {
+                color: var(--secondary-color);
+                text-align: center;
+                font-size: 50px;
+            }
+        }
+
+        .contact-detail {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 50px;
+            background: linear-gradient( #1a1a1e34 75.57%);
+
+
+            .address {
+                width: 50%;
+                height: 300px;
+                border: 1px solid white;
+                text-align:center;
+                // padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+
+
+                h3 {
+                    color: white;
+                }
+            }
+
+            .social-media {
+                width: 50%;
+                height: 300px;
+                border: 1px solid white;
+                // display: flex;
+            }
+        }
+
+
+
+
+    }
+
+}
