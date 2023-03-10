@@ -80,7 +80,10 @@ const RegisterPage = () => {
 
                     <form action="">
                         <div className="row">
-                            <input onChange={handleInputChange} type="text" name='fullname' placeholder='Full Name' />
+                            <div className="custom-input">
+                                <input type="text" name='fullname' />
+                                <div className="lbl">Full Name</div>
+                            </div>
                         </div>
                         <div className="row">
                             <input onChange={handleInputChange} type="email" name='email' placeholder='Email' />
