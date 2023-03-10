@@ -64,6 +64,47 @@ code {
 
 }
 
+// ADMIN UTILITY
+.adm-main-btn{
+  
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    background: #064f32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    &:hover{
+      background: transparent;
+      border:1px solid #064f32;
+      color: #064f32;
+      transition: 0.5s ease;
+      
+    }
+
+}
+.adm-input-wrap{
+  margin-top: 10px;
+
+  input,select{
+    height: 30px;
+    width: 200px;
+    border: 1px solid #064f32;
+    outline: none;
+    box-shadow: 0 0 2px gray;
+    padding-left: 10px;
+    color: #064f32;
+    font-weight: 500;
+    // border: ;
+
+  }
+
+}
+
 @keyframes floaty {
   from{
     transform: translateY(-5px);
