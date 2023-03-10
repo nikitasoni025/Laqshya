@@ -114,9 +114,10 @@ $light-green: #06603b;
                 overflow: auto;
 
                 table {
-                    width: 150%;
+                    width: 130%;
                     border-collapse: collapse;
-                    border-spacing: 0;
+                    border-spacing: 5px;
+                    
 
                     thead {
                         width: 100%;
@@ -151,7 +152,9 @@ $light-green: #06603b;
 
                             td {
                                 text-align: left;
-                                padding: 10px;
+                                
+                               
+                                
                             }
 
                             .action-btn {
@@ -161,8 +164,9 @@ $light-green: #06603b;
                                 position: sticky;
                                 right: 0;
                                 top: 0;
-                                background: white;
+                                background:rgb(174, 174, 174);
                                 z-index: 1;
+                                // padding: 0 5px;
                                
 
                                 button,

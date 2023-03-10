@@ -46,7 +46,7 @@ const RegisterPage = () => {
             alert("You have registered successfully");
 
         }
-        else{
+        else {
             alert("Your Data is not submitted");
         }
 
@@ -81,31 +81,51 @@ const RegisterPage = () => {
                     <form action="">
                         <div className="row">
                             <div className="custom-input">
-                                <input type="text" name='fullname' />
+                                <input onChange={handleInputChange} type="text" name='fullname' />
                                 <div className="lbl">Full Name</div>
+                            </div>
+
+                        </div>
+                        <div className="row">
+                            <div className="custom-input">
+                                <input onChange={handleInputChange} type="email" name='email' />
+                                <div className="lbl">Email</div>
+                            </div>
+
+                        </div>
+                        <div className="row">
+                            <div className="custom-input">
+                                <input onChange={handleInputChange} type="tel" name='phonenumber' />
+                                <div className="lbl">Phone Number</div>
                             </div>
                         </div>
                         <div className="row">
-                            <input onChange={handleInputChange} type="email" name='email' placeholder='Email' />
+                            <div className="custom-input">
+                                <input onChange={handleInputChange} type="text" name='institution' />
+                                <div className="lbl">Institution</div>
+                            </div>
                         </div>
                         <div className="row">
-                            <input onChange={handleInputChange} type="tel" name='phonenumber' placeholder='Phone Number' />
-                        </div>
-                        <div className="row">
-                            <input onChange={handleInputChange} type="text" name='institution' placeholder='Institution' />
-                        </div>
-                        <div className="row">
-                            <input onChange={handleInputChange} type="text" name='standard' placeholder='Standard' />
+                            <div className="custom-input">
+                                <input onChange={handleInputChange} type="text" name='standard' />
+                                <div className="lbl">Standard</div>
+                            </div>
                         </div>
                         <div className="row">
                             <div className="password-wrap">
-                                <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' placeholder='Password' />
+                                <div className="custom-input">
+                                    <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' />
+                                    <div className="lbl">Password</div>
+                                </div>
                                 <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>
                             </div>
                         </div>
                         <div className="row">
                             <div className="password-wrap">
-                                <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' placeholder='Confirm Password' />
+                                <div className="custom-input">
+                                    <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' />
+                                    <div className="lbl">Confirm Password</div>
+                                </div>
                                 <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>
                             </div>
                         </div>
