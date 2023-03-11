@@ -8,59 +8,123 @@
         overflow-x: hidden;
         overflow-y: auto;
 
-        // position: absolute;
-        .greet {
+        .contact-banner {
             width: 100%;
-            height: 50px;
+            height: 60vh;
             // border: 1px solid white;
-            margin-top: 10%;
-
-            h1 {
-                color: var(--secondary-color);
-                text-align: center;
-                font-size: 50px;
-            }
-        }
-
-        .contact-detail {
-            width: 100%;
-            height: 100%;
+            background: url('https://ik.imagekit.io/dexo68yudb/12-LandingPage_Banner_2200X560_contact.jpg?updatedAt=1678534609332');
+            background-size: cover;
+            background-position: center;
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-top: 50px;
-            background: linear-gradient( #1a1a1e34 75.57%);
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
 
+            .greet {
 
-            .address {
-                width: 50%;
-                height: 300px;
-                border: 1px solid white;
-                text-align:center;
-                // padding: 20px;
+                // border: 1px solid white;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
-                
+                margin-left: 50px;
 
+                // margin-top: 10%;
 
-                h3 {
-                    color: white;
+                h1 {
+                    color: var(--secondary-color);
+                    text-align: center;
+                    font-size: 50px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
                 }
             }
 
-            .social-media {
-                width: 50%;
-                height: 300px;
-                border: 1px solid white;
-                // display: flex;
+            .contact-detail {
+                width: 100%;
+               
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-top: 50px;
+                background: linear-gradient(#1a1a1e34 75.57%);
+                position: absolute;
+                bottom: -40%;
+                left: 0;
+                
+                .con-icon{
+                    font-size: 50px;
+                    // position: absolute;
+                    // top: 50%;
+                    // left: -10%;
+                    // translate: 0 -50% 0;
+                    color: rgba(241, 197, 84, 0.496); 
+
+                    
+                    
+                    
+                }
+    
+    
+                .address {
+                    width: 50%;
+                    height: 300px;
+                    // border: 1px solid white;
+                    
+                    // padding: 20px;
+                    display: flex;
+                    // flex-direction: column;
+                    justify-content: center;
+                    align-items:flex-end;
+                    .address-card{
+
+                        padding: 24px;
+                        height: 70%;
+                        width: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content:center;
+                        gap: 20px;
+                        background: #212226;
+                        color: white;
+                        font-weight: 800;
+                        position: relative;
+                    }
+
+    
+    
+                    h3 {
+                        color: white;
+                    }
+                }
+    
+                .social-media {
+                    width: 50%;
+                    height: 300px;
+                    // border: 1px solid white;
+                    
+                    // padding: 20px;
+                    display: flex;
+                    // flex-direction: column;
+                    justify-content: center;
+                    align-items:flex-end;
+                    .social-card{
+                        padding: 24px;
+                        height: 70%;
+                        width: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content:center;
+                        gap: 20px;
+                        background: #212226;
+                        color: white;
+                        font-weight: 800;
+                        position: relative;
+                    }
+                }
             }
+
         }
-
-
-
-
     }
 
 }
