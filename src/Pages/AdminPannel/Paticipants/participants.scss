@@ -161,10 +161,10 @@ $light-green: #06603b;
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
-                                position: sticky;
+                                // position: sticky;
                                 right: 0;
                                 top: 0;
-                                background:rgb(174, 174, 174);
+                                // background:rgb(174, 174, 174);
                                 z-index: 1;
                                 // padding: 0 5px;
                                
@@ -192,6 +192,42 @@ $light-green: #06603b;
                             }
                         }
                     }
+                }
+            }
+        }
+
+        // table config
+        .table-config{
+            width: 100%;
+            .table-config-wrap{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                .pagination-btn{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: 10px;
+                    margin-right:25px ;
+                    button{
+                        width: 25px;
+                        height: 25px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        outline: none;
+                        border: none;
+                        background: #064f32;
+                        color: white;
+                        border-radius: 3px;
+                        
+                    }
+                    h1{
+                        font-size: 25px;
+                    }
+                   
                 }
             }
         }

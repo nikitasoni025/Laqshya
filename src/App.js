@@ -29,11 +29,10 @@ function App() {
       window.removeEventListener('resize', handleWindowResize);
     };
   });
-  console.log(windowSize);
   return (
     <Router basename='/'>
       <div className="App">
-      <audio  autoplay id='ouraudio' controls style={{marginTop:"100px",display:"none"}}  src={music}></audio>
+      <audio id='ouraudio' controls style={{marginTop:"100px",display:"none"}}  src={music}></audio>
         <Routes >
           <Route path='/' element={<Homepage windowSize={windowSize} />} />
           <Route path='/events' element={<Eventpage windowSize={windowSize}/>} />
