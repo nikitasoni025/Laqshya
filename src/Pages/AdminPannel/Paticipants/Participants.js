@@ -116,6 +116,7 @@ const Participants = () => {
                             <div className="adm-input-wrap">
                                 <select value={filteredTerm.events} onChange={handleSearch} name="events" id="events">
                                     <option disabled hidden >Choose Event</option>
+                                    <option value="" >All</option>
                                     <option value="xxc">Xxcelerate</option>
                                     <option value="rsl">Robo Soccer League</option>
                                     <option value="rgk">Robo Go Karting</option>
