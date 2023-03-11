@@ -80,24 +80,15 @@ const RegisterPage = () => {
 
                     <form action="">
                         <div className="row">
-                            <div className="custom-input">
-                                <input onChange={handleInputChange} type="text" name='fullname' />
-                                <div className="lbl">Full Name</div>
-                            </div>
-
+                            <input onChange={handleInputChange} type="text" name='fullname' required placeholder='Full Name' />
                         </div>
                         <div className="row">
-                            <div className="custom-input">
-                                <input onChange={handleInputChange} type="email" name='email' />
-                                <div className="lbl">Email</div>
-                            </div>
-
+                            <input onChange={handleInputChange} type="email" name='email' />
+                            <div className="lbl">Email</div>
                         </div>
                         <div className="row">
-                            <div className="custom-input">
-                                <input onChange={handleInputChange} type="tel" name='phonenumber' />
-                                <div className="lbl">Phone Number</div>
-                            </div>
+                            <input onChange={handleInputChange} type="tel" name='phonenumber' />
+                            <div className="lbl">Phone Number</div>
                         </div>
                         <div className="row">
                             <div className="custom-input">
@@ -106,26 +97,20 @@ const RegisterPage = () => {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="custom-input">
-                                <input onChange={handleInputChange} type="text" name='standard' />
-                                <div className="lbl">Standard</div>
-                            </div>
+                            <input onChange={handleInputChange} type="text" name='standard' />
+                            <div className="lbl">Standard</div>
                         </div>
                         <div className="row">
                             <div className="password-wrap">
-                                <div className="custom-input">
-                                    <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' />
-                                    <div className="lbl">Password</div>
-                                </div>
+                                <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' />
+                                <div className="lbl">Password</div>
                                 <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>
                             </div>
                         </div>
                         <div className="row">
                             <div className="password-wrap">
-                                <div className="custom-input">
-                                    <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' />
-                                    <div className="lbl">Confirm Password</div>
-                                </div>
+                                <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' />
+                                <div className="lbl">Confirm Password</div>
                                 <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>
                             </div>
                         </div>

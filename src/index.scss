@@ -116,7 +116,7 @@ code {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 10px;
+    top: 0;
     color: gray;
     left: 0;
     z-index: 1;
@@ -128,6 +128,8 @@ code {
     height: 100%;
     position: relative;
     z-index: 2;
+
+    &:required,&:invalid { box-shadow:none; }
 
     &:focus {
       ~.lbl {
