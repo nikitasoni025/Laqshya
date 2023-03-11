@@ -1,0 +1,141 @@
+.Eventmodal {
+    width: 100%;
+    height: 100vh;
+    background: rgba(16, 12, 12, 0.677);
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--secondary-font);
+
+    .event-modal-wrap {
+        background: rgb(49, 48, 52);
+        width: 90%;
+        height: 90%;
+        padding: 20px;
+        border-radius: 24px;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        // close btn styling
+
+        .close-mod-btn{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            button{
+                width: 40px;
+                height: 40px;
+                background: transparent;
+                border: none;
+                outline: none;
+                font-size: 30px;
+                color:aliceblue ;
+                transition: 0.5s ease;
+                transform-origin: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+
+                &:hover{
+                    rotate: 90deg;
+                    transition: 0.5s ease;
+                }
+            }
+        }
+
+        // Introduction section styling
+        .introduction{
+            width: 100%;
+
+            h1{
+                color: white;
+                display: inline;
+                padding: 7px 0;
+                border-bottom: 2px solid white;
+
+            }
+            p{
+                color: white;
+                text-align: justify;
+                margin-top: 40px;
+
+            }
+
+
+        }
+
+
+        // Basic information section
+        .basic-info{
+            margin-top: 40px;
+            h1{
+                color: white;
+                display: inline;
+                padding: 7px 0;
+                border-bottom: 2px solid white;
+
+            }
+            .rules{
+                color: white;
+                h2{
+                    color: white;
+                    margin-top: 20px;
+
+                }
+                ul{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    list-style: none;
+                    gap: 10px;
+                    flex-direction: column;
+                    margin-top: 20px;
+                }
+            }
+
+
+        }
+
+        // Round Details
+        .round-details{
+            h2{
+                color: white;
+                margin-top: 20px;
+
+            }
+            p{
+                color: white;
+                text-align: justify;
+                margin-top: 20px;
+
+            }
+
+        }
+
+        // Fee Details
+        .fees-details{
+            h3{
+                color: white;
+                
+
+            } 
+            h2{
+                color: white;
+                margin: 20px 0;
+                
+
+            } 
+
+        }
+
+
+    }
+}

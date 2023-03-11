@@ -1,6 +1,7 @@
 import React from 'react';
 import Bannercarousel from '../../Components/Bannercarousel/Bannercarousel';
 import Eventcarousel from '../../Components/Eventcarousel/Eventcarousel';
+import Eventmodal from '../../Components/Eventmodal/Eventmodal';
 import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
 import './Eventpage.scss';
@@ -168,10 +169,11 @@ const Eventpage = (props) => {
 
   return (
     <div className='Eventpage'>
+         <Eventmodal/>
       <div className="eventpage-wrap">
         {/* Navbar  */}
         <Navbar />
-
+        
 
         <div className="event-banner">
           <Bannercarousel
@@ -280,7 +282,9 @@ const Eventpage = (props) => {
 
         </div>
         <Footer windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined} />
+     
       </div>
+   
     </div>
 
   )

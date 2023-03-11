@@ -85,7 +85,7 @@
                         flex-direction: column;
                         justify-content:center;
                         gap: 20px;
-                        background: #212226;
+                        background:#1e091e;
                         color: white;
                         font-weight: 800;
                         position: relative;
@@ -94,7 +94,7 @@
     
     
                     h3 {
-                        color: white;
+                        color: rgb(204, 202, 198);;
                     }
                 }
     
@@ -116,10 +116,15 @@
                         flex-direction: column;
                         justify-content:center;
                         gap: 20px;
-                        background: #212226;
+                        background:#1e091e;
                         color: white;
                         font-weight: 800;
                         position: relative;
+
+                        a{
+                            text-decoration: none;
+                            color: rgb(204, 202, 198);
+                        }
                     }
                 }
             }
