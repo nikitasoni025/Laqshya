@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import "./registerpage.scss";
-import axios from "axios";
 import { API } from '../../Services/Api';
 
 

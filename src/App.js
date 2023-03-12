@@ -12,8 +12,14 @@ import Gallery from './Pages/Gallery/Gallery';
 import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import Loginpage from './Pages/LoginPage/Loginpage';
 import Dashboard from './Pages/AdminPannel/Dashboard/Dashboard';
+import Dataprovider from './Context/Dataprovider';
 
 function App() {
+
+  const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
+
+
+
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
     window.innerHeight,
@@ -30,24 +36,26 @@ function App() {
     };
   });
   return (
-    <Router basename='/'>
-      <div className="App">
-      <audio id='ouraudio' controls style={{marginTop:"100px",display:"none"}}  src={music}></audio>
-        <Routes >
-          <Route path='/' element={<Homepage windowSize={windowSize} />} />
-          <Route path='/events' element={<Eventpage windowSize={windowSize}/>} />
-          <Route path='/gallery' element={<Gallery windowSize={windowSize}/>} />
-          <Route path='/contact' element={<ConatctPage windowSize={windowSize}/>} />
-          <Route path='/register' element={<RegisterPage windowSize={windowSize}/>} />
-          <Route path='/signin' element={<Loginpage windowSize={windowSize}/>} />
+    <Dataprovider>
+      <Router basename='/'>
+        <div className="App">
+          <audio id='ouraudio' controls style={{ marginTop: "100px", display: "none" }} src={music}></audio>
+          <Routes >
+            <Route path='/' element={<Homepage windowSize={windowSize} />} />
+            <Route path='/events' element={<Eventpage isUserAuthenticated={isUserAuthenticated} windowSize={windowSize} />} />
+            <Route path='/gallery' element={<Gallery windowSize={windowSize} />} />
+            <Route path='/contact' element={<ConatctPage windowSize={windowSize} />} />
+            <Route path='/register' element={<RegisterPage windowSize={windowSize} />} />
+            <Route path='/signin' element={<Loginpage setIsUserAuthenticated={setIsUserAuthenticated} windowSize={windowSize} />} />
 
-          {/* ADMIN ROUTE START HERE */}
-          <Route path='/admin/dashboard/:dashid' element={< Dashboard windowSize={windowSize}/>}/>
-          
+            {/* ADMIN ROUTE START HERE */}
+            <Route path='/admin/dashboard/:dashid' element={< Dashboard windowSize={windowSize} />} />
 
-        </Routes>
-      </div>
-    </Router>
+
+          </Routes>
+        </div>
+      </Router>
+    </Dataprovider>
 
   );
 }
