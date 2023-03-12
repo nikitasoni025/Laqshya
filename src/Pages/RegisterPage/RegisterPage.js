@@ -3,6 +3,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import "./registerpage.scss";
 import { API } from '../../Services/Api';
+import Loader from '../../Components/Loader/Loader';
 
 
 
@@ -19,6 +20,9 @@ const initialValue = {
 const RegisterPage = () => {
     const [formData, setFormData] = useState(initialValue)
     const [isEyeOpened, setIsEyeOpened] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
+
+
 
     const handleInputChange = async (e) => {
 
@@ -38,15 +42,19 @@ const RegisterPage = () => {
     const handleSubmit = async (e) => {
 
         e.preventDefault();
+        setIsLoading(true);
+        
         let response = await API.registerParticipants(formData);
         if (response.isSuccess) {
 
             setFormData(initialValue)
+            setIsLoading(false);
             alert("You have registered successfully");
 
         }
         else {
             alert("Your Data is not submitted");
+            setIsLoading(false);
         }
 
 
@@ -82,39 +90,39 @@ const RegisterPage = () => {
                             <input onChange={handleInputChange} type="text" name='fullname' required placeholder='Full Name' />
                         </div>
                         <div className="row">
-                            <input onChange={handleInputChange} type="email" name='email'placeholder='Email' />
-                           
+                            <input onChange={handleInputChange} type="email" name='email' placeholder='Email' />
+
                         </div>
                         <div className="row">
                             <input onChange={handleInputChange} type="tel" name='phonenumber' placeholder='Phone Number' />
-                            
+
                         </div>
                         <div className="row">
                             <div className="custom-input">
                                 <input onChange={handleInputChange} type="text" name='institution' placeholder='Institution' />
-                               
+
                             </div>
                         </div>
                         <div className="row">
                             <input onChange={handleInputChange} type="text" name='standard' placeholder='Standard' />
-                            
+
                         </div>
                         <div className="row">
                             <div className="password-wrap">
-                                <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' placeholder='Password'/>
-                                
+                                <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' placeholder='Password' />
+
                                 <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>
                             </div>
                         </div>
                         <div className="row">
                             <div className="password-wrap">
-                                <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' placeholder='Confirm Password'/>
-                                
+                                <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' placeholder='Confirm Password' />
+
                                 <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>
                             </div>
                         </div>
                         <div className="row">
-                            <button onClick={handleSubmit} className='register-btn'>Register</button>
+                            <button onClick={handleSubmit} className='register-btn'>{isLoading ? <Loader /> : "Register"}</button>
                         </div>
                     </form>
                     <p>Already Have An Account ? <Link to={'/signin'}>Sign In</Link></p>
