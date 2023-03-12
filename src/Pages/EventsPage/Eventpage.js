@@ -169,7 +169,7 @@ const Eventpage = (props) => {
 
   return (
     <div className='Eventpage'>
-         <Eventmodal/>
+         {/* <Eventmodal/> */}
       <div className="eventpage-wrap">
         {/* Navbar  */}
         <Navbar />
