@@ -1,13 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Bannercarousel from '../../Components/Bannercarousel/Bannercarousel';
 import Eventcarousel from '../../Components/Eventcarousel/Eventcarousel';
 import Eventmodal from '../../Components/Eventmodal/Eventmodal';
 import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
+import { checkTokenExpiration } from '../../Utils/commonutil';
 import './Eventpage.scss';
 
 const Eventpage = (props) => {
+
+  const [isUserAuthenticated, setIsUserAuthenticated] = useState(checkTokenExpiration());
+  const navigate = useNavigate();
+
 
   let Shauryas = [
     {
@@ -171,7 +176,7 @@ const Eventpage = (props) => {
   return (
     <div className='Eventpage'>
       {/* <Eventmodal/> */}
-      {props.isUserAuthenticated ? null : (
+      {isUserAuthenticated ? null : (
         <Link to={'/signin'} className='clktosignin'>Sign to enroll for this event</Link>
       )
       }
@@ -199,7 +204,7 @@ const Eventpage = (props) => {
               </div>
               <div className='row-events'>
                 <Eventcarousel
-                  isUserAuthenticated={props.isUserAuthenticated}
+                  isUserAuthenticated={isUserAuthenticated}
                   events={Shauryas}
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
@@ -215,7 +220,7 @@ const Eventpage = (props) => {
               </div>
               <div className='row-events'>
                 <Eventcarousel
-                  isUserAuthenticated={props.isUserAuthenticated}
+                  isUserAuthenticated={isUserAuthenticated}
                   events={kautilya}
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
@@ -231,7 +236,7 @@ const Eventpage = (props) => {
               </div>
               <div className='row-events'>
                 <Eventcarousel
-                  isUserAuthenticated={props.isUserAuthenticated}
+                  isUserAuthenticated={isUserAuthenticated}
                   events={bouddhiki}
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
@@ -246,7 +251,7 @@ const Eventpage = (props) => {
                 <p>Parakram is a dynamic technical event that showcases a range of cutting-edge competitions. The event features four exciting competitions, including Bottle Jet, CAD Master, D Bugger, and Pharma. Each competition challenges participants to demonstrate their technical expertise and problem-solving skills in different areas such as aerodynamics, computer-aided design, debugging, and pharmaceuticals. With a high-energy atmosphere and talented participants, Parakram is a must-attend event for anyone interested in the latest technological advancements.</p>
                 <div className='row-events'>
                   <Eventcarousel
-                    isUserAuthenticated={props.isUserAuthenticated}
+                    isUserAuthenticated={isUserAuthenticated}
                     events={parakram}
                     windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                   />
@@ -262,7 +267,7 @@ const Eventpage = (props) => {
                 <p>Nataraja" is a cultural event that celebrates the art of dance and the spirit of spontaneity through the popular game "Just a Minute". This event brings together dancers from different genres and backgrounds to showcase their skills and creativity in front of an enthusiastic audience. The participants are challenged to perform impromptu dances to various themes and music styles, while also being tested on their ability to articulate their thoughts in a minute or less. Nataraja promises to be a vibrant and entertaining evening that celebrates the beauty and diversity of dance and the power of words.</p>
                 <div className='row-events'>
                   <Eventcarousel
-                    isUserAuthenticated={props.isUserAuthenticated}
+                    isUserAuthenticated={isUserAuthenticated}
                     events={natraja}
                     windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                   />
@@ -278,7 +283,7 @@ const Eventpage = (props) => {
                 <p>Kautilya is an academic event that offers a diverse range of activities to engage and challenge participants. The event includes workshops and quiz masters to provide an immersive learning experience. Additionally, there is a hematology camp to promote awareness and education about blood disorders. For those seeking a more adventurous experience, a treasure hunt is also part of the event. Overall, Kautilya promises to be an exciting and educational event for all participants.</p>
                 <div className='row-events'>
                   <Eventcarousel
-                    isUserAuthenticated={props.isUserAuthenticated}
+                    isUserAuthenticated={isUserAuthenticated}
                     events={Kautilya}
                     windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                   />
