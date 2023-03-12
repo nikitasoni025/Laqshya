@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Bannercarousel from '../../Components/Bannercarousel/Bannercarousel';
 import Eventcarousel from '../../Components/Eventcarousel/Eventcarousel';
+import Eventmodal from '../../Components/Eventmodal/Eventmodal';
 import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
 import './Eventpage.scss';
@@ -95,79 +97,84 @@ const Eventpage = (props) => {
     },
   ]
 
-    let natraja = [
-      {
-        title: "Make Your Move",
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-      },
-      {
-        title: "Just a Minute",
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-      },
-   
-  
-  
-    ]
+  let natraja = [
+    {
+      title: "Make Your Move",
+      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+    },
+    {
+      title: "Just a Minute",
+      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+    },
 
-    let Kautilya = [
-      {
-        title: "Quit",
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-      },
-      {
-        title: "Treasure hunt",
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-      },
-      {
-        title: "Pitch Your Idea",
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-      },
-      {
-        title: "Workshops",
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-      },
-   
-  
-  
-    ]
-    let bannerslide=[
-      {
-        title:"Shaurya",
-        img:"https://ik.imagekit.io/dexo68yudb/shaurya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678014819803",
 
-      },
-      {
-        title:"kaushalya",
-        img:"https://ik.imagekit.io/dexo68yudb/img_4_1677915173888.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1678016436549",
 
-      },
-      {
-        title:"Bouddhiki",
-        img:"https://ik.imagekit.io/dexo68yudb/bouddhiki2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678016647248",
+  ]
 
-      },
-      {
-        title:"Parakram",
-        img:"https://ik.imagekit.io/dexo68yudb/debugg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678016863195",
+  let Kautilya = [
+    {
+      title: "Quit",
+      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+    },
+    {
+      title: "Treasure hunt",
+      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+    },
+    {
+      title: "Pitch Your Idea",
+      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+    },
+    {
+      title: "Workshops",
+      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+    },
 
-      },
-      {
-        title:"Natraja",
-        img:"https://ik.imagekit.io/dexo68yudb/DSC_0243.JPG?ik-sdk-version=javascript-1.4.3&updatedAt=1678017286992",
 
-      },
-      {
-        title:"Kautilya",
-        img:"https://ik.imagekit.io/dexo68yudb/kautilya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678017925010",
 
-      },
-     
-    ]
-  
-  
+  ]
+  let bannerslide = [
+    {
+      title: "Shaurya",
+      img: "https://ik.imagekit.io/dexo68yudb/shaurya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678014819803",
+
+    },
+    {
+      title: "kaushalya",
+      img: "https://ik.imagekit.io/dexo68yudb/img_4_1677915173888.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1678016436549",
+
+    },
+    {
+      title: "Bouddhiki",
+      img: "https://ik.imagekit.io/dexo68yudb/bouddhiki2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678016647248",
+
+    },
+    {
+      title: "Parakram",
+      img: "https://ik.imagekit.io/dexo68yudb/debugg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678016863195",
+
+    },
+    {
+      title: "Natraja",
+      img: "https://ik.imagekit.io/dexo68yudb/DSC_0243.JPG?ik-sdk-version=javascript-1.4.3&updatedAt=1678017286992",
+
+    },
+    {
+      title: "Kautilya",
+      img: "https://ik.imagekit.io/dexo68yudb/kautilya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678017925010",
+
+    },
+
+  ]
+
+
 
   return (
     <div className='Eventpage'>
+      {/* <Eventmodal/> */}
+      {props.isUserAuthenticated ? null : (
+        <Link to={'/signin'} className='clktosignin'>Sign to enroll for this event</Link>
+      )
+      }
       <div className="eventpage-wrap">
         {/* Navbar  */}
         <Navbar />
@@ -175,11 +182,11 @@ const Eventpage = (props) => {
 
         <div className="event-banner">
           <Bannercarousel
-          bannerSlides={bannerslide}
+            bannerSlides={bannerslide}
           />
         </div>
 
-      
+
         <div className=' event-detail'>
           <div className="event-wrapdetail">
             {/* event shaurya stars here */}
@@ -192,6 +199,7 @@ const Eventpage = (props) => {
               </div>
               <div className='row-events'>
                 <Eventcarousel
+                  isUserAuthenticated={props.isUserAuthenticated}
                   events={Shauryas}
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
@@ -207,6 +215,7 @@ const Eventpage = (props) => {
               </div>
               <div className='row-events'>
                 <Eventcarousel
+                  isUserAuthenticated={props.isUserAuthenticated}
                   events={kautilya}
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
@@ -222,6 +231,7 @@ const Eventpage = (props) => {
               </div>
               <div className='row-events'>
                 <Eventcarousel
+                  isUserAuthenticated={props.isUserAuthenticated}
                   events={bouddhiki}
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
@@ -236,6 +246,7 @@ const Eventpage = (props) => {
                 <p>Parakram is a dynamic technical event that showcases a range of cutting-edge competitions. The event features four exciting competitions, including Bottle Jet, CAD Master, D Bugger, and Pharma. Each competition challenges participants to demonstrate their technical expertise and problem-solving skills in different areas such as aerodynamics, computer-aided design, debugging, and pharmaceuticals. With a high-energy atmosphere and talented participants, Parakram is a must-attend event for anyone interested in the latest technological advancements.</p>
                 <div className='row-events'>
                   <Eventcarousel
+                    isUserAuthenticated={props.isUserAuthenticated}
                     events={parakram}
                     windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                   />
@@ -251,6 +262,7 @@ const Eventpage = (props) => {
                 <p>Nataraja" is a cultural event that celebrates the art of dance and the spirit of spontaneity through the popular game "Just a Minute". This event brings together dancers from different genres and backgrounds to showcase their skills and creativity in front of an enthusiastic audience. The participants are challenged to perform impromptu dances to various themes and music styles, while also being tested on their ability to articulate their thoughts in a minute or less. Nataraja promises to be a vibrant and entertaining evening that celebrates the beauty and diversity of dance and the power of words.</p>
                 <div className='row-events'>
                   <Eventcarousel
+                    isUserAuthenticated={props.isUserAuthenticated}
                     events={natraja}
                     windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                   />
@@ -266,6 +278,7 @@ const Eventpage = (props) => {
                 <p>Kautilya is an academic event that offers a diverse range of activities to engage and challenge participants. The event includes workshops and quiz masters to provide an immersive learning experience. Additionally, there is a hematology camp to promote awareness and education about blood disorders. For those seeking a more adventurous experience, a treasure hunt is also part of the event. Overall, Kautilya promises to be an exciting and educational event for all participants.</p>
                 <div className='row-events'>
                   <Eventcarousel
+                    isUserAuthenticated={props.isUserAuthenticated}
                     events={Kautilya}
                     windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                   />
@@ -280,11 +293,13 @@ const Eventpage = (props) => {
 
         </div>
         <Footer windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined} />
+
       </div>
-    </div>
+
+    </div >
 
   )
- 
+
 }
 
 export default Eventpage;

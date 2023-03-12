@@ -6,7 +6,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 // https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320
 
 const Eventcarousel = (props) => {
-    const[isLogined, setIsLogined]=useState(false)
+    const[isLogined, setIsLogined]=useState(props.isUserAuthenticated);
 
     return (
         <div className='event-carousel'>
