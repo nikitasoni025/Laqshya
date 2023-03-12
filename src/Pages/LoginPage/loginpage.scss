@@ -50,6 +50,25 @@
                 flex-direction: column;
                 gap: 20px;
 
+                .home-link {
+                    a {
+                        color: white;
+                        padding: 8px 16px;
+                        border-radius: 3px;
+                        // display: flex;
+                        justify-content: center;
+                        text-decoration: none;
+                        align-items: center;
+                        background: var(--secondary-color);
+
+                        &:hover {
+                            border: 1px solid var(--secondary-color);
+                            background: transparent;
+                        }
+                    }
+
+                }
+
             }
         }
 
@@ -69,8 +88,9 @@
                 font-family: var(--secondary-font);
 
             }
-            p{
-                a{
+
+            p {
+                a {
                     color: var(--secondary-color);
                     text-decoration: none;
                 }
@@ -104,7 +124,8 @@
                         outline: none;
                         color: white;
                         font-size: 15px;
-                        &::placeholder{
+
+                        &::placeholder {
                             color: whitesmoke;
                         }
 
@@ -119,7 +140,8 @@
                         border-radius: 5px;
                         border: none;
                         outline: none;
-                        &:hover{
+
+                        &:hover {
                             background: transparent;
                             border: 2px solid var(--secondary-color);
                         }
@@ -141,9 +163,10 @@
                             border: none;
                             background: transparent;
                             outline: none;
-                            color:whitesmoke;
+                            color: whitesmoke;
                             font-size: 15px;
-                            &::placeholder{
+
+                            &::placeholder {
                                 color: white;
                             }
 

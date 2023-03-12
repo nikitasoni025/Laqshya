@@ -24,7 +24,7 @@ const Eventcarousel = (props) => {
                                 </div>
                                 <div className="card-bottom">
                                     <h2 className='card-title'>{event.title}</h2>
-                                    <a href="#">Read More</a>
+                                    <button onClick={()=>props.openModal(event.ourIndex)}>Read More</button>
                                 </div>
                             </div>
                         </div>
