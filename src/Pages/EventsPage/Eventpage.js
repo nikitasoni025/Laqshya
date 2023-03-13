@@ -5,13 +5,13 @@ import Eventcarousel from '../../Components/Eventcarousel/Eventcarousel';
 import Eventmodal from '../../Components/Eventmodal/Eventmodal';
 import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
-import { bannerslide, bouddhiki, kaushalya, Kaushalya, Kautilya, kautilya, natraja, parakram, Shauryas } from '../../Constants/OurConst';
+import { bannerslide, bouddhiki, kaushalya, Kautilya, natraja, parakram, Shauryas } from '../../Constants/OurConst';
 import { checkTokenExpiration } from '../../Utils/commonutil';
 import './Eventpage.scss';
 
 const Eventpage = (props) => {
 
-  const [isUserAuthenticated, setIsUserAuthenticated] = useState(checkTokenExpiration());
+  const [isUserAuthenticatedExpired, setIsUserAuthenticatedExpired] = useState(checkTokenExpiration());
   const [ourIndex, setOurIndex] = useState(0);
   const [isModalOpened, setIsModalOpened] = useState(false);
   const navigate = useNavigate();
@@ -72,12 +72,12 @@ const Eventpage = (props) => {
               <h1><span className='diff-font'>Kaushalya</span></h1>
               <h2>SPORTS</h2>
               <div className='row-details'>
-                <p>Kautilya is a multi-sport event that brings together athletes and enthusiasts from various backgrounds to compete in four exciting disciplines - cricket, arm wrestling, futsal, and Angry Bird. This event promises to be a thrilling display of strength, skill, and strategy, as participants battle it out in each sport to claim the coveted Kautilya trophy. Whether you're a seasoned athlete or a casual fan, Kautilya is sure to provide an unforgettable experience for all who participate.</p>
+                <p>Kaushalya is a multi-sport event that brings together athletes and enthusiasts from various backgrounds to compete in four exciting disciplines - cricket, arm wrestling, futsal, and Angry Bird. This event promises to be a thrilling display of strength, skill, and strategy, as participants battle it out in each sport to claim the coveted Kautilya trophy. Whether you're a seasoned athlete or a casual fan, Kautilya is sure to provide an unforgettable experience for all who participate.</p>
               </div>
               <div className='row-events'>
                 <Eventcarousel
                   isUserAuthenticated={!isUserAuthenticatedExpired}
-                  events={kautilya}
+                  events={kaushalya}
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
               </div>
