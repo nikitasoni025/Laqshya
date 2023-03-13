@@ -5,174 +5,29 @@ import Eventcarousel from '../../Components/Eventcarousel/Eventcarousel';
 import Eventmodal from '../../Components/Eventmodal/Eventmodal';
 import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
+import { bannerslide, bouddhiki, kaushalya, Kaushalya, Kautilya, kautilya, natraja, parakram, Shauryas } from '../../Constants/OurConst';
 import { checkTokenExpiration } from '../../Utils/commonutil';
 import './Eventpage.scss';
 
 const Eventpage = (props) => {
 
-  const [isUserAuthenticatedExpired, setIsUserAuthenticatedExpired] = useState(checkTokenExpiration());
+  const [isUserAuthenticated, setIsUserAuthenticated] = useState(checkTokenExpiration());
+  const [ourIndex, setOurIndex] = useState(0);
+  const [isModalOpened, setIsModalOpened] = useState(false);
   const navigate = useNavigate();
 
 
-  let Shauryas = [
-    {
-      title: "Xxcelerate",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Robo Soccer League",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Robo Go Karting",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Robo Sumo",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Deep Blue",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Robo Fire Fighting",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Drone Race",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-  ]
-  let kautilya = [
-    {
-      title: "cricket",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Arm Wrestling",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Futsal",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Angry Bird",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
 
-  ]
-  let bouddhiki = [
-    {
-      title: "Face Of Laqshya",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Artifex",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "cinematics",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-
-
-  ]
-  let parakram = [
-    {
-      title: "Bottle jet",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "D Bugger",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Tech farmactic",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Cad Master",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Lets Play With Bond",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-  ]
-
-  let natraja = [
-    {
-      title: "Make Your Move",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Just a Minute",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
+  const openModal =async (ourIndex) => {
+    setOurIndex(ourIndex);
+    setIsModalOpened(true);
+  }
 
 
 
-  ]
-
-  let Kautilya = [
-    {
-      title: "Quit",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Treasure hunt",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Pitch Your Idea",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
-    {
-      title: "Workshops",
-      img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-    },
 
 
-
-  ]
-  let bannerslide = [
-    {
-      title: "Shaurya",
-      img: "https://ik.imagekit.io/dexo68yudb/shaurya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678014819803",
-
-    },
-    {
-      title: "kaushalya",
-      img: "https://ik.imagekit.io/dexo68yudb/img_4_1677915173888.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1678016436549",
-
-    },
-    {
-      title: "Bouddhiki",
-      img: "https://ik.imagekit.io/dexo68yudb/bouddhiki2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678016647248",
-
-    },
-    {
-      title: "Parakram",
-      img: "https://ik.imagekit.io/dexo68yudb/debugg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678016863195",
-
-    },
-    {
-      title: "Natraja",
-      img: "https://ik.imagekit.io/dexo68yudb/DSC_0243.JPG?ik-sdk-version=javascript-1.4.3&updatedAt=1678017286992",
-
-    },
-    {
-      title: "Kautilya",
-      img: "https://ik.imagekit.io/dexo68yudb/kautilya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678017925010",
-
-    },
-
-  ]
-
-
-
+  console.log(ourIndex)
   return (
     <div className='Eventpage'>
       {/* <Eventmodal/> */}
@@ -206,6 +61,7 @@ const Eventpage = (props) => {
                 <Eventcarousel
                   isUserAuthenticated={!isUserAuthenticatedExpired}
                   events={Shauryas}
+                  openModal={openModal}
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
               </div>
@@ -238,6 +94,7 @@ const Eventpage = (props) => {
                 <Eventcarousel
                    isUserAuthenticated={!isUserAuthenticatedExpired}
                   events={bouddhiki}
+                  openModal={openModal}
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
               </div>
@@ -253,6 +110,7 @@ const Eventpage = (props) => {
                   <Eventcarousel
                     isUserAuthenticated={!isUserAuthenticatedExpired}
                     events={parakram}
+                    openModal={openModal}
                     windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                   />
                 </div>
@@ -269,6 +127,7 @@ const Eventpage = (props) => {
                   <Eventcarousel
                      isUserAuthenticated={!isUserAuthenticatedExpired}
                     events={natraja}
+                    openModal={openModal}
                     windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                   />
                 </div>
@@ -285,6 +144,7 @@ const Eventpage = (props) => {
                   <Eventcarousel
                      isUserAuthenticated={!isUserAuthenticatedExpired}
                     events={Kautilya}
+                    openModal={openModal}
                     windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                   />
                 </div>

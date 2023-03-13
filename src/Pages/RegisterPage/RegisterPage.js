@@ -43,7 +43,7 @@ const RegisterPage = () => {
 
         e.preventDefault();
         setIsLoading(true);
-        
+
         let response = await API.registerParticipants(formData);
         if (response.isSuccess) {
 
@@ -79,6 +79,9 @@ const RegisterPage = () => {
                         <h3>
                             Central India's Bigest Techno-Management-Sports & Culture Fest
                         </h3>
+                        <div className="home-link">
+                            <Link to={'/'}>Home</Link>
+                        </div>
 
                     </div>
                 </div>

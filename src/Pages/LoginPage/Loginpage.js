@@ -76,6 +76,9 @@ const Loginpage = ({setIsUserAuthenticated}) => {
                         <h3>
                             Central India's Bigest Techno-Management-Sports & Culture Fest
                         </h3>
+                        <div className="home-link">
+                            <Link to={'/'}>Home</Link>
+                        </div>
 
                     </div>
                 </div>
