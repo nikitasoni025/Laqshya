@@ -28,6 +28,7 @@ function App() {
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
     };
+    
 
     window.addEventListener('resize', handleWindowResize);
 

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./registerpage.scss";
 import { API } from '../../Services/Api';
 import Loader from '../../Components/Loader/Loader';
@@ -21,6 +21,21 @@ const RegisterPage = () => {
     const [formData, setFormData] = useState(initialValue)
     const [isEyeOpened, setIsEyeOpened] = useState(false)
     const [isLoading, setIsLoading] = useState(false);
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const handleBackButton = () => {
+            navigate('/');
+        };
+
+        window.addEventListener('popstate', handleBackButton);
+        window.history.pushState(null, '', window.location.href);
+
+        return () => {
+            window.removeEventListener('popstate', handleBackButton);
+        };
+    }, [navigate]);
 
 
 

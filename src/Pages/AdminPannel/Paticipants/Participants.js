@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import "./participants.scss"
-import { MdDeleteForever, MdGroupAdd } from "react-icons/md"
-import { FaEdit, FaLeaf, FaSearch } from 'react-icons/fa'
-import { TbArrowWaveLeftDown, TbArrowWaveRightUp } from 'react-icons/tb'
-import { initialdata } from '../../../Constants/OurConst'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import "./participants.scss";
+import { MdDeleteForever, MdGroupAdd } from "react-icons/md";
+import { FaEdit, FaSearch } from 'react-icons/fa';
+import { TbArrowWaveLeftDown, TbArrowWaveRightUp } from 'react-icons/tb';
+import { initialdata } from '../../../Constants/OurConst';
+import { API } from '../../../Services/Api';
 
 
 
@@ -21,6 +22,25 @@ const Participants = () => {
     const [sortOrder, setSortOrder] = useState("asc");
     let [currentPage, setCurrentPage] = useState(1);
     const [itemPerPage, setItemPerPage] = useState(5);
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+
+    //         const response = await API.getAllParticipants();
+
+    //         if (response.isSuccess) {
+    //             console.log(response.data);
+    //             setTableData(response.data);
+    //         }
+
+    //     }
+    //     fetchData()
+
+    // }, [])
+
+
+
+
 
     const handleSearch = (e) => {
         // console.log(filteredTerm);

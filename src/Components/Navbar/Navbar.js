@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./navbar.scss";
 import { CgUserlane } from "react-icons/cg"
 import { FaAudible, FaBars, FaTimes, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   // MAKING STATE (states are nothing but its variable ; we can sture dunamic data to be stored)
@@ -47,7 +48,7 @@ const Navbar = () => {
 
         </div>
         <div className="right-navbar">
-          <a href="/register"><span>Register <CgUserlane /></span></a>
+          <Link to={'/signin'}><span>Login <CgUserlane /></span></Link>
           <button onClick={() => { setIsSideBarOpened(!isSideBarOpened) }} className='side-bar-btn'>
             <FaBars />
           </button>
@@ -61,11 +62,11 @@ const Navbar = () => {
       <div className={isSideBarOpened ? "side-bar opened" : "side-bar"}>
         <ul className="side-menu">
           <li><button onClick={() => { setIsSideBarOpened(false) }} className='side-bar-btn'><FaTimes /></button></li>
-          <li><a className={isSideBarOpened ? "anim1" : ""} href="/">Home</a></li>
-          <li><a className={isSideBarOpened ? "anim2" : ""} href="/events">Events</a></li>
-          <li><a className={isSideBarOpened ? "anim3" : ""} href="/gallery">Gallery</a></li>
-          <li><a className={isSideBarOpened ? "anim4" : ""} href="#">Contact</a></li>
-          <li><a className={isSideBarOpened ? "anim5" : ""} href="/register">Register</a></li>
+          <li><Link className={isSideBarOpened ? "anim1" : ""} to={"/"}>Home</Link></li>
+          <li><Link className={isSideBarOpened ? "anim2" : ""} to={"/events"}>Events</Link></li>
+          <li><Link className={isSideBarOpened ? "anim3" : ""} to={"/gallery"}>Gallery</Link></li>
+          <li><Link className={isSideBarOpened ? "anim4" : ""} to={"/contact"}>Contact</Link></li>
+          <li><Link className={isSideBarOpened ? "anim5" : ""} to="/signin">Sign In</Link></li>
 
         </ul>
       </div>
