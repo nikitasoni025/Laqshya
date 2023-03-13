@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import "./registerpage.scss";
 import { API } from '../../Services/Api';
 import Loader from '../../Components/Loader/Loader';
+import { Toaster } from '../../Components/Toaster/Toaster';
 
 
 
@@ -21,6 +22,9 @@ const RegisterPage = () => {
     const [formData, setFormData] = useState(initialValue)
     const [isEyeOpened, setIsEyeOpened] = useState(false)
     const [isLoading, setIsLoading] = useState(false);
+    const [showSuccess,setShowSuccess]= useState(false);
+    const [showError,setShowError]= useState(false);
+    const [errorMessage,setErrorMessage]=useState(false);
 
     const navigate = useNavigate();
 
@@ -64,12 +68,20 @@ const RegisterPage = () => {
 
             setFormData(initialValue)
             setIsLoading(false);
-            alert("You have registered successfully");
+            setShowSuccess(true);
+            setTimeout(()=>setShowSuccess(false),4000);
+                       
+            // alert("You have registered successfully");
+
 
         }
         else {
-            alert("Your Data is not submitted");
+            // alert("Your Data is not submitted");
             setIsLoading(false);
+            setShowError(true);
+            setErrorMessage(response.msg.message);
+            setTimeout(()=>showError(false));
+
         }
 
 
@@ -142,6 +154,12 @@ const RegisterPage = () => {
                         <div className="row">
                             <button onClick={handleSubmit} className='register-btn'>{isLoading ? <Loader /> : "Register"}</button>
                         </div>
+
+                        {/* toaster */}
+
+                        {showSuccess && <Toaster message={"Registered Successfully"} type={"success"}/>}
+                        {showError && <Toaster message={errorMessage} type={"error"}/>}
+
                     </form>
                     <p>Already Have An Account ? <Link to={'/signin'}>Sign In</Link></p>
                 </div>

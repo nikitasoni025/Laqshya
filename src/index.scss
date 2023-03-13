@@ -144,6 +144,34 @@ code {
   }
 }
 
+// Toaster 
+.toaster{
+  position: fixed;
+  top: -4rem;
+  left:-50%;
+  translate: -50% 0 0;
+  padding: 5px 15px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: top 0.5s ease-in-out;
+  &.visible{
+    top: 2rem;
+
+  }
+  &.success{
+    background: rgba(17, 18, 28, 0.674);
+    color: rgb(137,255,137);
+    
+  }
+  &.error{
+    background: rgba(17, 18, 28, 0.674);
+    color: rgb(255,148,148);
+
+  }
+}
+
 @keyframes floaty {
   from {
     transform: translateY(-5px);
