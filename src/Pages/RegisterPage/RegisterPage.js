@@ -22,9 +22,10 @@ const RegisterPage = () => {
     const [formData, setFormData] = useState(initialValue)
     const [isEyeOpened, setIsEyeOpened] = useState(false)
     const [isLoading, setIsLoading] = useState(false);
-    const [showSuccess,setShowSuccess]= useState(false);
-    const [showError,setShowError]= useState(false);
-    const [errorMessage,setErrorMessage]=useState(false);
+    const [showSuccess, setShowSuccess] = useState(false);
+    const [showError, setShowError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState(false);
+    
 
     const navigate = useNavigate();
 
@@ -64,13 +65,14 @@ const RegisterPage = () => {
         setIsLoading(true);
 
         let response = await API.registerParticipants(formData);
+        console.log(response);
         if (response.isSuccess) {
 
             setFormData(initialValue)
             setIsLoading(false);
             setShowSuccess(true);
-            setTimeout(()=>setShowSuccess(false),4000);
-                       
+            setTimeout(() => setShowSuccess(false), 4000);
+
             // alert("You have registered successfully");
 
 
@@ -79,8 +81,8 @@ const RegisterPage = () => {
             // alert("Your Data is not submitted");
             setIsLoading(false);
             setShowError(true);
-            setErrorMessage(response.msg.message);
-            setTimeout(()=>showError(false));
+            setErrorMessage(response.errormsg || "Error!");
+            setTimeout(() => setShowError(false),4000);
 
         }
 
@@ -91,6 +93,11 @@ const RegisterPage = () => {
 
     return (
         <div className='register-page'>
+            {/* toaster */}
+
+            {showSuccess && <Toaster message={"Registered Successfully"} type={"success"} />}
+            {showError && <Toaster message={errorMessage} type={"error"} />}
+
             <div className="register-wrap">
                 <div className="left-wrap">
                     <div className="logo">
@@ -155,10 +162,6 @@ const RegisterPage = () => {
                             <button onClick={handleSubmit} className='register-btn'>{isLoading ? <Loader /> : "Register"}</button>
                         </div>
 
-                        {/* toaster */}
-
-                        {showSuccess && <Toaster message={"Registered Successfully"} type={"success"}/>}
-                        {showError && <Toaster message={errorMessage} type={"error"}/>}
 
                     </form>
                     <p>Already Have An Account ? <Link to={'/signin'}>Sign In</Link></p>

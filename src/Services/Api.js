@@ -52,7 +52,8 @@ const processError = (err) => {
         return {
             isError: true,
             msg: API_NOTIFICATION_MESSAGES.responseFailure,
-            code: err.response.status
+            code: err.response.status,
+            errormsg: err.response.data.msg
         }
 
     } else if (err.request) {
@@ -68,7 +69,8 @@ const processError = (err) => {
         return {
             isError: true,
             msg: API_NOTIFICATION_MESSAGES.networkError,
-            code: ""
+            code: "",
+            
         }
 
     }

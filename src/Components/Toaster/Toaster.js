@@ -7,8 +7,6 @@ export const Toaster = ({ message, type, duration = 4000 }) => {
   useEffect(() => {
     setIsVisible(true);
     const timer = setTimeout(() => setIsVisible(false), duration);
-
-
     return () => clearTimeout(timer);
 
 
