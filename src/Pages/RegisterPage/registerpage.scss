@@ -8,6 +8,56 @@
     overflow: hidden;
     font-family: var(--secondary-font);
     position: relative;
+    background-size: cover;
+    background-position: center;
+
+    .animated-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            &:nth-child(1) {
+                position: absolute;
+                width: 200px;
+                bottom:-100%;
+                left: 0%;
+                animation: bubble 9s ease-in-out infinite;
+                animation-delay: 0s;
+            }
+
+            &:nth-child(2) {
+                
+                position: absolute;
+                // width: 200px;
+                bottom:-100%;
+                left: 17%;
+                animation: bubble 9s ease-in-out infinite;
+                animation-delay: 2s;
+            }
+            &:nth-child(3) {
+                width: 80px;
+                position: absolute;
+                // width: 200px;
+                bottom:-100%;
+                left:62%;
+                animation: bubble 9s ease-in-out infinite;
+                animation-delay: 4s;
+            }
+            &:nth-child(4) {
+                // width: 80px;
+                position: absolute;
+                // width: 200px;
+                bottom:-100%;
+                left: 60%;
+                animation: bubble 9s ease-in-out infinite;
+                animation-delay: 6s;
+            }
+        }
+    }
+
 
 
 
@@ -23,7 +73,8 @@
         -webkit-backdrop-filter: blur(3px);
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.18);
-        background: url("https://ik.imagekit.io/egjzyz51e/shivaji.jpg?updatedAt=1678529045714");
+        // background: url("https://ik.imagekit.io/egjzyz51e/shivaji.jpg?updatedAt=1678529045714");
+        // background: url("https://ik.imagekit.io/dexo68yudb/Untitled.gif?updatedAt=1678730288784");
         background-position: bottom;
         background-size: cover;
 
@@ -63,7 +114,7 @@
                         align-items: center;
                         background: var(--secondary-color);
 
-                        &:hover{
+                        &:hover {
                             border: 1px solid var(--secondary-color);
                             background: transparent;
                         }
@@ -211,6 +262,22 @@
             }
         }
 
+    }
+}
+
+@keyframes bubble {
+    0% {
+        bottom: -100%;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        bottom: 100%;
+        opacity: 0;
     }
 }
 

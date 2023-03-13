@@ -98,6 +98,13 @@ const RegisterPage = () => {
             {showSuccess && <Toaster message={"Registered Successfully"} type={"success"} />}
             {showError && <Toaster message={errorMessage} type={"error"} />}
 
+            <div className="animated-background">
+                <img src={'https://ik.imagekit.io/dexo68yudb/Sphere0000.png?updatedAt=1678733368137'} alt="sphere" />
+                <img src={'https://ik.imagekit.io/dexo68yudb/Sphere0000.png?updatedAt=1678733368137'} alt="sphere" />
+                <img src={'https://ik.imagekit.io/dexo68yudb/Sphere0000.png?updatedAt=1678733368137'} alt="sphere" />
+                <img src={'https://ik.imagekit.io/dexo68yudb/Sphere0000.png?updatedAt=1678733368137'} alt="sphere" />
+            </div>
+
             <div className="register-wrap">
                 <div className="left-wrap">
                     <div className="logo">
