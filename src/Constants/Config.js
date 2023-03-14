@@ -33,5 +33,6 @@ export const SERVICE_URLS = {
     userSignin: { url: "/signin", method: "POST" },
     getAllParticipants: { url: '/participants', method: "GET" },
     getSearchedParticipants: { url: "/api/participants", method: "GET" }
+    
 
 }

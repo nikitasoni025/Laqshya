@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./autocomplete.scss";
 import { FaUserCheck } from "react-icons/fa";
+import { API } from '../../Services/Api';
 
 const AutoComplete = (props) => {
     const [value, setValue] = useState("");
@@ -18,7 +19,7 @@ const AutoComplete = (props) => {
         const inputValue = event.target.value;
         setValue(inputValue);
         if (inputValue.length > 0) {
-            const Response = await getSearchedParticipants(inputValue);
+            const Response = await API.getSearchedParticipants(inputValue);
             setSuggestion(Response.data);
         }
         else{
@@ -38,7 +39,7 @@ const AutoComplete = (props) => {
                         )
                     })}
                 </ul>
-                {/* <button>Add</button> */}
+                
             </div>
         </div>
     )

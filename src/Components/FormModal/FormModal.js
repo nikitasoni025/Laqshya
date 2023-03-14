@@ -1,11 +1,29 @@
 import React, { useState } from 'react';
 import "./formmodal.scss";
 import { GrGroup } from "react-icons/gr"
-import { FaLayerGroup, FaSeedling, FaUserCheck } from 'react-icons/fa';
+import { FaLayerGroup, FaSeedling, FaTrash, FaUserCheck } from 'react-icons/fa';
+import AutoComplete from '../AutoComplete/AutoComplete';
 
 const FormModal = () => {
     const isGrouped = true;
     const [groupedClicked, setGroupedClicked] = useState(false);
+    const [paticipants, setParticipants] = useState([]);
+
+    const handleSelectPaticipants = (paticipant) => {
+
+        if (!paticipants.includes(paticipant)) {
+            setParticipants([...paticipants, paticipant]);
+        }
+
+    }
+
+    const handleSubmit = (event) => {
+
+        
+
+    }
+
+
     return (
         <div className='formModal'>
             <div className="formModal-wrap">
@@ -31,15 +49,29 @@ const FormModal = () => {
                                 </div>
 
 
-                            </div>
 
+                            </div>
+                            <AutoComplete onSelect={handleSelectPaticipants} />
                             <div className="row">
-                                <div className="input-icon-wrap">
-                                    <FaUserCheck />
-                                    <input type="text" placeholder='Search Participants Name' />
-                                    <button>Add</button>
+                                <div className="list-wrap">
+                                    <ul>
+                                        {paticipants.map((paticipant, index) => {
+                                            return (
+
+                                                <li key={index}>
+                                                    <h1>{paticipant.fullname}</h1>
+                                                    <button><FaTrash /></button>
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
                                 </div>
                             </div>
+                            <div className="row">
+                                <button onClick={handleSubmit()}>Add</button>
+                            </div>
+
+
                         </div>
                     )}
 
