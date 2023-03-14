@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import "./formmodal.scss";
-import { GrGroup } from "react-icons/gr"
-import { FaLayerGroup, FaSeedling, FaTrash, FaUserCheck } from 'react-icons/fa';
 import AutoComplete from '../AutoComplete/AutoComplete';
+import { FaSeedling, FaTrash } from 'react-icons/fa';
 
 const FormModal = () => {
     const isGrouped = true;
@@ -19,7 +18,7 @@ const FormModal = () => {
 
     const handleSubmit = (event) => {
 
-        
+
 
     }
 
