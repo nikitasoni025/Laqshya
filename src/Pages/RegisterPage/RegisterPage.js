@@ -24,7 +24,8 @@ const RegisterPage = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
     const [showError, setShowError] = useState(false);
-    const [errorMessage, setErrorMessage] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+    const [successMessage,setSuccesMessage]=useState('');
     
 
     const navigate = useNavigate();
@@ -81,7 +82,7 @@ const RegisterPage = () => {
             // alert("Your Data is not submitted");
             setIsLoading(false);
             setShowError(true);
-            setErrorMessage(response.errormsg || "Error!");
+            setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
             setTimeout(() => setShowError(false),4000);
 
         }
