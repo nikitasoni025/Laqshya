@@ -25,8 +25,8 @@ const RegisterPage = () => {
     const [showSuccess, setShowSuccess] = useState(false);
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
-    const [successMessage,setSuccesMessage]=useState('');
-    
+    const [successMessage, setSuccesMessage] = useState('');
+
 
     const navigate = useNavigate();
 
@@ -68,22 +68,17 @@ const RegisterPage = () => {
         let response = await API.registerParticipants(formData);
         console.log(response);
         if (response.isSuccess) {
-
-            setFormData(initialValue)
+            setFormData(initialValue);
             setIsLoading(false);
             setShowSuccess(true);
             setTimeout(() => setShowSuccess(false), 4000);
-
-            // alert("You have registered successfully");
-
-
         }
         else {
-            // alert("Your Data is not submitted");
+            setFormData(initialValue);
             setIsLoading(false);
             setShowError(true);
             setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
-            setTimeout(() => setShowError(false),4000);
+            setTimeout(() => setShowError(false), 4000);
 
         }
 

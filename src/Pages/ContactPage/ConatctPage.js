@@ -43,4 +43,4 @@ const ConatctPage = (props) => {
   )
 }
 
-export default ConatctPage
+export default ConatctPage;
