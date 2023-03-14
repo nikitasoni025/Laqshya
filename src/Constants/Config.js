@@ -29,8 +29,10 @@ export const API_NOTIFICATION_MESSAGES = {
 // NEED SERVICE CALL: {url:'/',method:'POST/GET/UPDATE/DELETE',params:true/false,query:true/false}
 export const SERVICE_URLS = {
     adminSignup: { url: '/signup', method: 'POST' },
-    registerParticipants : {url:"/register" , method: "POST"},
-    userSignin:{url:"/signin",method:"POST"},
-    getAllParticipants:{url:'/participants',method:"GET"}
+    registerParticipants: { url: "/register", method: "POST" },
+    userSignin: { url: "/signin", method: "POST" },
+    getAllParticipants: { url: '/participants', method: "GET" },
+    getSearchedParticipants: { url: "/api/participants", method: "GET" }
     
+
 }
