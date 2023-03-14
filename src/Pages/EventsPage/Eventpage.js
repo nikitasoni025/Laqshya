@@ -4,6 +4,7 @@ import Bannercarousel from '../../Components/Bannercarousel/Bannercarousel';
 import Eventcarousel from '../../Components/Eventcarousel/Eventcarousel';
 import Eventmodal from '../../Components/Eventmodal/Eventmodal';
 import Footer from '../../Components/Footer/Footer';
+import FormModal from '../../Components/FormModal/FormModal';
 import Navbar from '../../Components/Navbar/Navbar';
 import { bannerslide, bouddhiki, kaushalya, Kautilya, natraja, parakram, Shauryas } from '../../Constants/OurConst';
 import { checkTokenExpiration } from '../../Utils/commonutil';
@@ -31,6 +32,7 @@ const Eventpage = (props) => {
   return (
     <div className='Eventpage'>
       {/* <Eventmodal/> */}
+      <FormModal/>
       {!isUserAuthenticatedExpired ? null : (
         <Link to={'/signin'} className='clktosignin'>Sign to enroll for this event</Link>
       )
