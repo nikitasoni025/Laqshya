@@ -90,6 +90,10 @@
                             padding: 20px 170px;
                             letter-spacing: 3px;
                             font-size: 5vw;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                           
 
                             &::after {
                                 content: '”';
