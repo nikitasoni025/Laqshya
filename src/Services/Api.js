@@ -48,7 +48,7 @@ const processResponse = (res) => {
 
 const processError = (err) => {
     if (err.response) {
-        console.log("Error in response", err.toJSON());
+        console.log("Error in response", err.response);
         return {
             isError: true,
             msg: API_NOTIFICATION_MESSAGES.responseFailure,
