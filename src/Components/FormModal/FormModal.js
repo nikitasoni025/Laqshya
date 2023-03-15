@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import "./formmodal.scss";
 import AutoComplete from '../AutoComplete/AutoComplete';
-import { FaSeedling, FaTrash } from 'react-icons/fa';
+import { FaBackward, FaChevronCircleLeft, FaChevronLeft, FaSeedling, FaTimes, FaTrash } from 'react-icons/fa';
 
 const FormModal = () => {
     const isGrouped = true;
-    const [groupedClicked, setGroupedClicked] = useState(false);
+    const [groupedClicked, setGroupedClicked] = useState(true);
     const [paticipants, setParticipants] = useState([]);
 
     const handleSelectPaticipants = (paticipant) => {
 
-        if (!paticipants.includes(paticipant)) {
+        const userexist = paticipants.find((user) => user._id === paticipant._id);
+
+
+        if (!userexist) {
             setParticipants([...paticipants, paticipant]);
         }
 
@@ -26,22 +29,24 @@ const FormModal = () => {
     return (
         <div className='formModal'>
             <div className="formModal-wrap">
+                <button className='cls-btn'><FaTimes /></button>
 
                 <div className="form-wrap">
                     {/* first-step */}
                     {groupedClicked ? (
                         <div className="form-step-1">
-                            <h1>Do you want to Perform </h1>
+
+                            <h1> Do you want to Perform </h1>
                             <div className="row">
                                 <button>Individual</button>
                                 <span>OR</span>
-                                <button>Grouped</button>
+                                <button onClick={() => setGroupedClicked(false)}>Grouped</button>
                             </div>
                         </div>
                     ) : (
                         // second step
                         <div className="form-step-2">
-                            <h1>Group Registration</h1>
+                            <h1> Group Registration </h1>
                             <div className="row">
                                 <div className="input-icon-wrap">
                                     <span className='input-icon'><FaSeedling /></span>
@@ -68,7 +73,10 @@ const FormModal = () => {
                                 </div>
                             </div>
                             <div className="row2">
-                                <button onClick={handleSubmit()}>Make Group</button>
+                                <div className="back-cross-btn">
+                                    <button onClick={()=> setGroupedClicked(true)}><FaChevronLeft />Back</button>
+                                    <button onClick={handleSubmit()}>Make Group</button>
+                                </div>
                             </div>
 
 
