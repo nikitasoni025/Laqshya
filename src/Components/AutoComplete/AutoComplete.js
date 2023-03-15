@@ -28,7 +28,7 @@ const AutoComplete = (props) => {
     }
 
     return (
-        <div className="row">
+        <div className="row2">
             <div className="input-icon-wrap">
                 <FaUserCheck />
                 <input type="text" value={value} onChange={handleInputChange} placeholder='Search Participants Name' />
@@ -38,7 +38,17 @@ const AutoComplete = (props) => {
                 <ul>
                     {suggestion.map((value, index) => {
                         return (
-                            <li key={value.id} onClick={() => handleSuggestionClick(value)}>{value.email}</li>
+                            <li key={value.id} onClick={() => handleSuggestionClick(value)}>
+                                <div className="user-name">
+                                    <div className="avatar">
+                                        <span>{value.fullname.split(" ")[0].split("")[0]}</span>
+                                        <h1>{value.fullname}<pre>{value.email}</pre></h1>
+                                    </div>
+
+                                    
+
+                                </div>
+                            </li>
                         )
                     })}
                 </ul>
