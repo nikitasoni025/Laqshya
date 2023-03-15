@@ -31,7 +31,7 @@ export const SERVICE_URLS = {
     adminSignup: { url: '/signup', method: 'POST' },
     registerParticipants: { url: "/register", method: "POST" },
     userSignin: { url: "/signin", method: "POST" },
-    getAllParticipants: { url: '/participants', method: "GET" },
+    getAllParticipants: { url: '/participants', method: "GET",params:true},
     getSearchedParticipants: { url: "/api/participants", method: "GET" }
     
 

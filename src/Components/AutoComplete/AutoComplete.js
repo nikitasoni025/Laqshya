@@ -19,10 +19,10 @@ const AutoComplete = (props) => {
         const inputValue = event.target.value;
         setValue(inputValue);
         if (inputValue.length > 0) {
-            const Response = await API.getSearchedParticipants(inputValue);
+            const Response = await API.getAllParticipants({ email: inputValue });
             setSuggestion(Response.data);
         }
-        else{
+        else {
             setSuggestion([]);
         }
     }
@@ -32,6 +32,9 @@ const AutoComplete = (props) => {
             <div className="input-icon-wrap">
                 <FaUserCheck />
                 <input type="text" value={value} onChange={handleInputChange} placeholder='Search Participants Name' />
+
+            </div>
+            <div className="sugg-list">
                 <ul>
                     {suggestion.map((value, index) => {
                         return (
@@ -39,7 +42,6 @@ const AutoComplete = (props) => {
                         )
                     })}
                 </ul>
-                
             </div>
         </div>
     )
