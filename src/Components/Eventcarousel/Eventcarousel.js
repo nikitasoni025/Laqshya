@@ -18,7 +18,7 @@ const Eventcarousel = (props) => {
                                 <div className="card-top">
                                     <img src={event.img} alt="card" />
                                     <div className="overlay">
-                                        {isLogined? <button onClick={()=>} >Register</button> : null}
+                                        {isLogined? <button >Register</button> : null}
                                        
                                     </div>
                                 </div>
