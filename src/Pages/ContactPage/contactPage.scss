@@ -136,6 +136,39 @@
 }
 
 @media screen and (max-width:991px ) {
+    .contact-page{
+        .contact-wrap{
+            .contact-banner{
+                height: auto;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                .greet{
+                    margin-left: 0;
+                    margin-top: 40%;
+                    h1{
+                        font-size: 20px;
+                    }
+                }
+                .contact-detail{
+                    position: relative;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 20px;
+                    padding: 20px 0;
+                    .address{
+                        width: 100%;
+                        height: auto;
+                    }
+                    .social-media{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
     
     
 }

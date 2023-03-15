@@ -19,27 +19,39 @@ const AutoComplete = (props) => {
         const inputValue = event.target.value;
         setValue(inputValue);
         if (inputValue.length > 0) {
-            const Response = await API.getSearchedParticipants(inputValue);
+            const Response = await API.getAllParticipants({ email: inputValue });
             setSuggestion(Response.data);
         }
-        else{
+        else {
             setSuggestion([]);
         }
     }
 
     return (
-        <div className="row">
+        <div className="row2">
             <div className="input-icon-wrap">
                 <FaUserCheck />
                 <input type="text" value={value} onChange={handleInputChange} placeholder='Search Participants Name' />
+
+            </div>
+            <div className="sugg-list">
                 <ul>
                     {suggestion.map((value, index) => {
                         return (
-                            <li key={value.id} onClick={() => handleSuggestionClick(value)}>{value.email}</li>
+                            <li key={value.id} onClick={() => handleSuggestionClick(value)}>
+                                <div className="user-name">
+                                    <div className="avatar">
+                                        <span>{value.fullname.split(" ")[0].split("")[0]}{value.fullname.split(" ")[1] ? value.fullname.split(" ")[1].split("")[0] :""}</span>
+                                        <h1>{value.fullname}<pre>{value.email}</pre></h1>
+                                    </div>
+
+                                    
+
+                                </div>
+                            </li>
                         )
                     })}
                 </ul>
-                
             </div>
         </div>
     )

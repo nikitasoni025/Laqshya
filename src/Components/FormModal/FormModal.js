@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import "./formmodal.scss";
-import { GrGroup } from "react-icons/gr"
-import { FaLayerGroup, FaSeedling, FaTrash, FaUserCheck } from 'react-icons/fa';
 import AutoComplete from '../AutoComplete/AutoComplete';
+import { FaSeedling, FaTrash } from 'react-icons/fa';
 
 const FormModal = () => {
     const isGrouped = true;
@@ -19,7 +18,7 @@ const FormModal = () => {
 
     const handleSubmit = (event) => {
 
-        
+
 
     }
 
@@ -42,6 +41,7 @@ const FormModal = () => {
                     ) : (
                         // second step
                         <div className="form-step-2">
+                            <h1>Group Registration</h1>
                             <div className="row">
                                 <div className="input-icon-wrap">
                                     <span className='input-icon'><FaSeedling /></span>
@@ -52,7 +52,7 @@ const FormModal = () => {
 
                             </div>
                             <AutoComplete onSelect={handleSelectPaticipants} />
-                            <div className="row">
+                            <div className="row2">
                                 <div className="list-wrap">
                                     <ul>
                                         {paticipants.map((paticipant, index) => {
@@ -67,8 +67,8 @@ const FormModal = () => {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="row">
-                                <button onClick={handleSubmit()}>Add</button>
+                            <div className="row2">
+                                <button onClick={handleSubmit()}>Make Group</button>
                             </div>
 
 
