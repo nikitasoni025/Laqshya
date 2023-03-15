@@ -1,54 +1,56 @@
 import React, { useContext, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
+import { TbArrowNarrowRight } from 'react-icons/tb';
+import { RiLockPasswordLine, RiMailSendLine } from 'react-icons/ri';
 import { DataContext } from '../../Context/Dataprovider';
 import { API } from '../../Services/Api';
 import './loginpage.scss';
 
 
-const initialLoginValues={
-    email:'',
-    password:''
+const initialLoginValues = {
+    email: '',
+    password: ''
 }
 
 
-const Loginpage = ({setIsUserAuthenticated}) => {
+const Loginpage = ({ setIsUserAuthenticated }) => {
     const [isEyeOpened, setIsEyeOpened] = useState(false);
-    const [formData,setFormData]=useState(initialLoginValues);
-    const [isLoading,setIsLoading]=useState(false)
+    const [formData, setFormData] = useState(initialLoginValues);
+    const [isLoading, setIsLoading] = useState(false)
 
-    const {setAccount} =useContext(DataContext);
+    const { setAccount } = useContext(DataContext);
 
-    const navigate=useNavigate();
+    const navigate = useNavigate();
 
 
-    const handleInputChange=(ev)=>{
-        const {name,value}=ev.target;
+    const handleInputChange = (ev) => {
+        const { name, value } = ev.target;
 
-        setFormData((preval)=>{
-            return{
+        setFormData((preval) => {
+            return {
                 ...preval,
-                [name]:value
+                [name]: value
             }
         })
     }
 
-    const handleLogin= async (ev)=>{
+    const handleLogin = async (ev) => {
         ev.preventDefault();
 
-        let response= await API.userSignin(formData);
+        let response = await API.userSignin(formData);
 
-        if(response.isSuccess){
+        if (response.isSuccess) {
             setIsLoading(false);
             // setShowSuccess(true);
             // setTimeout(() => setShowSuccess(false), 4000);
             setFormData(initialLoginValues);
-            sessionStorage.setItem('accessToken',`Bearer ${response.data.accessToken}`);
-            sessionStorage.setItem('refreshToken',`Bearer ${response.data.refreshToken}`);
+            sessionStorage.setItem('accessToken', `Bearer ${response.data.accessToken}`);
+            sessionStorage.setItem('refreshToken', `Bearer ${response.data.refreshToken}`);
             setIsUserAuthenticated(true);
-            await setAccount({username:response.data.data.name,email:response.data.data.email});
+            await setAccount({ username: response.data.data.name, email: response.data.data.email });
             navigate('/events');
-        }else{
+        } else {
             setFormData(initialLoginValues);
             setIsLoading(false);
 
@@ -73,17 +75,17 @@ const Loginpage = ({setIsUserAuthenticated}) => {
                     </div>
                     <div className="left-details">
                         <h1>
-                            CSGI Welcomes You
+                            CSGI Welcomes You To Laqshya 2K23
                         </h1>
-                        <h1>
-                            To Laqshya 2K23.
+                        <h3>in Association with</h3>
+                        <img src="https://ik.imagekit.io/egjzyz51e/Tech36garh_Grey_300x.png?updatedAt=1678861467885" alt="" />
+                        <h3 className='divider'>Presents</h3>
 
-                        </h1>
                         <h3>
                             Central India's Bigest Techno-Management-Sports & Culture Fest
                         </h3>
                         <div className="home-link">
-                            <Link to={'/'}>Home</Link>
+                            <Link to={'/'}>Go To Home  <TbArrowNarrowRight className='arw-icon' /></Link>
                         </div>
 
                     </div>
@@ -93,11 +95,16 @@ const Loginpage = ({setIsUserAuthenticated}) => {
 
                     <form action="">
                         <div className="row">
-                            <input onChange={handleInputChange} value={formData.email} type="email" name='email' placeholder='Email' />
+                            <div className="icon-input-wrap">
+                                <RiMailSendLine />
+                                <input onChange={handleInputChange} value={formData.email} type="email" name='email' placeholder='Email' />
+
+                            </div>
                         </div>
                         <div className="row">
                             <div className="password-wrap">
-                                <input onChange={handleInputChange} value={formData.password} type={isEyeOpened ? "text" : "password"} name='password' placeholder='Confirm Password' />
+                                <RiLockPasswordLine />
+                                <input onChange={handleInputChange} value={formData.password} type={isEyeOpened ? "text" : "password"} name='password' placeholder='Password' />
                                 <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>
                             </div>
                         </div>

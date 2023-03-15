@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaEye, FaEyeSlash, FaSchool } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import "./registerpage.scss";
 import { API } from '../../Services/Api';
 import Loader from '../../Components/Loader/Loader';
 import { Toaster } from '../../Components/Toaster/Toaster';
+import { TbArrowNarrowRight } from "react-icons/tb";
+import { IoIosSchool } from "react-icons/io";
+import { RiLockPasswordLine, RiMailSendLine, RiPhoneFill, RiUser6Line } from "react-icons/ri";
 
 
 
@@ -108,16 +111,17 @@ const RegisterPage = () => {
                     </div>
                     <div className="left-details">
                         <h1>
-                            CSGI Welcomes You
+                            CSGI Welcomes You To Laqshya 2K23
                         </h1>
-                        <h1>
-                            To Laqshya 2K23.
-                        </h1>
+                        <h3>in Association with</h3>
+                        <img src="https://ik.imagekit.io/egjzyz51e/Tech36garh_Grey_300x.png?updatedAt=1678861467885" alt="" />
+                        <h3 className='divider'>Presents</h3>
+
                         <h3>
                             Central India's Bigest Techno-Management-Sports & Culture Fest
                         </h3>
                         <div className="home-link">
-                            <Link to={'/'}>Home</Link>
+                            <Link to={'/'}>Go To Home  <TbArrowNarrowRight className='arw-icon' /></Link>
                         </div>
 
                     </div>
@@ -127,28 +131,45 @@ const RegisterPage = () => {
 
                     <form action="">
                         <div className="row">
-                            <input onChange={handleInputChange} type="text" name='fullname' required placeholder='Full Name' />
-                        </div>
-                        <div className="row">
-                            <input onChange={handleInputChange} type="email" name='email' placeholder='Email' />
-
-                        </div>
-                        <div className="row">
-                            <input onChange={handleInputChange} type="tel" name='phonenumber' placeholder='Phone Number' />
-
-                        </div>
-                        <div className="row">
-                            <div className="custom-input">
-                                <input onChange={handleInputChange} type="text" name='institution' placeholder='Institution' />
-
+                            <div className="icon-input-wrap">
+                                <RiUser6Line />
+                                <input onChange={handleInputChange} type="text" name='fullname' required placeholder='Full Name' />
                             </div>
                         </div>
                         <div className="row">
-                            <input onChange={handleInputChange} type="text" name='standard' placeholder='Standard' />
+                            <div className="icon-input-wrap">
+                                <RiMailSendLine/>
+                                <input onChange={handleInputChange} type="email" name='email' placeholder='Email' />
+                            </div>
+
+                        </div>
+                        <div className="row">
+                            <div className="icon-input-wrap">
+                                <RiPhoneFill/>
+                                <input onChange={handleInputChange} type="tel" name='phonenumber' placeholder='Phone Number' />
+                            </div>
+
+
+                        </div>
+                        <div className="row">
+                            <div className="icon-input-wrap">
+                                <FaSchool/>
+                                <input onChange={handleInputChange} type="text" name='institution' placeholder='Institution' />
+                            </div>
+
+
+                        </div>
+                        <div className="row">
+                            <div className="icon-input-wrap">
+                                <IoIosSchool/>
+                                <input onChange={handleInputChange} type="text" name='standard' placeholder='Standard' />
+                            </div>
+
 
                         </div>
                         <div className="row">
                             <div className="password-wrap">
+                                <RiLockPasswordLine/>
                                 <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' placeholder='Password' />
 
                                 <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>
@@ -156,6 +177,7 @@ const RegisterPage = () => {
                         </div>
                         <div className="row">
                             <div className="password-wrap">
+                                <RiLockPasswordLine/>
                                 <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' placeholder='Confirm Password' />
 
                                 <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>

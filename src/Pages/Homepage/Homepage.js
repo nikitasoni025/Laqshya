@@ -72,6 +72,8 @@ const Homepage = (props) => {
                   </div>
                 </div>
 
+
+
               </div>
             </div>
 
@@ -102,6 +104,16 @@ const Homepage = (props) => {
                 <div className="wrap-carousel">
                   <PostCarousel windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined} />
                 </div>
+              </div>
+            </div>
+
+            {/* SECTION 4 SPONSOR */}
+
+            <div className="sponsor">
+              <div className="sponsor-wrap">
+
+                
+
               </div>
             </div>
 
