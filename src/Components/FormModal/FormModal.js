@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import "./formmodal.scss";
 import AutoComplete from '../AutoComplete/AutoComplete';
 import { FaBackward, FaChevronCircleLeft, FaChevronLeft, FaSeedling, FaTimes, FaTrash } from 'react-icons/fa';
+import { DataContext } from '../../Context/Dataprovider';
 
-const FormModal = () => {
+const FormModal = (props) => {
     const isGrouped = true;
     const [groupedClicked, setGroupedClicked] = useState(true);
     const [paticipants, setParticipants] = useState([]);
@@ -29,7 +30,7 @@ const FormModal = () => {
     return (
         <div className='formModal'>
             <div className="formModal-wrap">
-                <button className='cls-btn'><FaTimes /></button>
+                <button onClick={()=>props.setOpenFormModal(false)} className='cls-btn'><FaTimes /></button>
 
                 <div className="form-wrap">
                     {/* first-step */}

@@ -16,7 +16,7 @@ const Eventpage = (props) => {
   const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
   const [ourIndex, setOurIndex] = useState(0);
   const [isModalOpened, setIsModalOpened] = useState(false);
-  const [openFormModal, setOpenFormModal] = useState(false);
+  const [openFormModal, setOpenFormModal] = useState(true);
   const navigate = useNavigate();
 
 
@@ -28,32 +28,20 @@ const Eventpage = (props) => {
   }
 
   useEffect(() => {
-    const checkTokenExpiration = () => {
-      console.log("running");
-      const token = sessionStorage.getItem('accessToken');
-      if (token) {
-        const splitToken= token.split(" ")[1];
-        console.log(splitToken);
-        const decodedToken = jwtDecode(splitToken);
-        console.log(decodedToken.exp < Date.now() / 1000,decodedToken.exp,Date.now() / 1000);
-        if (decodedToken.exp < Date.now() / 1000) {
-          sessionStorage.removeItem('accessToken');
-          setIsUserAuthenticated(false); // Token expired and removed from storage
-
-        } else {
-          setIsUserAuthenticated(true); // Token still valid
-        }
-      }
-      setIsUserAuthenticated(false)// No token found in storage
+    if (checkTokenExpiration()) {
+      setIsUserAuthenticated(false);
+    } else {
+      setIsUserAuthenticated(true);
     }
-    checkTokenExpiration();
   })
 
-  console.log(isUserAuthenticated);
   return (
     <div className='Eventpage'>
       {/* <Eventmodal/> */}
-      {/* <FormModal /> */}
+
+      {openFormModal ? (
+        <FormModal setOpenFormModal={setOpenFormModal} />
+      ) : null}
       {isUserAuthenticated ? null : (
         <Link to={'/signin'} className='clktosignin'>Sign to enroll for this event</Link>
       )
@@ -100,6 +88,7 @@ const Eventpage = (props) => {
               </div>
               <div className='row-events'>
                 <Eventcarousel
+                  setOpenFormModal={setOpenFormModal}
                   isUserAuthenticated={isUserAuthenticated}
                   events={kaushalya}
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
@@ -116,6 +105,7 @@ const Eventpage = (props) => {
               </div>
               <div className='row-events'>
                 <Eventcarousel
+                  setOpenFormModal={setOpenFormModal}
                   isUserAuthenticated={isUserAuthenticated}
                   events={bouddhiki}
                   openModal={openModal}
@@ -132,6 +122,7 @@ const Eventpage = (props) => {
                 <p>Parakram is a dynamic technical event that showcases a range of cutting-edge competitions. The event features four exciting competitions, including Bottle Jet, CAD Master, D Bugger, and Pharma. Each competition challenges participants to demonstrate their technical expertise and problem-solving skills in different areas such as aerodynamics, computer-aided design, debugging, and pharmaceuticals. With a high-energy atmosphere and talented participants, Parakram is a must-attend event for anyone interested in the latest technological advancements.</p>
                 <div className='row-events'>
                   <Eventcarousel
+                    setOpenFormModal={setOpenFormModal}
                     isUserAuthenticated={isUserAuthenticated}
                     events={parakram}
                     openModal={openModal}
@@ -149,6 +140,7 @@ const Eventpage = (props) => {
                 <p>Nataraja" is a cultural event that celebrates the art of dance and the spirit of spontaneity through the popular game "Just a Minute". This event brings together dancers from different genres and backgrounds to showcase their skills and creativity in front of an enthusiastic audience. The participants are challenged to perform impromptu dances to various themes and music styles, while also being tested on their ability to articulate their thoughts in a minute or less. Nataraja promises to be a vibrant and entertaining evening that celebrates the beauty and diversity of dance and the power of words.</p>
                 <div className='row-events'>
                   <Eventcarousel
+                    setOpenFormModal={setOpenFormModal}
                     isUserAuthenticated={isUserAuthenticated}
                     events={natraja}
                     openModal={openModal}
@@ -166,6 +158,7 @@ const Eventpage = (props) => {
                 <p>Kautilya is an academic event that offers a diverse range of activities to engage and challenge participants. The event includes workshops and quiz masters to provide an immersive learning experience. Additionally, there is a hematology camp to promote awareness and education about blood disorders. For those seeking a more adventurous experience, a treasure hunt is also part of the event. Overall, Kautilya promises to be an exciting and educational event for all participants.</p>
                 <div className='row-events'>
                   <Eventcarousel
+                    setOpenFormModal={setOpenFormModal}
                     isUserAuthenticated={isUserAuthenticated}
                     events={Kautilya}
                     openModal={openModal}

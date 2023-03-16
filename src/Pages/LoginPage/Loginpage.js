@@ -42,13 +42,15 @@ const Loginpage = ({ setIsUserAuthenticated }) => {
 
         if (response.isSuccess) {
             setIsLoading(false);
+            const {id,name,email,phonenumber,institution,standard}=response.data.data;
             // setShowSuccess(true);
             // setTimeout(() => setShowSuccess(false), 4000);
             setFormData(initialLoginValues);
             sessionStorage.setItem('accessToken', `Bearer ${response.data.accessToken}`);
             sessionStorage.setItem('refreshToken', `Bearer ${response.data.refreshToken}`);
             setIsUserAuthenticated(true);
-            await setAccount({ username: response.data.data.name, email: response.data.data.email });
+            console.log(response);
+            await setAccount({id:id, username: name, email: email ,phonenumber:phonenumber,institution:institution,standard:standard});
             navigate('/events');
         } else {
             setFormData(initialLoginValues);

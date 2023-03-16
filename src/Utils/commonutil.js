@@ -1,18 +1,22 @@
 import jwtDecode from 'jwt-decode';
 
-export const checkTokenExpiration =()=>{
-    const token = sessionStorage.getItem('accessToken');
-    if (token) {
-      const decodedToken = jwtDecode(token);
-      if (decodedToken.exp < Date.now() / 1000) {
-        sessionStorage.removeItem('accessToken');
-        return true; // Token expired and removed from storage
-      } else {
-        return false; // Token still valid
-      }
+export const checkTokenExpiration = () => {
+      
+  const token = sessionStorage.getItem('accessToken');
+  if (token) {
+    const decodedToken = jwtDecode(token);
+    const expUTC = new Date(decodedToken.exp); // Convert exp value to UTC
+    const offset = new Date().getTimezoneOffset(); // Get the difference between local timezone and UTC in minutes
+    const nowUTC = new Date(Date.now() - (offset * 60 * 1000)); // Convert to UTC by subtracting the offset in milliseconds
+    if (nowUTC.getTime() < expUTC.getTime()) {
+      sessionStorage.removeItem('accessToken');
+      alert("Session Expired !!, Login Again") // Token expired and removed from storage
+      return true;
+    } else {
+      return false;
     }
-    return true; // No token found in storage
   }
+}
 
 
 export const getType=(value,body)=>{

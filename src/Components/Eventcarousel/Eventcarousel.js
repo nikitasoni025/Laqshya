@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './eventcarousel.scss'
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -6,7 +6,15 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 // https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320
 
 const Eventcarousel = (props) => {
-    const[isLogined, setIsLogined]=useState(props.isUserAuthenticated);
+
+    const [isLogined,setIsLogined]=useState(props.isUserAuthenticated);
+
+    useEffect(() => {
+        setIsLogined(props.isUserAuthenticated);
+      }, [props.isUserAuthenticated]);
+
+    console.log(props.isUserAuthenticated);
+    
 
     return (
         <div className='event-carousel'>
@@ -18,7 +26,7 @@ const Eventcarousel = (props) => {
                                 <div className="card-top">
                                     <img src={event.img} alt="card" />
                                     <div className="overlay">
-                                        {isLogined? <button >Register</button> : null}
+                                        {props.isUserAuthenticated ? <button onClick={()=>props.setOpenFormModal(true)}>Register</button> : null}
                                        
                                     </div>
                                 </div>
