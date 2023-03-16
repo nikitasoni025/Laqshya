@@ -10,6 +10,8 @@ const FormModal = () => {
 
     const handleSelectPaticipants = (paticipant) => {
 
+        console.log(!paticipants.includes(paticipant),paticipants,paticipant);
+
         if (!paticipants.includes(paticipant)) {
             setParticipants([...paticipants, paticipant]);
         }
