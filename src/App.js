@@ -13,6 +13,8 @@ import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import Loginpage from './Pages/LoginPage/Loginpage';
 import Dashboard from './Pages/AdminPannel/Dashboard/Dashboard';
 import Dataprovider from './Context/Dataprovider';
+import { checkTokenExpiration } from './Utils/commonutil';
+import jwtDecode from 'jwt-decode';
 
 function App() {
 
@@ -28,8 +30,6 @@ function App() {
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
     };
-    
-
     window.addEventListener('resize', handleWindowResize);
 
     return () => {

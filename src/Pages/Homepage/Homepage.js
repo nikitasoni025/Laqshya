@@ -30,7 +30,7 @@ const Homepage = (props) => {
 
             <div className="section-1">
               <div className="banner">
-                <h1> BOL SHIVAJI HALLA BOL</h1>
+                <h1> #BOLSHIVAJIHALLABOL</h1>
               </div>
             </div>
 
@@ -111,6 +111,8 @@ const Homepage = (props) => {
 
             <div className="sponsor">
               <div className="sponsor-wrap">
+
+                
 
                 
 
