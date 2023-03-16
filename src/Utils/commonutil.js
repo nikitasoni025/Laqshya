@@ -1,36 +1,39 @@
 import jwtDecode from 'jwt-decode';
 
 export const checkTokenExpiration = () => {
-      
+
   const token = sessionStorage.getItem('accessToken');
   if (token) {
     const decodedToken = jwtDecode(token);
-    const expUTC = new Date(decodedToken.exp); // Convert exp value to UTC
-    const offset = new Date().getTimezoneOffset(); // Get the difference between local timezone and UTC in minutes
-    const nowUTC = new Date(Date.now() - (offset * 60 * 1000)); // Convert to UTC by subtracting the offset in milliseconds
-    if (nowUTC.getTime() < expUTC.getTime()) {
+    console.log(decodedToken.exp,Date.now(),decodedToken.exp * 1000 < Date.now());
+    if (decodedToken.exp * 1000 < Date.now()) {
+      // Token has expired
       sessionStorage.removeItem('accessToken');
-      alert("Session Expired !!, Login Again") // Token expired and removed from storage
+      sessionStorage.removeItem('refreshToken');
+      sessionStorage.removeItem('isLogined');
       return true;
     } else {
+      // Token is still valid
       return false;
+      // Set up timer to check for token expiration
     }
   }else{
     return true;
   }
-}
 
-
-export const getType=(value,body)=>{
-  if(value.params){
-    return {params:body}
-  }else if(value.query){
-    if(typeof body === 'object'){
-      return {query:body._id}
-    }else{
-      return {query:body};
-    }
   }
-  return {};
 
-}
+
+  export const getType = (value, body) => {
+    if (value.params) {
+      return { params: body }
+    } else if (value.query) {
+      if (typeof body === 'object') {
+        return { query: body._id }
+      } else {
+        return { query: body };
+      }
+    }
+    return {};
+
+  }

@@ -42,11 +42,11 @@ function App() {
         <div className="App">
           <audio id='ouraudio' controls style={{ marginTop: "100px", display: "none" }} src={music}></audio>
           <Routes >
-            <Route path='/' element={<Homepage windowSize={windowSize} />} />
+            <Route path='/' element={<Homepage isUserAuthenticated={isUserAuthenticated} windowSize={windowSize} />} />
             <Route path='/events' element={<Eventpage isUserAuthenticated={isUserAuthenticated} windowSize={windowSize} />} />
-            <Route path='/gallery' element={<Gallery windowSize={windowSize} />} />
-            <Route path='/contact' element={<ConatctPage windowSize={windowSize} />} />
-            <Route path='/register' element={<RegisterPage windowSize={windowSize} />} />
+            <Route path='/gallery' element={<Gallery  windowSize={windowSize} />} />
+            <Route path='/contact' element={<ConatctPage isUserAuthenticated={isUserAuthenticated} windowSize={windowSize} />} />
+            <Route path='/register' element={<RegisterPage  windowSize={windowSize} />} />
             <Route path='/signin' element={<Loginpage setIsUserAuthenticated={setIsUserAuthenticated} windowSize={windowSize} />} />
 
             {/* ADMIN ROUTE START HERE */}

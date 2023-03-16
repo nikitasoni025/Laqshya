@@ -15,14 +15,15 @@ const Homepage = (props) => {
 
         {/* Navbar */}
 
-        <Navbar />
+        <Navbar  />
         <div className="section">
           <div className="wrap-section">
 
             {/* HEADER */}
 
             <div className="header">
-              <img className='headerfade-lft' src={smokeimg} alt="smokeimg" />
+              {/* <img className='headerfade-lft' src={smokeimg} alt="smokeimg" /> */}
+              <img className='headerfade-lft' src={"https://ik.imagekit.io/dexo68yudb/HCMd.gif?updatedAt=1679000148675"} alt="smokeimg" />
               <span className='shadow-logo'>LAQSHYA</span>
             </div>
 

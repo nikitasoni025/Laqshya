@@ -1,14 +1,29 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./navbar.scss";
-import { CgUserlane } from "react-icons/cg"
-import { FaAudible, FaBars, FaTimes, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
+import { CgUserlane } from "react-icons/cg";
+import { GrTechnology } from "react-icons/gr";
+import { FaAudible, FaBars, FaDiceSix, FaTimes, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = (props) => {
   // MAKING STATE (states are nothing but its variable ; we can sture dunamic data to be stored)
   const [audioPlayed, setAudioPlayed] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSideBarOpened, setIsSideBarOpened] = useState(false);
+  const [isUserLogined, setIsUserLogined] = useState(false);
+
+
+  useEffect(() => {
+    const isLogined = sessionStorage.getItem('isLogined');
+    if (isLogined) {
+      setIsUserLogined(true);
+    } else {
+      setIsUserLogined(false);
+    }
+  }, [])
+
+
+
 
 
   window.onscroll = () => {
@@ -16,17 +31,17 @@ const Navbar = () => {
     return () => (window.onscroll = null);
   }
 
-  const playSound=(ev)=>{
+  const playSound = (ev) => {
     setAudioPlayed(!audioPlayed);
-    if(audioPlayed){
+    if (audioPlayed) {
       document.getElementById('ouraudio').play();
-    }else{
+    } else {
       document.getElementById('ouraudio').pause();
     }
   }
 
-  
-  
+
+
 
 
 
@@ -36,7 +51,7 @@ const Navbar = () => {
       <div className="main-navbar">
         <div className="left-navbar">
           <div className="logo"><h1>LAQSHYA</h1></div>
-          <button className='audio-btn' onClick={(e)=>playSound(e)}>{audioPlayed ? <FaVolumeMute/> : <FaVolumeUp /> }</button>
+          <button className='audio-btn' onClick={(e) => playSound(e)}>{audioPlayed ? <FaVolumeMute /> : <FaVolumeUp />}</button>
           <ul className="menu">
             <li><a href="/">Home</a></li>
             <li><a href="/events">Events</a></li>
@@ -48,18 +63,23 @@ const Navbar = () => {
 
         </div>
         <div className="right-navbar">
-          <Link to={'/signin'}><span>Login <CgUserlane /></span></Link>
+          {isUserLogined ? (
+            <Link to={'/'}><span>My Events<FaDiceSix/></span></Link>
+          ) : (
+            <Link to={'/signin'}><span>Login<CgUserlane /></span></Link>
+
+          )}
           <button onClick={() => { setIsSideBarOpened(!isSideBarOpened) }} className='side-bar-btn'>
             <FaBars />
           </button>
 
 
         </div>
-      </div>
+      </div >
 
       {/* side bar */}
 
-      <div className={isSideBarOpened ? "side-bar opened" : "side-bar"}>
+      < div className={isSideBarOpened ? "side-bar opened" : "side-bar"} >
         <ul className="side-menu">
           <li><button onClick={() => { setIsSideBarOpened(false) }} className='side-bar-btn'><FaTimes /></button></li>
           <li><Link className={isSideBarOpened ? "anim1" : ""} to={"/"}>Home</Link></li>
@@ -69,9 +89,9 @@ const Navbar = () => {
           <li><Link className={isSideBarOpened ? "anim5" : ""} to="/signin">Sign In</Link></li>
 
         </ul>
-      </div>
+      </div >
 
-    </div>
+    </div >
   )
 }
 

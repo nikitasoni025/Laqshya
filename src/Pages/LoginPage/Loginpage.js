@@ -48,6 +48,7 @@ const Loginpage = ({ setIsUserAuthenticated }) => {
             setFormData(initialLoginValues);
             sessionStorage.setItem('accessToken', `Bearer ${response.data.accessToken}`);
             sessionStorage.setItem('refreshToken', `Bearer ${response.data.refreshToken}`);
+            sessionStorage.setItem('isLogined', true);
             setIsUserAuthenticated(true);
             console.log(response);
             await setAccount({id:id, username: name, email: email ,phonenumber:phonenumber,institution:institution,standard:standard});

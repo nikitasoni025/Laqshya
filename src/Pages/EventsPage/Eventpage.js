@@ -19,6 +19,8 @@ const Eventpage = (props) => {
   const [openFormModal, setOpenFormModal] = useState(false);
   const navigate = useNavigate();
 
+  console.log("Nishu", props.isUserAuthenticated);
+
 
 
 
@@ -33,7 +35,17 @@ const Eventpage = (props) => {
     } else {
       setIsUserAuthenticated(true);
     }
-  })
+    const timer = setInterval(() => {
+      if (checkTokenExpiration()) {
+        setIsUserAuthenticated(false);
+      } else {
+        setIsUserAuthenticated(true);
+      }
+    }, 5000);
+
+    return () => clearInterval(timer);
+
+  }, [])
 
   return (
     <div className='Eventpage'>
