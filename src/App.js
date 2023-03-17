@@ -16,10 +16,6 @@ import Dataprovider from './Context/Dataprovider';
 function App() {
 
   const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
-  const [preloading, setPreloading] = useState(true);
-  console.log(preloading);
-
-
 
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
@@ -27,13 +23,7 @@ function App() {
   ]);
 
 
-  useLayoutEffect(() => {
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        setPreloading(false);
-      },3000)
-
-    })
+  useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
     };
@@ -49,18 +39,6 @@ function App() {
     <Dataprovider>
       <Router basename='/Laqshya'>
         <div className="App">
-          {preloading ? <div className='preloading'>
-            <div className="prelogo">
-              <h1>LAQSHYA</h1>
-
-              <p>In Assocoation With</p>
-
-              <img src="https://ik.imagekit.io/dexo68yudb/Tec36_Logo_white_300x.png?updatedAt=1679068816840" alt="" />
-              {windowSize[0] <991 ? (
-                <button onClick={()=>setPreloading(false)}>Dive In</button>
-              ):null}
-            </div>
-          </div> : null}
           <audio id='ouraudio' controls style={{ marginTop: "100px", display: "none" }} src={music}></audio>
           <Routes >
             <Route path='/' element={<Homepage isUserAuthenticated={isUserAuthenticated} windowSize={windowSize} />} />
