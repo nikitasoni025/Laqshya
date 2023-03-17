@@ -16,7 +16,8 @@ import Dataprovider from './Context/Dataprovider';
 function App() {
 
   const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
-  const [preloading, setPreloading] = useState(false);
+  const [preloading, setPreloading] = useState(true);
+  console.log(preloading);
 
 
 
@@ -28,9 +29,11 @@ function App() {
 
   useEffect(() => {
     window.addEventListener('load', () => {
-      
+
+      setTimeout(() => {
         setPreloading(false);
-  
+      },5000)
+
     })
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
