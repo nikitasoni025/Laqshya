@@ -1,29 +1,62 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
 import PostCarousel from '../../Components/PostCarousel/PostCarousel';
 import "./homepage.scss";
+import NET from 'vanta/dist/vanta.net.min';
 
-
-// let smokeimg = "https://ik.imagekit.io/dexo68yudb/image.png?ik-sdk-version=javascript-1.4.3&updatedAt=1677697561319";
-let smokeimg = "https://ik.imagekit.io/dexo68yudb/giphy.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1677770580940";
 
 const Homepage = (props) => {
+  const [vantaEffect, setVantaEffect] = useState(null);
+  const myRef = useRef(null);
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(NET(props.windowSize[0] < 991 ? {
+        el: myRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x58fffa,
+        backgroundColor: 0x0,
+        points: 9.00,
+        maxDistance: 23.00,
+        spacing: 25.00
+      } : {
+        el: myRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x58fffa,
+        backgroundColor: 0x0,
+      }))
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect])
   return (
     <div className='homepage'>
       <div className="wrap-home">
 
         {/* Navbar */}
 
-        <Navbar  />
+        <Navbar />
         <div className="section">
           <div className="wrap-section">
 
             {/* HEADER */}
 
-            <div className="header">
+            <div className="header" ref={myRef}>
               {/* <img className='headerfade-lft' src={smokeimg} alt="smokeimg" /> */}
-              <img className='headerfade-lft' src={"https://ik.imagekit.io/dexo68yudb/HCMd.gif?updatedAt=1679000148675"} alt="smokeimg" />
+              <div className='headerfade-lft'></div>
               <span className='shadow-logo'>LAQSHYA</span>
             </div>
 
@@ -113,9 +146,9 @@ const Homepage = (props) => {
             <div className="sponsor">
               <div className="sponsor-wrap">
 
-                
 
-                
+
+
 
               </div>
             </div>
@@ -123,7 +156,7 @@ const Homepage = (props) => {
             {/* FOOTER SECTION */}
 
             <Footer windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined} />
-                 
+
 
 
 

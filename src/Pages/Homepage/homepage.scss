@@ -19,11 +19,10 @@
                 .header {
                     width: 100%;
                     height: 100vh;
-
-                    background: url("https://ik.imagekit.io/dexo68yudb/Picsart_23-03-17_02-52-02-447.png?updatedAt=1679002204391");
                     background-size: cover;
                     background-position: center;
                     position: relative;
+                    z-index: 1;
 
                     // SHADOW LOGO DESIGN
                     .shadow-logo {
@@ -44,12 +43,13 @@
                         position: absolute;
                         left: 0;
                         top: 0;
-                        object-position: center 68%;
-                        object-fit: cover;
-                        opacity: 0.2;
+                        background: url('https://ik.imagekit.io/dexo68yudb/Picsart_23-03-17_16-03-37-520.png?updatedAt=1679049405772');
+                        background-size: cover;
+                        background-position: center;
+                        // opacity: 1;
                         width: 100%;
                         height: 100%;
-                        z-index: 5;
+                        z-index: 100;
                         background-attachment: fixed;
                     }
 
@@ -433,7 +433,6 @@
             .section {
                 .wrap-section {
                     .header {
-                        background: url("https://ik.imagekit.io/dexo68yudb/Picsart_23-03-17_02-55-00-232.png?updatedAt=1679002219299");
                         background-size: cover;
                         background-position: center;
 
@@ -444,6 +443,9 @@
                         .headerfade-lft {
                             width: 100%;
                             height: 100%;
+                            background:url('https://ik.imagekit.io/dexo68yudb/Picsart_23-03-17_16-35-19-066.png?updatedAt=1679051141105');
+                            background-size: cover;
+                            background-position: center;
                         }
 
                         .headerfade-right {
