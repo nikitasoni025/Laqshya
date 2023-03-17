@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Homepage from './Pages/Homepage/Homepage';
 import "./Assets/fonts/stylesheet.scss";
 import Eventpage from './Pages/EventsPage/Eventpage';
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import music from './Assets/Audios/On my way - pubg mobile.mp3';
 import ConatctPage from './Pages/ContactPage/ConatctPage';
 import Gallery from './Pages/Gallery/Gallery';
@@ -16,7 +16,8 @@ import Dataprovider from './Context/Dataprovider';
 function App() {
 
   const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
-  const [preloading, setPreloading] = useState(false);
+  const [preloading, setPreloading] = useState(true);
+  console.log(preloading);
 
 
 
@@ -26,11 +27,12 @@ function App() {
   ]);
 
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.addEventListener('load', () => {
-      
+      setTimeout(() => {
         setPreloading(false);
-  
+      },3000)
+
     })
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
@@ -50,10 +52,10 @@ function App() {
           {preloading ? <div className='preloading'>
             <div className="prelogo">
               <h1>LAQSHYA</h1>
-
               <p>In Assocoation With</p>
-
-              <img src="https://ik.imagekit.io/dexo68yudb/Tec36_Logo_white_300x.png?updatedAt=1679068816840" alt="" />
+              {windowSize[0] <991 ? (
+                <button onClick={()=>setPreloading(false)}>Dive In</button>
+              ):null}
             </div>
           </div> : null}
           <audio id='ouraudio' controls style={{ marginTop: "100px", display: "none" }} src={music}></audio>
