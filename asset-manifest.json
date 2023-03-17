@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.1bc4fc45.css",
-    "main.js": "/static/js/main.d8c00113.js",
-    "static/media/On my way - pubg mobile.mp3": "/static/media/On my way - pubg mobile.c12bf87f036ecff96291.mp3",
-    "static/media/Sman.ttf": "/static/media/Sman.fcba438bef1049a04a96.ttf",
-    "static/media/SamarkanNormal.woff": "/static/media/SamarkanNormal.28b5cade04c95fae47a6.woff",
-    "static/media/SamarkanNormal.woff2": "/static/media/SamarkanNormal.5ae38ee34838206a0eb9.woff2",
-    "static/media/Ailerons-Regular.woff": "/static/media/Ailerons-Regular.820d5589e41a5e7ee81d.woff",
-    "static/media/Ailerons-Regular.woff2": "/static/media/Ailerons-Regular.72ddd5c2e91db6e307cf.woff2",
-    "static/media/Anurati-Regular.woff": "/static/media/Anurati-Regular.f500f4b0365151684320.woff",
-    "static/media/Anurati-Regular.woff2": "/static/media/Anurati-Regular.3aecc46138093421fd9a.woff2",
-    "index.html": "/index.html",
-    "main.1bc4fc45.css.map": "/static/css/main.1bc4fc45.css.map",
-    "main.d8c00113.js.map": "/static/js/main.d8c00113.js.map"
+    "main.css": "/Laqshya/static/css/main.b3563bca.css",
+    "main.js": "/Laqshya/static/js/main.a56f0c3a.js",
+    "static/media/On my way - pubg mobile.mp3": "/Laqshya/static/media/On my way - pubg mobile.c12bf87f036ecff96291.mp3",
+    "static/media/Sman.ttf": "/Laqshya/static/media/Sman.fcba438bef1049a04a96.ttf",
+    "static/media/SamarkanNormal.woff": "/Laqshya/static/media/SamarkanNormal.28b5cade04c95fae47a6.woff",
+    "static/media/SamarkanNormal.woff2": "/Laqshya/static/media/SamarkanNormal.5ae38ee34838206a0eb9.woff2",
+    "static/media/Ailerons-Regular.woff": "/Laqshya/static/media/Ailerons-Regular.820d5589e41a5e7ee81d.woff",
+    "static/media/Ailerons-Regular.woff2": "/Laqshya/static/media/Ailerons-Regular.72ddd5c2e91db6e307cf.woff2",
+    "static/media/Anurati-Regular.woff": "/Laqshya/static/media/Anurati-Regular.f500f4b0365151684320.woff",
+    "static/media/Anurati-Regular.woff2": "/Laqshya/static/media/Anurati-Regular.3aecc46138093421fd9a.woff2",
+    "index.html": "/Laqshya/index.html",
+    "main.b3563bca.css.map": "/Laqshya/static/css/main.b3563bca.css.map",
+    "main.a56f0c3a.js.map": "/Laqshya/static/js/main.a56f0c3a.js.map"
   },
   "entrypoints": [
-    "static/css/main.1bc4fc45.css",
-    "static/js/main.d8c00113.js"
+    "static/css/main.b3563bca.css",
+    "static/js/main.a56f0c3a.js"
   ]
 }
