@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Laqshya/static/css/main.b3563bca.css",
-    "main.js": "/Laqshya/static/js/main.a56f0c3a.js",
-    "static/media/On my way - pubg mobile.mp3": "/Laqshya/static/media/On my way - pubg mobile.c12bf87f036ecff96291.mp3",
+    "main.css": "/Laqshya/static/css/main.65a6a039.css",
+    "main.js": "/Laqshya/static/js/main.595d7a11.js",
+    "static/media/WhatsApp Audio 2023-03-18 at 12.50.14 AM.mp3": "/Laqshya/static/media/WhatsApp Audio 2023-03-18 at 12.50.14 AM.f286fe78075cae8f8a0c.mp3",
     "static/media/Sman.ttf": "/Laqshya/static/media/Sman.fcba438bef1049a04a96.ttf",
     "static/media/SamarkanNormal.woff": "/Laqshya/static/media/SamarkanNormal.28b5cade04c95fae47a6.woff",
     "static/media/SamarkanNormal.woff2": "/Laqshya/static/media/SamarkanNormal.5ae38ee34838206a0eb9.woff2",
@@ -11,11 +11,11 @@
     "static/media/Anurati-Regular.woff": "/Laqshya/static/media/Anurati-Regular.f500f4b0365151684320.woff",
     "static/media/Anurati-Regular.woff2": "/Laqshya/static/media/Anurati-Regular.3aecc46138093421fd9a.woff2",
     "index.html": "/Laqshya/index.html",
-    "main.b3563bca.css.map": "/Laqshya/static/css/main.b3563bca.css.map",
-    "main.a56f0c3a.js.map": "/Laqshya/static/js/main.a56f0c3a.js.map"
+    "main.65a6a039.css.map": "/Laqshya/static/css/main.65a6a039.css.map",
+    "main.595d7a11.js.map": "/Laqshya/static/js/main.595d7a11.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3563bca.css",
-    "static/js/main.a56f0c3a.js"
+    "static/css/main.65a6a039.css",
+    "static/js/main.595d7a11.js"
   ]
 }
