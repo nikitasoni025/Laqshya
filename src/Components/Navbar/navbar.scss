@@ -44,6 +44,7 @@
                 font-family: "Anurati";
                 color: var(--secondary-color);
                 letter-spacing: 3px;
+                font-size: 0.7vw;
                 transition: scale 0.5s ease;
                 cursor: pointer;
                 user-select: none;
@@ -81,6 +82,7 @@
                         align-items: center;
                         // padding: 3px 10px;
                         position: relative;
+                        letter-spacing: 3px;
 
                         
 
@@ -252,7 +254,7 @@
             position: absolute;
             top: 0;
             right: 0px;
-            background: linear-gradient(-239.59deg, #af9d3b -44.65%, #1a1a1e 75.57%);
+            background: linear-gradient(-239.59deg, #4bbbd1 -44.65%, #1a1a1e 75.57%);
             z-index: 1;
 
 
@@ -302,8 +304,9 @@
                     color: white;
                     text-decoration: none;
                     font-weight: bold;
-                    font-family: sans-serif;
+                    font-family: 'Anurati';
                     translate: 110% 0 0;
+                    letter-spacing: 3px;
 
                     &.anim1 {
                         transition: translate 1s ease;
@@ -326,6 +329,10 @@
                     }
 
                     &.anim5 {
+                        transition: translate 1.7s ease;
+                        translate: 0;
+                    }
+                    &.anim6 {
                         transition: translate 1.7s ease;
                         translate: 0;
                     }
@@ -365,7 +372,7 @@
 
                 .logo {
                     margin-left: 20px;
-                    font-size: 15px;
+                    font-size: 10px;
                 }
 
             }

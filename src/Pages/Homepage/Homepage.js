@@ -64,7 +64,7 @@ const Homepage = (props) => {
 
             <div className="section-1">
               <div className="banner">
-                <h1> #BOLSHIVAJIHALLABOL</h1>
+                <h1> <span>#</span>BOLSHIVAJIHALLABOL</h1>
               </div>
             </div>
 

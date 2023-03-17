@@ -16,6 +16,7 @@ import Dataprovider from './Context/Dataprovider';
 function App() {
 
   const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
+  const [preloading, setPreloading] = useState(false);
 
 
 
@@ -23,7 +24,14 @@ function App() {
     window.innerWidth,
     window.innerHeight,
   ]);
+
+
   useEffect(() => {
+    window.addEventListener('load', () => {
+      
+        setPreloading(false);
+  
+    })
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
     };
@@ -32,18 +40,29 @@ function App() {
     return () => {
       window.removeEventListener('resize', handleWindowResize);
     };
-  });
+  }, []);
+
+
   return (
     <Dataprovider>
-      <Router basename='/'>
+      <Router basename='/Laqshya'>
         <div className="App">
+          {preloading ? <div className='preloading'>
+            <div className="prelogo">
+              <h1>LAQSHYA</h1>
+
+              <p>In Assocoation With</p>
+
+              <img src="https://ik.imagekit.io/dexo68yudb/Tec36_Logo_white_300x.png?updatedAt=1679068816840" alt="" />
+            </div>
+          </div> : null}
           <audio id='ouraudio' controls style={{ marginTop: "100px", display: "none" }} src={music}></audio>
           <Routes >
             <Route path='/' element={<Homepage isUserAuthenticated={isUserAuthenticated} windowSize={windowSize} />} />
             <Route path='/events' element={<Eventpage isUserAuthenticated={isUserAuthenticated} windowSize={windowSize} />} />
-            <Route path='/gallery' element={<Gallery  windowSize={windowSize} />} />
+            <Route path='/gallery' element={<Gallery windowSize={windowSize} />} />
             <Route path='/contact' element={<ConatctPage isUserAuthenticated={isUserAuthenticated} windowSize={windowSize} />} />
-            <Route path='/register' element={<RegisterPage  windowSize={windowSize} />} />
+            <Route path='/register' element={<RegisterPage windowSize={windowSize} />} />
             <Route path='/signin' element={<Loginpage setIsUserAuthenticated={setIsUserAuthenticated} windowSize={windowSize} />} />
 
             {/* ADMIN ROUTE START HERE */}
