@@ -24,6 +24,7 @@ function App() {
 
 
   useEffect(() => {
+
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
     };

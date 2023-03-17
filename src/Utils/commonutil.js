@@ -11,6 +11,7 @@ export const checkTokenExpiration = () => {
       sessionStorage.removeItem('accessToken');
       sessionStorage.removeItem('refreshToken');
       sessionStorage.removeItem('isLogined');
+      sessionStorage.removeItem('visited');
       return true;
     } else {
       // Token is still valid
