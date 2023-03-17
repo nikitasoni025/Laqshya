@@ -83,11 +83,28 @@
                         // padding: 3px 10px;
                         position: relative;
                         letter-spacing: 3px;
+                        overflow: hidden;
+                        padding-bottom: 8px;
+
+                        &::before{
+                            content: "";
+                            width: 10px;
+                            height: 1px;
+                            background: var(--secondary-color);
+                            position: absolute;
+                            bottom: 0;
+                            left: -100;
+                            transition: 0.5s ease;
+                           }
 
                         
 
                         &:hover{
-                            animation: glow 0.5s ease-in-out infinite alternate;
+                            &::before{
+                                transition: 0.5 ease;
+                                left: 0;
+                            }
+                          
                         }
 
                     }
