@@ -6,15 +6,12 @@ import "./Assets/fonts/stylesheet.scss";
 import Eventpage from './Pages/EventsPage/Eventpage';
 import { useEffect, useState } from 'react';
 import music from './Assets/Audios/On my way - pubg mobile.mp3';
-
 import ConatctPage from './Pages/ContactPage/ConatctPage';
 import Gallery from './Pages/Gallery/Gallery';
 import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import Loginpage from './Pages/LoginPage/Loginpage';
 import Dashboard from './Pages/AdminPannel/Dashboard/Dashboard';
 import Dataprovider from './Context/Dataprovider';
-import { checkTokenExpiration } from './Utils/commonutil';
-import jwtDecode from 'jwt-decode';
 
 function App() {
 
