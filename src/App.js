@@ -52,7 +52,10 @@ function App() {
           {preloading ? <div className='preloading'>
             <div className="prelogo">
               <h1>LAQSHYA</h1>
+
               <p>In Assocoation With</p>
+
+              <img src="https://ik.imagekit.io/dexo68yudb/Tec36_Logo_white_300x.png?updatedAt=1679068816840" alt="" />
               {windowSize[0] <991 ? (
                 <button onClick={()=>setPreloading(false)}>Dive In</button>
               ):null}

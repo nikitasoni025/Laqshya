@@ -20,17 +20,6 @@
         justify-content: center;
         align-items: center;
 
-        &::after{
-            content: '';
-            background: url('https://ik.imagekit.io/dexo68yudb/DPS.gif?updatedAt=1679071350835');
-            background-repeat: no-repeat;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 50%;
-            height: 50%;
-        }
-
         .prelogo {
             // background: #f1f1f1;
             background-size: cover;
