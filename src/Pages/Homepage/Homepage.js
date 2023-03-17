@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
 import PostCarousel from '../../Components/PostCarousel/PostCarousel';
@@ -8,7 +8,21 @@ import NET from 'vanta/dist/vanta.net.min';
 
 const Homepage = (props) => {
   const [vantaEffect, setVantaEffect] = useState(null);
+  const [preloading, setPreloading] = useState(true);
   const myRef = useRef(null);
+
+
+  useLayoutEffect(()=>{
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        setPreloading(false);
+      },3000)
+
+    })
+
+  },[])
+
+
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(NET(props.windowSize[0] < 991 ? {
@@ -44,6 +58,18 @@ const Homepage = (props) => {
   }, [vantaEffect])
   return (
     <div className='homepage'>
+      {preloading ? <div className='preloading'>
+        <div className="prelogo">
+          <h1>LAQSHYA</h1>
+
+          <p>In Assocoation With</p>
+
+          <img src="https://ik.imagekit.io/dexo68yudb/Tec36_Logo_white_300x.png?updatedAt=1679068816840" alt="" />
+          {props.windowSize[0] < 991 ? (
+            <button onClick={() => setPreloading(false)}>Dive In</button>
+          ) : null}
+        </div>
+      </div> : null}
       <div className="wrap-home">
 
         {/* Navbar */}
