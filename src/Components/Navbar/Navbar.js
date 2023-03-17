@@ -14,6 +14,8 @@ const Navbar = (props) => {
 
 
   useEffect(() => {
+    setAudioPlayed(true);
+    document.getElementById('ouraudio').play();
     const isLogined = sessionStorage.getItem('isLogined');
     if (isLogined) {
       setIsUserLogined(true);
@@ -54,10 +56,10 @@ const Navbar = (props) => {
           <button className='audio-btn' onClick={(e) => playSound(e)}>{audioPlayed ? <FaVolumeMute /> : <FaVolumeUp />}</button>
           <ul className="menu">
             <li><a href="/">HOME</a></li>
-            <li><a href="/Laqshya/events">EVENTS</a></li>
-            <li><a href="/Laqshya/gallery">GALLERY</a></li>
-            <li><a href="/Laqshya/gallery">BOARD</a></li>
-            <li><a href="/Laqshya/contact">CONTACT</a></li>
+            <li><a href="/events">EVENTS</a></li>
+            <li><a href="/gallery">GALLERY</a></li>
+            <li><a href="/gallery">BOARD</a></li>
+            <li><a href="/contact">CONTACT</a></li>
           </ul>
 
 
@@ -83,11 +85,11 @@ const Navbar = (props) => {
         <ul className="side-menu">
           <li><button onClick={() => { setIsSideBarOpened(false) }} className='side-bar-btn'><FaTimes /></button></li>
           <li><Link className={isSideBarOpened ? "anim1" : ""} to={"/"}>HOME</Link></li>
-          <li><Link className={isSideBarOpened ? "anim2" : ""} to={"/Laqshya/events"}>EVENTS</Link></li>
-          <li><Link className={isSideBarOpened ? "anim3" : ""} to={"/Laqshya/gallery"}>GALLERY</Link></li>
-          <li><Link className={isSideBarOpened ? "anim4" : ""} to={"/Laqshya/contact"}>CONTACT</Link></li>
-          <li><Link className={isSideBarOpened ? "anim4" : ""} to={"/Laqshya/contact"}>BOARDS</Link></li>
-          <li><Link className={isSideBarOpened ? "anim5" : ""} to="/Laqshya/signin">LOGIN</Link></li>
+          <li><Link className={isSideBarOpened ? "anim2" : ""} to={"/events"}>EVENTS</Link></li>
+          <li><Link className={isSideBarOpened ? "anim3" : ""} to={"/gallery"}>GALLERY</Link></li>
+          <li><Link className={isSideBarOpened ? "anim4" : ""} to={"/contact"}>CONTACT</Link></li>
+          <li><Link className={isSideBarOpened ? "anim4" : ""} to={"/contact"}>BOARDS</Link></li>
+          <li><Link className={isSideBarOpened ? "anim5" : ""} to="/signin">LOGIN</Link></li>
 
         </ul>
       </div >

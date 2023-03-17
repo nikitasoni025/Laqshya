@@ -5,7 +5,7 @@ import Homepage from './Pages/Homepage/Homepage';
 import "./Assets/fonts/stylesheet.scss";
 import Eventpage from './Pages/EventsPage/Eventpage';
 import { useEffect, useLayoutEffect, useState } from 'react';
-import music from './Assets/Audios/On my way - pubg mobile.mp3';
+import music from './Assets/Audios/WhatsApp Audio 2023-03-18 at 12.50.14 AM.mp3';
 import ConatctPage from './Pages/ContactPage/ConatctPage';
 import Gallery from './Pages/Gallery/Gallery';
 import RegisterPage from './Pages/RegisterPage/RegisterPage';
@@ -37,7 +37,7 @@ function App() {
 
   return (
     <Dataprovider>
-      <Router basename='/Laqshya'>
+      <Router basename='/'>
         <div className="App">
           <audio id='ouraudio' controls style={{ marginTop: "100px", display: "none" }} src={music}></audio>
           <Routes >

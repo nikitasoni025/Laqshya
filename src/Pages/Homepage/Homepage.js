@@ -8,22 +8,26 @@ import NET from 'vanta/dist/vanta.net.min';
 
 const Homepage = (props) => {
   const [vantaEffect, setVantaEffect] = useState(null);
-  const [preloading, setPreloading] = useState(true);
+  const [preloading, setPreloading] = useState(false);
   const myRef = useRef(null);
 
 
-  useLayoutEffect(()=>{
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        setPreloading(false);
-      },3000)
-
-    })
-
-  },[])
-
-
   useEffect(() => {
+
+    let timer;
+    let isVisited = sessionStorage.getItem('visited');
+    if (!isVisited) {
+      setPreloading(true)
+      window.addEventListener('load', () => {
+        timer = setTimeout(() => {
+          setPreloading(false);
+          sessionStorage.setItem('visited','true');
+        }, 3000)
+      })
+    } else {
+      setPreloading(false);
+    }
+
     if (!vantaEffect) {
       setVantaEffect(NET(props.windowSize[0] < 991 ? {
         el: myRef.current,
@@ -53,23 +57,27 @@ const Homepage = (props) => {
       }))
     }
     return () => {
+      clearTimeout(timer);
       if (vantaEffect) vantaEffect.destroy()
     }
   }, [vantaEffect])
   return (
     <div className='homepage'>
-      {preloading ? <div className='preloading'>
+
+      {/* Preloader */}
+      <div className={preloading ? 'preloading' :'preloading preloadingends'}>
         <div className="prelogo">
-          <h1>LAQSHYA</h1>
+          <h1 className={preloading ? '' :'fade'}>LAQSHYA</h1>
 
-          <p>In Assocoation With</p>
+          <p className={preloading ? '' :'fade'}>In Assocoation With</p>
 
-          <img src="https://ik.imagekit.io/dexo68yudb/Tec36_Logo_white_300x.png?updatedAt=1679068816840" alt="" />
-          {props.windowSize[0] < 991 ? (
-            <button onClick={() => setPreloading(false)}>Dive In</button>
-          ) : null}
+          <img className={preloading ? '' :'fade'} src="https://ik.imagekit.io/dexo68yudb/Tec36_Logo_white_300x.png?updatedAt=1679068816840" alt="" />
         </div>
-      </div> : null}
+      </div>
+
+
+
+      {/* Homepage Starts Here */}
       <div className="wrap-home">
 
         {/* Navbar */}
