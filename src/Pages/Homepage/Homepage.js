@@ -66,12 +66,15 @@ const Homepage = (props) => {
 
       {/* Preloader */}
       <div className={preloading ? 'preloading' :'preloading preloadingends'}>
+      <button onClick={()=>{setPreloading(false);sessionStorage.setItem('visited','true')}}>Dive In</button>
         <div className="prelogo">
           <h1 className={preloading ? '' :'fade'}>LAQSHYA</h1>
 
           <p className={preloading ? '' :'fade'}>In Assocoation With</p>
 
           <img className={preloading ? '' :'fade'} src="https://ik.imagekit.io/dexo68yudb/Tec36_Logo_white_300x.png?updatedAt=1679068816840" alt="" />
+
+          
         </div>
       </div>
 
