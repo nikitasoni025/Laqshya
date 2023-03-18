@@ -38,7 +38,7 @@ function App() {
 
   return (
     <Dataprovider>
-      <Router basename='/'>
+      <Router basename='/Laqshya'>
         <div className="App">
           <audio id='ouraudio' controls style={{ marginTop: "100px", display: "none" }} src={music}></audio>
           <Routes >

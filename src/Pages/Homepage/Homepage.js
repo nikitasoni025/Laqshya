@@ -66,7 +66,9 @@ const Homepage = (props) => {
 
       {/* Preloader */}
       <div className={preloading ? 'preloading' : 'preloading preloadingends'}>
-        <button onClick={() => { setPreloading(false); sessionStorage.setItem('visited', 'true') }}>Dive In</button>
+        {props.windowSize[0] <= 991 ? (
+          <button onClick={() => { setPreloading(false); sessionStorage.setItem('visited', 'true') }}>Dive In</button>
+        ) : null}
         <div className="prelogo">
           <h1 className={preloading ? '' : 'fade'}>LAQSHYA</h1>
 
