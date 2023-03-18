@@ -189,13 +189,13 @@ const Homepage = (props) => {
                     </div>
                   </div>
                   <div className="timing-right">
-                    <div className={currentDot === 0 ? "schdl-text open" : "schdl-text"}>
+                    <div className={currentDot === 0 ? "schdl-text initial" : "schdl-text"}>
                       Inauguration
                     </div>
-                    <div className={currentDot === 1 ? "schdl-text open" : "schdl-text"}>
+                    <div className={currentDot === 1 ? "schdl-text mid" : "schdl-text"}>
                       Competetion
                     </div>
-                    <div className={currentDot === 2 ? "schdl-text open" : "schdl-text"}>
+                    <div className={currentDot === 2 ? "schdl-text final" : "schdl-text"}>
                       DJ Night
                     </div>
                   </div>
