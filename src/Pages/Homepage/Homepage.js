@@ -9,6 +9,7 @@ import NET from 'vanta/dist/vanta.net.min';
 const Homepage = (props) => {
   const [vantaEffect, setVantaEffect] = useState(null);
   const [preloading, setPreloading] = useState(false);
+  const [currentDot, setCurrentDot] = useState(0);
   const myRef = useRef(null);
 
 
@@ -168,29 +169,39 @@ const Homepage = (props) => {
 
             {/* SECTION 4 SPONSOR */}
 
-          <div className="sponsor">
-            <div className="spon-wrap">
-              <h1> <span>IN</span> ASSOCIATION <span>WITH</span> </h1>
-              <img src="https://ik.imagekit.io/egjzyz51e/Tec36_Logo_white_300x.png?updatedAt=1679145810521" alt="" />
-            </div>
-          </div>
-
-          {/* SCHEDUL SECTION*/}
-          <div className="schedule">
-            <div className="schedule-wrap">
-              <h1>SCHEDULE</h1>
-              <div className="timings">
-                <div className="timing-left">
-                  <div className="dots">
-                    <div className="dot"><button>18</button></div>
-                    <div className="dot"><button>19</button></div>
-                    <div className="dot"><button>20</button></div>
-                  </div>
-                </div>
-                <div className="timing-right"></div>
+            <div className="sponsor">
+              <div className="spon-wrap">
+                <h1> <span>IN</span> ASSOCIATION <span>WITH</span> </h1>
+                <img src="https://ik.imagekit.io/egjzyz51e/Tec36_Logo_white_300x.png?updatedAt=1679145810521" alt="" />
               </div>
             </div>
-          </div>
+
+            {/* SCHEDUL SECTION*/}
+            <div className="schedule">
+              <div className="schedule-wrap">
+                <h1>SCHEDULE</h1>
+                <div className="timings">
+                  <div className="timing-left">
+                    <div className={currentDot === 0 ? "dots initial" : currentDot === 1 ? "dots mid"  : currentDot ===2 ? "dots final" : "dots"}>
+                      <div className={currentDot === 0 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(0) }}>18</button></div>
+                      <div className={currentDot === 1 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(1) }}>19</button></div>
+                      <div className={currentDot === 2 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(2) }}>20</button></div>
+                    </div>
+                  </div>
+                  <div className="timing-right">
+                    <div className={currentDot === 0 ? "schdl-text open" : "schdl-text"}>
+                      Inauguration
+                    </div>
+                    <div className={currentDot === 1 ? "schdl-text open" : "schdl-text"}>
+                      Competetion
+                    </div>
+                    <div className={currentDot === 2 ? "schdl-text open" : "schdl-text"}>
+                      DJ Night
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* FOOTER SECTION */}
 

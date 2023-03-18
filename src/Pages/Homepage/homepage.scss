@@ -469,13 +469,15 @@
                 // schedule section
                 .schedule {
                     width: 100%;
+                    margin-bottom: 100px;
 
                     .schedule-wrap {
                         width: 100%;
                         display: flex;
                         flex-direction: column;
-                        gap: 20px;
+                        gap: 50px;
                         padding: 20px;
+
 
                         h1 {
                             font-size: 45px;
@@ -493,34 +495,107 @@
 
                             .timing-left {
                                 width: 150px;
-                                border: 1px solid olive;
 
                                 .dots {
                                     width: 100%;
                                     display: flex;
                                     flex-direction: column;
-                                    justify-content: space-between;
+                                    justify-content: flex-start;
                                     align-items: center;
                                     justify-content: center;
                                     gap: 150px;
+
+                                    position: relative;
+
+                                    &.initial {
+                                        &::before {
+                                            height: 0%;
+                                            transition: 0.5s ease;
+                                        }
+                                    }
+
+                                    &.mid {
+                                        &::before {
+                                            height: 50%;
+                                            transition: 0.5s ease;
+                                        }
+                                    }
+
+                                    &.final {
+                                        &::before {
+                                            height: 100%;
+                                            transition: 0.5s ease;
+                                        }
+                                    }
+
+
+                                    &::before {
+                                        content: "";
+                                        width: 2px;
+                                        height: 0%;
+                                        background: var(--secondary-color);
+                                        position: absolute;
+                                        top: 0;
+                                        transition: 0.5s ease;
+                                        transform-origin: top;
+                                    }
 
                                     .dot {
                                         width: 50px;
                                         height: 50px;
                                         border-radius: 50%;
-                                        overflow: hidden;
+                                        position: relative;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
 
-                                        button{
+                                        &.active {
+                                            &::before {
+                                                animation: sclup 1s infinite ease-in-out;
+                                            }
+                                        }
+
+                                        &::before {
+                                            content: "";
+                                            width: 70px;
+                                            height: 70px;
+                                            border-right: 1px solid var(--secondary-color);
+                                            border-left: 1px solid var(--secondary-color);
+                                            position: absolute;
+                                            border-radius: 50%;
+                                            transform-origin: center;
+                                            animation: rote 1s infinite ease;
+                                        }
+
+                                        button {
                                             width: 100%;
                                             height: 100%;
-                                            background: transparent;
-                                            border: 1px solid var(--secondary-color);
+                                            background: black;
                                             color: var(--secondary-color);
                                             display: flex;
                                             justify-content: center;
                                             align-items: center;
+                                            position: relative;
+                                            overflow: hidden;
+                                            border-radius: 50%;
+                                            border: none;
+                                            cursor: pointer;
+                                            transition: 0.5s ease;
 
 
+                                            &:hover {
+                                                font-size: 20px;
+                                                transition: 0.5s ease;
+                                            }
+
+                                            &::before {
+                                                content: "";
+                                                width: 96%;
+                                                height: 97%;
+                                                position: absolute;
+                                                transform-origin: center;
+                                                border: 1px solid var(--secondary-color);
+                                            }
                                         }
                                     }
                                 }
@@ -528,8 +603,39 @@
 
                             .timing-right {
                                 width: calc(100% - 150px);
-                                border:1px solid white;
-                                height: 100%;
+                                height: 50vh;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+
+                                .schdl-text {
+                                    width: 100%;
+                                    height: 100%;
+                                    background-size: cover;
+                                    font-size: 5vw;
+                                    color: rgba(181, 181, 181, 0.634);
+                                    font-family: "Anurati";
+                                    font-weight: 900;
+                                    text-align: center;
+                                    letter-spacing: 10px;
+                                    text-transform: uppercase;
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    translate: 0 30px 0;
+                                    transition: 1s ease;
+                                    position: absolute;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    &.open {
+                                        visibility: visible;
+                                        opacity: 1;
+                                        translate: 0 0 0;
+                                        transition: 1s ease;
+                                    }
+                                }
                             }
                         }
                     }
@@ -587,6 +693,17 @@
     100% {
         background-position: 100% 50%;
     }
+}
+
+@keyframes sclup {
+    0% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 1.2;
+    }
+
 }
 
 
@@ -758,18 +875,21 @@
                     // SPONSOR SECTION
                     .sponsor {
                         padding-top: 0;
+
                         .spon-wrap {
 
                             // padding: 20px;
                             h1 {
                                 font-size: 9vw;
                                 text-align: center;
-                                span{
+
+                                span {
                                     width: 100%;
                                     display: block;
                                     text-align: left;
+
                                     // border: 1px solid white;
-                                    &:nth-child(2){
+                                    &:nth-child(2) {
                                         text-align: right;
                                     }
                                 }
