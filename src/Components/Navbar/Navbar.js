@@ -55,7 +55,7 @@ const Navbar = (props) => {
           <div className="logo"><h1>LAQSHYA</h1></div>
           <button className='audio-btn' onClick={(e) => playSound(e)}>{audioPlayed ? <FaVolumeMute /> : <FaVolumeUp />}</button>
           <ul className="menu">
-            <li><a href="/Laqshya/">HOME</a></li>
+            <li><a href="/Laqshya">HOME</a></li>
             <li><a href="/Laqshya/events">EVENTS</a></li>
             <li><a href="/Laqshya/gallery">GALLERY</a></li>
             <li><a href="/Laqshya/gallery">BOARD</a></li>
