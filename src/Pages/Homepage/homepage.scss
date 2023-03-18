@@ -440,12 +440,15 @@
                     margin: 50px 0;
 
                     .spon-wrap {
+                        padding: 70px 0;
                         width: 100%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         flex-direction: column;
                         gap: 50px;
+                        background: linear-gradient(3deg, rgba(61, 149, 187, 0.671) -44.65%, rgba(26, 26, 30, 0.2039215686) 75.57%);
+
 
                         h1 {
                             color: rgba(181, 181, 181, 0.634);
@@ -469,10 +472,11 @@
 
                     .schedule-wrap {
                         width: 100%;
-                        display:flex;
+                        display: flex;
                         flex-direction: column;
                         gap: 20px;
                         padding: 20px;
+
                         h1 {
                             font-size: 45px;
                             font-weight: 900;
@@ -480,25 +484,52 @@
                             color: rgba(181, 181, 181, 0.634);
                             letter-spacing: 10px;
                         }
+
                         .timings {
                             width: 100%;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+
                             .timing-left {
-                                width: 100px; 
-                                border: 1px solid olive;                             
+                                width: 150px;
+                                border: 1px solid olive;
+
                                 .dots {
                                     width: 100%;
                                     display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    align-items: center;
                                     justify-content: center;
-                                    
-                                    .dot {}
+                                    gap: 150px;
+
+                                    .dot {
+                                        width: 50px;
+                                        height: 50px;
+                                        border-radius: 50%;
+                                        overflow: hidden;
+
+                                        button{
+                                            width: 100%;
+                                            height: 100%;
+                                            background: transparent;
+                                            border: 1px solid var(--secondary-color);
+                                            color: var(--secondary-color);
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+
+
+                                        }
+                                    }
                                 }
                             }
 
                             .timing-right {
-                                // width: 50%;
+                                width: calc(100% - 150px);
+                                border:1px solid white;
+                                height: 100%;
                             }
                         }
                     }
@@ -718,6 +749,34 @@
                                     background: transparent;
 
                                 }
+                            }
+                        }
+                    }
+
+
+
+                    // SPONSOR SECTION
+                    .sponsor {
+                        padding-top: 0;
+                        .spon-wrap {
+
+                            // padding: 20px;
+                            h1 {
+                                font-size: 9vw;
+                                text-align: center;
+                                span{
+                                    width: 100%;
+                                    display: block;
+                                    text-align: left;
+                                    // border: 1px solid white;
+                                    &:nth-child(2){
+                                        text-align: right;
+                                    }
+                                }
+                            }
+
+                            img {
+                                width: 70%;
                             }
                         }
                     }

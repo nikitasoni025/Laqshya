@@ -170,7 +170,7 @@ const Homepage = (props) => {
 
           <div className="sponsor">
             <div className="spon-wrap">
-              <h1>IN ASSOCIATION WITH</h1>
+              <h1> <span>IN</span> ASSOCIATION <span>WITH</span> </h1>
               <img src="https://ik.imagekit.io/egjzyz51e/Tec36_Logo_white_300x.png?updatedAt=1679145810521" alt="" />
             </div>
           </div>
@@ -182,9 +182,9 @@ const Homepage = (props) => {
               <div className="timings">
                 <div className="timing-left">
                   <div className="dots">
-                    <div className="dot">18</div>
-                    <div className="dot">19</div>
-                    <div className="dot">20</div>
+                    <div className="dot"><button>18</button></div>
+                    <div className="dot"><button>19</button></div>
+                    <div className="dot"><button>20</button></div>
                   </div>
                 </div>
                 <div className="timing-right"></div>
