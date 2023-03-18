@@ -21,7 +21,7 @@ const Homepage = (props) => {
       window.addEventListener('load', () => {
         timer = setTimeout(() => {
           setPreloading(false);
-          sessionStorage.setItem('visited','true');
+          sessionStorage.setItem('visited', 'true');
         }, 3000)
       })
     } else {
@@ -65,16 +65,18 @@ const Homepage = (props) => {
     <div className='homepage'>
 
       {/* Preloader */}
-      <div className={preloading ? 'preloading' :'preloading preloadingends'}>
-      <button onClick={()=>{setPreloading(false);sessionStorage.setItem('visited','true')}}>Dive In</button>
+      <div className={preloading ? 'preloading' : 'preloading preloadingends'}>
+        {props.windowSize[0] <= 991 ? (
+          <button onClick={() => { setPreloading(false); sessionStorage.setItem('visited', 'true') }}>Dive In</button>
+        ) : null}
         <div className="prelogo">
-          <h1 className={preloading ? '' :'fade'}>LAQSHYA</h1>
+          <h1 className={preloading ? '' : 'fade'}>LAQSHYA</h1>
 
-          <p className={preloading ? '' :'fade'}>In Assocoation With</p>
+          <p className={preloading ? '' : 'fade'}>In Assocoation With</p>
 
-          <img className={preloading ? '' :'fade'} src="https://ik.imagekit.io/dexo68yudb/Tec36_Logo_white_300x.png?updatedAt=1679068816840" alt="" />
+          <img className={preloading ? '' : 'fade'} src="https://ik.imagekit.io/dexo68yudb/Tec36_Logo_white_300x.png?updatedAt=1679068816840" alt="" />
 
-          
+
         </div>
       </div>
 
