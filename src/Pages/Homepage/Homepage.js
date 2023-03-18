@@ -168,12 +168,12 @@ const Homepage = (props) => {
 
             {/* SECTION 4 SPONSOR */}
 
-            <div className="sponsor">
-              <div className="sponsor-wrap">
-                <h1>IN ASSOCIATION WITH</h1>
-                <img src="https://ik.imagekit.io/egjzyz51e/Tec36_Logo_white_300x.png?updatedAt=1679145810521" alt="" />
-              </div>
+           <div className="sponsor">
+            <div className="sponsor-wrap">
+              <h1>IN ASSOCIATION WITH</h1>
+              <img src="https://ik.imagekit.io/egjzyz51e/Tec36_Logo_white_300x.png?updatedAt=1679145810521" alt="" />
             </div>
+           </div>
 
             {/* FOOTER SECTION */}
 
