@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.2d88d399.css",
-    "main.js": "/static/js/main.ae0d9ee2.js",
-    "static/media/WhatsApp Audio 2023-03-18 at 12.50.14 AM.mp3": "/static/media/WhatsApp Audio 2023-03-18 at 12.50.14 AM.f286fe78075cae8f8a0c.mp3",
-    "static/media/Sman.ttf": "/static/media/Sman.fcba438bef1049a04a96.ttf",
-    "static/media/SamarkanNormal.woff": "/static/media/SamarkanNormal.28b5cade04c95fae47a6.woff",
-    "static/media/SamarkanNormal.woff2": "/static/media/SamarkanNormal.5ae38ee34838206a0eb9.woff2",
-    "static/media/Ailerons-Regular.woff": "/static/media/Ailerons-Regular.820d5589e41a5e7ee81d.woff",
-    "static/media/Ailerons-Regular.woff2": "/static/media/Ailerons-Regular.72ddd5c2e91db6e307cf.woff2",
-    "static/media/Anurati-Regular.woff": "/static/media/Anurati-Regular.f500f4b0365151684320.woff",
-    "static/media/Anurati-Regular.woff2": "/static/media/Anurati-Regular.3aecc46138093421fd9a.woff2",
-    "index.html": "/index.html",
-    "main.2d88d399.css.map": "/static/css/main.2d88d399.css.map",
-    "main.ae0d9ee2.js.map": "/static/js/main.ae0d9ee2.js.map"
+    "main.css": "/Laqshya/static/css/main.85c24ba7.css",
+    "main.js": "/Laqshya/static/js/main.16aae5af.js",
+    "static/media/WhatsApp Audio 2023-03-18 at 12.50.14 AM.mp3": "/Laqshya/static/media/WhatsApp Audio 2023-03-18 at 12.50.14 AM.f286fe78075cae8f8a0c.mp3",
+    "static/media/Sman.ttf": "/Laqshya/static/media/Sman.fcba438bef1049a04a96.ttf",
+    "static/media/SamarkanNormal.woff": "/Laqshya/static/media/SamarkanNormal.28b5cade04c95fae47a6.woff",
+    "static/media/SamarkanNormal.woff2": "/Laqshya/static/media/SamarkanNormal.5ae38ee34838206a0eb9.woff2",
+    "static/media/Ailerons-Regular.woff": "/Laqshya/static/media/Ailerons-Regular.820d5589e41a5e7ee81d.woff",
+    "static/media/Ailerons-Regular.woff2": "/Laqshya/static/media/Ailerons-Regular.72ddd5c2e91db6e307cf.woff2",
+    "static/media/Anurati-Regular.woff": "/Laqshya/static/media/Anurati-Regular.f500f4b0365151684320.woff",
+    "static/media/Anurati-Regular.woff2": "/Laqshya/static/media/Anurati-Regular.3aecc46138093421fd9a.woff2",
+    "index.html": "/Laqshya/index.html",
+    "main.85c24ba7.css.map": "/Laqshya/static/css/main.85c24ba7.css.map",
+    "main.16aae5af.js.map": "/Laqshya/static/js/main.16aae5af.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d88d399.css",
-    "static/js/main.ae0d9ee2.js"
+    "static/css/main.85c24ba7.css",
+    "static/js/main.16aae5af.js"
   ]
 }
