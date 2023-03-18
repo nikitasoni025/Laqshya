@@ -11,7 +11,7 @@ const Footer = (props) => {
         <div className="coloumn-wrap">
           <div className="col">
             <div className="wdth-wrap">
-              <img src="https://ik.imagekit.io/egjzyz51e/IMG_20230307_200718.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678199895069" alt="" />
+              <img src="https://ik.imagekit.io/dexo68yudb/output-onlinepngtools__2_.png?updatedAt=1679173248151" alt="" />
               <p>Copyright © CSIT 2023<br />Techno Management Sports & Cultural Fest</p>
             </div>
           </div>
