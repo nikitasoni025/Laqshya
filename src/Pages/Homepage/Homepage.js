@@ -168,12 +168,29 @@ const Homepage = (props) => {
 
             {/* SECTION 4 SPONSOR */}
 
-           <div className="sponsor">
-            <div className="sponsor-wrap">
+          <div className="sponsor">
+            <div className="spon-wrap">
               <h1>IN ASSOCIATION WITH</h1>
               <img src="https://ik.imagekit.io/egjzyz51e/Tec36_Logo_white_300x.png?updatedAt=1679145810521" alt="" />
             </div>
-           </div>
+          </div>
+
+          {/* SCHEDUL SECTION*/}
+          <div className="schedule">
+            <div className="schedule-wrap">
+              <h1>SCHEDULE</h1>
+              <div className="timings">
+                <div className="timing-left">
+                  <div className="dots">
+                    <div className="dot">18</div>
+                    <div className="dot">19</div>
+                    <div className="dot">20</div>
+                  </div>
+                </div>
+                <div className="timing-right"></div>
+              </div>
+            </div>
+          </div>
 
             {/* FOOTER SECTION */}
 

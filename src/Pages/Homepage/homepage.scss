@@ -309,7 +309,7 @@
 
                                         p {
                                             text-align: justify;
-                                            font-family:var(--secondary-font);
+                                            font-family: var(--secondary-font);
                                             font-size: 15px;
 
                                         }
@@ -434,7 +434,77 @@
                     }
                 }
 
-               
+                // sponsor section
+                .sponsor {
+                    width: 100%;
+                    margin: 50px 0;
+
+                    .spon-wrap {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 50px;
+
+                        h1 {
+                            color: rgba(181, 181, 181, 0.634);
+                            font-family: var(--secondary-font);
+                            font-size: 45px;
+                            font-weight: 900;
+                            letter-spacing: 10px;
+
+                        }
+
+                        img {
+                            width: 40%;
+
+                        }
+                    }
+                }
+
+                // schedule section
+                .schedule {
+                    width: 100%;
+
+                    .schedule-wrap {
+                        width: 100%;
+                        display:flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        padding: 20px;
+                        h1 {
+                            font-size: 45px;
+                            font-weight: 900;
+                            font-family: var(--secondary-font);
+                            color: rgba(181, 181, 181, 0.634);
+                            letter-spacing: 10px;
+                        }
+                        .timings {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .timing-left {
+                                width: 100px; 
+                                border: 1px solid olive;                             
+                                .dots {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    
+                                    .dot {}
+                                }
+                            }
+
+                            .timing-right {
+                                // width: 50%;
+                            }
+                        }
+                    }
+                }
+
+
             }
         }
     }
@@ -595,11 +665,12 @@
 
                                         h1 {
                                             font-size: 10vw;
-                                            span{
+
+                                            span {
                                                 margin-left: 50%;
                                             }
                                         }
-                                        
+
 
                                     }
 
