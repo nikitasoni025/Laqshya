@@ -14,8 +14,8 @@ const Navbar = (props) => {
 
 
   useEffect(() => {
-    setAudioPlayed(true);
-    document.getElementById('ouraudio').play();
+    // setAudioPlayed(true);
+    // document.getElementById('ouraudio').play();
     const isLogined = sessionStorage.getItem('isLogined');
     if (isLogined) {
       setIsUserLogined(true);

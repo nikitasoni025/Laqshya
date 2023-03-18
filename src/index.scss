@@ -37,6 +37,9 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   background: var(--main-color);
+  &::-webkit-scrollbar{
+    display: none;
+}
 }
 
 code {
