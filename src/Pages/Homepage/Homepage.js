@@ -126,7 +126,7 @@ const Homepage = (props) => {
                       </div>
                     </div>
                     <div className="right-cont">
-                      <video controls src="https://ik.imagekit.io/egjzyz51e/VID-20230301-WA0001.mp4?updatedAt=1677831082506"></video>
+                      <video poster='https://ik.imagekit.io/egjzyz51e/output-onlinepngtools__1_.png?updatedAt=1679148485586' controls src="https://ik.imagekit.io/egjzyz51e/VID-20230301-WA0001.mp4?updatedAt=1677831082506"></video>
 
                     </div>
 
