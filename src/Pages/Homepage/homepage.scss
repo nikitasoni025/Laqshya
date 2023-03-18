@@ -243,7 +243,7 @@
                             transform-origin: center;
                             position: absolute;
                             z-index: 1;
-                            animation: rote 2s infinite ease-in-out;
+                            animation: rote 5s infinite ease;
                         }
 
                         .details-wrap {
@@ -305,9 +305,12 @@
                                         display: flex;
                                         flex-direction: column;
                                         gap: 15px;
+                                        overflow: hidden;
 
                                         p {
                                             text-align: justify;
+                                            font-family:var(--secondary-font);
+                                            font-size: 15px;
 
                                         }
                                     }
@@ -566,29 +569,43 @@
                     // SECTION 2
                     .section-2 {
                         height: auto;
+                        padding: 5px;
 
                         .section-2-wrap {
                             height: 100%;
-                            &::before{
+
+                            &::before {
                                 width: 20%;
                                 height: 200%;
                             }
 
 
                             .details-wrap {
-                               width: 99%;
-                               height: 90%;
+                                width: 99%;
+                                height: 90%;
+
                                 .content {
                                     flex-direction: column;
                                     gap: 15px;
-                                    .left-cont{
+
+                                    .left-cont {
                                         width: 100%;
 
+                                        h1 {
+                                            font-size: 10vw;
+                                            span{
+                                                margin-left: 50%;
+                                            }
+                                        }
+                                        
+
                                     }
-                                    .right-cont{
+
+                                    .right-cont {
                                         width: 100%;
+
                                         // padding: 0;
-                                        video{
+                                        video {
                                             width: 100%;
                                         }
                                     }
@@ -597,46 +614,46 @@
                         }
                     }
 
-                
 
-                // SECTION 3
-                .section-3 {
-                    height: auto;
 
-                    &::before {
-                        right: -87%;
-                    }
+                    // SECTION 3
+                    .section-3 {
+                        height: auto;
 
-                    .section3-wrap {
-                        .sec-3-title {
-                            flex-direction: row;
-                            top: 20px;
-                            left: 20px;
+                        &::before {
+                            right: -87%;
                         }
 
-                        .sec-3-title2 {
-                            top: 70px;
-                            right: 20px;
-                            flex-direction: row;
-                        }
+                        .section3-wrap {
+                            .sec-3-title {
+                                flex-direction: row;
+                                top: 20px;
+                                left: 20px;
+                            }
 
-                        .wrap-carousel {
-                            width: 100%;
+                            .sec-3-title2 {
+                                top: 70px;
+                                right: 20px;
+                                flex-direction: row;
+                            }
 
-                            &::before {
-                                width: 97%;
-                                background: transparent;
+                            .wrap-carousel {
+                                width: 100%;
 
+                                &::before {
+                                    width: 97%;
+                                    background: transparent;
+
+                                }
                             }
                         }
                     }
+
+
+
                 }
-
-
-
             }
         }
     }
-}
 
 }
