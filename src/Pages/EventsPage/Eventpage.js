@@ -6,10 +6,16 @@ import Eventmodal from '../../Components/Eventmodal/Eventmodal';
 import Footer from '../../Components/Footer/Footer';
 import FormModal from '../../Components/FormModal/FormModal';
 import Navbar from '../../Components/Navbar/Navbar';
-import { bannerslide, bouddhiki, kaushalya, Kautilya, natraja, parakram, Shauryas } from '../../Constants/OurConst';
+import { bannerslide, bouddhiki, eventDetails, kaushalya, Kautilya, natraja, parakram, Shauryas } from '../../Constants/OurConst';
 import { checkTokenExpiration } from '../../Utils/commonutil';
 import jwtDecode from 'jwt-decode';
 import './Eventpage.scss';
+
+const initialEventData ={
+  eventname:"",
+  registrationfee:"",
+  isGrouped:true
+}
 
 const Eventpage = (props) => {
 
@@ -17,6 +23,7 @@ const Eventpage = (props) => {
   const [ourIndex, setOurIndex] = useState(0);
   const [isModalOpened, setIsModalOpened] = useState(false);
   const [openFormModal, setOpenFormModal] = useState(false);
+  const [eventNameFee, setEventNameFee] = useState(initialEventData);
   const navigate = useNavigate();
 
   console.log("Nishu", props.isUserAuthenticated);
@@ -52,7 +59,7 @@ const Eventpage = (props) => {
       {/* <Eventmodal/> */}
 
       {openFormModal ? (
-        <FormModal setOpenFormModal={setOpenFormModal} />
+        <FormModal eventNameFee={eventNameFee} setOpenFormModal={setOpenFormModal} />
       ) : null}
       {isUserAuthenticated ? null : (
         <Link to={'/signin'} className='clktosignin'>Sign to enroll for this event</Link>
@@ -86,6 +93,7 @@ const Eventpage = (props) => {
                   isUserAuthenticated={isUserAuthenticated}
                   events={Shauryas}
                   openModal={openModal}
+                  setEventNameFee={setEventNameFee}
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
               </div>
@@ -103,6 +111,7 @@ const Eventpage = (props) => {
                   setOpenFormModal={setOpenFormModal}
                   isUserAuthenticated={isUserAuthenticated}
                   events={kaushalya}
+                  setEventNameFee={setEventNameFee}
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
               </div>
@@ -121,6 +130,7 @@ const Eventpage = (props) => {
                   isUserAuthenticated={isUserAuthenticated}
                   events={bouddhiki}
                   openModal={openModal}
+                  setEventNameFee={setEventNameFee}
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
               </div>
@@ -138,6 +148,7 @@ const Eventpage = (props) => {
                     isUserAuthenticated={isUserAuthenticated}
                     events={parakram}
                     openModal={openModal}
+                    setEventNameFee={setEventNameFee}
                     windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                   />
                 </div>
@@ -156,6 +167,7 @@ const Eventpage = (props) => {
                     isUserAuthenticated={isUserAuthenticated}
                     events={natraja}
                     openModal={openModal}
+                    setEventNameFee={setEventNameFee}
                     windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                   />
                 </div>
@@ -174,6 +186,7 @@ const Eventpage = (props) => {
                     isUserAuthenticated={isUserAuthenticated}
                     events={Kautilya}
                     openModal={openModal}
+                    setEventNameFee={setEventNameFee}
                     windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                   />
                 </div>

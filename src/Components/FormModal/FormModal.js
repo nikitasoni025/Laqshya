@@ -4,10 +4,48 @@ import AutoComplete from '../AutoComplete/AutoComplete';
 import { FaBackward, FaChevronCircleLeft, FaChevronLeft, FaSeedling, FaTimes, FaTrash } from 'react-icons/fa';
 import { DataContext } from '../../Context/Dataprovider';
 
+
+
 const FormModal = (props) => {
-    const isGrouped = true;
-    const [groupedClicked, setGroupedClicked] = useState(true);
+    const { account } = useContext(DataContext);
+
+
+    const InitialIndiFormData = {
+
+        fullname: account.username || "Anonymous",
+        email: account.email || "Anonymous@gmail.com",
+        phonenumber: account.phonenumber || "XXXXXXXXXX",
+        institution: account.institution || "Anonymous",
+        standard: account.standard || "Anonymous",
+        eventname: props.eventNameFee.eventname || "undifined",
+        registrationfee: props.eventNameFee.registrationfee || 0,
+        status: false
+
+    }
+    const InitialGroupFormData = {
+
+        groupname: "",
+        members: [
+            {
+                fullname: "",
+                email: "",
+                phonenumber: "",
+                institution: "",
+                standard: "",
+
+            }
+        ],
+        eventname: "",
+        registrationfee: "",
+        status: false,
+
+
+    }
+    const [groupedClicked, setGroupedClicked] = useState("S1");
+    const [s3FormType, setS3FormType] = useState(null)
     const [paticipants, setParticipants] = useState([]);
+    const [indiFormData, setIndiFormData] = useState()
+
 
     const handleSelectPaticipants = (paticipant) => {
 
@@ -20,31 +58,34 @@ const FormModal = (props) => {
 
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event) => { }
 
-
-
-    }
+    console.log(account);
 
 
     return (
         <div className='formModal'>
             <div className="formModal-wrap">
-                <button onClick={()=>props.setOpenFormModal(false)} className='cls-btn'><FaTimes /></button>
+                <button onClick={() => props.setOpenFormModal(false)} className='cls-btn'><FaTimes /></button>
 
                 <div className="form-wrap">
                     {/* first-step */}
-                    {groupedClicked ? (
+                    {groupedClicked === "S1" ? (
                         <div className="form-step-1">
 
-                            <h1> Do you want to Perform </h1>
+                            <h1> {props.eventNameFee.isGrouped ? "Do you want to Perform" : "You are performing"} </h1>
                             <div className="row">
-                                <button>Individual</button>
-                                <span>OR</span>
-                                <button onClick={() => setGroupedClicked(false)}>Grouped</button>
+                                <button onClick={() => setGroupedClicked("S3")}>Individual</button>
+                                {props.eventNameFee.isGrouped ? (
+                                    <>
+                                        <span>OR</span>
+                                        <button onClick={() => setGroupedClicked("S2")}>Grouped</button>
+                                    </>
+                                ) : null}
+
                             </div>
                         </div>
-                    ) : (
+                    ) : groupedClicked === "S2" ? (
                         // second step
                         <div className="form-step-2">
                             <h1> Group Registration </h1>
@@ -75,14 +116,22 @@ const FormModal = (props) => {
                             </div>
                             <div className="row2">
                                 <div className="back-cross-btn">
-                                    <button onClick={()=> setGroupedClicked(true)}><FaChevronLeft />Back</button>
+                                    <button onClick={() => setGroupedClicked("S1")}><FaChevronLeft />Back</button>
                                     <button onClick={handleSubmit()}>Make Group</button>
                                 </div>
                             </div>
 
 
                         </div>
-                    )}
+                    ) : groupedClicked === "S3" ? (
+                        <div className="form-step-3">
+                            <h1>Registering For</h1>
+                            <h2>Event Name : {props.eventNameFee.eventname}</h2>
+                            <h2>Registration Fee :{props.eventNameFee.registrationfee}&nbsp;₹</h2>
+                            <button>Pay</button>
+                            <button onClick={() => setGroupedClicked("S1")}><FaChevronLeft />Back</button>
+                        </div>
+                    ) : null}
 
                 </div>
 

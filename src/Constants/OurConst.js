@@ -1005,14 +1005,16 @@ export const Shauryas = [
         ourIndex:0,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
     },
     {
         title: "Robo Soccer League",
         ourIndex:1,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
@@ -1021,7 +1023,8 @@ export const Shauryas = [
         ourIndex:2,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
@@ -1030,7 +1033,7 @@ export const Shauryas = [
         ourIndex:3,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3, registrationfee:50
 
 
     },
@@ -1039,7 +1042,8 @@ export const Shauryas = [
         ourIndex:4,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+         registrationfee:50
         
 
 
@@ -1049,7 +1053,8 @@ export const Shauryas = [
         ourIndex:5,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
@@ -1058,7 +1063,8 @@ export const Shauryas = [
         ourIndex:6,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
@@ -1069,7 +1075,8 @@ export const kaushalya = [
         ourIndex:7,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:7,
+        registrationfee:50
 
 
     },
@@ -1077,8 +1084,9 @@ export const kaushalya = [
         title: "Arm Wrestling",
         ourIndex:8,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3
+        isGrouped:false,
+        maxParticipants:1,
+        registrationfee:50
 
 
     },
@@ -1087,7 +1095,8 @@ export const kaushalya = [
         ourIndex:9,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
@@ -1095,8 +1104,19 @@ export const kaushalya = [
         title: "Angry Bird",
         ourIndex:10,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        isGrouped:false,
+        maxParticipants:1,
+        registrationfee:50
+
+
+    },
+    {
+        title: "E-Sports",
+        ourIndex:11,
+        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
@@ -1105,28 +1125,31 @@ export const kaushalya = [
 export const bouddhiki = [
     {
         title: "Face Of Laqshya",
-        ourIndex:11,
+        ourIndex:12,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3
+        isGrouped:false,
+        maxParticipants:1,
+        registrationfee:50
 
 
     },
     {
         title: "Artifex",
-        ourIndex:12,
+        ourIndex:13,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
     {
         title: "cinematics",
-        ourIndex:13,
+        ourIndex:14,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
@@ -1136,46 +1159,51 @@ export const bouddhiki = [
 export const parakram = [
     {
         title: "Bottle jet",
-        ourIndex:14,
+        ourIndex:15,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
     {
-        title: "D Bugger",
-        ourIndex:15,
+        title: "Code Crunch",
+        ourIndex:16,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3
+        isGrouped:false,
+        maxParticipants:1,
+        registrationfee:50
 
 
     },
     {
         title: "Tech farmactic",
-        ourIndex:16,
+        ourIndex:17,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
     {
         title: "Cad Master",
-        ourIndex:17,
+        ourIndex:18,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
     {
         title: "Lets Play With Bond",
-        ourIndex:18,
+        ourIndex:19,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
@@ -1184,19 +1212,21 @@ export const parakram = [
 export const natraja = [
     {
         title: "Make Your Move",
-        ourIndex:19,
+        ourIndex:20,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
     {
         title: "Just a Minute",
-        ourIndex:20,
+        ourIndex:21,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
@@ -1208,37 +1238,41 @@ export const natraja = [
 export const Kautilya = [
     {
         title: "Quiz",
-        ourIndex:21,
+        ourIndex:22,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
     {
         title: "Treasure hunt",
-        ourIndex:22,
+        ourIndex:23,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
     {
         title: "Pitch Your Idea",
-        ourIndex:23,
+        ourIndex:24,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },
     {
         title: "Workshops",
-        ourIndex:24,
+        ourIndex:25,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped:true,
-        maxParticipants:3
+        maxParticipants:3,
+        registrationfee:50
 
 
     },

@@ -30,9 +30,9 @@
             right: 10px;
             color: white;
             transition: 0.5s ease;
-            
 
-            &:hover{
+
+            &:hover {
                 rotate: 90deg;
                 transition: 0.5s ease;
             }
@@ -43,7 +43,7 @@
             width: 100%;
 
             h1 {
-                color: white;
+                color: var(--secondary-color);
                 font-size: 20px;
                 display: flex;
                 justify-content: space-between;
@@ -65,30 +65,25 @@
                 span {
                     color: white;
                 }
-
                 button {
-
                     padding: 8px 16px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid var(--secondary-color);
                     outline: none;
-                    border: none;
-                    background: var(--secondary-color);
-                    color: white;
-                    box-sizing: border-box;
-                    // transition: 0.5s ease;
-
+                    color: var(--secondary-color);
+                    background: transparent;
+                    font-weight: 700;
+                    transition: 0.5s ease-in-out;
+                    gap: 10px;
+    
                     &:hover {
-                        background: transparent;
-                        border: 2px solid var(--secondary-color);
+                        background: var(--secondary-color);
+                        color: rgb(70, 70, 70);
+                        transition: 0.5s ease-in-out;
                     }
-
-
-
-
-
                 }
             }
         }
@@ -101,7 +96,7 @@
             gap: 30px;
 
             h1 {
-                color: aliceblue;
+                color: var(--secondary-color);
             }
 
             .row {
@@ -231,8 +226,8 @@
 
             .row2 {
                 width: 100%;
-               
-                
+
+
 
                 .list-wrap {
                     width: 100%;
@@ -252,6 +247,7 @@
                             h1 {
                                 width: 100%;
                                 font-size: 15px;
+                                color: var(--secondary-color);
                             }
 
 
@@ -379,33 +375,75 @@
 
                 }
 
-                .back-cross-btn{
+                .back-cross-btn {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     gap: 5px;
                 }
+
                 button {
                     width: 100%;
-                    padding: 8px 0;
+                    padding: 8px 16px;
                     border-radius: 5px;
-                    background: var(--secondary-color);
-                    color: white;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    border: none;
+                    border: 1px solid var(--secondary-color);
                     outline: none;
-                    cursor: pointer;
+                    color: var(--secondary-color);
+                    background: transparent;
+                    font-weight: 700;
+                    transition: 0.5s ease-in-out;
                     gap: 10px;
 
                     &:hover {
-                        border: 1px solid var(--secondary-color);
-                        background: transparent;
+                        background: var(--secondary-color);
+                        color: rgb(70, 70, 70);
+                        transition: 0.5s ease-in-out;
                     }
                 }
 
             }
+        }
+
+        .form-step-3 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: var(--secondary-font);
+            color: white;
+            gap: 25px;
+
+            h1 {
+                color: var(--secondary-color);
+            }
+
+            h2 {
+                color: rgba(179, 179, 179, 0.822);
+            }
+
+            button {
+                padding: 8px 16px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid var(--secondary-color);
+                outline: none;
+                color: var(--secondary-color);
+                background: transparent;
+                font-weight: 700;
+                transition: 0.5s ease-in-out;
+                gap: 10px;
+
+                &:hover {
+                    background: var(--secondary-color);
+                    color: rgb(70, 70, 70);
+                    transition: 0.5s ease-in-out;
+                }
+            }
+
         }
 
 

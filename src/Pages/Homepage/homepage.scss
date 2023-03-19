@@ -155,7 +155,7 @@
                         position: absolute;
                         left: 0;
                         top: 0;
-                        background: url('https://ik.imagekit.io/dexo68yudb/Picsart_23-03-19_02-21-59-306.png?updatedAt=1679173063338');
+                        background: url('https://ik.imagekit.io/egjzyz51e/Picsart_23-03-19_11-45-01-405.png?updatedAt=1679207329951');
                         background-size: cover;
                         background-position: center;
                         // opacity: 1;
@@ -882,26 +882,31 @@
                         padding-top: 0;
 
                         .spon-wrap {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 70px;
 
                             // padding: 20px;
                             h1 {
-                                font-size: 9vw;
+                                font-size: 7vw;
                                 text-align: center;
+                                
 
                                 span {
                                     width: 100%;
                                     display: block;
-                                    text-align: left;
+                                    text-align: center;
 
                                     // border: 1px solid white;
                                     &:nth-child(2) {
-                                        text-align: right;
+                                        text-align: cenetr;
                                     }
                                 }
                             }
 
                             img {
-                                width: 70%;
+                                width: 75%;
                             }
                         }
                     }
@@ -913,6 +918,7 @@
                         .schedule-wrap{
                             h1{
                                 font-size: 10vw;
+                                text-align: center;
                             }
                             .timings{
                                 flex-direction: column;
@@ -958,6 +964,12 @@
                                                 transition: 0.5s ease;
                                             }
                                         }
+                                    }
+                                }
+
+                                .timing-right{
+                                    .schdl-text{
+                                        color: white;
                                     }
                                 }
 
