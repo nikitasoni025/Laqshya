@@ -32,7 +32,8 @@ export const SERVICE_URLS = {
     registerParticipants: { url: "/register", method: "POST" },
     userSignin: { url: "/signin", method: "POST" },
     getAllParticipants: { url: '/participants', method: "GET",params:true},
-    getSearchedParticipants: { url: "/api/participants", method: "GET" }
-    
+    getSearchedParticipants: { url: "/api/participants", method: "GET" },
+    getParticipantWithId: {url: "/partwid", method: "GET"},
+    registerIndividuals : {url: "/indi/regist",method: "POST"},
 
 }

@@ -1,8 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import "./formmodal.scss";
 import AutoComplete from '../AutoComplete/AutoComplete';
 import { FaChevronLeft, FaSeedling, FaTimes, FaTrash } from 'react-icons/fa';
 import { DataContext } from '../../Context/Dataprovider';
+import Loader from '../Loader/Loader';
+import { API } from '../../Services/Api';
 
 
 
@@ -11,18 +13,9 @@ const FormModal = (props) => {
 
 
     const initialIndiFormData = {
-        id: account.id || "",
-        fullname: account.username || "Anonymous",
-        email: account.email || "Anonymous@gmail.com",
-        phonenumber: account.phonenumber || "XXXXXXXXXX",
-        institution: account.institution || "Anonymous",
-        standard: account.standard || "Anonymous",
-        eventname: props.eventNameFee.eventname || "undifined",
-        eventid:props.eventNameFee.eventid,
-        registrationfee: props.eventNameFee.registrationfee || 0,
-        status: false
-    }  
-    
+
+    }
+
     const initialGroupFormData = {
         groupname: "",
         members: [
@@ -40,9 +33,35 @@ const FormModal = (props) => {
     }
 
     const [groupedClicked, setGroupedClicked] = useState("S1");
-    const [s3FormType, setS3FormType] = useState(null)
+    const [s3FormType, setS3FormType] = useState(null);
     const [paticipants, setParticipants] = useState([]);
-    const [indiFormData, setIndiFormData] = useState()
+    const [indiFormData, setIndiFormData] = useState();
+    const [isLoading, setIsLoading] = useState(false);
+
+    // setIndiFormData(initialIndiFormData);
+    useEffect(() => {
+        const fetchUser = async () => {
+            const userId = sessionStorage.getItem("isLogined");
+            const response = await API.getParticipantWithId({ id: userId });
+            console.log( "from Modal",userId,response);
+            if (response.isSuccess) {
+                setIndiFormData({
+                    id: userId || "CSIT",
+                    fullname: account.username || "Anonymous",
+                    email: account.email || "Anonymous@gmail.com",
+                    phonenumber: account.phonenumber || "XXXXXXXXXX",
+                    institution: account.institution || "Anonymous",
+                    standard: account.standard || "Anonymous",
+                    eventname: props.eventNameFee.eventname || "undifined",
+                    eventid: props.eventNameFee.eventid,
+                    registrationfee: props.eventNameFee.registrationfee || 0,
+                    status: false
+
+                })
+            }
+        }
+        fetchUser();
+    }, []);
 
 
     const handleSelectPaticipants = (paticipant) => {
@@ -54,8 +73,9 @@ const FormModal = (props) => {
 
     const handleSubmit = (event) => { };
 
-    const handleIndividalSubmit = async () => {
+    const handleIndividalSubmit = async (formData) => {
 
+        console.log("mm", formData);
     }
 
     console.log(account, initialIndiFormData);
@@ -120,7 +140,7 @@ const FormModal = (props) => {
                             <h1>Registering For</h1>
                             <h2>Event Name : {props.eventNameFee.eventname}</h2>
                             <h2>Registration Fee :{props.eventNameFee.registrationfee}&nbsp;₹</h2>
-                            {s3FormType === "indi" ? <button onClick={handleIndividalSubmit}>Pay</button> : s3FormType === "group" ? <button onClick={()=>{}}>Pay</button> : null}
+                            {s3FormType === "indi" ? <button onClick={() => handleIndividalSubmit(indiFormData)}>{isLoading ? <Loader /> : "Pay"}</button> : s3FormType === "group" ? <button onClick={() => { }}>{isLoading ? <Loader /> : "Pay"}</button> : null}
 
                             <button onClick={() => setGroupedClicked("S1")}><FaChevronLeft />Back</button>
                         </div>
