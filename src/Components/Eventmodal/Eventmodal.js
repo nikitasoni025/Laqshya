@@ -4,7 +4,6 @@ import { eventDetails } from '../../Constants/OurConst';
 import './eventmodal.scss';
 
 const Eventmodal = (props) => {
-    console.log(props.ourIndex);
     return (
         <div className='Eventmodal'>
             <div className="event-modal-wrap">

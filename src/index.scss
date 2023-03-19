@@ -189,6 +189,14 @@ code {
   }
 }
 
+
+.note-mark{
+  color: rgb(244, 234, 108);
+  font-weight: 500;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
 @keyframes floaty {
   from {
     transform: translateY(-5px);

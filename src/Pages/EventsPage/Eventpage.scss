@@ -4,18 +4,26 @@
     overflow: hidden;
     scroll-behavior: smooth;
 
-    .clktosignin{
+    .clktosignin {
         padding: 9px 18px;
         text-decoration: none;
         position: fixed;
         bottom: 10%;
+        border: 1px solid var(--secondary-color);
+        border-right: none;
         right: 0;
-        background: var(--secondary-color);
+        background: transparent;
         color: aliceblue;
         font-weight: 700;
         font-family: var(--secondary-font);
         border-top-left-radius: 10px;
         z-index: 5;
+        animation: wid 1s infinite alternate-reverse ease;
+
+        &:hover{
+            background: rgba(30, 214, 255, 0.304);
+            transition: 0.5s ease;
+        }
     }
 
     .eventpage-wrap {
@@ -138,6 +146,17 @@
 
 }
 
+@keyframes wid {
+    0% {
+        padding: 9px 18px;
+    }
+
+    100% {
+        padding: 9px 23px;
+    }
+
+}
+
 
 @media screen and (max-width:991px) {
     .Eventpage {
@@ -152,7 +171,8 @@
                         h1 {
                             font-size: 60px;
                         }
-                        h2{
+
+                        h2 {
                             font-size: 30px;
                         }
                     }

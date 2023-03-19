@@ -35,5 +35,6 @@ export const SERVICE_URLS = {
     getSearchedParticipants: { url: "/api/participants", method: "GET" ,params:true},
     getParticipantWithId: {url: "/partwid", method: "GET",params:true},
     registerIndividuals : {url: "/indi/regist",method: "POST"},
+    registerGroups : {url: "/group/regist",method: "POST"},
 
 }

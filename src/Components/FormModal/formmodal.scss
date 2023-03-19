@@ -238,6 +238,9 @@
                     // border: 1px solid violet;
                     ul {
                         padding: 8px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
 
                         li {
                             display: flex;
@@ -253,9 +256,11 @@
 
                             button {
                                 width: 30px;
+                                padding: 0;
                                 background: transparent;
                                 color: rgb(255, 95, 95);
                                 border: none;
+                                cursor: pointer;
 
                                 &:hover {
                                     color: rgba(255, 255, 255, 0.66);
