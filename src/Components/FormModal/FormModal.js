@@ -45,18 +45,19 @@ const FormModal = (props) => {
             const response = await API.getParticipantWithId({ id: userId });
             console.log( "from Modal",userId,response);
             if (response.isSuccess) {
+
+                let {_id,fullname,email,phonenumber,institution,standard} =response.data;
                 setIndiFormData({
                     id: userId || "CSIT",
-                    fullname: account.username || "Anonymous",
-                    email: account.email || "Anonymous@gmail.com",
-                    phonenumber: account.phonenumber || "XXXXXXXXXX",
-                    institution: account.institution || "Anonymous",
-                    standard: account.standard || "Anonymous",
+                    fullname: fullname|| "Anonymous",
+                    email: email || "Anonymous@gmail.com",
+                    phonenumber: phonenumber || "XXXXXXXXXX",
+                    institution: institution || "Anonymous",
+                    standard: standard || "Anonymous",
                     eventname: props.eventNameFee.eventname || "undifined",
                     eventid: props.eventNameFee.eventid,
                     registrationfee: props.eventNameFee.registrationfee || 0,
                     status: false
-
                 })
             }
         }
@@ -78,7 +79,6 @@ const FormModal = (props) => {
         console.log("mm", formData);
     }
 
-    console.log(account, initialIndiFormData);
 
 
 
