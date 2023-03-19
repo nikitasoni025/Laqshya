@@ -1002,69 +1002,77 @@ export const initialdata = [{
 export const Shauryas = [
     {
         title: "Xxcelerate",
-        ourIndex:0,
+        ourIndex: 0,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid: 'XX'
     },
     {
         title: "Robo Soccer League",
-        ourIndex:1,
+        ourIndex: 1,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid: 'RSL'
 
 
     },
     {
-        title: "Robo Go Karting",
-        ourIndex:2,
+        title: "Robo Go Carting",
+        ourIndex: 2,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid: 'RGC'
 
 
     },
     {
         title: "Robo Sumo",
-        ourIndex:3,
+        ourIndex: 3,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3, registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid: 'RS'
 
 
     },
     {
         title: "Deep Blue",
-        ourIndex:4,
+        ourIndex: 4,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-         registrationfee:50
-        
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid: 'DB'
+
 
 
     },
     {
         title: "Robo Fire Fighting",
-        ourIndex:5,
+        ourIndex: 5,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'RFF'
 
 
     },
     {
         title: "Drone Race",
-        ourIndex:6,
+        ourIndex: 6,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'DR'
 
 
     },
@@ -1072,51 +1080,56 @@ export const Shauryas = [
 export const kaushalya = [
     {
         title: "Cricket",
-        ourIndex:7,
+        ourIndex: 7,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:7,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 7,
+        registrationfee: 50,
+        eventid:'CT'
 
 
     },
     {
         title: "Arm Wrestling",
-        ourIndex:8,
+        ourIndex: 8,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:false,
-        maxParticipants:1,
-        registrationfee:50
+        isGrouped: false,
+        maxParticipants: 1,
+        registrationfee: 50,
+        eventid:'AW'
 
 
     },
     {
         title: "Futsal",
-        ourIndex:9,
+        ourIndex: 9,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'FL'
 
 
     },
     {
         title: "Angry Bird",
-        ourIndex:10,
+        ourIndex: 10,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:false,
-        maxParticipants:1,
-        registrationfee:50
+        isGrouped: false,
+        maxParticipants: 1,
+        registrationfee: 50,
+        eventid:'AB'
 
 
     },
     {
         title: "E-Sports",
-        ourIndex:11,
+        ourIndex: 11,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'ES'
 
 
     },
@@ -1125,31 +1138,34 @@ export const kaushalya = [
 export const bouddhiki = [
     {
         title: "Face Of Laqshya",
-        ourIndex:12,
+        ourIndex: 12,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:false,
-        maxParticipants:1,
-        registrationfee:50
+        isGrouped: false,
+        maxParticipants: 1,
+        registrationfee: 50,
+        eventid:'FOL'
 
 
     },
     {
-        title: "Artifex",
-        ourIndex:13,
+        title: "Artifex Show",
+        ourIndex: 13,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'AS'
 
 
     },
     {
-        title: "cinematics",
-        ourIndex:14,
+        title: "Cinematics",
+        ourIndex: 14,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'CS'
 
 
     },
@@ -1159,51 +1175,56 @@ export const bouddhiki = [
 export const parakram = [
     {
         title: "Bottle jet",
-        ourIndex:15,
+        ourIndex: 15,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'BJ'
 
 
     },
     {
         title: "Code Crunch",
-        ourIndex:16,
+        ourIndex: 16,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:false,
-        maxParticipants:1,
-        registrationfee:50
+        isGrouped: false,
+        maxParticipants: 1,
+        registrationfee: 50,
+        eventid:'CC'
 
 
     },
     {
         title: "Tech farmactic",
-        ourIndex:17,
+        ourIndex: 17,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'TF'
 
 
     },
     {
         title: "Cad Master",
-        ourIndex:18,
+        ourIndex: 18,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'CM'
 
 
     },
     {
         title: "Lets Play With Bond",
-        ourIndex:19,
+        ourIndex: 19,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'LPB'
 
 
     },
@@ -1212,21 +1233,23 @@ export const parakram = [
 export const natraja = [
     {
         title: "Make Your Move",
-        ourIndex:20,
+        ourIndex: 20,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'MYM'
 
 
     },
     {
         title: "Just a Minute",
-        ourIndex:21,
+        ourIndex: 21,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'JAM'
 
 
     },
@@ -1237,42 +1260,46 @@ export const natraja = [
 
 export const Kautilya = [
     {
-        title: "Quiz",
-        ourIndex:22,
+        title: "Quiz Masters",
+        ourIndex: 22,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'QM'
 
 
     },
     {
         title: "Treasure hunt",
-        ourIndex:23,
+        ourIndex: 23,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'TH'
 
 
     },
     {
         title: "Pitch Your Idea",
-        ourIndex:24,
+        ourIndex: 24,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'PYI'
 
 
     },
     {
         title: "Workshops",
-        ourIndex:25,
+        ourIndex: 25,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped:true,
-        maxParticipants:3,
-        registrationfee:50
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'WS'
 
 
     },
@@ -1284,7 +1311,7 @@ export const bannerslide = [
     {
         title: "Shaurya",
         img: "https://ik.imagekit.io/dexo68yudb/shaurya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678014819803",
-        
+
 
     },
     {
@@ -1316,42 +1343,42 @@ export const bannerslide = [
 ]
 export const eventDetails = [
     {
-        title:"Xxcelerate",
-        intro:"introduction",
-        rules:[
-            "1","2","3","4"
+        title: "Xxcelerate",
+        intro: "introduction",
+        rules: [
+            "1", "2", "3", "4"
         ],
-        registrationfee:50,
-        eventIncharges:[
+        registrationfee: 50,
+        eventIncharges: [
             {
-                name:"Sakshi Verma",
-                contactno:3265487915,
+                name: "Sakshi Verma",
+                contactno: 3265487915,
             }
         ],
-        eventManagers:[
+        eventManagers: [
             {
-                name:"Nikita soni",
-                contactno:123456789,
+                name: "Nikita soni",
+                contactno: 123456789,
             }
         ]
     },
     {
-        title:"Robo Soccer League",
-        intro:"introduction",
-        rules:[
-            "1","2","3","4"
+        title: "Robo Soccer League",
+        intro: "introduction",
+        rules: [
+            "1", "2", "3", "4"
         ],
-        registrationfee:50,
-        eventIncharges:[
+        registrationfee: 50,
+        eventIncharges: [
             {
-                name:"Sakshi Verma",
-                contactno:3265487915,
+                name: "Sakshi Verma",
+                contactno: 3265487915,
             }
         ],
-        eventManagers:[
+        eventManagers: [
             {
-                name:"Nikita soni",
-                contactno:123456789,
+                name: "Nikita soni",
+                contactno: 123456789,
             }
         ]
     },

@@ -26,7 +26,7 @@ const Eventcarousel = (props) => {
                                 <div className="card-top">
                                     <img src={event.img} alt="card" />
                                     <div className="overlay">
-                                        {props.isUserAuthenticated ? <button onClick={() => { props.setOpenFormModal(true); props.setEventNameFee({eventname:event.title , registrationfee:event.registrationfee , isGrouped:event.isGrouped})}}>Register</button> : null}
+                                        {props.isUserAuthenticated ? <button onClick={() => { props.setOpenFormModal(true); props.setEventNameFee({eventname:event.title , registrationfee:event.registrationfee , isGrouped:event.isGrouped,eventid:event.eventid})}}>Register</button> : null}
 
                                 </div>
                             </div>

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import "./formmodal.scss";
 import AutoComplete from '../AutoComplete/AutoComplete';
-import { FaBackward, FaChevronCircleLeft, FaChevronLeft, FaSeedling, FaTimes, FaTrash } from 'react-icons/fa';
+import { FaChevronLeft, FaSeedling, FaTimes, FaTrash } from 'react-icons/fa';
 import { DataContext } from '../../Context/Dataprovider';
 
 
@@ -18,6 +18,7 @@ const FormModal = (props) => {
         institution: account.institution || "Anonymous",
         standard: account.standard || "Anonymous",
         eventname: props.eventNameFee.eventname || "undifined",
+        eventid:props.eventNameFee.eventid,
         registrationfee: props.eventNameFee.registrationfee || 0,
         status: false
     }  
@@ -119,7 +120,7 @@ const FormModal = (props) => {
                             <h1>Registering For</h1>
                             <h2>Event Name : {props.eventNameFee.eventname}</h2>
                             <h2>Registration Fee :{props.eventNameFee.registrationfee}&nbsp;₹</h2>
-                            {s3FormType === "indi" ? <button onClick={handleIndividalSubmit}>Pay</button> : s3FormType === "group" ? <button onClick={handleGroupSubmit}>Pay</button> : null}
+                            {s3FormType === "indi" ? <button onClick={handleIndividalSubmit}>Pay</button> : s3FormType === "group" ? <button onClick={()=>{}}>Pay</button> : null}
 
                             <button onClick={() => setGroupedClicked("S1")}><FaChevronLeft />Back</button>
                         </div>

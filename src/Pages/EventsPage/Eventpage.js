@@ -14,6 +14,7 @@ import './Eventpage.scss';
 const initialEventData ={
   eventname:"",
   registrationfee:"",
+  eventid:"",
   isGrouped:true
 }
 
