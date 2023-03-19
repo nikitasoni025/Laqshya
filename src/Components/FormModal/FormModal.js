@@ -10,8 +10,8 @@ const FormModal = (props) => {
     const { account } = useContext(DataContext);
 
 
-    const InitialIndiFormData = {
-
+    const initialIndiFormData = {
+        id: account.id || "",
         fullname: account.username || "Anonymous",
         email: account.email || "Anonymous@gmail.com",
         phonenumber: account.phonenumber || "XXXXXXXXXX",
@@ -20,10 +20,9 @@ const FormModal = (props) => {
         eventname: props.eventNameFee.eventname || "undifined",
         registrationfee: props.eventNameFee.registrationfee || 0,
         status: false
-
-    }
-    const InitialGroupFormData = {
-
+    }  
+    
+    const initialGroupFormData = {
         groupname: "",
         members: [
             {
@@ -32,15 +31,13 @@ const FormModal = (props) => {
                 phonenumber: "",
                 institution: "",
                 standard: "",
-
             }
         ],
         eventname: "",
         registrationfee: "",
         status: false,
-
-
     }
+
     const [groupedClicked, setGroupedClicked] = useState("S1");
     const [s3FormType, setS3FormType] = useState(null)
     const [paticipants, setParticipants] = useState([]);
@@ -48,19 +45,20 @@ const FormModal = (props) => {
 
 
     const handleSelectPaticipants = (paticipant) => {
-
         const userexist = paticipants.find((user) => user._id === paticipant._id);
-
-
         if (!userexist) {
             setParticipants([...paticipants, paticipant]);
         }
+    }
+
+    const handleSubmit = (event) => { };
+
+    const handleIndividalSubmit = async () => {
 
     }
 
-    const handleSubmit = (event) => { }
+    console.log(account, initialIndiFormData);
 
-    console.log(account);
 
 
     return (
@@ -72,7 +70,6 @@ const FormModal = (props) => {
                     {/* first-step */}
                     {groupedClicked === "S1" ? (
                         <div className="form-step-1">
-
                             <h1> {props.eventNameFee.isGrouped ? "Do you want to Perform" : "You are performing"} </h1>
                             <div className="row">
                                 <button onClick={() => setGroupedClicked("S3")}>Individual</button>
@@ -82,7 +79,6 @@ const FormModal = (props) => {
                                         <button onClick={() => setGroupedClicked("S2")}>Grouped</button>
                                     </>
                                 ) : null}
-
                             </div>
                         </div>
                     ) : groupedClicked === "S2" ? (
@@ -94,9 +90,6 @@ const FormModal = (props) => {
                                     <span className='input-icon'><FaSeedling /></span>
                                     <input type="text" name='groupname' placeholder='Group Name' id='groupname' />
                                 </div>
-
-
-
                             </div>
                             <AutoComplete onSelect={handleSelectPaticipants} />
                             <div className="row2">
@@ -120,21 +113,18 @@ const FormModal = (props) => {
                                     <button onClick={handleSubmit()}>Make Group</button>
                                 </div>
                             </div>
-
-
                         </div>
                     ) : groupedClicked === "S3" ? (
                         <div className="form-step-3">
                             <h1>Registering For</h1>
                             <h2>Event Name : {props.eventNameFee.eventname}</h2>
                             <h2>Registration Fee :{props.eventNameFee.registrationfee}&nbsp;₹</h2>
-                            <button>Pay</button>
+                            {s3FormType === "indi" ? <button onClick={handleIndividalSubmit}>Pay</button> : s3FormType === "group" ? <button onClick={handleGroupSubmit}>Pay</button> : null}
+
                             <button onClick={() => setGroupedClicked("S1")}><FaChevronLeft />Back</button>
                         </div>
                     ) : null}
-
                 </div>
-
             </div>
         </div>
     )
