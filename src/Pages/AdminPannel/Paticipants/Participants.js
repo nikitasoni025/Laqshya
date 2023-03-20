@@ -21,23 +21,7 @@ const Participants = () => {
     const [sortBy, setSortBy] = useState("fullname");
     const [sortOrder, setSortOrder] = useState("asc");
     let [currentPage, setCurrentPage] = useState(1);
-    const [itemPerPage, setItemPerPage] = useState(5);
-
-    // useEffect(() => {
-    //     const fetchData = async () => {
-
-    //         const response = await API.getAllParticipants();
-
-    //         if (response.isSuccess) {
-    //             console.log(response.data);
-    //             setTableData(response.data);
-    //         }
-
-    //     }
-    //     fetchData()
-
-    // }, [])
-
+    const [itemPerPage, setItemPerPage] = useState(5); 
 
 
 
@@ -94,11 +78,7 @@ const Participants = () => {
 
         setItemPerPage(e.target.value);
         setCurrentPage(1);
-
     }
-
-
-
 
     return (
         <div className='participants'>
@@ -137,28 +117,28 @@ const Participants = () => {
                                 <select value={filteredTerm.events} onChange={handleSearch} name="events" id="events">
                                     <option disabled hidden >Choose Event</option>
                                     <option value="" >All</option>
-                                    <option value="xxc">Xxcelerate</option>
-                                    <option value="rsl">Robo Soccer League</option>
-                                    <option value="rgk">Robo Go Karting</option>
-                                    <option value="rs">Robo Sumo</option>
-                                    <option value="db">Deep Blue</option>
-                                    <option value="rff">Robo Fire Fighting</option>
-                                    <option value="dr">Drone Race</option>
-                                    <option value="cri">Cricket</option>
-                                    <option value="aw">Arm Wrestling</option>
-                                    <option value="fut">Futsal</option>
-                                    <option value="ab">Angry Bird</option>
-                                    <option value="fol">Face Of Laqshya</option>
-                                    <option value="art">Artifex</option>
-                                    <option value="cine">Cinematics</option>
-                                    <option value="cm">Cad Master</option>
-                                    <option value="pwb">Lets Play With Bond</option>
-                                    <option value="bj">Bottle Jet</option>
-                                    <option value="dbug">D Bugger</option>
-                                    <option value="tf">Tech Farmactic</option>
-                                    <option value="mym">Make Your Move</option>
+                                    <option value="Xxcelerate">Xxcelerate</option>
+                                    <option value="Robo Soccer Leaguers">Robo Soccer League</option>
+                                    <option value="Robo Go Karting">Robo Go Karting</option>
+                                    <option value="rsRobo Sumo">Robo Sumo</option>
+                                    <option value="Deep Blue">Deep Blue</option>
+                                    <option value="Robo Fire Fighting">Robo Fire Fighting</option>
+                                    <option value="Drone Race">Drone Race</option>
+                                    <option value="Cricket">Cricket</option>
+                                    <option value="Arm Wrestling">Arm Wrestling</option>
+                                    <option value="Futsal">Futsal</option>
+                                    <option value="Angry Bird">Angry Bird</option>
+                                    <option value="Face Of Laqshya">Face Of Laqshya</option>
+                                    <option value="Artifex">Artifex</option>
+                                    <option value="Cinematics">Cinematics</option>
+                                    <option value="Cad Master">Cad Master</option>
+                                    <option value="Lets Play With Bond">Lets Play With Bond</option>
+                                    <option value="Bottle Jet">Bottle Jet</option>
+                                    <option value="Code Crunch">Code Crunch</option>
+                                    <option value="Tech Farmactic">Tech Farmactic</option>
+                                    <option value="Make Your Move">Make Your Move</option>
                                     <option value="jm">Just A Minute</option>
-                                    <option value="quiz">Quiz</option>
+                                    <option value="\Quiz">Quiz</option>
                                     <option value="th">Tresure Hunt</option>
                                     <option value="pyi">Pitch Your Idea</option>
                                     <option value="work">Workshop</option>
@@ -177,6 +157,15 @@ const Participants = () => {
                                     <option value={100} >100</option>
                                    
                                 </select>
+                            </div>
+                        </div>
+
+                        {/* export to excel */}
+
+                        <div className="filter-col">
+                            <label htmlFor="export">Export to Excel</label>
+                            <div className="adm-input-wrap">
+                            <input type="button" value={"Export"} name="export"  id='export'  />
                             </div>
                         </div>
                     </div>

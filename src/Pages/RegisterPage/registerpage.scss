@@ -8,8 +8,11 @@
     overflow: hidden;
     font-family: var(--secondary-font);
     position: relative;
+    background: url("https://ik.imagekit.io/egjzyz51e/pawel-czerwinski-fPN1w7bIuNU-unsplash.jpg?updatedAt=1679331884653");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+
 
     .register-wrap {
         width: 80%;
@@ -18,12 +21,14 @@
         justify-content: space-between;
         align-items: center;
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(3px);
-        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
+
+        // border: 1px solid rgba(255, 255, 255, 0.18);
         background-position: bottom;
         background-size: cover;
+
 
 
         .left-wrap {
@@ -205,6 +210,7 @@
                         outline: none;
                         font-weight: 600;
                         transition: 0.5s ease-out;
+
                         &:hover {
 
                             background: transparent;
