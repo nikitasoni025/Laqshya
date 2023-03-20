@@ -9,7 +9,7 @@ const AutoComplete = (props) => {
 
     const handleSuggestionClick = (value) => {
 
-        setValue(value.fullname);
+        setValue('');
         props.onSelect(value);
         setSuggestion([]);
 
@@ -34,6 +34,8 @@ const AutoComplete = (props) => {
                 <input type="text" value={value} onChange={handleInputChange} placeholder='Search Participants Name' />
 
             </div>
+            <span className="note-mark">Max Participants : {props.maxParticipants}</span><br></br>
+            <span className="note-mark">Remove Yourself If You Dont Want To Be A Member</span>
             <div className="sugg-list">
                 <ul>
                     {suggestion.map((value, index) => {

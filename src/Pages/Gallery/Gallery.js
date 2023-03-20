@@ -11,7 +11,6 @@ const Gallery = () => {
   const [displayZoom, setDisplayZoom] = useState(false);
 
   const handleZoomOut = (src) => {
-    console.log("clicked", src);
     setImgSrc(src);
     setDisplayZoom(true);
 

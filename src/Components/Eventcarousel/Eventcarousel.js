@@ -13,8 +13,6 @@ const Eventcarousel = (props) => {
         setIsLogined(props.isUserAuthenticated);
     }, [props.isUserAuthenticated]);
 
-    console.log(props.isUserAuthenticated);
-
 
     return (
         <div className='event-carousel'>
@@ -28,7 +26,7 @@ const Eventcarousel = (props) => {
                                     <div className="overlay">
                                         {props.isUserAuthenticated ? <button onClick={() => {
                                             props.setOpenFormModal(true); props.setEventNameFee(
-                                                { eventname: event.title, registrationfee: event.registrationfee, isGrouped: event.isGrouped, eventid: event.eventid }
+                                                { eventname: event.title, registrationfee: event.registrationfee, isGrouped: event.isGrouped, eventid: event.eventid ,maxParticipants:event.maxParticipants}
                                             )
                                         }}>Register</button> : null}
 

@@ -15,6 +15,7 @@ const initialEventData ={
   eventname:"",
   registrationfee:"",
   eventid:"",
+  maxParticipants:"",
   isGrouped:true
 }
 
@@ -27,7 +28,6 @@ const Eventpage = (props) => {
   const [eventNameFee, setEventNameFee] = useState(initialEventData);
   const navigate = useNavigate();
 
-  console.log("Nishu", props.isUserAuthenticated);
 
 
 
@@ -63,7 +63,7 @@ const Eventpage = (props) => {
         <FormModal eventNameFee={eventNameFee} setOpenFormModal={setOpenFormModal} />
       ) : null}
       {isUserAuthenticated ? null : (
-        <Link to={'/signin'} className='clktosignin'>Sign to enroll for this event</Link>
+        <Link to={'/signin'} className='clktosignin'>Sign to enroll for the events</Link>
       )
       }
       <div className="eventpage-wrap">
@@ -211,3 +211,5 @@ const Eventpage = (props) => {
 }
 
 export default Eventpage;
+
+// https://github.com/Artificier7010

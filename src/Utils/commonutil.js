@@ -5,7 +5,6 @@ export const checkTokenExpiration = () => {
   const token = sessionStorage.getItem('accessToken');
   if (token) {
     const decodedToken = jwtDecode(token);
-    console.log(decodedToken.exp,Date.now(),decodedToken.exp * 1000 < Date.now());
     if (decodedToken.exp * 1000 < Date.now()) {
       // Token has expired
       sessionStorage.removeItem('accessToken');
