@@ -507,7 +507,6 @@
                                     align-items: center;
                                     justify-content: center;
                                     gap: 150px;
-                                    border-left: 1px solid var(--secondary-color);
 
                                     position: relative;
 
@@ -607,7 +606,7 @@
 
                             .timing-right {
                                 width: calc(100% - 150px);
-                                height: 50vh;
+                                height: 80vh;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
@@ -639,7 +638,8 @@
                                         translate: 0 0 0;
                                         transition: 1s ease;
                                         background: url('https://ik.imagekit.io/dexo68yudb/_gif__radiohalo.gif?updatedAt=1679167606754');
-                                        background-size: cover;
+                                        background-size:inherit;
+                                        background-repeat: no-repeat;
                                         background-position: center;
                                     }
                                 }
@@ -933,6 +933,7 @@
                                         gap: 0px;
                                         padding: 30px 0;
                                         border-left: none;
+                                     
                                         
 
                                         &::before{
@@ -970,8 +971,14 @@
                                 }
 
                                 .timing-right{
+                                    width: 90%;
+                                    height: 50vh;
                                     .schdl-text{
-                                        color: white;
+                                        color: rgba(197, 197, 197, 0.629);
+                                        &.open{
+                                            background-size: cover;
+                                        
+                                        }
                                     }
                                 }
 

@@ -6,9 +6,8 @@ import Eventmodal from '../../Components/Eventmodal/Eventmodal';
 import Footer from '../../Components/Footer/Footer';
 import FormModal from '../../Components/FormModal/FormModal';
 import Navbar from '../../Components/Navbar/Navbar';
-import { bannerslide, bouddhiki, eventDetails, kaushalya, Kautilya, natraja, parakram, Shauryas } from '../../Constants/OurConst';
+import { bannerslide, bouddhiki, kaushalya, Kautilya, natraja, parakram, Shauryas } from '../../Constants/OurConst';
 import { checkTokenExpiration } from '../../Utils/commonutil';
-import jwtDecode from 'jwt-decode';
 import './Eventpage.scss';
 
 const initialEventData ={
