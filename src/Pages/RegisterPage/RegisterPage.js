@@ -97,12 +97,7 @@ const RegisterPage = () => {
             {showSuccess && <Toaster message={"Registered Successfully"} type={"success"} />}
             {showError && <Toaster message={errorMessage} type={"error"} />}
 
-            <div className="animated-background">
-                <img src={'https://ik.imagekit.io/dexo68yudb/Sphere0000.png?updatedAt=1678733368137'} alt="sphere" />
-                <img src={'https://ik.imagekit.io/dexo68yudb/Sphere0000.png?updatedAt=1678733368137'} alt="sphere" />
-                <img src={'https://ik.imagekit.io/dexo68yudb/Sphere0000.png?updatedAt=1678733368137'} alt="sphere" />
-                <img src={'https://ik.imagekit.io/dexo68yudb/Sphere0000.png?updatedAt=1678733368137'} alt="sphere" />
-            </div>
+           
 
             <div className="register-wrap">
                 <div className="left-wrap">
@@ -114,7 +109,7 @@ const RegisterPage = () => {
                             CSGI Welcomes You To Laqshya 2K23
                         </h1>
                         <h3>in Association with</h3>
-                        <img src="https://ik.imagekit.io/egjzyz51e/Tech36garh_Grey_300x.png?updatedAt=1678861467885" alt="" />
+                        <img src="https://ik.imagekit.io/egjzyz51e/Tec36_Logo_white_300x.png?updatedAt=1679145810521" alt="" />
                         <h3 className='divider'>Presents</h3>
 
                         <h3>

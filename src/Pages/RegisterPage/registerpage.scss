@@ -11,76 +11,21 @@
     background-size: cover;
     background-position: center;
 
-    .animated-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-
-        img {
-            &:nth-child(1) {
-                position: absolute;
-                width: 200px;
-                bottom: -100%;
-                left: 0%;
-                animation: bubble 9s ease-in-out infinite;
-                animation-delay: 0s;
-            }
-
-            &:nth-child(2) {
-
-                position: absolute;
-                // width: 200px;
-                bottom: -100%;
-                left: 17%;
-                animation: bubble 9s ease-in-out infinite;
-                animation-delay: 2s;
-            }
-
-            &:nth-child(3) {
-                width: 80px;
-                position: absolute;
-                // width: 200px;
-                bottom: -100%;
-                left: 62%;
-                animation: bubble 9s ease-in-out infinite;
-                animation-delay: 4s;
-            }
-
-            &:nth-child(4) {
-                // width: 80px;
-                position: absolute;
-                // width: 200px;
-                bottom: -100%;
-                left: 60%;
-                animation: bubble 9s ease-in-out infinite;
-                animation-delay: 6s;
-            }
-        }
-    }
-
-
-
-
     .register-wrap {
         width: 80%;
         height: 80%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // background: rgba(255, 255, 255, 0.1);
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         backdrop-filter: blur(3px);
         -webkit-backdrop-filter: blur(3px);
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.18);
-        // background: url("https://ik.imagekit.io/egjzyz51e/shivaji.jpg?updatedAt=1678529045714");
-        // background: url("https://ik.imagekit.io/dexo68yudb/Untitled.gif?updatedAt=1678730288784");
         background-position: bottom;
         background-size: cover;
 
-        // border: 2px solid cadetblue;
+
         .left-wrap {
             width: 60%;
             height: 100%;
@@ -145,19 +90,25 @@
                     margin-top: 40px;
 
                     a {
-                        color: white;
+                        color: rgb(73, 73, 73);
                         padding: 8px 16px;
-                        border-radius: 3px;
+                        border-radius: 5px;
                         display: flex;
                         justify-content: center;
                         text-decoration: none;
                         align-items: center;
                         background: var(--secondary-color);
                         gap: 5px;
+                        font-weight: 700;
+                        transition: 0.5s ease-out;
+                        // font-weight: 600;
+
 
                         &:hover {
                             border: 1px solid var(--secondary-color);
                             background: transparent;
+                            color: white;
+                            transition: 0.5s ease-out;
                         }
 
                         .arw-icon {
@@ -173,7 +124,6 @@
         .right-wrap {
             width: 40%;
             height: 100%;
-            // border: 1px solid ghostwhite;
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -182,12 +132,8 @@
             padding: 25px;
             box-sizing: border-box;
 
-
-
-
             h1 {
                 font-family: var(--secondary-font);
-
             }
 
             p {
@@ -251,18 +197,20 @@
 
 
                     .register-btn {
-                        padding: 10px 20px;
+                        padding: 10px 30px;
                         background: var(--secondary-color);
-                        color: white;
+                        color: rgb(73, 73, 73);
                         border-radius: 5px;
                         border: none;
                         outline: none;
-
+                        font-weight: 600;
+                        transition: 0.5s ease-out;
                         &:hover {
 
                             background: transparent;
                             border: 2px solid var(--secondary-color);
-
+                            color: white;
+                            transition: 0.5s ease-out;
                         }
 
 
@@ -285,7 +233,8 @@
                             outline: none;
                             color: whitesmoke;
                             font-size: 15px;
-                            &::placeholder{
+
+                            &::placeholder {
                                 color: white;
                             }
 

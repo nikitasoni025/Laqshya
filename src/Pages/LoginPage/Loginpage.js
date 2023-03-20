@@ -6,6 +6,7 @@ import { RiLockPasswordLine, RiMailSendLine } from 'react-icons/ri';
 import { DataContext } from '../../Context/Dataprovider';
 import { API } from '../../Services/Api';
 import './loginpage.scss';
+import Loader from '../../Components/Loader/Loader';
 
 
 const initialLoginValues = {
@@ -17,7 +18,8 @@ const initialLoginValues = {
 const Loginpage = ({ setIsUserAuthenticated }) => {
     const [isEyeOpened, setIsEyeOpened] = useState(false);
     const [formData, setFormData] = useState(initialLoginValues);
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
+    
 
     const { setAccount } = useContext(DataContext);
 
@@ -36,6 +38,7 @@ const Loginpage = ({ setIsUserAuthenticated }) => {
     }
 
     const handleLogin = async (ev) => {
+        setIsLoading(true);
         ev.preventDefault();
 
         let response = await API.userSignin(formData);
@@ -65,12 +68,7 @@ const Loginpage = ({ setIsUserAuthenticated }) => {
 
     return (
         <div className='Loginpage'>
-            <div className="animated-background">
-                <img src={'https://ik.imagekit.io/dexo68yudb/Sphere0000.png?updatedAt=1678733368137'} alt="sphere" />
-                <img src={'https://ik.imagekit.io/dexo68yudb/Sphere0000.png?updatedAt=1678733368137'} alt="sphere" />
-                <img src={'https://ik.imagekit.io/dexo68yudb/Sphere0000.png?updatedAt=1678733368137'} alt="sphere" />
-                <img src={'https://ik.imagekit.io/dexo68yudb/Sphere0000.png?updatedAt=1678733368137'} alt="sphere" />
-            </div>
+           
             <div className="loginpage-wrap">
                 <div className="left-wrap">
                     <div className="logo">
@@ -81,7 +79,7 @@ const Loginpage = ({ setIsUserAuthenticated }) => {
                             CSGI Welcomes You To Laqshya 2K23
                         </h1>
                         <h3>in Association with</h3>
-                        <img src="https://ik.imagekit.io/egjzyz51e/Tech36garh_Grey_300x.png?updatedAt=1678861467885" alt="" />
+                        <img src="https://ik.imagekit.io/egjzyz51e/Tec36_Logo_white_300x.png?updatedAt=1679145810521" alt="" />
                         <h3 className='divider'>Presents</h3>
 
                         <h3>
@@ -112,7 +110,7 @@ const Loginpage = ({ setIsUserAuthenticated }) => {
                             </div>
                         </div>
                         <div className="row">
-                            <button onClick={handleLogin} className='register-btn'>Choose Events</button>
+                            <button onClick={handleLogin} className='register-btn'>{isLoading ? <Loader /> : "Choose Events"}</button>
                         </div>
                     </form>
                     <p>Don't Have An Account ? <Link to={"/register"}>Sign Up</Link></p>
