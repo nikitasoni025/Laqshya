@@ -1081,7 +1081,7 @@ export const kaushalya = [
     {
         title: "Cricket",
         ourIndex: 7,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/cricket.jpg?updatedAt=1679422202934",
         isGrouped: true,
         maxParticipants: 7,
         registrationfee: 50,
