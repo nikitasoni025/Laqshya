@@ -3,7 +3,7 @@ import {API_NOTIFICATION_MESSAGES, SERVICE_URLS} from "../Constants/Config";
 import { getType } from '../Utils/commonutil';
 // import { getAccessToken } from '../Utils/Commonutils';
 
-const API_URL = 'http://localhost:8001';
+const API_URL = 'https://laqshyaserver.onrender.com';
 const axiosInstance = axios.create({
     baseURL: API_URL,
     timeout: 10000,
