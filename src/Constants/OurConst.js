@@ -1092,7 +1092,7 @@ export const kaushalya = [
     {
         title: "Arm Wrestling",
         ourIndex: 8,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/arm_wrestling.jpg?updatedAt=1679426991977",
         isGrouped: false,
         maxParticipants: 1,
         registrationfee: 50,
@@ -1103,7 +1103,7 @@ export const kaushalya = [
     {
         title: "Futsal",
         ourIndex: 9,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/futsal.jpg?updatedAt=1679426537623",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1114,7 +1114,7 @@ export const kaushalya = [
     {
         title: "Angry Bird",
         ourIndex: 10,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/angry_bird.jpg?updatedAt=1679426354463",
         isGrouped: false,
         maxParticipants: 1,
         registrationfee: 50,
@@ -1125,7 +1125,7 @@ export const kaushalya = [
     {
         title: "E-Sports",
         ourIndex: 11,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/free_fire.jpg?updatedAt=1679426417642",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1139,7 +1139,7 @@ export const bouddhiki = [
     {
         title: "Face Of Laqshya",
         ourIndex: 12,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/face_of_laqshya.jpg?updatedAt=1679426649886",
         isGrouped: false,
         maxParticipants: 1,
         registrationfee: 50,
@@ -1150,7 +1150,7 @@ export const bouddhiki = [
     {
         title: "Artifex Show",
         ourIndex: 13,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/Artifex.jpg?updatedAt=1679426726630",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1161,7 +1161,7 @@ export const bouddhiki = [
     {
         title: "Cinematics",
         ourIndex: 14,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/cinematics.jpg?updatedAt=1679426808809",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1176,7 +1176,7 @@ export const parakram = [
     {
         title: "Bottle jet",
         ourIndex: 15,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/Bottle_jet.jpg?updatedAt=1679426923380",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1187,7 +1187,7 @@ export const parakram = [
     {
         title: "Code Crunch",
         ourIndex: 16,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/dbugger.jpg?updatedAt=1679426846085",
         isGrouped: false,
         maxParticipants: 1,
         registrationfee: 50,
@@ -1198,7 +1198,7 @@ export const parakram = [
     {
         title: "Tech farmactic",
         ourIndex: 17,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/tech_farmacia.jpg?updatedAt=1679426773036",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1220,7 +1220,7 @@ export const parakram = [
     {
         title: "Lets Play With Bond",
         ourIndex: 19,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/lets_play_with_bond.jpg?updatedAt=1679426883200",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1234,7 +1234,7 @@ export const natraja = [
     {
         title: "Make Your Move",
         ourIndex: 20,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/make_your_move.jpg?updatedAt=1679426606864",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1243,9 +1243,9 @@ export const natraja = [
 
     },
     {
-        title: "Just a Minute",
+        title: "One Minute Show",
         ourIndex: 21,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/one_minute_show.jpg?updatedAt=1679426689351",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1262,7 +1262,7 @@ export const Kautilya = [
     {
         title: "Quiz Masters",
         ourIndex: 22,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/quiz_masters.jpg?updatedAt=1679426958564",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1273,7 +1273,7 @@ export const Kautilya = [
     {
         title: "Treasure hunt",
         ourIndex: 23,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/treasure_hunt.jpg?updatedAt=1679426495577",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
