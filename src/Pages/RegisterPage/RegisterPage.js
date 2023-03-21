@@ -29,6 +29,7 @@ const RegisterPage = () => {
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [successMessage, setSuccesMessage] = useState('');
+    const [confirmPass, setConfirmPass] = useState("");
 
 
     const navigate = useNavigate();
@@ -62,28 +63,56 @@ const RegisterPage = () => {
 
 
     }
+    const handleCOnfirmPass = (e) => {
+
+        const { name, value } = e.target;
+        setConfirmPass(value);
+
+
+    }
+    const checkConfirmPass = () => {
+        if (!confirmPass) {
+            return false;
+        }
+        if (formData.password === confirmPass) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
     const handleSubmit = async (e) => {
 
         e.preventDefault();
         setIsLoading(true);
 
-        let response = await API.registerParticipants(formData);
-        console.log(response);
-        if (response.isSuccess) {
-            setFormData(initialValue);
-            setIsLoading(false);
-            setShowSuccess(true);
-            setTimeout(() => setShowSuccess(false), 4000);
+        if (checkConfirmPass()) {
+
+            let response = await API.registerParticipants(formData);
+            console.log(response);
+            if (response.isSuccess) {
+                setFormData(initialValue);
+                setIsLoading(false);
+                setShowSuccess(true);
+                setConfirmPass("");
+                setTimeout(() => setShowSuccess(false), 4000);
+            }
+            else {
+                setIsLoading(false);
+                setShowError(true);
+                setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
+                setTimeout(() => setShowError(false), 4000);
+            }
         }
         else {
-            setFormData(initialValue);
             setIsLoading(false);
             setShowError(true);
-            setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
+            setErrorMessage("Error!, Confirm Password didn't matched");
             setTimeout(() => setShowError(false), 4000);
 
         }
+
 
 
 
@@ -97,7 +126,7 @@ const RegisterPage = () => {
             {showSuccess && <Toaster message={"Registered Successfully"} type={"success"} />}
             {showError && <Toaster message={errorMessage} type={"error"} />}
 
-           
+
 
             <div className="register-wrap">
                 <div className="left-wrap">
@@ -128,52 +157,52 @@ const RegisterPage = () => {
                         <div className="row">
                             <div className="icon-input-wrap">
                                 <RiUser6Line />
-                                <input onChange={handleInputChange} type="text" name='fullname' required placeholder='Full Name' />
+                                <input onChange={handleInputChange} type="text" value={formData.fullname} name='fullname' required placeholder='Full Name' />
                             </div>
                         </div>
                         <div className="row">
                             <div className="icon-input-wrap">
-                                <RiMailSendLine/>
-                                <input onChange={handleInputChange} type="email" name='email' placeholder='Email' />
+                                <RiMailSendLine />
+                                <input onChange={handleInputChange} type="email" value={formData.email} name='email' placeholder='Email' />
                             </div>
 
                         </div>
                         <div className="row">
                             <div className="icon-input-wrap">
-                                <RiPhoneFill/>
-                                <input onChange={handleInputChange} type="tel" name='phonenumber' placeholder='Phone Number' />
-                            </div>
-
-
-                        </div>
-                        <div className="row">
-                            <div className="icon-input-wrap">
-                                <FaSchool/>
-                                <input onChange={handleInputChange} type="text" name='institution' placeholder='Institution' />
+                                <RiPhoneFill />
+                                <input onChange={handleInputChange} type="tel" value={formData.phonenumber} name='phonenumber' placeholder='Phone Number' />
                             </div>
 
 
                         </div>
                         <div className="row">
                             <div className="icon-input-wrap">
-                                <IoIosSchool/>
-                                <input onChange={handleInputChange} type="text" name='standard' placeholder='Standard' />
+                                <FaSchool />
+                                <input onChange={handleInputChange} type="text" value={formData.institution} name='institution' placeholder='Institution' />
+                            </div>
+
+
+                        </div>
+                        <div className="row">
+                            <div className="icon-input-wrap">
+                                <IoIosSchool />
+                                <input onChange={handleInputChange} type="text" value={formData.standard} name='standard' placeholder='Standard' />
                             </div>
 
 
                         </div>
                         <div className="row">
                             <div className="password-wrap">
-                                <RiLockPasswordLine/>
-                                <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' placeholder='Password' />
+                                <RiLockPasswordLine />
+                                <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} value={formData.password} name='password' placeholder='Password' />
 
                                 <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>
                             </div>
                         </div>
                         <div className="row">
                             <div className="password-wrap">
-                                <RiLockPasswordLine/>
-                                <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} name='password' placeholder='Confirm Password' />
+                                <RiLockPasswordLine />
+                                <input onChange={handleCOnfirmPass} type={isEyeOpened ? "text" : "password"} value={confirmPass} name='password' placeholder='Confirm Password' />
 
                                 <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>
                             </div>
