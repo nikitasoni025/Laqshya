@@ -60,9 +60,9 @@
                                     display: flex;
                                     justify-content: flex-start;
                                     align-items: flex-end;
-                                    // visibility: hidden;
-                                    // opacity: 0;
-                                    background: linear-gradient(to top,black ,transparent );
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    background: linear-gradient(to top,rgba(43, 138, 255, 0.567) 0% ,transparent 100% );
                                     position: absolute;
                                     top: 0;
                                     left: 0;
@@ -70,6 +70,9 @@
                                     transition: 0.5s ease;
                                     // padding: 20px;
                                     box-sizing: border-box;
+
+
+                                    
 
 
                                     button {
@@ -80,19 +83,17 @@
                                         align-items: flex-end;
                                         text-decoration: none;
                                         border: none;
-                                        color: rgba(186, 186, 186, 0.633);
+                                        color: rgb(255, 255, 255);
                                         font-weight: 900;
                                         font-family: var(--secondary-font);
-                                        font-size: 1.5vw;
+                                        font-size: 2vw;
                                         z-index: 1;
                                         overflow: hidden;
                                         transition: 0.5s ease;
                                         border-radius: 5px;
                                         background: transparent;
                                         cursor: pointer;
-                                        padding: 20px;
-
-                                        
+                                        padding: 20px; 
                                     }
                                 }
 
