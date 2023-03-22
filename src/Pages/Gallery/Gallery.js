@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { MdOutlineZoomIn, MdZoomOutMap } from 'react-icons/md';
 import { Link } from "react-router-dom";
+import { galleryData } from '../../Constants/OurConst';
 import "./gallery.scss";
 
 
 
 const Gallery = () => {
-  let gallery = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+ 
+
   const [imgSrc, setImgSrc] = useState('');
   const [displayZoom, setDisplayZoom] = useState(false);
 
@@ -47,11 +49,13 @@ const Gallery = () => {
               </div>
               <div className="literal-gallery">
                 <div className="gallery-container">
-                  {gallery.map((items, index) => {
+                  {galleryData.map((items, index) => {
                     return (
                       <div className="gallery-item" key={index}>
 
-                        <img src="https://ik.imagekit.io/egjzyz51e/img_4_1677915173888.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915472669" alt="" />
+                        {items.type==='img' ? <img src={items.link} alt="" /> : <video controls muted autoPlay src={items.link}></video>}
+
+                        
                         <div className="over-lay">
                           <button onClick={() => handleZoomOut("https://ik.imagekit.io/egjzyz51e/img_4_1677915173888.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915472669")} ><MdZoomOutMap /></button>
                         </div>
