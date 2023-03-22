@@ -34,9 +34,16 @@ const Gallery = () => {
             {/* Gallery wrap */}
             <div className="gallery-wrap">
               <div className="gallery-description">
+               <div className="gallery-size">
+               <div className="home-btn-wrap">
+                <Link to={"/"} >Home</Link>
+                </div>
+                <div className="gallery-des-content">
                 <h1>Our Gallery</h1>
                 <p> Kaleidoscope Of Memories</p>
-                <Link to={"/"} >Home</Link>
+                  </div>
+                </div>                
+              
               </div>
               <div className="literal-gallery">
                 <div className="gallery-container">
