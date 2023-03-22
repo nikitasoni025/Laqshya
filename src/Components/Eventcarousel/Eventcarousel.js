@@ -8,24 +8,25 @@ import { SlGameController } from "react-icons/sl"
 
 const Eventcarousel = (props) => {
 
-    const [isLogined, setIsLogined] = useState(props.isUserAuthenticated);
+    const [isLogined, setIsLogined] = useState(true);
 
-    useEffect(() => {
-        setIsLogined(props.isUserAuthenticated);
-    }, [props.isUserAuthenticated]);
+    // useEffect(() => {
+    //     setIsLogined(props.isUserAuthenticated);
+    // }, [props.isUserAuthenticated]);
 
 
     return (
         <div className='event-carousel'>
-            <OwlCarousel className='owl-theme' autoplay={true} autoplayHoverPause autoplaySpeed={5000} loop={props.events.length <= 4 ? false : true} margin={8} nav items={props.windowSize[0] <= 1025 ? 1 : 4}>
+            <OwlCarousel className='owl-theme' autoplay={2500}  autoplaySpeed={5000} loop={props.windowSize[0] <= 1025 ? true : props.events.length <= 4 ? false : true} smartSpeed={2500} margin={15} nav items={props.windowSize[0] <= 1025 ? 2 : 4}>
                 {props.events ? props.events.map((event, index) => {
                     return (
                         <div key={index} class='item myevent-card'>
                             <div className='event-card-wrap'>
                                 <div className="card-top">
-                                    <img src={event.img} alt="card" />
+                                    <img src={event.img} loading="lazy" alt="card" />
                                     <div className="overlay">
-                                        {props.isUserAuthenticated ? <button onClick={() => {
+                                        {/* {props.isUserAuthenticated ? <button onClick={() => { */}
+                                        {true ? <button onClick={() => {
                                             props.setOpenFormModal(true); props.setEventNameFee(
                                                 { eventname: event.title, registrationfee: event.registrationfee, isGrouped: event.isGrouped, eventid: event.eventid ,maxParticipants:event.maxParticipants}
                                             )
