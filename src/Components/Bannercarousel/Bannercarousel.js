@@ -3,13 +3,14 @@ import './bannercarousel.scss';
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import "animate.css";
 // https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320
 
 
 const Bannercarousel = (props) => {
     return (
         <div className='bannercarousel'>
-            <OwlCarousel className='owl-theme' autoplay={true} loop autoplaySpeed={5000} nav items={1}>
+            <OwlCarousel animateIn={"flipInX"} animateOut={"slideOutDown"} smartSpeed={450} className='owl-theme' autoplay={true} loop autoplaySpeed={5000} nav items={1}>
                 {props.bannerSlides ? props.bannerSlides.map((slides,index) => {
                     return (
                         <div key={index} className="item banner-slide">
