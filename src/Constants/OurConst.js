@@ -1385,6 +1385,40 @@ export const eventDetails = [
 ]
 
 
+// Gallery Data
+
+ export const galleryData = [
+    {
+        type:"img",
+        link:"https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?updatedAt=1677915392553"
+    },
+    {
+        type:"vid",
+        link:"https://ik.imagekit.io/egjzyz51e/VID-20230301-WA0001.mp4?updatedAt=1677831082506"
+    },
+    {
+        type:"img",
+        link:"https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?updatedAt=1677915392553"
+    },
+    {
+        type:"img",
+        link:"https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?updatedAt=1677915392553"
+    },
+    {
+        type:"img",
+        link:"https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?updatedAt=1677915392553"
+    },
+    {
+        type:"img",
+        link:"https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?updatedAt=1677915392553"
+    },
+    {
+        type:"img",
+        link:"https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?updatedAt=1677915392553"
+    },
+]
+
+
 
 
 

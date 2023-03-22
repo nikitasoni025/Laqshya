@@ -12,6 +12,8 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                position: relative;
+                z-index: 5;
                
                 .gallery-size{
                     width: 85%;
@@ -60,6 +62,10 @@
                         font-family: "Anurati";
                         text-transform: uppercase;
                         letter-spacing: 10px;
+                        background: linear-gradient(to right , rgb(96, 207, 248), rgb(120, 1, 120));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
                     }
     
                     p {
@@ -83,13 +89,14 @@
                     width: 1000px;
                     height: 1000px;
                     position: fixed;
-                    top: -10%;
-                    left: -34%;
+                    top: -60%;
+                    left: -30%;
                     background: url('https://ik.imagekit.io/dexo68yudb/pngaaa.com-2767466.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678135890201');
                     background-size: cover;
                     background-position: center;
                     opacity: 0.2;
                     animation: rotrond 5s infinite ease;
+                    // z-index: -1;
 
                 }
 
@@ -284,4 +291,71 @@
             rotate: 360deg;
         }
 
+    }
+
+    @media screen and (max-width:991px) {
+
+        .gallery{
+            .gallery-wrap{
+                .gallery-description{
+                    .gallery-size{
+                        height: 85%;
+                        gap: 70px;
+                        .home-btn-wrap{
+                            a{
+                                margin: 10px;
+                            }
+                        }
+                    }
+                }
+
+                .literal-gallery{
+                    .gallery-container{
+                        grid-template-columns: 200px 200px;
+                        grid-template-rows: 200px;
+                        .gallery-item{
+                            &:nth-child(1) {
+                                grid-row: 1 ;
+                            }
+    
+                            &:nth-child(2) {
+                                animation: rot3dy 5s infinite ease-in-out;
+                                animation-delay: 5s;
+                            }
+    
+                            &:nth-child(8) {
+                                animation: rot3dy 5s infinite ease-in-out;
+                                animation-delay: 3s;
+                            }
+    
+                            &:nth-child(7) {
+                                animation: rot3dx 5s infinite ease-in-out;
+                                animation-delay: 2s;
+                            }
+    
+                            &:nth-child(18) {
+                                animation: rot3dx 5s infinite ease-in-out;
+                                animation-delay: 4s;
+                            }
+    
+                            &:nth-child(5) {
+                                //    border: 2px solid red;
+                                grid-column: 1 ;
+                                grid-row: 1;
+    
+                            }
+    
+                            &:nth-child(15) {
+                                grid-column: 1;
+                                grid-row: 1 ;
+    
+                            }
+                        }
+
+                    }
+                }
+            }
+
+        }
+        
     }
