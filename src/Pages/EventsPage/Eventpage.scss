@@ -1,6 +1,5 @@
 .Eventpage {
     width: 100%;
-    // height: 100vh;
     overflow: hidden;
     scroll-behavior: smooth;
 
@@ -20,7 +19,7 @@
         z-index: 5;
         animation: wid 1s infinite alternate-reverse ease;
 
-        &:hover{
+        &:hover {
             background: rgba(30, 214, 255, 0.304);
             transition: 0.5s ease;
         }
@@ -124,10 +123,10 @@
                         width: 100%;
 
                         p {
-                            color: aliceblue;
+                            color: rgb(222, 222, 222);
                             text-align: left;
-                            font-size: 20px;
-                            font-family: var(--secondary-font);
+                            font-size: 15px;
+                            font-family: sans-serif;
                             text-align: justify;
                         }
                     }
@@ -167,13 +166,32 @@
 
             .event-detail {
                 .event-wrapdetail {
+                    gap: 0px;
+
                     .event-row {
+
                         h1 {
-                            font-size: 60px;
+                            font-size: 20px;
+                            letter-spacing: 6px;
+                            font-family: 'Anurati';
+                            text-transform: uppercase;
+                            padding: 0 20px;
+
                         }
 
                         h2 {
-                            font-size: 30px;
+                            font-size: 12px;
+                            color: rgb(189, 189, 189);
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            padding: 0 20px;
+                        }
+
+
+
+                        .row-details {
+                            display: none;
                         }
                     }
                 }
