@@ -263,6 +263,7 @@
     .event-carousel {
         padding: 0 15px;
         box-sizing: border-box;
+        margin-top: 50px;
 
         .owl-theme {
             .owl-stage-outer {
@@ -280,6 +281,9 @@
                                     .overlay {
                                         visibility: hidden;
                                         opacity: 0;
+                                        button{
+                                            font-size: 15px;
+                                        }
                                     }
                                 }
 
@@ -294,6 +298,9 @@
 
                                     .card-title {
                                         font-size: 12px !important;
+                                        padding: 0 !important;
+                                        display: block !important;
+                                        
                                     }
 
                                     button {
