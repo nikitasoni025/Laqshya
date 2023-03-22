@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaTimes } from 'react-icons/fa';
 import { MdOutlineZoomIn, MdZoomOutMap } from 'react-icons/md';
 import { Link } from "react-router-dom";
 import { galleryData } from '../../Constants/OurConst';
@@ -10,10 +11,13 @@ const Gallery = () => {
  
 
   const [imgSrc, setImgSrc] = useState('');
+  const [itemType,setItemType]=useState('');
   const [displayZoom, setDisplayZoom] = useState(false);
 
-  const handleZoomOut = (src) => {
+  const handleZoomOut = (src,type) => {
+
     setImgSrc(src);
+    setItemType(type);
     setDisplayZoom(true);
 
   }
@@ -23,10 +27,10 @@ const Gallery = () => {
         displayZoom ? (
           <div className="zoom-out-wrap" >
             <div className="btns">
-              <button onClick={()=>setDisplayZoom(false)}><MdOutlineZoomIn/></button>
+              <button onClick={()=>setDisplayZoom(false)}><FaTimes/></button>
             </div>
             <div className="img-display">
-              <img src={imgSrc} alt="zoomed out" />
+              {itemType === 'img' ?  <img src={imgSrc} alt="zoomed out" />: <video controls muted autoPlay src={imgSrc}></video>}  
             </div>
           </div >
 
@@ -57,7 +61,7 @@ const Gallery = () => {
 
                         
                         <div className="over-lay">
-                          <button onClick={() => handleZoomOut("https://ik.imagekit.io/egjzyz51e/img_4_1677915173888.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1677915472669")} ><MdZoomOutMap /></button>
+                          <button onClick={() => handleZoomOut(items.link,items.type)} ><MdZoomOutMap /></button>
                         </div>
                       </div>
 
