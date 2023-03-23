@@ -1003,7 +1003,7 @@ export const Shauryas = [
     {
         title: "Xxcelerate",
         ourIndex: 0,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/xxcelerate-3.jpg?updatedAt=1679561065352",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1012,7 +1012,7 @@ export const Shauryas = [
     {
         title: "Robo Soccer League",
         ourIndex: 1,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/robo_soccer_league-2.jpg?updatedAt=1679561586951",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1023,7 +1023,7 @@ export const Shauryas = [
     {
         title: "Robo Go Carting",
         ourIndex: 2,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/robo_go_karting-3.jpg?updatedAt=1679561476392",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1034,7 +1034,7 @@ export const Shauryas = [
     {
         title: "Robo Sumo",
         ourIndex: 3,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/robo_sumo-3.jpg?updatedAt=1679561027658",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1045,7 +1045,7 @@ export const Shauryas = [
     {
         title: "Deep Blue",
         ourIndex: 4,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/deep_blue-3.jpg?updatedAt=1679561562493",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1057,7 +1057,7 @@ export const Shauryas = [
     {
         title: "Robo Fire Fighting",
         ourIndex: 5,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/robofire_fighting-2.jpg?updatedAt=1679561211419",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1068,7 +1068,7 @@ export const Shauryas = [
     {
         title: "Drone Race",
         ourIndex: 6,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/drone_race-3.jpg?updatedAt=1679561139257",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1206,20 +1206,10 @@ export const parakram = [
 
 
     },
-    {
-        title: "Cad Master",
-        ourIndex: 18,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped: true,
-        maxParticipants: 3,
-        registrationfee: 50,
-        eventid:'CM'
-
-
-    },
+   
     {
         title: "Lets Play With Bond",
-        ourIndex: 19,
+        ourIndex: 18,
         img: "https://ik.imagekit.io/egjzyz51e/lets_play_with_bond.jpg?updatedAt=1679426883200",
         isGrouped: true,
         maxParticipants: 3,
@@ -1233,7 +1223,7 @@ export const parakram = [
 export const natraja = [
     {
         title: "Make Your Move",
-        ourIndex: 20,
+        ourIndex: 19,
         img: "https://ik.imagekit.io/egjzyz51e/make_your_move.jpg?updatedAt=1679426606864",
         isGrouped: true,
         maxParticipants: 3,
@@ -1244,7 +1234,7 @@ export const natraja = [
     },
     {
         title: "One Minute Show",
-        ourIndex: 21,
+        ourIndex: 20,
         img: "https://ik.imagekit.io/egjzyz51e/one_minute_show.jpg?updatedAt=1679426689351",
         isGrouped: true,
         maxParticipants: 3,
@@ -1261,7 +1251,7 @@ export const natraja = [
 export const Kautilya = [
     {
         title: "Quiz Masters",
-        ourIndex: 22,
+        ourIndex: 21,
         img: "https://ik.imagekit.io/egjzyz51e/quiz_masters.jpg?updatedAt=1679426958564",
         isGrouped: true,
         maxParticipants: 3,
@@ -1272,7 +1262,7 @@ export const Kautilya = [
     },
     {
         title: "Treasure hunt",
-        ourIndex: 23,
+        ourIndex: 22,
         img: "https://ik.imagekit.io/egjzyz51e/treasure_hunt.jpg?updatedAt=1679426495577",
         isGrouped: true,
         maxParticipants: 3,
@@ -1281,20 +1271,10 @@ export const Kautilya = [
 
 
     },
-    {
-        title: "Pitch Your Idea",
-        ourIndex: 24,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped: true,
-        maxParticipants: 3,
-        registrationfee: 50,
-        eventid:'PYI'
-
-
-    },
+   
     {
         title: "Workshops",
-        ourIndex: 25,
+        ourIndex: 23,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped: true,
         maxParticipants: 3,
@@ -1390,7 +1370,7 @@ export const eventDetails = [
  export const galleryData = [
     {
         type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?updatedAt=1677915392553"
+        link:"https://ik.imagekit.io/egjzyz51e/DSC_0171.JPG?updatedAt=1679562389624"
     },
     {
         type:"vid",
@@ -1398,23 +1378,48 @@ export const eventDetails = [
     },
     {
         type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?updatedAt=1677915392553"
+        link:"https://ik.imagekit.io/egjzyz51e/DSC_0179.JPG?updatedAt=1679562390758"
     },
     {
         type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?updatedAt=1677915392553"
+        link:"https://ik.imagekit.io/egjzyz51e/DSC_0165.JPG?updatedAt=1679562391608"
     },
     {
         type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?updatedAt=1677915392553"
+        link:"https://ik.imagekit.io/egjzyz51e/DSC_0162.JPG?updatedAt=1679562392070"
     },
     {
         type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?updatedAt=1677915392553"
+        link:"https://ik.imagekit.io/egjzyz51e/DSC_0193.JPG?updatedAt=1679562392214"
     },
     {
         type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/img_3_1677915162450.jpg?updatedAt=1677915392553"
+        link:"https://ik.imagekit.io/egjzyz51e/DSC_0256.JPG?updatedAt=1679562393160"
+    },
+    {
+        type:"img",
+        link:"https://ik.imagekit.io/egjzyz51e/DSC_0174.JPG?updatedAt=1679562391499"
+    },
+    {
+        type:"img",
+        link:"https://ik.imagekit.io/egjzyz51e/DSC_0214.JPG?updatedAt=1679562389933"
+    },
+  
+    {
+        type:"img",
+        link:"https://ik.imagekit.io/egjzyz51e/IMG_20230315_195011.jpg?updatedAt=1679563023303"
+    },
+    {
+        type:"img",
+        link:"https://ik.imagekit.io/egjzyz51e/IMG_20230313_082154__1_.jpg?updatedAt=1679563034886"
+    },
+    {
+        type:"img",
+        link:"https://ik.imagekit.io/egjzyz51e/stx_5.jpg?updatedAt=1679563372898"
+    },
+    {
+        type:"img",
+        link:"https://ik.imagekit.io/egjzyz51e/IMG_20230313_061227.jpg?updatedAt=1679563363175"
     },
 ]
 
