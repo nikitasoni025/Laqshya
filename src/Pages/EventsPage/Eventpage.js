@@ -22,7 +22,7 @@ const Eventpage = (props) => {
 
   const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
   const [ourIndex, setOurIndex] = useState(0);
-  const [isModalOpened, setIsModalOpened] = useState(false);
+  const [isModalOpened, setIsModalOpened] = useState(true);
   const [openFormModal, setOpenFormModal] = useState(false);
   const [eventNameFee, setEventNameFee] = useState(initialEventData);
   const navigate = useNavigate();
@@ -56,8 +56,8 @@ const Eventpage = (props) => {
 
   return (
     <div className='Eventpage'>
-      {/* <Eventmodal/> */}
-
+      {isModalOpened ? <Eventmodal openModal={setIsModalOpened} ourIndex={ourIndex}/> : null}
+      
       {openFormModal ? (
         <FormModal eventNameFee={eventNameFee} setOpenFormModal={setOpenFormModal} />
       ) : null}
@@ -112,6 +112,7 @@ const Eventpage = (props) => {
                   isUserAuthenticated={isUserAuthenticated}
                   events={kaushalya}
                   setEventNameFee={setEventNameFee}
+                  openModal={openModal}
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
               </div>

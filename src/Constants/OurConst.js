@@ -1003,7 +1003,7 @@ export const Shauryas = [
     {
         title: "Xxcelerate",
         ourIndex: 0,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/dexo68yudb/WhatsApp_Image_2023-03-23_at_4.36.13_PM__2_.jpeg?updatedAt=1679570520273",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1012,7 +1012,7 @@ export const Shauryas = [
     {
         title: "Robo Soccer League",
         ourIndex: 1,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/dexo68yudb/WhatsApp_Image_2023-03-23_at_4.36.13_PM__3_.jpeg?updatedAt=1679571009079",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1023,8 +1023,7 @@ export const Shauryas = [
     {
         title: "Robo Go Carting",
         ourIndex: 2,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-        isGrouped: true,
+        img: "https://ik.imagekit.io/dexo68yudb/WhatsApp_Image_2023-03-23_at_4.36.14_PM__1_.jpeg?updatedAt=1679570177072",
         maxParticipants: 3,
         registrationfee: 50,
         eventid: 'RGC'
@@ -1034,7 +1033,7 @@ export const Shauryas = [
     {
         title: "Robo Sumo",
         ourIndex: 3,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/dexo68yudb/WhatsApp_Image_2023-03-23_at_4.36.12_PM__3_.jpeg?updatedAt=1679570772006",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1045,7 +1044,7 @@ export const Shauryas = [
     {
         title: "Deep Blue",
         ourIndex: 4,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/dexo68yudb/deep_blue_FQvnhesZJ?updatedAt=1679570358943",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1057,7 +1056,7 @@ export const Shauryas = [
     {
         title: "Robo Fire Fighting",
         ourIndex: 5,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/dexo68yudb/WhatsApp_Image_2023-03-23_at_4.36.12_PM__4_.jpeg?updatedAt=1679570833687",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1068,7 +1067,7 @@ export const Shauryas = [
     {
         title: "Drone Race",
         ourIndex: 6,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/dexo68yudb/WhatsApp_Image_2023-03-23_at_4.36.14_PM.jpeg?updatedAt=1679570642493",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
@@ -1348,6 +1347,10 @@ export const eventDetails = [
         rules: [
             "1", "2", "3", "4"
         ],
+        judgement: [
+            "1", "2", "3", "4"
+        ],
+        arena:'https://ik.imagekit.io/dexo68yudb/kautilya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678017925010',
         registrationfee: 50,
         eventIncharges: [
             {
@@ -1366,6 +1369,10 @@ export const eventDetails = [
         title: "Robo Soccer League",
         intro: "introduction",
         rules: [
+            "1", "2", "3", "4"
+        ],
+        arena:'',
+        judgement: [
             "1", "2", "3", "4"
         ],
         registrationfee: 50,
