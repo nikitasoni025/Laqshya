@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom"
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import "./footer.scss";
+import RegisterPage from '../../Pages/RegisterPage/RegisterPage';
 
 
 const Footer = (props) => {
@@ -18,7 +19,7 @@ const Footer = (props) => {
           <div className="col">
             <ul className="social-link">
               {props.windowSize[0] <= 990 ? null : <li>Social</li>}
-              <li><Link>{props.windowSize[0] <= 990 ? <FaInstagram color='#ff2bae' /> : <>Instagram &nbsp; <FaInstagram /></>}</Link></li>
+              <li><Link >{props.windowSize[0] <= 990 ? <FaInstagram color='#ff2bae' /> : <>Instagram &nbsp; <FaInstagram /></>}</Link></li>
               <li><Link>{props.windowSize[0] <= 990 ? <FaFacebook /> : <>Facebook &nbsp;  <FaFacebook /></>}</Link></li>
               <li><Link>{props.windowSize[0] <= 990 ? <FaYoutube /> : <>Youtube &nbsp; <FaYoutube /></>}</Link></li>
             </ul>
@@ -26,7 +27,7 @@ const Footer = (props) => {
           <div className="col">
             <div className="register-link">
               <h4>Click Here To Register</h4>
-              <Link>Register</Link>
+              <Link to="/register">Register</Link>
             </div>
           </div>
         </div>
