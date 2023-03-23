@@ -36,5 +36,6 @@ export const SERVICE_URLS = {
     getParticipantWithId: {url: "/partwid", method: "GET",params:true},
     registerIndividuals : {url: "/indi/regist",method: "POST"},
     registerGroups : {url: "/group/regist",method: "POST"},
+    getAllGroups : {url:"/groups",method:"GET",params:true}
 
 }

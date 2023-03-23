@@ -6,11 +6,12 @@ import { IoAnalyticsOutline } from "react-icons/io5";
 import { RiUserStarLine } from "react-icons/ri";
 import { CgFeed } from "react-icons/cg";
 import Participants from '../Paticipants/Participants';
+import Group from '../Group/Group';
 
 
 const Dashboard = () => {
     const [isSideBarOpened, setIsSideBarOpened] = useState(false)
-    const{dashid}=useParams();
+    const { dashid } = useParams();
 
 
     return (
@@ -58,11 +59,12 @@ const Dashboard = () => {
 
                             <div className="main-content">
                                 <div className="main-content-wrap">
-                                    {dashid==="overview"?(
+                                    {dashid === "overview" ? (
                                         <>overview</>
-                                    ):dashid==="participants"?(
-                                        <Participants/>
-                                    ):null}
+                                    ) : dashid === "participants" ? (
+                                        <Participants />
+                                    ) : dashid === "groups" ? (<Group />) 
+                                    : null}
                                 </div>
                             </div>
                         </div>
