@@ -65,32 +65,32 @@ const Group = () => {
         setCurrentPage(1);
     }
 
-    const indexOfLastItem = currentPage * itemPerPage;
-    const indexOfFirstItem = indexOfLastItem - itemPerPage;
-    const filteredData = tableData.filter((item) =>
-        item.name.toLowerCase().includes(filteredTerm.searched.toLowerCase()) &&
-            item.status === true ? "paid" : "unpaid".includes(filteredTerm.status.toLowerCase()) &&
-        item.event.toLowerCase().includes(filteredTerm.events.toLowerCase())
-    );
-    const sortedData = filteredData.sort((a, b) => {
-        const aValue = a[sortBy];
-        const bValue = b[sortBy];
-        if (aValue < bValue) {
-            return sortOrder === "asc" ? -1 : 1;
-        }
-        else if (aValue > bValue) {
-            return sortOrder === "asc" ? 1 : -1;
-        }
-        else {
-            return 0;
-        }
-    });
-    const currentData = sortedData.slice(indexOfFirstItem, indexOfLastItem);
+    // const indexOfLastItem = currentPage * itemPerPage;
+    // const indexOfFirstItem = indexOfLastItem - itemPerPage;
+    // const filteredData = tableData.filter((item) =>
+    //     item.name.toLowerCase().includes(filteredTerm.searched.toLowerCase()) &&
+    //         item.status === true ? "paid" : "unpaid".includes(filteredTerm.status.toLowerCase()) &&
+    //     item.event.toLowerCase().includes(filteredTerm.events.toLowerCase())
+    // );
+    // const sortedData = filteredData.sort((a, b) => {
+    //     const aValue = a[sortBy];
+    //     const bValue = b[sortBy];
+    //     if (aValue < bValue) {
+    //         return sortOrder === "asc" ? -1 : 1;
+    //     }
+    //     else if (aValue > bValue) {
+    //         return sortOrder === "asc" ? 1 : -1;
+    //     }
+    //     else {
+    //         return 0;
+    //     }
+    // });
+    // const currentData = sortedData.slice(indexOfFirstItem, indexOfLastItem);
 
-    const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(sortedData.length / itemPerPage); i++) {
-        pageNumbers.push(i);
-    }
+    // const pageNumbers = [];
+    // for (let i = 1; i <= Math.ceil(sortedData.length / itemPerPage); i++) {
+    //     pageNumbers.push(i);
+    // }
 
     const handleItemPerpage = (e) => {
 
@@ -237,7 +237,7 @@ const Group = () => {
 
                 {/* Table Configuration Button */}
 
-                <div className="table-config">
+                {/* <div className="table-config">
                     <div className="table-config-wrap">
                         <div className="pagination-btn">
                             <p>Pagination</p>
@@ -246,7 +246,7 @@ const Group = () => {
                             <button onClick={() => { currentPage > (pageNumbers.length - 1) ? setCurrentPage(currentPage) : setCurrentPage(++currentPage) }}><TbArrowWaveRightUp /></button>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
         </div>
