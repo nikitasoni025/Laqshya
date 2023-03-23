@@ -7,6 +7,7 @@ import { DataContext } from '../../Context/Dataprovider';
 import { API } from '../../Services/Api';
 import './loginpage.scss';
 import Loader from '../../Components/Loader/Loader';
+import { Toaster } from '../../Components/Toaster/Toaster';
 
 
 const initialLoginValues = {
@@ -19,7 +20,10 @@ const Loginpage = ({ setIsUserAuthenticated }) => {
     const [isEyeOpened, setIsEyeOpened] = useState(false);
     const [formData, setFormData] = useState(initialLoginValues);
     const [isLoading, setIsLoading] = useState(false);
-    
+    const [showSuccess, setShowSuccess] = useState(false);
+    const [showError, setShowError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+
 
     const { setAccount } = useContext(DataContext);
 
@@ -45,7 +49,7 @@ const Loginpage = ({ setIsUserAuthenticated }) => {
 
         if (response.isSuccess) {
             setIsLoading(false);
-            const {id,name,email,phonenumber,institution,standard}=response.data.data;
+            const { id, name, email, phonenumber, institution, standard } = response.data.data;
             // setShowSuccess(true);
             // setTimeout(() => setShowSuccess(false), 4000);
             setFormData(initialLoginValues);
@@ -54,11 +58,15 @@ const Loginpage = ({ setIsUserAuthenticated }) => {
             sessionStorage.setItem('isLogined', id);
             setIsUserAuthenticated(true);
             console.log(response);
-            await setAccount({id:id, username: name, email: email ,phonenumber:phonenumber,institution:institution,standard:standard});
+            await setAccount({ id: id, username: name, email: email, phonenumber: phonenumber, institution: institution, standard: standard });
             navigate('/events');
         } else {
-            setFormData(initialLoginValues);
+
             setIsLoading(false);
+            setShowError(true);
+            setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
+            setTimeout(() => setShowError(false), 4000);
+
 
         }
 
@@ -68,7 +76,9 @@ const Loginpage = ({ setIsUserAuthenticated }) => {
 
     return (
         <div className='Loginpage'>
-           
+            {showSuccess && <Toaster message={"Registered Successfully"} type={"success"} />}
+            {showError && <Toaster message={errorMessage} type={"error"} />}
+
             <div className="loginpage-wrap">
                 <div className="left-wrap">
                     <div className="logo">
@@ -113,6 +123,8 @@ const Loginpage = ({ setIsUserAuthenticated }) => {
                             <button onClick={handleLogin} className='register-btn'>{isLoading ? <Loader /> : "Choose Events"}</button>
                         </div>
                     </form>
+                    {showSuccess && <p className='note-mark'> Registered Successfully  </p>}
+                    {showError && <p className='error-mark' >{errorMessage} </p>}
                     <p>Don't Have An Account ? <Link to={"/register"}>Sign Up</Link></p>
                 </div>
             </div>

@@ -196,9 +196,13 @@ const Eventpage = (props) => {
 
             {/* workshop */}
             <a href="" id='Workshop'></a>
+            
             <div className='event-row'>
               <h1><span className='diff-font'>Workshop</span></h1>
               <h2>Academic</h2>
+              <div className='row-details'>
+                <p>A workshop is a collaborative learning experience where a group of individuals come together to actively participate and engage in a particular topic or skill. Workshops can be conducted in-person or online and can range in length from a few hours to several days.</p>
+              </div>
              
                 <div className='row-events'>
                   <Eventcarousel

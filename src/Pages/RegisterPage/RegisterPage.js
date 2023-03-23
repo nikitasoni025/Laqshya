@@ -17,7 +17,8 @@ const initialValue = {
     "phonenumber": "",
     "institution": "",
     "standard": "",
-    "password": ""
+    "password": "",
+    "confirmPassword": ""
 
 }
 
@@ -87,31 +88,25 @@ const RegisterPage = () => {
         e.preventDefault();
         setIsLoading(true);
 
-        if (checkConfirmPass()) {
 
-            let response = await API.registerParticipants(formData);
-            console.log(response);
-            if (response.isSuccess) {
-                setFormData(initialValue);
-                setIsLoading(false);
-                setShowSuccess(true);
-                setConfirmPass("");
-                setTimeout(() => setShowSuccess(false), 4000);
-            }
-            else {
-                setIsLoading(false);
-                setShowError(true);
-                setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
-                setTimeout(() => setShowError(false), 4000);
-            }
+
+        let response = await API.registerParticipants(formData);
+        console.log(response);
+        if (response.isSuccess) {
+            setFormData(initialValue);
+            setIsLoading(false);
+            setShowSuccess(true);
+            setConfirmPass("");
+            setTimeout(() => setShowSuccess(false), 4000);
         }
         else {
             setIsLoading(false);
-            setShowError(true);
-            setErrorMessage("Error!, Confirm Password didn't matched");
+            setShowError(true);            
+            setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
             setTimeout(() => setShowError(false), 4000);
-
+            
         }
+
 
 
 
@@ -152,6 +147,9 @@ const RegisterPage = () => {
                 </div>
                 <div className="right-wrap">
                     <h1>REGISTRATION</h1>
+                    {showSuccess && <p className='note-mark'> Registered Successfully  </p>}
+                    {showError && <p className='error-mark' >{errorMessage} </p>}
+
 
                     <form action="">
                         <div className="row">
@@ -202,7 +200,7 @@ const RegisterPage = () => {
                         <div className="row">
                             <div className="password-wrap">
                                 <RiLockPasswordLine />
-                                <input onChange={handleCOnfirmPass} type={isEyeOpened ? "text" : "password"} value={confirmPass} name='password' placeholder='Confirm Password' />
+                                <input onChange={handleInputChange} type={isEyeOpened ? "text" : "password"} value={formData.confirmPassword} name='confirmPassword' placeholder='Confirm Password' />
 
                                 <button onClick={(e) => { e.preventDefault(); setIsEyeOpened(!isEyeOpened) }}>{isEyeOpened ? <FaEyeSlash /> : <FaEye />}</button>
                             </div>

@@ -19,9 +19,9 @@ const Footer = (props) => {
           <div className="col">
             <ul className="social-link">
               {props.windowSize[0] <= 990 ? null : <li>Social</li>}
-              <li><Link hrefLang=' https://instagram.com/laqshya2023?igshid=YmMyMTA2M2Y=' >{props.windowSize[0] <= 990 ? <FaInstagram color='#ff2bae' /> : <>Instagram &nbsp; <FaInstagram /></>}</Link></li>
-              <li><Link>{props.windowSize[0] <= 990 ? <FaFacebook /> : <>Facebook &nbsp;  <FaFacebook /></>}</Link></li>
-              <li><Link>{props.windowSize[0] <= 990 ? <FaYoutube /> : <>Youtube &nbsp; <FaYoutube /></>}</Link></li>
+              <li><Link to=" https://instagram.com/laqshya2023?igshid=YmMyMTA2M2Y=" >{props.windowSize[0] <= 990 ? <FaInstagram color='#ff2bae' /> : <>Instagram &nbsp; <FaInstagram /></>}</Link></li>
+              <li><Link to="https://m.facebook.com/story.php?story_fbid=pfbid02tsRSxXviF5hmsyanwoxnan4wNngVYeaYFdkcEMWdzzoGgPxeD9VRLxsdeZ65thpyl&id=1392219277708303">{props.windowSize[0] <= 990 ? <FaFacebook /> : <>Facebook &nbsp;  <FaFacebook /></>}</Link></li>
+              <li><Link to="https://youtube.com/@CSGIDURG">{props.windowSize[0] <= 990 ? <FaYoutube /> : <>Youtube &nbsp; <FaYoutube /></>}</Link></li>
             </ul>
           </div>
           <div className="col">

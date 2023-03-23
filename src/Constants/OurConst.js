@@ -1304,7 +1304,7 @@ export const Kautilya = [
             isGrouped: false,
             maxParticipants: 1,
             registrationfee: 50,
-            eventid:'WS'
+            eventid:'DM'
     
     
         },
@@ -1315,7 +1315,7 @@ export const Kautilya = [
             isGrouped: false,
             maxParticipants: 1,
             registrationfee: 50,
-            eventid:'WS'
+            eventid:'CS'
     
     
         },
@@ -1326,7 +1326,7 @@ export const Kautilya = [
             isGrouped: false,
             maxParticipants: 1,
             registrationfee: 50,
-            eventid:'WS'
+            eventid:'CC'
     
     
         },
@@ -1337,7 +1337,7 @@ export const Kautilya = [
             isGrouped: false,
             maxParticipants: 1,
             registrationfee: 50,
-            eventid:'WS'
+            eventid:'DA'
     
     
         },
