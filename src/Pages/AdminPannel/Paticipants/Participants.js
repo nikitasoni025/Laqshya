@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./participants.scss";
 import { MdDeleteForever, MdGroupAdd } from "react-icons/md";
@@ -16,12 +16,24 @@ const initialfiltervalue = {
 }
 
 const Participants = () => {
-    const [tableData, setTableData] = useState(initialdata);
+    const [tableData, setTableData] = useState([]);
     const [filteredTerm, setFilteredTerm] = useState(initialfiltervalue);
     const [sortBy, setSortBy] = useState("fullname");
     const [sortOrder, setSortOrder] = useState("asc");
     let [currentPage, setCurrentPage] = useState(1);
-    const [itemPerPage, setItemPerPage] = useState(5); 
+    const [itemPerPage, setItemPerPage] = useState(5);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await API.getParticipantsWithLimit({ limit: itemPerPage });
+            if (response.isSuccess) {
+                console.log(response);
+                setTableData(response.data);
+
+            }
+        }
+        fetchData();
+    }, [])
 
 
 
@@ -47,34 +59,34 @@ const Participants = () => {
         }
         setCurrentPage(1);
     }
-    const indexOfLastItem = currentPage * itemPerPage;
-    const indexOfFirstItem = indexOfLastItem - itemPerPage;
-    const filteredData = tableData.filter((item) =>
-        item.name.toLowerCase().includes(filteredTerm.searched.toLowerCase()) &&
-            item.status === true ? "paid" : "unpaid".includes(filteredTerm.status.toLowerCase()) &&
-        item.event.toLowerCase().includes(filteredTerm.events.toLowerCase())
-    );
-    const sortedData = filteredData.sort((a, b) => {
-        const aValue = a[sortBy];
-        const bValue = b[sortBy];
-        if (aValue < bValue) {
-            return sortOrder === "asc" ? -1 : 1;
-        }
-        else if (aValue > bValue) {
-            return sortOrder === "asc" ? 1 : -1;
-        }
-        else {
-            return 0;
-        }
-    });
-    const currentData = sortedData.slice(indexOfFirstItem, indexOfLastItem);
+    // const indexOfLastItem = currentPage * itemPerPage;
+    // const indexOfFirstItem = indexOfLastItem - itemPerPage;
+    // const filteredData = tableData.filter((item) =>
+    //     item.name.toLowerCase().includes(filteredTerm.searched.toLowerCase()) &&
+    //         item.status === true ? "paid" : "unpaid".includes(filteredTerm.status.toLowerCase()) &&
+    //     item.event.toLowerCase().includes(filteredTerm.events.toLowerCase())
+    // );
+    // const sortedData = filteredData.sort((a, b) => {
+    //     const aValue = a[sortBy];
+    //     const bValue = b[sortBy];
+    //     if (aValue < bValue) {
+    //         return sortOrder === "asc" ? -1 : 1;
+    //     }
+    //     else if (aValue > bValue) {
+    //         return sortOrder === "asc" ? 1 : -1;
+    //     }
+    //     else {
+    //         return 0;
+    //     }
+    // });
+    // const currentData = sortedData.slice(indexOfFirstItem, indexOfLastItem);
 
-    const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(sortedData.length / itemPerPage); i++) {
-        pageNumbers.push(i);
-    }
+    // const pageNumbers = [];
+    // for (let i = 1; i <= Math.ceil(sortedData.length / itemPerPage); i++) {
+    //     pageNumbers.push(i);
+    // }
 
-    const handleItemPerpage=(e)=>{
+    const handleItemPerpage = (e) => {
 
         setItemPerPage(e.target.value);
         setCurrentPage(1);
@@ -111,41 +123,7 @@ const Participants = () => {
                                 </select>
                             </div>
                         </div>
-                        <div className="filter-col">
-                            <label htmlFor="events">Events</label>
-                            <div className="adm-input-wrap">
-                                <select value={filteredTerm.events} onChange={handleSearch} name="events" id="events">
-                                    <option disabled hidden >Choose Event</option>
-                                    <option value="" >All</option>
-                                    <option value="Xxcelerate">Xxcelerate</option>
-                                    <option value="Robo Soccer Leaguers">Robo Soccer League</option>
-                                    <option value="Robo Go Karting">Robo Go Karting</option>
-                                    <option value="rsRobo Sumo">Robo Sumo</option>
-                                    <option value="Deep Blue">Deep Blue</option>
-                                    <option value="Robo Fire Fighting">Robo Fire Fighting</option>
-                                    <option value="Drone Race">Drone Race</option>
-                                    <option value="Cricket">Cricket</option>
-                                    <option value="Arm Wrestling">Arm Wrestling</option>
-                                    <option value="Futsal">Futsal</option>
-                                    <option value="Angry Bird">Angry Bird</option>
-                                    <option value="Face Of Laqshya">Face Of Laqshya</option>
-                                    <option value="Artifex">Artifex</option>
-                                    <option value="Cinematics">Cinematics</option>
-                                    <option value="Cad Master">Cad Master</option>
-                                    <option value="Lets Play With Bond">Lets Play With Bond</option>
-                                    <option value="Bottle Jet">Bottle Jet</option>
-                                    <option value="Code Crunch">Code Crunch</option>
-                                    <option value="Tech Farmactic">Tech Farmactic</option>
-                                    <option value="Make Your Move">Make Your Move</option>
-                                    <option value="jm">Just A Minute</option>
-                                    <option value="\Quiz">Quiz</option>
-                                    <option value="th">Tresure Hunt</option>
-                                    <option value="pyi">Pitch Your Idea</option>
-                                    <option value="work">Workshop</option>
-                                    {/* <option value="">Cicket</option> */}
-                                </select>
-                            </div>
-                        </div>
+                       
                         <div className="filter-col">
                             <label htmlFor="status">Number of items</label>
                             <div className="adm-input-wrap">
@@ -155,7 +133,7 @@ const Participants = () => {
                                     <option value={40} >40</option>
                                     <option value={80} >80</option>
                                     <option value={100} >100</option>
-                                   
+
                                 </select>
                             </div>
                         </div>
@@ -165,7 +143,7 @@ const Participants = () => {
                         <div className="filter-col">
                             <label htmlFor="export">Export to Excel</label>
                             <div className="adm-input-wrap">
-                            <input type="button" value={"Export"} name="export"  id='export'  />
+                                <input type="button" value={"Export"} name="export" id='export' />
                             </div>
                         </div>
                     </div>
@@ -181,7 +159,6 @@ const Participants = () => {
                                     <th onClick={() => handleSort("id")}>Id</th>
                                     <th>UniqueId</th>
                                     <th onClick={() => handleSort("fullname")}>Name</th>
-                                    <th>Event</th>
                                     <th>Email</th>
                                     <th>Number</th>
                                     <th>Institution</th>
@@ -191,19 +168,18 @@ const Participants = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {currentData.map((data, indx) => {
+                                {tableData.map((data, indx) => {
 
                                     return (
                                         <tr key={indx}>
-                                            <td>{data.id}</td>
+                                            <td>{indx}</td>
                                             <td>{data.uid}</td>
-                                            <td>{data.name}</td>
-                                            <td>{data.event}</td>
+                                            <td>{data.fullname}</td>
                                             <td>{data.email}</td>
-                                            <td>{data.number}</td>
+                                            <td>{data.phonenumber}</td>
                                             <td>{data.institution}</td>
                                             <td>{data.standard}</td>
-                                            <td>{data.status}</td>
+                                            <td>{data.status ? "Paid" : "Unpaid"}</td>
                                             <td className='action-btn'>
                                                 {/* <input type="checkbox" /> */}
                                                 <button>Select</button>
@@ -220,7 +196,7 @@ const Participants = () => {
 
                 {/* Table Configuration Button */}
 
-                <div className="table-config">
+                {/* <div className="table-config">
                     <div className="table-config-wrap">
                         <div className="pagination-btn">
                             <p>Pagination</p>
@@ -229,7 +205,7 @@ const Participants = () => {
                             <button onClick={() => { currentPage > (pageNumbers.length - 1) ? setCurrentPage(currentPage) : setCurrentPage(++currentPage) }}><TbArrowWaveRightUp /></button>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
 
 

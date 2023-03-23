@@ -1,14 +1,14 @@
 $dark-green: #064f32;
 $light-green: #06603b;
 
-.group {
+.individual {
     width: 100%;
     font-family: var(--secondary-font);
 
-    .group-wrap {
+    .individual-wrap {
         width: 100%;
 
-        .group-heading {
+        .individual-heading {
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -105,7 +105,7 @@ $light-green: #06603b;
         }
 
         // participant table
-        .group-table {
+        .individual-table {
             width: 100%;
 
             .group-table-wrap {

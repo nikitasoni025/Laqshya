@@ -1,12 +1,12 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import "./group.scss";
+import "./individual.scss";
 import { MdDeleteForever, MdGroupAdd } from "react-icons/md";
 import { FaEdit, FaSearch } from 'react-icons/fa';
 import { TbArrowWaveLeftDown, TbArrowWaveRightUp } from 'react-icons/tb';
 import { initialdata } from '../../../Constants/OurConst';
 import { API } from '../../../Services/Api';
+
 
 const initialfiltervalue = {
     searched: "",
@@ -14,8 +14,10 @@ const initialfiltervalue = {
     events: ""
 }
 
-const Group = () => {
 
+
+
+const Individual = () => {
     const [tableData, setTableData] = useState([]);
     const [filteredTerm, setFilteredTerm] = useState(initialfiltervalue);
     const [sortBy, setSortBy] = useState("fullname");
@@ -23,25 +25,17 @@ const Group = () => {
     let [currentPage, setCurrentPage] = useState(1);
     const [itemPerPage, setItemPerPage] = useState(5);
 
-
-
-
-
     useEffect(() => {
-        const fetchGroupsData = async () => {
-            const response = await API.getAllGroups({ limit: itemPerPage });
+        const fetchData = async () => {
+            const response = await API.getAllIndividuals({ limit: itemPerPage });
             if (response.isSuccess) {
                 console.log(response);
                 setTableData(response.data);
-
-
             }
+
         }
-        fetchGroupsData();
-    }, [])
-
-
-
+        fetchData();
+    }, []);
 
     const handleSearch = (e) => {
         // console.log(filteredTerm);
@@ -98,11 +92,10 @@ const Group = () => {
         setCurrentPage(1);
     }
     return (
-        <div className='group'>
-            <div className="group-wrap">
-
-                <div className="group-heading">
-                    <h1>Groups Participant</h1>
+        <div className='individual'>
+            <div className="individual-wrap">
+                <div className="individual-heading">
+                    <h1>Individual Participant</h1>
                     <Link className='adm-main-btn'>Add&nbsp;<MdGroupAdd /></Link>
                 </div>
 
@@ -190,16 +183,18 @@ const Group = () => {
 
                 {/* DATABASE TABLE */}
 
-                <div className="group-table">
+                <div className="individual-table">
                     <div className="group-table-wrap">
                         <table cellSpacing={5} >
                             <thead>
                                 <tr>
                                     <th onClick={() => handleSort("id")}>Id</th>
                                     <th>UniqueId</th>
-                                    <th onClick={() => handleSort("fullname")}>Group Name</th>
+                                    <th onClick={() => handleSort("fullname")}>Name</th>
+                                    <th>Email</th>
                                     <th>Event</th>
-                                    <th>Group Members</th>
+                                    <th>Institution</th>
+                                    <th>Standard</th>
                                     <th>Registration Fee</th>
                                     <th>Status</th>
                                     <th>Action</th>
@@ -211,21 +206,15 @@ const Group = () => {
                                     return (
                                         <tr key={indx}>
                                             <td>{indx}</td>
-                                            <td>{data.groupid}</td>
-                                            <td>{data.groupname}</td>
+                                            <td>{data.uid}</td>
+                                            <td>{data.fullname}</td>
+                                            <td>{data.email}</td>
                                             <td>{data.eventname}</td>
-                                            <td>
-                                                {data.members && data.members.length > 0 ? data.members.map((member, ind) => {
-                                                    return (
-                                                        <p>{member.fullname}&nbsp;&nbsp;{member.email}</p>
-                                                    )
-                                                }) : <p>No members</p>}
-                                            </td>
-
-                                            <td>{data.members.length > 0 ? data.registrationfee * data.members.length : data.registrationfee}</td>
+                                            <td>{data.institution}</td>
+                                            <td>{data.standard}</td>
+                                            <td>{data.registrationfee}</td>
                                             <td>{data.status ? "Paid" : "Unpaid"}</td>
-                                            <td className='action-btn'>
-                                                {/* <input type="checkbox" /> */}
+                                            <td className='action-btn'>                                               
                                                 <button>Select</button>
                                                 <button><FaEdit /></button>
                                                 <button><MdDeleteForever /></button>
@@ -251,9 +240,8 @@ const Group = () => {
                     </div>
                 </div> */}
             </div>
-
         </div>
     )
 }
 
-export default Group
+export default Individual

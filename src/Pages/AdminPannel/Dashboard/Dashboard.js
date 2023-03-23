@@ -7,6 +7,8 @@ import { RiUserStarLine } from "react-icons/ri";
 import { CgFeed } from "react-icons/cg";
 import Participants from '../Paticipants/Participants';
 import Group from '../Group/Group';
+import Individual from '../Individual/Individual';
+import CreateIndi from '../CreateIndividual/CreateIndi';
 
 
 const Dashboard = () => {
@@ -18,28 +20,30 @@ const Dashboard = () => {
         <div className='dashboard'>
             <div className="dashboard-wrap">
 
-
-
                 {/* CONTENT SECTION */}
 
                 <div className="content-section">
                     <div className="content-wrap">
+
                         {/* LEFT SIDE */}
 
                         <div className={isSideBarOpened ? "side-bar opened" : "side-bar"}>
                             <button onClick={(e) => { setIsSideBarOpened(!isSideBarOpened) }}><FaBars /></button>
                             <ul className="side-menu">
-                                <li><Link>{isSideBarOpened ? "OverView" : <IoAnalyticsOutline />}</Link></li>
-                                <li><Link>{isSideBarOpened ? "Participants" : <RiUserStarLine />}</Link></li>
-                                <li><Link>{isSideBarOpened ? "Posts" : <CgFeed />}</Link></li>
-                                <li><Link>{isSideBarOpened ? "Posts" : <FaAddressCard />}</Link></li>
-                                <li><Link>{isSideBarOpened ? "Posts" : <FaAddressCard />}</Link></li>
+                                <li><Link to="/admin/dashboard/overview">{isSideBarOpened ? "OverView" : <IoAnalyticsOutline />}</Link></li>
+                                <li><Link to="/admin/dashboard/particiapnts">{isSideBarOpened ? "Participants" : <RiUserStarLine />}</Link></li>
+                                <li><Link to="/admin/dashboard/individuals">{isSideBarOpened ? "Individuals" : <CgFeed />}</Link></li>
+                                <li><Link to="/admin/dashboard/groups">{isSideBarOpened ? "Groups" : <FaAddressCard />}</Link></li>
+                                <li><Link to="/admin/dashboard/posts">{isSideBarOpened ? "Posts" : <FaAddressCard />}</Link></li>
                             </ul>
                         </div>
 
                         {/* RIGHT SIDE */}
+
                         <div className="main-content">
+                            
                             {/* HEAD BAR */}
+
                             <div className="head-bar">
                                 <div className="head-bar-left">
 
@@ -64,6 +68,8 @@ const Dashboard = () => {
                                     ) : dashid === "participants" ? (
                                         <Participants />
                                     ) : dashid === "groups" ? (<Group />) 
+                                    : dashid === "individuals" ? (<Individual/>) 
+                                    : dashid === "createIndi" ? (<CreateIndi/>) 
                                     : null}
                                 </div>
                             </div>

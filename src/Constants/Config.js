@@ -1,5 +1,6 @@
 // API_NOTIFICATION_MESSAGES
 
+
 export const API_NOTIFICATION_MESSAGES = {
     loading: {
         title: "Loading.....",
@@ -31,11 +32,13 @@ export const SERVICE_URLS = {
     adminSignup: { url: '/signup', method: 'POST' },
     registerParticipants: { url: "/register", method: "POST" },
     userSignin: { url: "/signin", method: "POST" },
-    getAllParticipants: { url: '/participants', method: "GET",params:true},
-    getSearchedParticipants: { url: "/api/participants", method: "GET" ,params:true},
-    getParticipantWithId: {url: "/partwid", method: "GET",params:true},
-    registerIndividuals : {url: "/indi/regist",method: "POST"},
-    registerGroups : {url: "/group/regist",method: "POST"},
-    getAllGroups : {url:"/groups",method:"GET",params:true}
+    getAllParticipants: { url: '/participants', method: "GET", params: true },
+    getSearchedParticipants: { url: "/api/participants", method: "GET", params: true },
+    getParticipantWithId: { url: "/partwid", method: "GET", params: true },
+    registerIndividuals: { url: "/indi/regist", method: "POST" },
+    registerGroups: { url: "/group/regist", method: "POST" },
+    getAllGroups: { url: "/groups", method: "GET", params: true },
+    getParticipantsWithLimit: { url: "/paticipantsData", method: "GET", params: true },
+    getAllIndividuals: { url: "/individuals", method: "GET", params: true }
 
 }
