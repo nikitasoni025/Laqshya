@@ -1384,6 +1384,10 @@ export const eventDetails = [
         rules: [
             "1", "2", "3", "4"
         ],
+        judgement: [
+            "1", "2", "3", "4"
+        ],
+        arena:'https://ik.imagekit.io/dexo68yudb/kautilya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678017925010',
         registrationfee: 50,
         eventIncharges: [
             {
@@ -1402,6 +1406,10 @@ export const eventDetails = [
         title: "Robo Soccer League",
         intro: "introduction",
         rules: [
+            "1", "2", "3", "4"
+        ],
+        arena:'',
+        judgement: [
             "1", "2", "3", "4"
         ],
         registrationfee: 50,
