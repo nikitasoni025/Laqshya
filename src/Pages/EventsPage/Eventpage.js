@@ -6,7 +6,7 @@ import Eventmodal from '../../Components/Eventmodal/Eventmodal';
 import Footer from '../../Components/Footer/Footer';
 import FormModal from '../../Components/FormModal/FormModal';
 import Navbar from '../../Components/Navbar/Navbar';
-import { bannerslide, bouddhiki, kaushalya, Kautilya, natraja, parakram, Shauryas } from '../../Constants/OurConst';
+import { bannerslide, bouddhiki, kaushalya, Kautilya, natraja, parakram, Shauryas, workshop } from '../../Constants/OurConst';
 import { checkTokenExpiration } from '../../Utils/commonutil';
 import './Eventpage.scss';
 
@@ -192,6 +192,25 @@ const Eventpage = (props) => {
                   />
                 </div>
             </div>
+
+            {/* workshop */}
+            <a href="" id='Workshop'></a>
+            <div className='event-row'>
+              <h1><span className='diff-font'>Workshop</span></h1>
+              <h2>Academic</h2>
+             
+                <div className='row-events'>
+                  <Eventcarousel
+                    setOpenFormModal={setOpenFormModal}
+                    isUserAuthenticated={isUserAuthenticated}
+                    events={workshop}
+                    openModal={openModal}
+                    setEventNameFee={setEventNameFee}
+                    windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
+                  />
+                </div>
+            </div>
+            
 
 
 

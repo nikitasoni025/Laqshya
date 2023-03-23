@@ -1271,10 +1271,21 @@ export const Kautilya = [
 
 
     },
+    {
+        title: "AD Mad Show",
+        ourIndex: 23,
+        img: "https://ik.imagekit.io/egjzyz51e/ADD_MAD_SHOW__1_.jpg?updatedAt=1679569325428",
+        isGrouped: true,
+        maxParticipants: 3,
+        registrationfee: 50,
+        eventid:'TH'
+
+
+    },
    
     {
         title: "Workshops",
-        ourIndex: 23,
+        ourIndex: 24,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped: true,
         maxParticipants: 3,
@@ -1283,10 +1294,55 @@ export const Kautilya = [
 
 
     },
+    ]
+     export const workshop =[
 
+        {
+            title: "Digital Marketing",
+            ourIndex: 25,
+            img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+            isGrouped: false,
+            maxParticipants: 1,
+            registrationfee: 50,
+            eventid:'WS'
+    
+    
+        },
+        {
+            title: "Cyber Security",
+            ourIndex: 26,
+            img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+            isGrouped: false,
+            maxParticipants: 1,
+            registrationfee: 50,
+            eventid:'WS'
+    
+    
+        },
+        {
+            title: "Career Counselling",
+            ourIndex: 27,
+            img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+            isGrouped: false,
+            maxParticipants: 1,
+            registrationfee: 50,
+            eventid:'WS'
+    
+    
+        },
+        {
+            title: "Drug Awareness",
+            ourIndex: 28,
+            img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+            isGrouped: false,
+            maxParticipants: 1,
+            registrationfee: 50,
+            eventid:'WS'
+    
+    
+        },
 
-
-]
+     ]
 export const bannerslide = [
     {
         title: "Shaurya",
