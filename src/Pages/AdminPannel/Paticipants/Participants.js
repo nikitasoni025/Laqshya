@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useDownloadExcel } from 'react-export-table-to-excel';
 import { Link } from 'react-router-dom';
 import "./participants.scss";
 import { MdDeleteForever, MdGroupAdd } from "react-icons/md";
-import { FaEdit, FaSearch } from 'react-icons/fa';
+import { FaEdit, FaSave, FaSearch } from 'react-icons/fa';
 import { TbArrowWaveLeftDown, TbArrowWaveRightUp } from 'react-icons/tb';
 import { initialdata } from '../../../Constants/OurConst';
 import { API } from '../../../Services/Api';
@@ -11,7 +12,6 @@ import { API } from '../../../Services/Api';
 
 const initialfiltervalue = {
     searched: "",
-    status: "",
     events: ""
 }
 
@@ -19,21 +19,36 @@ const Participants = () => {
     const [tableData, setTableData] = useState([]);
     const [filteredTerm, setFilteredTerm] = useState(initialfiltervalue);
     const [sortBy, setSortBy] = useState("fullname");
+    const [status, setStatus] = useState(false);
+    const [pageNumbers, setPageNumbers] = useState(0);
     const [sortOrder, setSortOrder] = useState("asc");
     let [currentPage, setCurrentPage] = useState(1);
+    const [toggle, setToggle] = useState(true);
     const [itemPerPage, setItemPerPage] = useState(5);
+    const [editingid, setEditingId] = useState(null);
+    const tableRef = useRef(null);
+
+
+
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await API.getParticipantsWithLimit({ limit: itemPerPage });
+            const response = await API.getParticipantsWithLimit({ limit: itemPerPage, page: currentPage, status: status });
             if (response.isSuccess) {
                 console.log(response);
-                setTableData(response.data);
-
+                setTableData(response.data.data);
+                setPageNumbers(Math.ceil(response.data.totalCount / itemPerPage));
             }
         }
         fetchData();
-    }, [])
+    }, [itemPerPage, currentPage, status, toggle]);
+
+
+    const { onDownload } = useDownloadExcel({
+        currentTableRef: tableRef.current,
+        filename: 'Users table',
+        sheet: 'Users'
+    })
 
 
 
@@ -41,6 +56,9 @@ const Participants = () => {
     const handleSearch = (e) => {
         // console.log(filteredTerm);
         const { name, value } = e.target;
+        if (name === 'status') {
+            setStatus(value);
+        }
         setFilteredTerm((pre) => {
             return {
                 ...pre,
@@ -59,37 +77,42 @@ const Participants = () => {
         }
         setCurrentPage(1);
     }
-    // const indexOfLastItem = currentPage * itemPerPage;
-    // const indexOfFirstItem = indexOfLastItem - itemPerPage;
-    // const filteredData = tableData.filter((item) =>
-    //     item.name.toLowerCase().includes(filteredTerm.searched.toLowerCase()) &&
-    //         item.status === true ? "paid" : "unpaid".includes(filteredTerm.status.toLowerCase()) &&
-    //     item.event.toLowerCase().includes(filteredTerm.events.toLowerCase())
-    // );
-    // const sortedData = filteredData.sort((a, b) => {
-    //     const aValue = a[sortBy];
-    //     const bValue = b[sortBy];
-    //     if (aValue < bValue) {
-    //         return sortOrder === "asc" ? -1 : 1;
-    //     }
-    //     else if (aValue > bValue) {
-    //         return sortOrder === "asc" ? 1 : -1;
-    //     }
-    //     else {
-    //         return 0;
-    //     }
-    // });
-    // const currentData = sortedData.slice(indexOfFirstItem, indexOfLastItem);
 
-    // const pageNumbers = [];
-    // for (let i = 1; i <= Math.ceil(sortedData.length / itemPerPage); i++) {
-    //     pageNumbers.push(i);
-    // }
+    const searchedTerms = filteredTerm.searched.toLowerCase().split(' ');
+    const filteredData = tableData.filter((item) =>
+        searchedTerms.every((term) =>
+            item.fullname.toLowerCase().includes(term) ||
+            item.email.includes(term)
+        )
+    );
 
     const handleItemPerpage = (e) => {
 
         setItemPerPage(e.target.value);
         setCurrentPage(1);
+    }
+
+    const handleUserDelete = async (id) => {
+
+
+        if (window.confirm("Do You Really Want To Delete The User") == true) {
+            const response = await API.deleteUser({ id });
+            if (response.isSuccess) {
+                setToggle(!toggle);
+            }
+        }
+    }
+
+    const handleUserUpdate = async (id) => {
+
+        setEditingId(id);
+        // const response =await API.updateUsers({id:id,updateData:{fullname:"animesh"}});
+
+        // if(response.isSuccess){
+        //     setToggle(!toggle);
+        // }
+
+
     }
 
     return (
@@ -116,14 +139,14 @@ const Participants = () => {
                         <div className="filter-col">
                             <label htmlFor="status">Status</label>
                             <div className="adm-input-wrap">
-                                <select value={filteredTerm.status} onChange={handleSearch} name="status" id="status">
+                                <select value={status} onChange={handleSearch} name="status" id="status">
                                     <option disabled hidden >Choose Status</option>
-                                    <option value="paid">Paid</option>
-                                    <option value="unpaid">Unpaid</option>
+                                    <option value={true}>Paid</option>
+                                    <option value={false}>Unpaid</option>
                                 </select>
                             </div>
                         </div>
-                       
+
                         <div className="filter-col">
                             <label htmlFor="status">Number of items</label>
                             <div className="adm-input-wrap">
@@ -143,7 +166,7 @@ const Participants = () => {
                         <div className="filter-col">
                             <label htmlFor="export">Export to Excel</label>
                             <div className="adm-input-wrap">
-                                <input type="button" value={"Export"} name="export" id='export' />
+                                <input onClick={onDownload} type="button" value={"Export"} name="export" id='export' />
                             </div>
                         </div>
                     </div>
@@ -153,7 +176,7 @@ const Participants = () => {
 
                 <div className="participants-table">
                     <div className="participants-table-wrap">
-                        <table cellSpacing={5} >
+                        <table ref={tableRef}>
                             <thead>
                                 <tr>
                                     <th onClick={() => handleSort("id")}>Id</th>
@@ -168,23 +191,50 @@ const Participants = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {tableData.map((data, indx) => {
+                                {filteredData.map((data, indx) => {
 
                                     return (
                                         <tr key={indx}>
                                             <td>{indx}</td>
                                             <td>{data.uid}</td>
-                                            <td>{data.fullname}</td>
-                                            <td>{data.email}</td>
+                                            {editingid === data._id ? (
+                                                <td>
+                                                    <input name='fullname' type="text" value={data.fullname} />
+                                                </td>
+                                            ) : (
+                                                <td>
+                                                    {data.fullname}
+                                                </td>
+                                            )}
+                                            {editingid === data._id ? (
+                                                <td>
+                                                    <input name='email' type="email" value={data.email} />
+                                                </td>
+                                            ) : (
+                                                <td>
+                                                    {data.email}
+                                                </td>
+                                            )}
                                             <td>{data.phonenumber}</td>
                                             <td>{data.institution}</td>
                                             <td>{data.standard}</td>
-                                            <td>{data.status ? "Paid" : "Unpaid"}</td>
+                                            {editingid === data._id ? (
+                                                <td>
+                                                    <select name="status" id="">
+                                                        <option value={true}>Paid</option>
+                                                        <option value={false}>UnPaid</option>
+                                                    </select>
+                                                </td>
+                                            ) : (
+                                                <td>
+                                                    {data.status ? "Paid" : "Unpaid"}
+                                                </td>
+                                            )}
                                             <td className='action-btn'>
                                                 {/* <input type="checkbox" /> */}
-                                                <button>Select</button>
-                                                <button><FaEdit /></button>
-                                                <button><MdDeleteForever /></button>
+                                                {editingid===data._id ? <button onClick={() => setEditingId(null)}><FaSave /></button>: <button onClick={() => handleUserUpdate(data._id)}><FaEdit /></button>}
+                                                
+                                                <button onClick={() => handleUserDelete(data._id)}><MdDeleteForever /></button>
                                             </td>
                                         </tr>
                                     )
@@ -196,16 +246,16 @@ const Participants = () => {
 
                 {/* Table Configuration Button */}
 
-                {/* <div className="table-config">
+                <div className="table-config">
                     <div className="table-config-wrap">
                         <div className="pagination-btn">
                             <p>Pagination</p>
                             <button onClick={() => { currentPage <= 1 ? setCurrentPage(currentPage) : setCurrentPage(--currentPage) }}><TbArrowWaveLeftDown /></button>
                             <h1> {currentPage}</h1>
-                            <button onClick={() => { currentPage > (pageNumbers.length - 1) ? setCurrentPage(currentPage) : setCurrentPage(++currentPage) }}><TbArrowWaveRightUp /></button>
+                            <button onClick={() => { filteredData.length < currentPage || currentPage === pageNumbers ? setCurrentPage(currentPage) : setCurrentPage(++currentPage) }}><TbArrowWaveRightUp /></button>
                         </div>
                     </div>
-                </div> */}
+                </div>
 
 
 

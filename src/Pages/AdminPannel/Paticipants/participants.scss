@@ -159,7 +159,8 @@ $light-green: #06603b;
 
                             .action-btn {
                                 display: flex;
-                                justify-content: space-between;
+                                justify-content: flex-start;
+                                gap: 20px;
                                 align-items: center;
                                 // position: sticky;
                                 right: 0;
@@ -180,11 +181,12 @@ $light-green: #06603b;
                                     font-size: 18px;
                                 }
                                 button{
-                                    &:nth-child(2){
+                                    cursor: pointer;
+                                    &:nth-child(1){
                                         // background: rgb(209, 177, 17);
                                         color: #064f32;
                                     }
-                                    &:nth-child(3){
+                                    &:nth-child(2){
                                         // background: rgb(209, 177, 17);
                                         color: rgb(235, 62, 62);
                                     }

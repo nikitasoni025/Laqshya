@@ -39,6 +39,14 @@ export const SERVICE_URLS = {
     registerGroups: { url: "/group/regist", method: "POST" },
     getAllGroups: { url: "/groups", method: "GET", params: true },
     getParticipantsWithLimit: { url: "/paticipantsData", method: "GET", params: true },
-    getAllIndividuals: { url: "/individuals", method: "GET", params: true }
+    getAllIndividuals: { url: "/individuals", method: "GET", params: true },
+
+
+
+    // DELETE 
+    deleteUser:{url:'/user/delete',method:"DELETE" ,query:true},
+
+    // UPDATE
+    updateUsers:{url:'/user/update',method:"PUT",params:true},
 
 }

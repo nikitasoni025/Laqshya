@@ -25,13 +25,15 @@ export const checkTokenExpiration = () => {
 
 
   export const getType = (value, body) => {
+    console.log("From Utils",body._id,typeof body);
     if (value.params) {
       return { params: body }
     } else if (value.query) {
       if (typeof body === 'object') {
-        return { query: body._id }
+        console.log("fromutils",body._id);
+        return { query: body.id }
       } else {
-        return { query: body };
+        return { query: body._id };
       }
     }
     return {};
