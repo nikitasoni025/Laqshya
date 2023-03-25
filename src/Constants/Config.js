@@ -45,8 +45,11 @@ export const SERVICE_URLS = {
 
     // DELETE 
     deleteUser:{url:'/user/delete',method:"DELETE" ,query:true},
+    deleteGroup:{url:'/group/delete',method:"DELETE" ,query:true},
 
     // UPDATE
     updateUsers:{url:'/user/update',method:"PUT",params:true},
+    updateIndividuals:{url:'/indi/update',method:"PUT",params:true},
+    updateGroup:{url:'/group/update',method:"PUT",params:true}
 
 }

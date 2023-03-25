@@ -1,17 +1,20 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useDownloadExcel } from 'react-export-table-to-excel';
 import { Link } from 'react-router-dom';
 import "./group.scss";
 import { MdDeleteForever, MdGroupAdd } from "react-icons/md";
-import { FaEdit, FaSearch } from 'react-icons/fa';
+import { FaCheckDouble, FaEdit, FaSave, FaSearch, FaTimes } from 'react-icons/fa';
 import { TbArrowWaveLeftDown, TbArrowWaveRightUp } from 'react-icons/tb';
-import { initialdata } from '../../../Constants/OurConst';
 import { API } from '../../../Services/Api';
 
 const initialfiltervalue = {
     searched: "",
-    status: "",
     events: ""
+}
+const initialGroupUpdateData = {
+    status: false,
+    selected: false
 }
 
 const Group = () => {
@@ -19,9 +22,16 @@ const Group = () => {
     const [tableData, setTableData] = useState([]);
     const [filteredTerm, setFilteredTerm] = useState(initialfiltervalue);
     const [sortBy, setSortBy] = useState("fullname");
+    const [status, setStatus] = useState(false);
+    const [searchSelected,setSearchSelected] = useState(false);
+    const [pageNumbers, setPageNumbers] = useState(0);
     const [sortOrder, setSortOrder] = useState("asc");
     let [currentPage, setCurrentPage] = useState(1);
+    const [toggle, setToggle] = useState(true);
     const [itemPerPage, setItemPerPage] = useState(5);
+    const [editingid, setEditingId] = useState(null);
+    const [updateData, setUpdateData] = useState(initialGroupUpdateData);
+    const tableRef = useRef(null);
 
 
 
@@ -29,23 +39,32 @@ const Group = () => {
 
     useEffect(() => {
         const fetchGroupsData = async () => {
-            const response = await API.getAllGroups({ limit: itemPerPage });
+            const response = await API.getAllGroups({ limit: itemPerPage, page: currentPage, status: status,selected:searchSelected });
             if (response.isSuccess) {
                 console.log(response);
-                setTableData(response.data);
-
-
+                setTableData(response.data.data);
+                setPageNumbers(Math.ceil(response.data.totalCount / itemPerPage));
             }
         }
         fetchGroupsData();
-    }, [])
+    }, [itemPerPage, currentPage, status, toggle,searchSelected]);
 
 
-
+    const { onDownload } = useDownloadExcel({
+        currentTableRef: tableRef.current,
+        filename: 'Groups table',
+        sheet: 'Groups'
+    })
 
     const handleSearch = (e) => {
         // console.log(filteredTerm);
         const { name, value } = e.target;
+        if (name === 'status') {
+            setStatus(value);
+        }
+        if (name === 'selected') {
+            setSearchSelected(value);
+        }
         setFilteredTerm((pre) => {
             return {
                 ...pre,
@@ -63,39 +82,63 @@ const Group = () => {
             setSortOrder("asc");
         }
         setCurrentPage(1);
+    };
+
+    const searchedTerms = filteredTerm.searched.toLowerCase().split(' ');
+    const filteredData = tableData.filter((item) => {
+        console.log(item.eventname.toLowerCase(), filteredTerm.events.toLowerCase());
+        return searchedTerms.every((term) =>
+            item.groupname.toLowerCase().includes(term) ||
+            item.groupid.includes(term)
+        ) &&  item.eventname.toLowerCase().includes(filteredTerm.events.toLowerCase())
     }
-
-    // const indexOfLastItem = currentPage * itemPerPage;
-    // const indexOfFirstItem = indexOfLastItem - itemPerPage;
-    // const filteredData = tableData.filter((item) =>
-    //     item.name.toLowerCase().includes(filteredTerm.searched.toLowerCase()) &&
-    //         item.status === true ? "paid" : "unpaid".includes(filteredTerm.status.toLowerCase()) &&
-    //     item.event.toLowerCase().includes(filteredTerm.events.toLowerCase())
-    // );
-    // const sortedData = filteredData.sort((a, b) => {
-    //     const aValue = a[sortBy];
-    //     const bValue = b[sortBy];
-    //     if (aValue < bValue) {
-    //         return sortOrder === "asc" ? -1 : 1;
-    //     }
-    //     else if (aValue > bValue) {
-    //         return sortOrder === "asc" ? 1 : -1;
-    //     }
-    //     else {
-    //         return 0;
-    //     }
-    // });
-    // const currentData = sortedData.slice(indexOfFirstItem, indexOfLastItem);
-
-    // const pageNumbers = [];
-    // for (let i = 1; i <= Math.ceil(sortedData.length / itemPerPage); i++) {
-    //     pageNumbers.push(i);
-    // }
+    );
 
     const handleItemPerpage = (e) => {
 
         setItemPerPage(e.target.value);
         setCurrentPage(1);
+    }
+
+    const handleGroupEdit = async (rowdata) => {
+        setEditingId(rowdata._id);
+        setUpdateData({
+            status: rowdata.status,
+            selected: rowdata.selected
+        });
+    }
+
+    const handleInputChange = async (e) => {
+
+        const { name, value } = e.target;
+        setUpdateData((preval) => {
+            return {
+                ...preval,
+                [name]: value
+            }
+        })
+    }
+
+    const handleDeleteGroup = async (id) => {
+
+
+        if (window.confirm("Do You Really Want To Delete The Group") == true) {
+            const response = await API.deleteGroup({ id });
+            if (response.isSuccess) {
+                setToggle(!toggle);
+            }
+        }
+    }
+
+    const handleGroupUpdate = async (id, updateData) => {
+
+        const response = await API.updateGroup({ id, updateData });
+
+        if (response.isSuccess) {
+            setToggle(!toggle);
+            setEditingId(null)
+        }
+
     }
     return (
         <div className='group'>
@@ -121,10 +164,18 @@ const Group = () => {
                         <div className="filter-col">
                             <label htmlFor="status">Status</label>
                             <div className="adm-input-wrap">
-                                <select value={filteredTerm.status} onChange={handleSearch} name="status" id="status">
-                                    <option disabled hidden >Choose Status</option>
-                                    <option value="paid">Paid</option>
-                                    <option value="unpaid">Unpaid</option>
+                                <select value={status} onChange={handleSearch} name="status" id="status">
+                                    <option value={true}>Paid</option>
+                                    <option value={false}>Unpaid</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div className="filter-col">
+                            <label htmlFor="status">Selected</label>
+                            <div className="adm-input-wrap">
+                                <select value={searchSelected} onChange={handleSearch} name="selected" id="status">
+                                    <option value={true}>Selected</option>
+                                    <option value={false}>Not Selected</option>
                                 </select>
                             </div>
                         </div>
@@ -135,9 +186,9 @@ const Group = () => {
                                     <option disabled hidden >Choose Event</option>
                                     <option value="" >All</option>
                                     <option value="Xxcelerate">Xxcelerate</option>
-                                    <option value="Robo Soccer Leaguers">Robo Soccer League</option>
-                                    <option value="Robo Go Karting">Robo Go Karting</option>
-                                    <option value="rsRobo Sumo">Robo Sumo</option>
+                                    <option value="Robo Soccer League">Robo Soccer League</option>
+                                    <option value="Robo Go Carting">Robo Go Karting</option>
+                                    <option value="Robo Sumo">Robo Sumo</option>
                                     <option value="Deep Blue">Deep Blue</option>
                                     <option value="Robo Fire Fighting">Robo Fire Fighting</option>
                                     <option value="Drone Race">Drone Race</option>
@@ -146,20 +197,19 @@ const Group = () => {
                                     <option value="Futsal">Futsal</option>
                                     <option value="Angry Bird">Angry Bird</option>
                                     <option value="Face Of Laqshya">Face Of Laqshya</option>
-                                    <option value="Artifex">Artifex</option>
+                                    <option value="Artifex Show">Artifex</option>
                                     <option value="Cinematics">Cinematics</option>
                                     <option value="Cad Master">Cad Master</option>
                                     <option value="Lets Play With Bond">Lets Play With Bond</option>
-                                    <option value="Bottle Jet">Bottle Jet</option>
+                                    <option value="Bottle jet">Bottle Jet</option>
                                     <option value="Code Crunch">Code Crunch</option>
-                                    <option value="Tech Farmactic">Tech Farmactic</option>
+                                    <option value="Tech farmactic">Tech Farmactic</option>
                                     <option value="Make Your Move">Make Your Move</option>
-                                    <option value="jm">Just A Minute</option>
-                                    <option value="\Quiz">Quiz</option>
-                                    <option value="th">Tresure Hunt</option>
+                                    <option value="One Minute Show">One Minute Show</option>
+                                    <option value="Quiz Masters">Quiz Masters</option>
+                                    <option value="Treasure hunt">Treasure hunt</option>
                                     <option value="pyi">Pitch Your Idea</option>
                                     <option value="work">Workshop</option>
-                                    {/* <option value="">Cicket</option> */}
                                 </select>
                             </div>
                         </div>
@@ -182,7 +232,7 @@ const Group = () => {
                         <div className="filter-col">
                             <label htmlFor="export">Export to Excel</label>
                             <div className="adm-input-wrap">
-                                <input type="button" value={"Export"} name="export" id='export' />
+                                <input onClick={onDownload} type="button" value={"Export"} name="export" id='export' />
                             </div>
                         </div>
                     </div>
@@ -191,8 +241,9 @@ const Group = () => {
                 {/* DATABASE TABLE */}
 
                 <div className="group-table">
+                    <marquee><p className='error-mark' >The Select button will be Avaiable Only for once Please Select the Participants After Full Analysis ,There Is No Turning Back Feature</p></marquee>
                     <div className="group-table-wrap">
-                        <table cellSpacing={5} >
+                        <table ref={tableRef} >
                             <thead>
                                 <tr>
                                     <th onClick={() => handleSort("id")}>Id</th>
@@ -202,37 +253,63 @@ const Group = () => {
                                     <th>Group Members</th>
                                     <th>Registration Fee</th>
                                     <th>Status</th>
+                                    <th>Selection Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {tableData.map((data, indx) => {
+                                
+                                {filteredData && filteredData.length>0 ? filteredData.map((data, indx) => {
 
                                     return (
-                                        <tr key={indx}>
+                                        <tr key={indx} style={{background:data.selected ? "#5eff89" : ""}}>
                                             <td>{indx}</td>
                                             <td>{data.groupid}</td>
                                             <td>{data.groupname}</td>
                                             <td>{data.eventname}</td>
-                                            <td>
+                                            <td className='mem-list'>
                                                 {data.members && data.members.length > 0 ? data.members.map((member, ind) => {
                                                     return (
-                                                        <p>{member.fullname}&nbsp;&nbsp;{member.email}</p>
+                                                        <p>{member.fullname}&nbsp;|&nbsp;{member.email}&nbsp;|&nbsp;{member.phonenumber}</p>
                                                     )
                                                 }) : <p>No members</p>}
                                             </td>
 
                                             <td>{data.members.length > 0 ? data.registrationfee * data.members.length : data.registrationfee}</td>
-                                            <td>{data.status ? "Paid" : "Unpaid"}</td>
+                                            {editingid === data._id ? (
+                                                <td>
+                                                    <select onChange={handleInputChange} name="status" id="">
+                                                        <option value={true}>Paid</option>
+                                                        <option value={false}>UnPaid</option>
+                                                    </select>
+                                                </td>
+                                            ) : (
+                                                <td>
+                                                    {data.status ? "Paid" : "Unpaid"}
+                                                </td>
+                                            )}
+                                            <td>{data.selected ? <p>Selected &nbsp;&nbsp;<FaCheckDouble /></p> : <p>Not Selected&nbsp;&nbsp;<FaTimes /></p>}</td>
                                             <td className='action-btn'>
                                                 {/* <input type="checkbox" /> */}
-                                                <button>Select</button>
-                                                <button><FaEdit /></button>
-                                                <button><MdDeleteForever /></button>
+                                                <button disabled={data.selected ? true : false} onClick={() => handleGroupUpdate(data._id, { selected: !data.selected })}>{data.selected ? "Selected" : "Select"}</button>
+                                                {editingid === data._id ? <button onClick={() => handleGroupUpdate(data._id, updateData)}><FaSave /></button> : <button onClick={() => handleGroupEdit(data)}><FaEdit /></button>}
+                                                <button onClick={() => handleDeleteGroup(data._id)}><MdDeleteForever /></button>
                                             </td>
                                         </tr>
                                     )
-                                })}
+                                }):(
+                                    <tr>
+                                        <td>No</td>
+                                        <td>Data</td>
+                                        <td>Avaialable</td>
+                                        <td>At</td>
+                                        <td>This</td>
+                                        <td>Moment</td>
+                                        <td>-------</td>
+                                        <td>-------</td>
+                                        <td>-------</td>
+                                    </tr>
+                                )}
                             </tbody>
                         </table>
                     </div>
@@ -240,16 +317,16 @@ const Group = () => {
 
                 {/* Table Configuration Button */}
 
-                {/* <div className="table-config">
+                <div className="table-config">
                     <div className="table-config-wrap">
                         <div className="pagination-btn">
                             <p>Pagination</p>
                             <button onClick={() => { currentPage <= 1 ? setCurrentPage(currentPage) : setCurrentPage(--currentPage) }}><TbArrowWaveLeftDown /></button>
                             <h1> {currentPage}</h1>
-                            <button onClick={() => { currentPage > (pageNumbers.length - 1) ? setCurrentPage(currentPage) : setCurrentPage(++currentPage) }}><TbArrowWaveRightUp /></button>
+                            <button onClick={() => { filteredData.length < currentPage || currentPage === pageNumbers ? setCurrentPage(currentPage) : setCurrentPage(++currentPage) }}><TbArrowWaveRightUp /></button>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
 
         </div>

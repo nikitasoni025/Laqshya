@@ -5,7 +5,6 @@ import "./participants.scss";
 import { MdDeleteForever, MdGroupAdd } from "react-icons/md";
 import { FaEdit, FaSave, FaSearch } from 'react-icons/fa';
 import { TbArrowWaveLeftDown, TbArrowWaveRightUp } from 'react-icons/tb';
-import { initialdata } from '../../../Constants/OurConst';
 import { API } from '../../../Services/Api';
 
 
@@ -14,6 +13,14 @@ const initialfiltervalue = {
     searched: "",
     events: ""
 }
+
+const initialUserUpdateData={
+    fullname:"",
+    email:"",
+    phonenumber:"",
+    status:false
+}
+
 
 const Participants = () => {
     const [tableData, setTableData] = useState([]);
@@ -26,6 +33,7 @@ const Participants = () => {
     const [toggle, setToggle] = useState(true);
     const [itemPerPage, setItemPerPage] = useState(5);
     const [editingid, setEditingId] = useState(null);
+    const [updateData,setUpdateData]=useState(initialUserUpdateData)
     const tableRef = useRef(null);
 
 
@@ -35,7 +43,6 @@ const Participants = () => {
         const fetchData = async () => {
             const response = await API.getParticipantsWithLimit({ limit: itemPerPage, page: currentPage, status: status });
             if (response.isSuccess) {
-                console.log(response);
                 setTableData(response.data.data);
                 setPageNumbers(Math.ceil(response.data.totalCount / itemPerPage));
             }
@@ -95,7 +102,7 @@ const Participants = () => {
     const handleUserDelete = async (id) => {
 
 
-        if (window.confirm("Do You Really Want To Delete The User") == true) {
+        if (window.confirm("Do You Really Want To Delete The User") === true) {
             const response = await API.deleteUser({ id });
             if (response.isSuccess) {
                 setToggle(!toggle);
@@ -103,16 +110,35 @@ const Participants = () => {
         }
     }
 
-    const handleUserUpdate = async (id) => {
+    const handleUserEdit = async (rowdata) => {
+        setEditingId(rowdata._id);
+        setUpdateData({
+            fullname:rowdata.fullname,
+            email:rowdata.email,
+            phonenumber:rowdata.phonenumber,
+            status:rowdata.status
+        });
+    }
 
-        setEditingId(id);
-        // const response =await API.updateUsers({id:id,updateData:{fullname:"animesh"}});
+    const handleInputChange = async (e) => {
 
-        // if(response.isSuccess){
-        //     setToggle(!toggle);
-        // }
+        const { name, value } = e.target;
+        setUpdateData((preval) => {
+            return {
+                ...preval,
+                [name]: value
+            }
+        })
+    }
 
+    const handleUpdateUser=async(id,updateData)=>{
 
+        const response=await API.updateUsers({id,updateData});
+
+        if(response.isSuccess){
+            setToggle(!toggle);
+            setEditingId(null)
+        }
     }
 
     return (
@@ -199,7 +225,7 @@ const Participants = () => {
                                             <td>{data.uid}</td>
                                             {editingid === data._id ? (
                                                 <td>
-                                                    <input name='fullname' type="text" value={data.fullname} />
+                                                    <input onChange={handleInputChange} name='fullname' type="text" value={updateData.fullname} />
                                                 </td>
                                             ) : (
                                                 <td>
@@ -208,19 +234,28 @@ const Participants = () => {
                                             )}
                                             {editingid === data._id ? (
                                                 <td>
-                                                    <input name='email' type="email" value={data.email} />
+                                                    <input onChange={handleInputChange} name='email' type="email" value={updateData.email} />
                                                 </td>
                                             ) : (
                                                 <td>
                                                     {data.email}
                                                 </td>
                                             )}
-                                            <td>{data.phonenumber}</td>
+                                             {editingid === data._id ? (
+                                                <td>
+                                                    <input onChange={handleInputChange} name='phonenumber' type="text" value={updateData.phonenumber} />
+                                                </td>
+                                            ) : (
+                                                <td>
+                                                    {data.phonenumber}
+                                                </td>
+                                            )}
+                                            
                                             <td>{data.institution}</td>
                                             <td>{data.standard}</td>
                                             {editingid === data._id ? (
                                                 <td>
-                                                    <select name="status" id="">
+                                                    <select onChange={handleInputChange} value={updateData.status} name="status" id="">
                                                         <option value={true}>Paid</option>
                                                         <option value={false}>UnPaid</option>
                                                     </select>
@@ -232,7 +267,7 @@ const Participants = () => {
                                             )}
                                             <td className='action-btn'>
                                                 {/* <input type="checkbox" /> */}
-                                                {editingid===data._id ? <button onClick={() => setEditingId(null)}><FaSave /></button>: <button onClick={() => handleUserUpdate(data._id)}><FaEdit /></button>}
+                                                {editingid===data._id ? <button onClick={() => handleUpdateUser(data._id,updateData)}><FaSave /></button>: <button onClick={() => handleUserEdit(data)}><FaEdit /></button>}
                                                 
                                                 <button onClick={() => handleUserDelete(data._id)}><MdDeleteForever /></button>
                                             </td>

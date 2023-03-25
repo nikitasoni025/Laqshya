@@ -123,7 +123,7 @@ export const kaushalya = [
 
     },
     {
-        title: "E-Sports",
+        title: "E Sports",
         ourIndex: 11,
         img: "https://ik.imagekit.io/egjzyz51e/free_fire.jpg?updatedAt=1679426417642",
         isGrouped: true,

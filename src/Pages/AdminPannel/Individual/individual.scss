@@ -148,24 +148,32 @@ $light-green: #06603b;
                         tr {
                             &:nth-child(even) {
                                 background: #73e1b353;
+
+                            }
+                            .mem-list{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
                             }
 
                             td {
                                 text-align: left;
-                                
-                               
-                                
+                                height: 100%;
+                                p{
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+
+                                }
                             }
 
                             .action-btn {
                                 display: flex;
-                                justify-content: space-between;
+                                justify-content: flex-start;
                                 align-items: center;
-                                // position: sticky;
-                                
-                                // background:rgb(174, 174, 174);
                                 z-index: 1;
-                                // padding: 0 5px;
+                                gap: 15px;
+                                height: 100%;
                                
 
                                 button,
@@ -179,6 +187,12 @@ $light-green: #06603b;
                                     font-size: 18px;
                                 }
                                 button{
+                                    &:nth-child(1){
+                                        border:2px solid #064f32;
+                                        color: #064f32;
+                                        padding: 3px 6px;
+                                        font-size: 12px;
+                                    }
                                     &:nth-child(2){
                                         // background: rgb(209, 177, 17);
                                         color: #064f32;
