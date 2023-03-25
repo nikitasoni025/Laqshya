@@ -31,7 +31,7 @@ const Dashboard = () => {
                             <button onClick={(e) => { setIsSideBarOpened(!isSideBarOpened) }}><FaBars /></button>
                             <ul className="side-menu">
                                 <li><Link to="/admin/dashboard/overview">{isSideBarOpened ? "OverView" : <IoAnalyticsOutline />}</Link></li>
-                                <li><Link to="/admin/dashboard/particiapnts">{isSideBarOpened ? "Participants" : <RiUserStarLine />}</Link></li>
+                                <li><Link to="/admin/dashboard/participants">{isSideBarOpened ? "Participants" : <RiUserStarLine />}</Link></li>
                                 <li><Link to="/admin/dashboard/individuals">{isSideBarOpened ? "Individuals" : <CgFeed />}</Link></li>
                                 <li><Link to="/admin/dashboard/groups">{isSideBarOpened ? "Groups" : <FaAddressCard />}</Link></li>
                                 <li><Link to="/admin/dashboard/posts">{isSideBarOpened ? "Posts" : <FaAddressCard />}</Link></li>

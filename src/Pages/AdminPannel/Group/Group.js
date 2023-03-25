@@ -134,31 +134,33 @@ const Group = () => {
                                 <select value={filteredTerm.events} onChange={handleSearch} name="events" id="events">
                                     <option disabled hidden >Choose Event</option>
                                     <option value="" >All</option>
-                                    <option value="Xxcelerate">Xxcelerate</option>
-                                    <option value="Robo Soccer Leaguers">Robo Soccer League</option>
-                                    <option value="Robo Go Karting">Robo Go Karting</option>
-                                    <option value="rsRobo Sumo">Robo Sumo</option>
+                                    <option value="XXcelerate">XXcelerate</option>
+                                    <option value="Robo Go Carting">Robo Go Carting</option>
+                                    <option value="Robo Score Laegue">Robo Score Laegue</option>
+                                    <option value="Robo sumo">Robo sumo</option>
                                     <option value="Deep Blue">Deep Blue</option>
-                                    <option value="Robo Fire Fighting">Robo Fire Fighting</option>
+                                    <option value="Robo Fire Fight">Robo Fire Fight</option>
                                     <option value="Drone Race">Drone Race</option>
                                     <option value="Cricket">Cricket</option>
                                     <option value="Arm Wrestling">Arm Wrestling</option>
                                     <option value="Futsal">Futsal</option>
                                     <option value="Angry Bird">Angry Bird</option>
+                                    <option value="E-Sports">E-Sports</option>
                                     <option value="Face Of Laqshya">Face Of Laqshya</option>
-                                    <option value="Artifex">Artifex</option>
+                                    <option value="Artifex Show">Artifex Show</option>
                                     <option value="Cinematics">Cinematics</option>
-                                    <option value="Cad Master">Cad Master</option>
-                                    <option value="Lets Play With Bond">Lets Play With Bond</option>
                                     <option value="Bottle Jet">Bottle Jet</option>
                                     <option value="Code Crunch">Code Crunch</option>
-                                    <option value="Tech Farmactic">Tech Farmactic</option>
+                                    <option value="Tech Farmacia">Tech Farmacia</option>
+                                    <option value="Lets Play With Bond">Lets Play With Bond</option>
+                                    <option value="Quiz Master">Quiz Master</option>
+                                    <option value="Treasure Hunt">Treasure Hunt</option>
                                     <option value="Make Your Move">Make Your Move</option>
-                                    <option value="jm">Just A Minute</option>
-                                    <option value="\Quiz">Quiz</option>
-                                    <option value="th">Tresure Hunt</option>
-                                    <option value="pyi">Pitch Your Idea</option>
-                                    <option value="work">Workshop</option>
+                                    <option value="Ad Mad Show">Ad Mad Show</option>
+                                    <option value="Digit MArketing">Digit MArketing</option>
+                                    <option value="Cyber Securiyt">Cyber Securiyt</option>
+                                    <option value="Drug Awareness">Drug Awareness</option>
+                                    <option value="Carrer Counseling">Carrer Counseling</option>
                                     {/* <option value="">Cicket</option> */}
                                 </select>
                             </div>
