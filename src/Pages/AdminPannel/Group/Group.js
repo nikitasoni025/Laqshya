@@ -190,12 +190,13 @@ const Group = () => {
                                     <option value="Robo Go Carting">Robo Go Karting</option>
                                     <option value="Robo Sumo">Robo Sumo</option>
                                     <option value="Deep Blue">Deep Blue</option>
-                                    <option value="Robo Fire Fighting">Robo Fire Fighting</option>
+                                    <option value="Robo Fire Fight">Robo Fire Fight</option>
                                     <option value="Drone Race">Drone Race</option>
                                     <option value="Cricket">Cricket</option>
                                     <option value="Arm Wrestling">Arm Wrestling</option>
                                     <option value="Futsal">Futsal</option>
                                     <option value="Angry Bird">Angry Bird</option>
+                                    <option value="E-Sports">E-Sports</option>
                                     <option value="Face Of Laqshya">Face Of Laqshya</option>
                                     <option value="Artifex Show">Artifex</option>
                                     <option value="Cinematics">Cinematics</option>
