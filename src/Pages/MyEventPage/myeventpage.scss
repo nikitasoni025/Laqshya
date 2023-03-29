@@ -1,10 +1,102 @@
- .myEventPage{
-    width: 100%;
-    .myEventPage-wrap{
-        width: 100%;
-        border: 1px solid rosybrown;
-        h1{
-            font-size: 30px ;
-        }
-    }
+ .myEventPage {
+     width: 100%;
+     height: 100vh;
+
+     .myEventPage-wrap {
+         width: 100%;
+        //  border: 1px solid rosybrown;
+         padding: 0px 20px;
+         box-sizing: border-box;
+
+         .heading {
+             width: 100%;
+             height: 80px;
+             // border: 1px solid magenta;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             border-bottom: 2px solid var(--secondary-color);
+
+             h1 {
+                 font-size: 30px;
+                 color: var(--secondary-color);
+                 font-family: "Anurati";
+             }
+         }
+
+         .myevent-heading {
+             width: 100%;
+             display: flex;
+             justify-content: flex-start;
+             align-items: center;
+             color: rgb(209, 209, 209);
+             // gap: 20px;
+
+             .user-details {
+                 width: 100%;
+                 display: flex;
+                 justify-content: flex-start;
+                 align-items: flex-start;
+                 flex-direction: column;
+                 // border: 1px solid navajowhite;
+                 margin-top: 40px;
+                 gap: 8px;
+
+
+                 li {
+                     list-style: none;
+                     font-size: 18px;
+                     font-family: var(--secondary-font);
+                     // border: 1px solid darkblue5;
+                 }
+             }
+         }
+
+         .myevent-detail {
+             width: 100%;
+             // border: 1px solid khaki;
+             display: flex;
+             justify-content: flex-start;
+             align-items: flex-start;
+             flex-direction: column;
+             margin-top: 20px;
+             gap: 20px;
+
+             h1 {
+                 font-size: 20px;
+                 color: rgb(209, 209, 209);
+             }
+
+             .event-registered {
+                 width: 100%;
+                 // border: 1px solid firebrick;
+                 display: flex;
+                 justify-content: flex-start;
+                 align-items: center;
+                 flex-direction: column;
+                 gap: 20px;
+
+                 li {
+                     width: 100%;
+                     padding: 8px 10px;
+                     box-sizing: border-box;
+                    //  border: 2px solid var(--secondary-color);
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     list-style: none;
+                     color: rgb(209, 209, 209);
+                     background: rgba(35, 35, 35, 0.95);
+                     button{
+                        font-size: 20px;
+                        border: none;
+                        outline: none;
+                        background: transparent;
+                        color: var(--secondary-color);
+                     }
+                 }
+             }
+
+         }
+     }
  }
