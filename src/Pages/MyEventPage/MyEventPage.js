@@ -1,13 +1,15 @@
 import React from 'react'
+import "./myeventpage.scss"
 
 const MyEventPage = () => {
   return (
     <div className='myEventPage'>
         <div className="myEventPage-wrap">
+              <h1>My Events</h1>
             <div className="myevent-heading">
-              <h1>Name</h1>
-              <h1>email</h1>
-              <h1>phone number</h1>
+              <h3>Name</h3>
+              <h3>email</h3>
+              <h3>phone number</h3>
             </div>
             <div className="myevent-detail">
               <div className="my-event-wrap">

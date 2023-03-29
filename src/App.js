@@ -12,6 +12,7 @@ import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import Loginpage from './Pages/LoginPage/Loginpage';
 import Dashboard from './Pages/AdminPannel/Dashboard/Dashboard';
 import Dataprovider from './Context/Dataprovider';
+import MyEventPage from './Pages/MyEventPage/MyEventPage';
 
 function App() {
 
@@ -48,6 +49,7 @@ function App() {
             <Route path='/contact' element={<ConatctPage isUserAuthenticated={isUserAuthenticated} windowSize={windowSize} />} />
             <Route path='/register' element={<RegisterPage windowSize={windowSize} />} />
             <Route path='/signin' element={<Loginpage setIsUserAuthenticated={setIsUserAuthenticated} windowSize={windowSize} />} />
+            <Route path='/myevents' element={<MyEventPage setIsUserAuthenticated={setIsUserAuthenticated} windowSize={windowSize} />} />
 
             {/* ADMIN ROUTE START HERE */}
             <Route path='/admin/dashboard/:dashid' element={< Dashboard windowSize={windowSize} />} />
