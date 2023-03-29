@@ -20,9 +20,18 @@ const MyEventPage = () => {
           <h1>You Have Registered :</h1>
           <ul className="event-registered">
             <li>
+              <span>Event Name</span>
+              <span>Registration Status</span>
+              <span>Selction Status</span>
+              <span>Delete</span>
+              
+
+            </li>
+            <li>
               <span>Cricket</span>
               <span>Pending</span>
-              <button><MdDeleteOutline/></button>
+              <span>Not Selected</span>
+              <button><MdDeleteOutline /></button>
             </li>
           </ul>
         </div>
