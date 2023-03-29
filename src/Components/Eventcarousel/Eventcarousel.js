@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import './eventcarousel.scss'
+import React, { useEffect, useState } from 'react';
+import './eventcarousel.scss';
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import { SlGameController } from "react-icons/sl"
-// https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320
+import { SlGameController } from "react-icons/sl";
+
 
 const Eventcarousel = (props) => {
 
@@ -23,18 +23,18 @@ const Eventcarousel = (props) => {
                         <div key={index} class='item myevent-card'>
                             <div className='event-card-wrap'>
                                 <div className="card-top">
-                                    <img src={event.img} loading="lazy" alt="card" />
+                                    <img src={event.img} alt="gallery" loading='lazy'  />
                                     <div className="overlay">
                                         {props.isUserAuthenticated ? <button onClick={() => {
                                             props.setOpenFormModal(true); props.setEventNameFee(
-                                                { eventname: event.title, registrationfee: event.registrationfee, isGrouped: event.isGrouped, eventid: event.eventid ,maxParticipants:event.maxParticipants}
+                                                { eventname: event.title, registrationfee: event.registrationfee, isGrouped: event.isGrouped, eventid: event.eventid, maxParticipants: event.maxParticipants }
                                             )
                                         }}>Register</button> : null}
 
                                     </div>
                                 </div>
                                 <div className="card-bottom">
-                                    <h2 className='card-title'><span className='icon-title'><SlGameController/></span>{event.title}</h2>
+                                    <h2 className='card-title'><span className='icon-title'><SlGameController /></span>{event.title}</h2>
                                     <button onClick={() => props.openModal(event.ourIndex)}>Read More</button>
                                 </div>
                             </div>

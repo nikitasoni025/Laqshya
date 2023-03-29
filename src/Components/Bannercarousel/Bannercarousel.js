@@ -13,7 +13,6 @@ const Bannercarousel = (props) => {
         let indx=e.item.index;
 
         let overlayDetails=document.getElementsByClassName('overlay-deatils');
-        console.log(indx,overlayDetails[4].classList);
 
         if(indx===3){
             overlayDetails[3].classList.add('details-active');
@@ -104,4 +103,4 @@ const Bannercarousel = (props) => {
     )
 }
 
-export default Bannercarousel
+export default Bannercarousel;

@@ -17,7 +17,7 @@ const initialGroupUpdateData = {
     selected: false
 }
 
-const Group = () => {
+const Group = (props) => {
 
     const [tableData, setTableData] = useState([]);
     const [filteredTerm, setFilteredTerm] = useState(initialfiltervalue);
@@ -122,7 +122,7 @@ const Group = () => {
     const handleDeleteGroup = async (id) => {
 
 
-        if (window.confirm("Do You Really Want To Delete The Group") == true) {
+        if (window.confirm("Do You Really Want To Delete The Group") === true) {
             const response = await API.deleteGroup({ id });
             if (response.isSuccess) {
                 setToggle(!toggle);
@@ -223,6 +223,7 @@ const Group = () => {
                                     <option value={40} >40</option>
                                     <option value={80} >80</option>
                                     <option value={100} >100</option>
+                                    {(props.adminData.role && props.adminData.role === 'pladmin' )|| props.adminData.role==='superadmin' ? <option value={2000}>All</option>:null }
 
                                 </select>
                             </div>
@@ -242,7 +243,7 @@ const Group = () => {
                 {/* DATABASE TABLE */}
 
                 <div className="group-table">
-                    <marquee><p className='error-mark' >The Select button will be Avaiable Only for once Please Select the Participants After Full Analysis ,There Is No Turning Back Feature</p></marquee>
+                    <p className='error-mark' >The Select button will be Avaiable Only for once Please Select the Participants After Full Analysis ,There Is No Turning Back Feature</p>
                     <div className="group-table-wrap">
                         <table ref={tableRef} >
                             <thead>
@@ -279,7 +280,7 @@ const Group = () => {
                                             <td>{data.members.length > 0 ? data.registrationfee * data.members.length : data.registrationfee}</td>
                                             {editingid === data._id ? (
                                                 <td>
-                                                    <select onChange={handleInputChange} name="status" id="">
+                                                    <select defaultValue={updateData.status} onChange={handleInputChange} name="status" id="">
                                                         <option value={true}>Paid</option>
                                                         <option value={false}>UnPaid</option>
                                                     </select>
@@ -293,8 +294,8 @@ const Group = () => {
                                             <td className='action-btn'>
                                                 {/* <input type="checkbox" /> */}
                                                 <button disabled={data.selected ? true : false} onClick={() => handleGroupUpdate(data._id, { selected: !data.selected })}>{data.selected ? "Selected" : "Select"}</button>
-                                                {editingid === data._id ? <button onClick={() => handleGroupUpdate(data._id, updateData)}><FaSave /></button> : <button onClick={() => handleGroupEdit(data)}><FaEdit /></button>}
-                                                <button onClick={() => handleDeleteGroup(data._id)}><MdDeleteForever /></button>
+                                                {editingid === data._id ? <button  onClick={() => handleGroupUpdate(data._id, updateData)}><FaSave /></button> : <button disabled={data.status ? true :false} onClick={() => handleGroupEdit(data)}><FaEdit /></button>}
+                                                {(props.adminData.role && props.adminData.role ==='pladmin') || props.adminData.role==='superadmin' ? <button onClick={() => handleDeleteGroup(data._id)}><MdDeleteForever /></button>:null}
                                             </td>
                                         </tr>
                                     )

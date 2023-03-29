@@ -111,10 +111,11 @@ $light-green: #06603b;
             .participants-table-wrap {
                 width: 100%;
                 height: 50vh;
-                overflow: auto;
+                overflow-y: auto;
+                overflow-x: scroll;
 
                 table {
-                    width: 130%;
+                    width: 100%;
                     border-collapse: collapse;
                     border-spacing: 5px;
                     
@@ -152,6 +153,7 @@ $light-green: #06603b;
 
                             td {
                                 text-align: left;
+                                padding: 8px;
                                 
                                
                                 

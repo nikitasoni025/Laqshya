@@ -23,9 +23,19 @@ export const checkTokenExpiration = () => {
 
   }
 
+  export const checkAdminsession = () => {
+
+    const token = sessionStorage.getItem('adminId');
+    if (token) {
+      return true;
+    }else{
+      return false;
+    }
+  
+    }
+
 
   export const getType = (value, body) => {
-    console.log("From Utils",body._id,typeof body);
     if (value.params) {
       return { params: body }
     } else if (value.query) {
