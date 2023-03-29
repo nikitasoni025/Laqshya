@@ -1,8 +1,9 @@
 import React from 'react';
+import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
 import "./postpage.scss";
 
-const PostPage = () => {
+const PostPage = (props) => {
   return (
     <div className='postPage'>
       <div className="postPage-wrap">
@@ -56,8 +57,12 @@ const PostPage = () => {
           </div>
         </div>
 
+        <Footer windowSize={props.windowSize}/>
+
       </div>
+      
     </div>
+    
   )
 }
 

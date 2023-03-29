@@ -17,7 +17,7 @@ const FormModal = (props) => {
         members: [],
         eventname: "",
         registrationfee: "",
-        status: false,
+        status: false,        
     }
 
     const [groupedClicked, setGroupedClicked] = useState("S1");
