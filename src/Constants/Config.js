@@ -41,6 +41,14 @@ export const SERVICE_URLS = {
     getParticipantsWithLimit: { url: "/paticipantsData", method: "GET", params: true },
     getAllIndividuals: { url: "/individuals", method: "GET", params: true },
 
+    // Admin Routes
+    adminSignin:{url:'/admin/login',method:'POST'},
+    adminCheckSession:{url:'/admin/check-session',method:'GET'},
+    adminLogout:{url:'/admin/logout',method:'POST'},
+    getLoggedInAdmin:{url:'/admin/get',method:'GET',params:true},
+    getAllAdmins:{url:'/admin/all',method:'GET'},
+    updateAdmin:{url:'/admin/update',method:'PUT',params:true},
+
 
 
     // DELETE 

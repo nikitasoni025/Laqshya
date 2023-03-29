@@ -18,7 +18,7 @@ const initialIndiUpdateData={
     selected:false
 }
 
-const Individual = () => {
+const Individual = (props) => {
     const [tableData, setTableData] = useState([]);
     const [filteredTerm, setFilteredTerm] = useState(initialfiltervalue);
     const [sortBy, setSortBy] = useState("fullname");
@@ -35,7 +35,7 @@ const Individual = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await API.getAllIndividuals({ limit: itemPerPage, page: currentPage, status: status });
+            const response = await API.getAllIndividuals({ limit: itemPerPage, page: currentPage, status: status ,selected:searchSelected});
             if (response.isSuccess) {
                 console.log(response);
                 setTableData(response.data.data || []);
@@ -43,7 +43,7 @@ const Individual = () => {
             }
         }
         fetchData();
-    }, [itemPerPage, currentPage, status, toggle]);
+    }, [itemPerPage, currentPage, status, toggle,searchSelected]);
 
 
 
@@ -164,7 +164,7 @@ const Individual = () => {
                         <div className="filter-col">
                             <label htmlFor="status">Status</label>
                             <div className="adm-input-wrap">
-                                <select value={status} onChange={handleSearch} name="status" id="status">
+                                <select defaultValue={status} onChange={handleSearch} name="status" id="status">
                                     <option value={true}>Paid</option>
                                     <option value={false}>Unpaid</option>
                                 </select>
@@ -223,6 +223,7 @@ const Individual = () => {
                                     <option value={40} >40</option>
                                     <option value={80} >80</option>
                                     <option value={100} >100</option>
+                                    {(props.adminData.role && props.adminData.role === 'pladmin') || props.adminData.role==='superadmin' ? <option value={2000}>All</option>:null }
 
                                 </select>
                             </div>
@@ -242,7 +243,7 @@ const Individual = () => {
                 {/* DATABASE TABLE */}
 
                 <div className="individual-table">
-                        <marquee><p className='error-mark' >The Select button will be Avaiable Only for once Please Select the Participants After Full Analysis ,There Is No Turning Back Feature</p></marquee>
+                        <p className='error-mark' >The Select button will be Avaiable Only for once Please Select the Participants After Full Analysis ,There Is No Turning Back Feature</p>
                     <div className="group-table-wrap">
                         <table ref={tableRef} >
                             <thead>
@@ -261,7 +262,7 @@ const Individual = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {filteredData.map((data, indx) => {
+                                {filteredData && filteredData.length>0 ? filteredData.map((data, indx) => {
 
                                     return (
                                         <tr key={indx} style={{background:data.selected ? "#5eff89" : ""}}>
@@ -275,7 +276,7 @@ const Individual = () => {
                                             <td>{data.registrationfee}</td>
                                             {editingid === data._id ? (
                                                 <td>
-                                                    <select onChange={handleInputChange} name="status" id="">
+                                                    <select defaultValue={updateData.status} onChange={handleInputChange} name="status" id="">
                                                         <option value={true}>Paid</option>
                                                         <option value={false}>UnPaid</option>
                                                     </select>
@@ -288,12 +289,26 @@ const Individual = () => {
                                             <td>{data.selected ? <p>Selected &nbsp;&nbsp;<FaCheckDouble/></p> :<p>Not Selected&nbsp;&nbsp;<FaTimes/></p>}</td>
                                             <td className='action-btn'>
                                                 <button disabled={data.selected ? true:false} onClick={() => handleIndividualUpdate(data._id,{selected:!data.selected})}>{data.selected ? "Selected" : "Select"}</button>
-                                                {editingid === data._id ? <button onClick={() => handleIndividualUpdate(data._id,updateData)}><FaSave /></button> : <button onClick={() => handleIndividualEdit(data)}><FaEdit /></button>}
-                                                <button onClick={() => handleDeleteIndividual(data._id)}><MdDeleteForever /></button>
+                                                {editingid === data._id ? <button onClick={() => handleIndividualUpdate(data._id,updateData)}><FaSave /></button> : <button disabled={data.status ? true :false} onClick={() => handleIndividualEdit(data)}><FaEdit /></button>}
+                                                {(props.adminData.role && props.adminData.role ==='pladmin') || props.adminData.role==='superadmin' ? <button onClick={() => handleDeleteIndividual(data._id)}><MdDeleteForever /></button>:null}
                                             </td>
                                         </tr>
                                     )
-                                })}
+                                }):(
+                                    <tr>
+                                        <td>No</td>
+                                        <td>Data</td>
+                                        <td>Availabe</td>
+                                        <td>At</td>
+                                        <td>This</td>
+                                        <td>Moment</td>
+                                        <td>----</td>
+                                        <td>----</td>
+                                        <td>----</td>
+                                        <td>----</td>
+                                        <td>----</td>
+                                    </tr>
+                                )}
                             </tbody>
                         </table>
                     </div>
@@ -316,4 +331,4 @@ const Individual = () => {
     )
 }
 
-export default Individual
+export default Individual;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
-import { MdOutlineZoomIn, MdZoomOutMap } from 'react-icons/md';
+import { MdZoomOutMap } from 'react-icons/md';
 import { Link } from "react-router-dom";
 import { galleryData } from '../../Constants/OurConst';
 import "./gallery.scss";
@@ -30,7 +30,7 @@ const Gallery = () => {
               <button onClick={()=>setDisplayZoom(false)}><FaTimes/></button>
             </div>
             <div className="img-display">
-              {itemType === 'img' ?  <img src={imgSrc} alt="zoomed out" />: <video controls muted autoPlay src={imgSrc}></video>}  
+              {itemType === 'img' ?  <img src={imgSrc} alt="zoomed out"  loading='lazy'/>: <video controls muted autoPlay src={imgSrc}></video>}  
             </div>
           </div >
 
@@ -57,7 +57,7 @@ const Gallery = () => {
                     return (
                       <div className="gallery-item" key={index}>
 
-                        {items.type==='img' ? <img src={items.link} alt="" /> : <video controls muted autoPlay src={items.link}></video>}
+                        {items.type==='img' ? <img src={items.link} alt="gallery" loading='lazy' /> : <video controls muted autoPlay src={items.link}></video>}
 
                         
                         <div className="over-lay">

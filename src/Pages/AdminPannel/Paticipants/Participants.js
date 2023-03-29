@@ -22,7 +22,7 @@ const initialUserUpdateData={
 }
 
 
-const Participants = () => {
+const Participants = (props) => {
     const [tableData, setTableData] = useState([]);
     const [filteredTerm, setFilteredTerm] = useState(initialfiltervalue);
     const [sortBy, setSortBy] = useState("fullname");
@@ -182,6 +182,7 @@ const Participants = () => {
                                     <option value={40} >40</option>
                                     <option value={80} >80</option>
                                     <option value={100} >100</option>
+                                    {(props.adminData.role && props.adminData.role === 'pladmin') || props.adminData.role==='superadmin' ? <option value={2000}>All</option>:null }
 
                                 </select>
                             </div>
@@ -201,7 +202,7 @@ const Participants = () => {
                 {/* DATABASE TABLE */}
 
                 <div className="participants-table">
-                    <div className="participants-table-wrap">
+                    <div className="participants-table-wrap" style={{overflowX:'scroll'}}>
                         <table ref={tableRef}>
                             <thead>
                                 <tr>
@@ -268,8 +269,8 @@ const Participants = () => {
                                             <td className='action-btn'>
                                                 {/* <input type="checkbox" /> */}
                                                 {editingid===data._id ? <button onClick={() => handleUpdateUser(data._id,updateData)}><FaSave /></button>: <button onClick={() => handleUserEdit(data)}><FaEdit /></button>}
-                                                
-                                                <button onClick={() => handleUserDelete(data._id)}><MdDeleteForever /></button>
+                                                {(props.adminData.role && props.adminData.role ==='pladmin') || props.adminData.role==='superadmin' ? <button onClick={() => handleUserDelete(data._id)}><MdDeleteForever /></button>:null}
+                                               
                                             </td>
                                         </tr>
                                     )

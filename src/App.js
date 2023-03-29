@@ -1,10 +1,10 @@
 
 import './App.scss';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import Homepage from './Pages/Homepage/Homepage';
 import "./Assets/fonts/stylesheet.scss";
 import Eventpage from './Pages/EventsPage/Eventpage';
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import music from './Assets/Audios/WhatsApp Audio 2023-03-18 at 12.50.14 AM.mp3';
 import ConatctPage from './Pages/ContactPage/ConatctPage';
 import Gallery from './Pages/Gallery/Gallery';
@@ -13,10 +13,18 @@ import Loginpage from './Pages/LoginPage/Loginpage';
 import Dashboard from './Pages/AdminPannel/Dashboard/Dashboard';
 import Dataprovider from './Context/Dataprovider';
 import MyEventPage from './Pages/MyEventPage/MyEventPage';
+import Adminlogin from './Pages/AdminPannel/AdminLogin/Adminlogin';
+import { API } from './Services/Api';
+
+const PrivateRoute = ({ isAdminAuthenticated, ...props }) => {
+  return isAdminAuthenticated ? <><Outlet /></> : <Navigate replace to={'/admin'} />
+}
 
 function App() {
 
   const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
+
 
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
@@ -25,14 +33,27 @@ function App() {
 
 
   useEffect(() => {
-
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
     };
+    const isAdmin = sessionStorage.getItem('adminId');
+    if (isAdmin) {
+      setIsAdminAuthenticated(true);
+    } else {
+      setIsAdminAuthenticated(false);
+    }
+    const timer = setInterval(() => {
+      if (isAdmin) {
+        setIsAdminAuthenticated(true);
+      } else {
+        setIsAdminAuthenticated(false);
+      }
+    }, 5000);
     window.addEventListener('resize', handleWindowResize);
 
     return () => {
       window.removeEventListener('resize', handleWindowResize);
+      clearInterval(timer);
     };
   }, []);
 
@@ -52,7 +73,9 @@ function App() {
             <Route path='/myevents' element={<MyEventPage setIsUserAuthenticated={setIsUserAuthenticated} windowSize={windowSize} />} />
 
             {/* ADMIN ROUTE START HERE */}
-            <Route path='/admin/dashboard/:dashid' element={< Dashboard windowSize={windowSize} />} />
+            <Route path='/admin' element={< Adminlogin setIsAdminAuthenticated={setIsAdminAuthenticated} windowSize={windowSize} />} />
+            <Route path='/admin/dashboard/:dashid' element={< Dashboard setIsAdminAuthenticated={setIsAdminAuthenticated} windowSize={windowSize} />} />
+
 
 
           </Routes>
