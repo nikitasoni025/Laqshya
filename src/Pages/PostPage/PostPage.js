@@ -21,7 +21,7 @@ const PostPage = () => {
             <div className="post-item-card">
               <img src="https://ik.imagekit.io/egjzyz51e/DSC_0214.JPG?updatedAt=1679562389933" alt="" />
               <div className="overlay">
-                <span>category</span>
+                <span>Category</span>
                 <span>TItle</span>
               </div>
             </div>
