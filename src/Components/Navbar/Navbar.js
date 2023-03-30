@@ -58,7 +58,7 @@ const Navbar = (props) => {
             <li><a href="/">HOME</a></li>
             <li><a href="/events">EVENTS</a></li>
             <li><a href="/gallery">GALLERY</a></li>
-            <li><a href="/gallery">BOARD</a></li>
+            <li><a href="/posts">POSTS</a></li>
             <li><a href="/contact">CONTACT</a></li>
           </ul>
 
@@ -66,7 +66,7 @@ const Navbar = (props) => {
         </div>
         <div className="right-navbar">
           {isUserLogined ? (
-            <Link to={'/'}><span>My Events<FaDiceSix/></span></Link>
+            <Link to={'/myevents'}><span>My Events<FaDiceSix/></span></Link>
           ) : (
             <Link to={'/signin'}><span>Login<CgUserlane /></span></Link>
 
@@ -88,7 +88,7 @@ const Navbar = (props) => {
           <li><Link className={isSideBarOpened ? "anim2" : ""} to={"/events"}>EVENTS</Link></li>
           <li><Link className={isSideBarOpened ? "anim3" : ""} to={"/gallery"}>GALLERY</Link></li>
           <li><Link className={isSideBarOpened ? "anim4" : ""} to={"/contact"}>CONTACT</Link></li>
-          <li><Link className={isSideBarOpened ? "anim4" : ""} to={"/contact"}>BOARDS</Link></li>
+          <li><Link className={isSideBarOpened ? "anim4" : ""} to={"/posts"}>POSTS</Link></li>
           <li><Link className={isSideBarOpened ? "anim5" : ""} to="/signin">LOGIN</Link></li>
 
         </ul>

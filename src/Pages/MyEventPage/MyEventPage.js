@@ -1,21 +1,41 @@
 import React from 'react'
+import "./myeventpage.scss";
+import { MdDeleteOutline } from "react-icons/md";
 
 const MyEventPage = () => {
   return (
     <div className='myEventPage'>
-        <div className="myEventPage-wrap">
-            <div className="myevent-heading">
-              <h1>Name</h1>
-              <h1>email</h1>
-              <h1>phone number</h1>
-            </div>
-            <div className="myevent-detail">
-              <div className="my-event-wrap">
-                <h1>Event You Have Registered</h1>
-                
-              </div>
-            </div>
+      <div className="myEventPage-wrap">
+        <div className="heading">
+          <h1>My Events</h1>
         </div>
+        <div className="myevent-heading">
+          <ul className="user-details">
+            <li>Name</li>
+            <li>Email</li>
+            <li>Number</li>
+          </ul>
+        </div>
+        <div className="myevent-detail">
+          <h1>You Have Registered :</h1>
+          <ul className="event-registered">
+            <li>
+              <span>Event Name</span>
+              <span>Registration Status</span>
+              <span>Selction Status</span>
+              <span>Delete</span>
+              
+
+            </li>
+            <li>
+              <span>Cricket</span>
+              <span>Pending</span>
+              <span>Not Selected</span>
+              <button><MdDeleteOutline /></button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   )
 }

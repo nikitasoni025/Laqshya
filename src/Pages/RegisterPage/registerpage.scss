@@ -305,6 +305,7 @@
             flex-direction: column;
             background-position: -200px bottom;
             padding: 0;
+        
 
             .left-wrap {
                 height: 50px !important;
@@ -316,7 +317,11 @@
                 padding: 15px 0;
 
                 .logo {
-                    height: 200px;
+                    padding: 15px 0px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    // height: 200px;
 
                     img {
                         width: 100px;
@@ -335,7 +340,9 @@
                 height: 100%;
                 margin-bottom: 100px;
                 gap: 10px;
-                // overflow: hidden;
+                overflow-x: hidden;
+                overflow-y: auto;
+                // overflow: scroll;
 
                 form {
                     margin: 60px;
