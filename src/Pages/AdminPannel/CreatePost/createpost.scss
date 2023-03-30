@@ -1,0 +1,82 @@
+$dark-green: #064f32;
+$light-green: #06603b;
+
+.createpost {
+    width: 100%;
+    font-family: var(--secondary-font);
+
+    .createpost-wrap {
+        width: 100%;
+
+        .createpost-heading {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                padding: 8px 0px;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background: $light-green;
+                }
+
+                &::after {
+                    content: "";
+                    width: 50%;
+                    height: 4px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background: $dark-green;
+                }
+
+
+            }
+
+        }
+
+        .addpost-form{
+            width: 100%;
+            margin-top: 50px;
+            form{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                .left-form{
+                    width: 50%;
+                    label{
+                        width: 100%;
+                        height: 300px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        background: #0ad9834e;
+                        font-size: 2vw;
+                        border: 2px dashed $dark-green;
+                        box-sizing: border-box;
+                        &:hover{
+                            border: 3px dashed $dark-green;
+                        }
+                    }
+                    
+                }
+                .right-form{
+                    width: 50%;
+                    
+                }
+            }
+
+        }
+
+    }
+}
