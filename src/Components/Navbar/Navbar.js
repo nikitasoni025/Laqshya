@@ -66,7 +66,7 @@ const Navbar = (props) => {
         </div>
         <div className="right-navbar">
           {isUserLogined ? (
-            <Link to={'/'}><span>My Events<FaDiceSix/></span></Link>
+            <Link to={'/myevents'}><span>My Events<FaDiceSix/></span></Link>
           ) : (
             <Link to={'/signin'}><span>Login<CgUserlane /></span></Link>
 

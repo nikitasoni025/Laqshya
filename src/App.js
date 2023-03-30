@@ -16,6 +16,7 @@ import MyEventPage from './Pages/MyEventPage/MyEventPage';
 import Adminlogin from './Pages/AdminPannel/AdminLogin/Adminlogin';
 import { API } from './Services/Api';
 import PostPage from './Pages/PostPage/PostPage';
+import MyPost from './Pages/MyPost/MyPost';
 
 const PrivateRoute = ({ isAdminAuthenticated, ...props }) => {
   return isAdminAuthenticated ? <><Outlet /></> : <Navigate replace to={'/admin'} />
@@ -73,6 +74,7 @@ function App() {
             <Route path='/signin' element={<Loginpage setIsUserAuthenticated={setIsUserAuthenticated} windowSize={windowSize} />} />
             <Route path='/myevents' element={<MyEventPage setIsUserAuthenticated={setIsUserAuthenticated} windowSize={windowSize} />} />
             <Route path='/posts' element={<PostPage  windowSize={windowSize} />} />
+            <Route path='/mypost' element={<MyPost  windowSize={windowSize} />} />
 
             {/* ADMIN ROUTE START HERE */}
             <Route path='/admin' element={< Adminlogin setIsAdminAuthenticated={setIsAdminAuthenticated} windowSize={windowSize} />} />
