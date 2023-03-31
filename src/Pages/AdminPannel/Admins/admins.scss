@@ -69,6 +69,10 @@ $light-green: #06603b;
                         color: white;
                         border: none;
                         border-radius: 5px;
+
+                        &:nth-child(2){
+                            background: rgb(255, 88, 88);
+                        }
                     }
 
 

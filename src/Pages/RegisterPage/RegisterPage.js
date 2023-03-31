@@ -29,8 +29,6 @@ const RegisterPage = () => {
     const [showSuccess, setShowSuccess] = useState(false);
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
-    const [successMessage, setSuccesMessage] = useState('');
-    const [confirmPass, setConfirmPass] = useState("");
 
 
     const navigate = useNavigate();
@@ -64,25 +62,7 @@ const RegisterPage = () => {
 
 
     }
-    const handleCOnfirmPass = (e) => {
-
-        const { name, value } = e.target;
-        setConfirmPass(value);
-
-
-    }
-    const checkConfirmPass = () => {
-        if (!confirmPass) {
-            return false;
-        }
-        if (formData.password === confirmPass) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
+    
     const handleSubmit = async (e) => {
 
         e.preventDefault();
@@ -96,7 +76,6 @@ const RegisterPage = () => {
             setFormData(initialValue);
             setIsLoading(false);
             setShowSuccess(true);
-            setConfirmPass("");
             setTimeout(() => setShowSuccess(false), 4000);
         }
         else {

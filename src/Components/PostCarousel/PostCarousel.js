@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -8,28 +8,33 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./postCarousel.scss";
 import { Autoplay, EffectCoverflow, EffectCreative, Pagination } from "swiper"
 import { Link } from 'react-router-dom';
+import { API } from '../../Services/Api';
 
 const PostCarousel = (props) => {
-  let post = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  let posts = [
-    { title: "New Post", img: "https://ik.imagekit.io/dexo68yudb/Dance_Fusion.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1673809010282" },
-    { title: "Shaurya Came With Terrific Surprise", img: "https://ik.imagekit.io/dexo68yudb/Ballet_Performance_Photos_and_Premium_High_Res_Pictures.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1673809213988" },
-    { title: "New Post", img: "https://ik.imagekit.io/dexo68yudb/Black_Minimalist_Quote_Instagram_Post.png?ik-sdk-version=javascript-1.4.3&updatedAt=1677790805602" },
-    { title: "New Post", img: "https://ik.imagekit.io/dexo68yudb/21_Professional_Break_Dancing_Photos___Photoshop_Tutorials.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673809612232" },
-    { title: "New Post", img: "https://ik.imagekit.io/dexo68yudb/Jazz__Classical_Grace___1_.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1673809716244" },
-    { title: "New Post", img: "https://ik.imagekit.io/dexo68yudb/Jazz__Classical_Grace___1_.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1673809716244" },
-    { title: "New Post", img: "https://ik.imagekit.io/dexo68yudb/Jazz__Classical_Grace___1_.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1673809716244" },
-    { title: "New Post", img: "https://ik.imagekit.io/dexo68yudb/Jazz__Classical_Grace___1_.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1673809716244" },
-    { title: "New Post", img: "https://ik.imagekit.io/dexo68yudb/Jazz__Classical_Grace___1_.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1673809716244" },
-    { title: "New Post", img: "https://ik.imagekit.io/dexo68yudb/Jazz__Classical_Grace___1_.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1673809716244" },
+  const [posts, setPosts] = useState([]);
 
-  ]
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+
+      const response = await API.getPostWithLimit({ limit: 10 });
+
+      if (response.isSuccess) {
+        setPosts(response.data.data || []);
+      }
+
+    }
+    fetchPosts();
+
+  }, [])
   return (
 
+
     <div className='post-carousel'>
+      {console.log(posts)}
       <Swiper
         effect={props.windowSize[0] <= 990 ? "creative" : "coverflow"}
-        autoplay={{delay: 3000,disableOnInteraction: false}}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         grabCursor={false}
         centeredSlides={true}
         slidesPerView={props.windowSize[0] <= 990 ? "auto" : 3}
@@ -50,6 +55,8 @@ const PostCarousel = (props) => {
           },
         }}
         loop={true}
+        direction={'horizontal'}
+        loopedSlides={3}
         pagination={{
           clickable: true,
         }}
@@ -59,26 +66,43 @@ const PostCarousel = (props) => {
       >
         {/* Here the Image Section */}
 
-        {posts.map((item, index) => {
+        {posts && posts.length > 0 ? posts.map((item, index) => {
+
           return (
             <SwiperSlide key={index}>
-              {/* <Link to={'/events'} className="my-post-card"> */}
+
               <div className="my-post-card">
-                <a href='/events' className="overlay">
-                  <div className="numberi">{index+1}</div>
+                <Link to={`/myposts/${item._id}`} className="overlay">
+                  <div className="numberi">{index + 1}</div>
                   <div className="over-details">
                     <div className="badge"><span>Category</span></div>
                     <h1>{item.title.length > 20 ? item.title.slice(0, 20) + "..." : item.title}</h1>
                   </div>
 
-                </a>
-                <img src={item.img} />
+                </Link>
+                <img src={item.picture} />
               </div>
-              {/* </Link> */}
+
             </SwiperSlide>
           )
-        })}
+        }) : (
+          <SwiperSlide key={-1}>
 
+            <div className="my-post-card">
+              <div className="overlay">
+                <div className="numberi">{0}</div>
+                <div className="over-details">
+                  <div className="badge"><span>No Posts</span></div>
+                  <h1>No Posts Available</h1>
+                </div>
+
+              </div>
+              <img src='https://ik.imagekit.io/dexo68yudb/Matthew_Butler_-_GIF_Volume_I__Black___White.gif?updatedAt=1679070572255' alt='slider demo' />
+            </div>
+
+          </SwiperSlide>
+
+        )}
       </Swiper>
     </div >
   )

@@ -15,7 +15,8 @@ const initialEventData = {
   registrationfee: "",
   eventid: "",
   maxParticipants: "",
-  isGrouped: true
+  isGrouped: true,
+  upiid:'',
 }
 
 const Eventpage = (props) => {

@@ -7,7 +7,8 @@ export const Shauryas = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid: 'XX'
+        eventid: 'XX',
+        upiid: '9631492014@cnrb'
     },
     {
         title: "Robo Soccer League",
@@ -16,7 +17,8 @@ export const Shauryas = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid: 'RSL'
+        eventid: 'RSL',
+        upiid: '9631492014@cnrb'
 
 
     },
@@ -27,7 +29,8 @@ export const Shauryas = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid: 'RGC'
+        eventid: 'RGC',
+        upiid: '9631492014@cnrb'
 
 
     },
@@ -38,7 +41,8 @@ export const Shauryas = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid: 'RS'
+        eventid: 'RS',
+        upiid: '9631492014@cnrb'
 
 
     },
@@ -49,7 +53,8 @@ export const Shauryas = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid: 'DB'
+        eventid: 'DB',
+        upiid: '9631492014@cnrb'
 
 
 
@@ -61,7 +66,8 @@ export const Shauryas = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid:'RFF'
+        eventid: 'RFF',
+        upiid:'9631492014@cnrb'
 
 
     },
@@ -72,7 +78,8 @@ export const Shauryas = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid:'DR'
+        eventid: 'DR',
+        upiid:'9631492014@cnrb'
 
 
     },
@@ -85,7 +92,7 @@ export const kaushalya = [
         isGrouped: true,
         maxParticipants: 7,
         registrationfee: 50,
-        eventid:'CT'
+        eventid: 'CT'
 
 
     },
@@ -96,7 +103,7 @@ export const kaushalya = [
         isGrouped: false,
         maxParticipants: 1,
         registrationfee: 50,
-        eventid:'AW'
+        eventid: 'AW'
 
 
     },
@@ -107,7 +114,7 @@ export const kaushalya = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid:'FL'
+        eventid: 'FL'
 
 
     },
@@ -118,7 +125,7 @@ export const kaushalya = [
         isGrouped: false,
         maxParticipants: 1,
         registrationfee: 50,
-        eventid:'AB'
+        eventid: 'AB'
 
 
     },
@@ -129,7 +136,7 @@ export const kaushalya = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid:'ES'
+        eventid: 'ES'
 
 
     },
@@ -143,7 +150,7 @@ export const bouddhiki = [
         isGrouped: false,
         maxParticipants: 1,
         registrationfee: 50,
-        eventid:'FOL'
+        eventid: 'FOL'
 
 
     },
@@ -154,7 +161,7 @@ export const bouddhiki = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid:'AS'
+        eventid: 'AS'
 
 
     },
@@ -165,7 +172,7 @@ export const bouddhiki = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid:'CS'
+        eventid: 'CS'
 
 
     },
@@ -180,7 +187,7 @@ export const parakram = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid:'BJ'
+        eventid: 'BJ'
 
 
     },
@@ -191,22 +198,22 @@ export const parakram = [
         isGrouped: false,
         maxParticipants: 1,
         registrationfee: 50,
-        eventid:'CC'
+        eventid: 'CC'
 
 
     },
     {
-        title: "Tech farmactic",
+        title: "Tech farmacia",
         ourIndex: 17,
         img: "https://ik.imagekit.io/egjzyz51e/tech_farmacia.jpg?updatedAt=1679426773036",
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid:'TF'
+        eventid: 'TF'
 
 
     },
-   
+
     {
         title: "Lets Play With Bond",
         ourIndex: 18,
@@ -214,7 +221,7 @@ export const parakram = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid:'LPB'
+        eventid: 'LPB'
 
 
     },
@@ -228,7 +235,7 @@ export const natraja = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid:'MYM'
+        eventid: 'MYM'
 
 
     },
@@ -239,11 +246,11 @@ export const natraja = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid:'TH'
+        eventid: 'TH'
 
 
-    }, 
-   
+    },
+
 
 
 
@@ -257,7 +264,7 @@ export const Kautilya = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid:'QM'
+        eventid: 'QM'
 
 
     },
@@ -268,61 +275,61 @@ export const Kautilya = [
         isGrouped: true,
         maxParticipants: 3,
         registrationfee: 50,
-        eventid:'TH'
+        eventid: 'TH'
 
 
     },
-     
-   
-    ]
-     export const workshop =[
 
-        {
-            title: "Digital Marketing",
-            ourIndex: 23,
-            img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-            isGrouped: false,
-            maxParticipants: 1,
-            registrationfee: 50,
-            eventid:'DM'
-    
-    
-        },
-        {
-            title: "Cyber Security",
-            ourIndex: 24,
-            img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-            isGrouped: false,
-            maxParticipants: 1,
-            registrationfee: 50,
-            eventid:'CS'
-    
-    
-        },
-        {
-            title: "Carrer Counselling",
-            ourIndex: 25,
-            img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-            isGrouped: false,
-            maxParticipants: 1,
-            registrationfee: 50,
-            eventid:'CC'
-    
-    
-        },
-        {
-            title: "Drug Awareness",
-            ourIndex: 26,
-            img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
-            isGrouped: false,
-            maxParticipants: 1,
-            registrationfee: 50,
-            eventid:'DA'
-    
-    
-        },
 
-     ]
+]
+export const workshop = [
+
+    {
+        title: "Digital Marketing",
+        ourIndex: 23,
+        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        isGrouped: false,
+        maxParticipants: 1,
+        registrationfee: 50,
+        eventid: 'DM'
+
+
+    },
+    {
+        title: "Cyber Security",
+        ourIndex: 24,
+        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        isGrouped: false,
+        maxParticipants: 1,
+        registrationfee: 50,
+        eventid: 'CS'
+
+
+    },
+    {
+        title: "Carrer Counselling",
+        ourIndex: 25,
+        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        isGrouped: false,
+        maxParticipants: 1,
+        registrationfee: 50,
+        eventid: 'CC'
+
+
+    },
+    {
+        title: "Drug Awareness",
+        ourIndex: 26,
+        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        isGrouped: false,
+        maxParticipants: 1,
+        registrationfee: 50,
+        eventid: 'DA'
+
+
+    },
+
+]
 export const bannerslide = [
     {
         title: "Shaurya",
@@ -367,7 +374,7 @@ export const eventDetails = [
         judgement: [
             "1", "2", "3", "4"
         ],
-        arena:'https://ik.imagekit.io/dexo68yudb/kautilya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678017925010',
+        arena: 'https://ik.imagekit.io/dexo68yudb/kautilya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678017925010',
         registrationfee: 50,
         eventIncharges: [
             {
@@ -388,7 +395,7 @@ export const eventDetails = [
         rules: [
             "1", "2", "3", "4"
         ],
-        arena:'',
+        arena: '',
         judgement: [
             "1", "2", "3", "4"
         ],
@@ -411,59 +418,59 @@ export const eventDetails = [
 
 // Gallery Data
 
- export const galleryData = [
+export const galleryData = [
     {
-        type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/DSC_0171.JPG?updatedAt=1679562389624"
+        type: "img",
+        link: "https://ik.imagekit.io/egjzyz51e/DSC_0171.JPG?updatedAt=1679562389624"
     },
     {
-        type:"vid",
-        link:"https://ik.imagekit.io/egjzyz51e/VID-20230301-WA0001.mp4?updatedAt=1677831082506"
+        type: "vid",
+        link: "https://ik.imagekit.io/egjzyz51e/VID-20230301-WA0001.mp4?updatedAt=1677831082506"
     },
     {
-        type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/DSC_0179.JPG?updatedAt=1679562390758"
+        type: "img",
+        link: "https://ik.imagekit.io/egjzyz51e/DSC_0179.JPG?updatedAt=1679562390758"
     },
     {
-        type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/DSC_0165.JPG?updatedAt=1679562391608"
+        type: "img",
+        link: "https://ik.imagekit.io/egjzyz51e/DSC_0165.JPG?updatedAt=1679562391608"
     },
     {
-        type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/DSC_0162.JPG?updatedAt=1679562392070"
+        type: "img",
+        link: "https://ik.imagekit.io/egjzyz51e/DSC_0162.JPG?updatedAt=1679562392070"
     },
     {
-        type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/DSC_0193.JPG?updatedAt=1679562392214"
+        type: "img",
+        link: "https://ik.imagekit.io/egjzyz51e/DSC_0193.JPG?updatedAt=1679562392214"
     },
     {
-        type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/DSC_0256.JPG?updatedAt=1679562393160"
+        type: "img",
+        link: "https://ik.imagekit.io/egjzyz51e/DSC_0256.JPG?updatedAt=1679562393160"
     },
     {
-        type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/DSC_0174.JPG?updatedAt=1679562391499"
+        type: "img",
+        link: "https://ik.imagekit.io/egjzyz51e/DSC_0174.JPG?updatedAt=1679562391499"
     },
     {
-        type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/DSC_0214.JPG?updatedAt=1679562389933"
+        type: "img",
+        link: "https://ik.imagekit.io/egjzyz51e/DSC_0214.JPG?updatedAt=1679562389933"
     },
-  
+
     {
-        type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/IMG_20230315_195011.jpg?updatedAt=1679563023303"
-    },
-    {
-        type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/IMG_20230313_082154__1_.jpg?updatedAt=1679563034886"
+        type: "img",
+        link: "https://ik.imagekit.io/egjzyz51e/IMG_20230315_195011.jpg?updatedAt=1679563023303"
     },
     {
-        type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/stx_5.jpg?updatedAt=1679563372898"
+        type: "img",
+        link: "https://ik.imagekit.io/egjzyz51e/IMG_20230313_082154__1_.jpg?updatedAt=1679563034886"
     },
     {
-        type:"img",
-        link:"https://ik.imagekit.io/egjzyz51e/IMG_20230313_061227.jpg?updatedAt=1679563363175"
+        type: "img",
+        link: "https://ik.imagekit.io/egjzyz51e/stx_5.jpg?updatedAt=1679563372898"
+    },
+    {
+        type: "img",
+        link: "https://ik.imagekit.io/egjzyz51e/IMG_20230313_061227.jpg?updatedAt=1679563363175"
     },
 ]
 
