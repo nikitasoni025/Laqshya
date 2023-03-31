@@ -16,7 +16,9 @@ const initialEventData = {
   eventid: "",
   maxParticipants: "",
   isGrouped: true,
+  isIndividual:true,
   upiid:'',
+  qrimage:''
 }
 
 const Eventpage = (props) => {

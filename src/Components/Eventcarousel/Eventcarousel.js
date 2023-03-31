@@ -23,11 +23,11 @@ const Eventcarousel = (props) => {
                         <div key={index} class='item myevent-card'>
                             <div className='event-card-wrap'>
                                 <div className="card-top">
-                                    <img src={event.img} alt="gallery" loading='lazy'  />
+                                    <img src={event.img} alt="gallery" loading='lazy' />
                                     <div className="overlay">
                                         {props.isUserAuthenticated ? <button onClick={() => {
                                             props.setOpenFormModal(true); props.setEventNameFee(
-                                                { eventname: event.title, registrationfee: event.registrationfee, isGrouped: event.isGrouped, eventid: event.eventid, maxParticipants: event.maxParticipants,upiid:event.upiid }
+                                                { eventname: event.title, registrationfee: event.registrationfee, isGrouped: event.isGrouped, isIndividual: event.isIndividual, eventid: event.eventid, maxParticipants: event.maxParticipants, upiid: event.upiid, qrimage: event.qrimage }
                                             )
                                         }}>Register</button> : null}
 

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import "./formmodal.scss";
 import AutoComplete from '../AutoComplete/AutoComplete';
 import { FaChevronLeft, FaSeedling, FaTimes, FaTrash } from 'react-icons/fa';
+import { SiGooglepay, SiPaytm, SiPhonepe } from 'react-icons/si';
 import { DataContext } from '../../Context/Dataprovider';
 import Loader from '../Loader/Loader';
 import { API } from '../../Services/Api';
@@ -18,7 +19,7 @@ const FormModal = (props) => {
         members: [],
         eventname: "",
         registrationfee: "",
-        status: false,        
+        status: false,
     }
 
     const [groupedClicked, setGroupedClicked] = useState("S1");
@@ -30,8 +31,11 @@ const FormModal = (props) => {
     const [showSuccess, setShowSuccess] = useState(false);
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+    const [termsAgreed , setTermsAgreed] =useState(false);
+    const [finalFee, setFinalFee] = useState(null);
 
-    const navigate=useNavigate();
+
+    const navigate = useNavigate();
 
     // setIndiFormData(initialIndiFormData);
     useEffect(() => {
@@ -54,7 +58,7 @@ const FormModal = (props) => {
                     status: false
                 });
 
-                setGroupFormData({...initialGroupFormData,eventname:props.eventNameFee.eventname,eventid:props.eventNameFee.eventid,registrationfee:props.eventNameFee.registrationfee})
+                setGroupFormData({ ...initialGroupFormData, eventname: props.eventNameFee.eventname, eventid: props.eventNameFee.eventid, registrationfee: props.eventNameFee.registrationfee })
 
                 setParticipants([response.data])
 
@@ -69,7 +73,7 @@ const FormModal = (props) => {
         const maxParticipants = props.eventNameFee.maxParticipants;
         if (!userexist && paticipants.length <= maxParticipants) {
             setParticipants([...paticipants, paticipant]);
-            setGroupFormData({...groupFormData,members:paticipants});
+            setGroupFormData({ ...groupFormData, members: paticipants });
             console.log("participants", paticipants);
         } else {
             setShowError(true);
@@ -80,39 +84,39 @@ const FormModal = (props) => {
     const handleDeleteMembers = (participantid) => {
         const updatedusers = paticipants.filter((user) => user._id !== participantid);
         setParticipants(updatedusers);
-        setGroupFormData({...groupFormData,members:updatedusers});
+        setGroupFormData({ ...groupFormData, members: updatedusers });
     }
 
-    const handleGroupNameChange=(ev)=>{
-        const {name,value} = ev.target;
-        setGroupFormData({...groupFormData,groupname:value});
+    const handleGroupNameChange = (ev) => {
+        const { name, value } = ev.target;
+        setGroupFormData({ ...groupFormData, groupname: value });
     }
-    const handleMakeGroup=()=>{
-        setGroupFormData({...groupFormData,members:paticipants});
+    const handleMakeGroup = () => {
+        setGroupFormData({ ...groupFormData, members: paticipants });
         setS3FormType('group');
         setGroupedClicked('S3');
     }
 
-    const handleGroupSubmit=async(groupformData)=>{
+    const handleGroupSubmit = async (groupformData) => {
         setIsLoading(true)
         console.log(groupFormData);
 
-        const response= await API.registerGroups(groupFormData);
+        const response = await API.registerGroups(groupFormData);
 
-        if(response.isSuccess){
+        if (response.isSuccess) {
             setIsLoading(false);
             setGroupedClicked('S1');
             setShowSuccess(true);
-            setTimeout(() => {setShowSuccess(false);props.setOpenFormModal(false)}, 4000);
-            let deeplink=`upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`;
-            window.location.href=deeplink;
-        }else{
+            setTimeout(() => { setShowSuccess(false); props.setOpenFormModal(false) }, 4000);
+            let deeplink = `upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`;
+            window.location.href = deeplink;
+        } else {
             setIsLoading(false)
             setShowError(true);
             setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
-            setTimeout(() => {setShowError(false)}, 4000);
+            setTimeout(() => { setShowError(false) }, 4000);
         }
-        console.log("Group response",response);
+        console.log("Group response", response);
     }
 
     const handleIndividalSubmit = async (formData) => {
@@ -126,14 +130,20 @@ const FormModal = (props) => {
             setGroupedClicked('S1');
             setShowSuccess(true);
             setTimeout(() => setShowSuccess(false), 4000);
-            let deeplink=`upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`;
-            window.location.href=deeplink;
+            let deeplink = `upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`;
+            window.location.href = deeplink;
         } else {
             setIsLoading(false);
             setShowError(true);
             setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
             setTimeout(() => setShowError(false), 4000);
         }
+
+    }
+
+    const handleUpiPay = (e)=>{
+        let deepLink = `upi://pay?pa=${props.eventNameFee.upiid}&am=${finalFee}&pn=${'Laqshya'}&cu=INR&tn=Paying`;
+        // window.location.href = deeplink;
 
     }
 
@@ -151,15 +161,22 @@ const FormModal = (props) => {
                     {/* first-step */}
                     {groupedClicked === "S1" ? (
                         <div className="form-step-1">
-                            <h1> {props.eventNameFee.isGrouped ? "Do you want to Perform" : "You are performing"} </h1>
+                            <h1> {props.eventNameFee.isGrouped && props.eventNameFee.isIndividual ? "Do you want to Perform" : "You are performing"} </h1>
                             <div className="row">
-                                <button onClick={() => { setS3FormType('indi'); setGroupedClicked("S3") }}>Individual</button>
-                                {props.eventNameFee.isGrouped ? (
+                                {props.eventNameFee.isGrouped && props.eventNameFee.isIndividual ? (
                                     <>
+                                        <button onClick={() => { setS3FormType('indi'); setGroupedClicked("S3") }}>Individual</button>
                                         <span>OR</span>
                                         <button onClick={() => { setS3FormType('group'); setGroupedClicked("S2") }}>Grouped</button>
                                     </>
+
+                                ) : props.eventNameFee.isGrouped && !props.eventNameFee.isIndividual ? (
+                                    <button onClick={() => { setS3FormType('group'); setGroupedClicked("S2") }}>Grouped</button>
+
+                                ) : !props.eventNameFee.isGrouped && props.eventNameFee.isIndividual ? (
+                                    <button onClick={() => { setS3FormType('indi'); setGroupedClicked("S3") }}>Individual</button>
                                 ) : null}
+
                             </div>
                         </div>
                     ) : groupedClicked === "S2" ? (
@@ -199,10 +216,19 @@ const FormModal = (props) => {
                         <div className="form-step-3">
                             <h1>Registering For</h1>
                             <h2>Event Name : {props.eventNameFee.eventname}</h2>
-                            <h2>Registration Fee :{s3FormType ==='indi'? props.eventNameFee.registrationfee :(props.eventNameFee.registrationfee * paticipants.length) }&nbsp;₹</h2>
-                            {s3FormType === "indi" ? <button onClick={() => handleIndividalSubmit(indiFormData)}>{isLoading ? <Loader /> : "Pay"}</button> : s3FormType === "group" ? <button onClick={() => {handleGroupSubmit(groupFormData)}}>{isLoading ? <Loader /> : "Pay"}</button> : null}
+                            <h2>Registration Fee :{s3FormType === 'indi' ?()=>{setFinalFee(props.eventNameFee.registrationfee) ; return props.eventNameFee.registrationfee}  : ()=>{setFinalFee((props.eventNameFee.registrationfee * paticipants.length)) ; return (props.eventNameFee.registrationfee * paticipants.length) }  }&nbsp;₹</h2>
+                            {s3FormType === "indi" ? <button onClick={() => handleIndividalSubmit(indiFormData)}>{isLoading ? <Loader /> : "Pay"}</button> : s3FormType === "group" ? <button onClick={() => { handleGroupSubmit(groupFormData) }}>{isLoading ? <Loader /> : "Pay"}</button> : null}
 
                             <button onClick={() => setGroupedClicked("S1")}><FaChevronLeft />Back</button>
+                        </div>
+                    ) : groupedClicked === "S4" ? (
+                        <div className="form-step-4">
+                            <h1>Scan Or Click To Pay</h1>
+                            <img src={props.eventNameFee.qrimage} alt="qrcode" />
+                            <hr />
+                            <p className='note-mark'>Firstly Pay using either of the options, kindly provide the <span>Transaction Id</span> in the below field for the comfirmation of the payment because after payment there is no refund options.</p>
+                            <h3>Do you agree our terms & conditions <input type="checkbox" onClick={(e)=>{e.target.checked ? setTermsAgreed(true) : setTermsAgreed(false)}} /></h3>
+                            <button onClick={handleUpiPay} disabled={termsAgreed ? false : true}><SiPaytm/> &nbsp; <SiPhonepe/> &nbsp; <SiGooglepay/></button>
                         </div>
                     ) : null}
                 </div>
