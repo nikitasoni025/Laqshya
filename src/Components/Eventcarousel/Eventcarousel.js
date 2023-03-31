@@ -27,7 +27,7 @@ const Eventcarousel = (props) => {
                                     <div className="overlay">
                                         {props.isUserAuthenticated ? <button onClick={() => {
                                             props.setOpenFormModal(true); props.setEventNameFee(
-                                                { eventname: event.title, registrationfee: event.registrationfee, isGrouped: event.isGrouped, eventid: event.eventid, maxParticipants: event.maxParticipants }
+                                                { eventname: event.title, registrationfee: event.registrationfee, isGrouped: event.isGrouped, eventid: event.eventid, maxParticipants: event.maxParticipants,upiid:event.upiid }
                                             )
                                         }}>Register</button> : null}
 

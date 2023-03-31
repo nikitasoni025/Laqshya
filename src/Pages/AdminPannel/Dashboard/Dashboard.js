@@ -12,6 +12,8 @@ import { API } from '../../../Services/Api';
 import { checkAdminsession } from '../../../Utils/commonutil';
 import Admins from '../Admins/Admins';
 import Createpost from '../CreatePost/Createpost';
+import Postsshow from '../PostsShow/Postsshow';
+import Createadmin from '../CreateAdmins/Createadmin';
 
 
 const Dashboard = (props) => {
@@ -72,7 +74,7 @@ const Dashboard = (props) => {
                                 <li title='Participants'><Link to="/admin/dashboard/participants">{isSideBarOpened ? "Participants" : <RiUserStarLine />}</Link></li>
                                 <li title='Individuals'><Link to="/admin/dashboard/individuals">{isSideBarOpened ? "Individuals" : <RiUser6Line />}</Link></li>
                                 <li title='Groups'><Link to="/admin/dashboard/groups">{isSideBarOpened ? "Groups" : <FaUsers />}</Link></li>
-                                <li title='Posts'><Link to="/admin/dashboard/posts">{isSideBarOpened ? "Posts" : <FaImage />}</Link></li>
+                                <li title='Posts'><Link to="/admin/dashboard/showposts">{isSideBarOpened ? "Posts" : <FaImage />}</Link></li>
                                 {adminData.role && adminData.role === 'superadmin' ? (<li title='Posts'><Link to="/admin/dashboard/admins">{isSideBarOpened ? "Admins" : <FaShieldAlt />}</Link></li>) : null}
                             </ul>
                         </div>
@@ -106,8 +108,10 @@ const Dashboard = (props) => {
                                     ) : dashid === "groups" ? (<Group adminData={adminData} />)
                                         : dashid === "individuals" ? (<Individual adminData={adminData} />)
                                             : dashid === "createIndi" ? (<CreateIndi adminData={adminData} />)
-                                                : dashid === "admins" ? (<Admins />)
-                                                    : dashid==='createpost' ? (<Createpost/>) : null}
+                                                : dashid === "admins" && adminData.role === "superadmin" ? (<Admins />)
+                                                    : dashid === 'createpost' ? (<Createpost adminData={adminData} />)
+                                                        : dashid === 'showposts' ? (<Postsshow adminData={adminData} />)
+                                                            : dashid === 'createadmin' && adminData.role === "superadmin" ? (<Createadmin adminData={adminData}/>) : null}
                                 </div>
                             </div>
                         </div>

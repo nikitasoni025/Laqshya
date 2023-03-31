@@ -6,6 +6,7 @@ import { DataContext } from '../../Context/Dataprovider';
 import Loader from '../Loader/Loader';
 import { API } from '../../Services/Api';
 import { Toaster } from '../Toaster/Toaster';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -29,6 +30,8 @@ const FormModal = (props) => {
     const [showSuccess, setShowSuccess] = useState(false);
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+
+    const navigate=useNavigate();
 
     // setIndiFormData(initialIndiFormData);
     useEffect(() => {
@@ -101,6 +104,7 @@ const FormModal = (props) => {
             setGroupedClicked('S1');
             setShowSuccess(true);
             setTimeout(() => {setShowSuccess(false);props.setOpenFormModal(false)}, 4000);
+            navigate(`upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`);
         }else{
             setIsLoading(false)
             setShowError(true);
@@ -121,6 +125,8 @@ const FormModal = (props) => {
             setGroupedClicked('S1');
             setShowSuccess(true);
             setTimeout(() => setShowSuccess(false), 4000);
+            navigate(`upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`);
+
         } else {
             setIsLoading(false);
             setShowError(true);

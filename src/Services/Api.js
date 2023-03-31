@@ -3,6 +3,12 @@ import {API_NOTIFICATION_MESSAGES, SERVICE_URLS} from "../Constants/Config";
 import { getType } from '../Utils/commonutil';
 // import { getAccessToken } from '../Utils/Commonutils';
 
+//                                          |+
+// ==========================================  +                     <<<  IMPORTANT  >>>
+// ADD THE URL IN CREATEPOST ALSO                + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +>   
+// ==========================================  +                     <<<  CHANGE IT  >>>
+//                                          |+
+
 const API_URL = 'https://laqshyaserver.onrender.com';
 // const API_URL = 'http://localhost:8001';
 const axiosInstance = axios.create({

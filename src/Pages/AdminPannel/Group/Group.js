@@ -3,10 +3,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useDownloadExcel } from 'react-export-table-to-excel';
 import { Link } from 'react-router-dom';
 import "./group.scss";
-import { MdDeleteForever, MdGroupAdd } from "react-icons/md";
+import { MdDeleteForever, MdGroupAdd, MdLoop } from "react-icons/md";
 import { FaCheckDouble, FaEdit, FaSave, FaSearch, FaTimes } from 'react-icons/fa';
 import { TbArrowWaveLeftDown, TbArrowWaveRightUp } from 'react-icons/tb';
 import { API } from '../../../Services/Api';
+import Loader from '../../../Components/Loader/Loader';
 
 const initialfiltervalue = {
     searched: "",
@@ -23,7 +24,7 @@ const Group = (props) => {
     const [filteredTerm, setFilteredTerm] = useState(initialfiltervalue);
     const [sortBy, setSortBy] = useState("fullname");
     const [status, setStatus] = useState(false);
-    const [searchSelected,setSearchSelected] = useState(false);
+    const [searchSelected, setSearchSelected] = useState(false);
     const [pageNumbers, setPageNumbers] = useState(0);
     const [sortOrder, setSortOrder] = useState("asc");
     let [currentPage, setCurrentPage] = useState(1);
@@ -31,6 +32,7 @@ const Group = (props) => {
     const [itemPerPage, setItemPerPage] = useState(5);
     const [editingid, setEditingId] = useState(null);
     const [updateData, setUpdateData] = useState(initialGroupUpdateData);
+    const [isLoading, setIsLoading] = useState(false);
     const tableRef = useRef(null);
 
 
@@ -39,15 +41,20 @@ const Group = (props) => {
 
     useEffect(() => {
         const fetchGroupsData = async () => {
-            const response = await API.getAllGroups({ limit: itemPerPage, page: currentPage, status: status,selected:searchSelected });
+            setIsLoading(true);
+            const response = await API.getAllGroups({ limit: itemPerPage, page: currentPage, status: status, selected: searchSelected });
             if (response.isSuccess) {
                 console.log(response);
                 setTableData(response.data.data);
                 setPageNumbers(Math.ceil(response.data.totalCount / itemPerPage));
+                setIsLoading(false);
+
+            }else{
+                setIsLoading(false);
             }
         }
         fetchGroupsData();
-    }, [itemPerPage, currentPage, status, toggle,searchSelected]);
+    }, [itemPerPage, currentPage, status, toggle, searchSelected]);
 
 
     const { onDownload } = useDownloadExcel({
@@ -90,7 +97,7 @@ const Group = (props) => {
         return searchedTerms.every((term) =>
             item.groupname.toLowerCase().includes(term) ||
             item.groupid.includes(term)
-        ) &&  item.eventname.toLowerCase().includes(filteredTerm.events.toLowerCase())
+        ) && item.eventname.toLowerCase().includes(filteredTerm.events.toLowerCase())
     }
     );
 
@@ -146,7 +153,7 @@ const Group = (props) => {
 
                 <div className="group-heading">
                     <h1>Groups Participant</h1>
-                    <Link className='adm-main-btn'>Add&nbsp;<MdGroupAdd /></Link>
+                    <button onClick={()=>setToggle(!toggle)} className='adm-main-btn'>Refresh&nbsp;<MdLoop/></button>
                 </div>
 
                 {/*FILTER GROUP */}
@@ -204,13 +211,15 @@ const Group = (props) => {
                                     <option value="Lets Play With Bond">Lets Play With Bond</option>
                                     <option value="Bottle jet">Bottle Jet</option>
                                     <option value="Code Crunch">Code Crunch</option>
-                                    <option value="Tech farmactic">Tech Farmactic</option>
+                                    <option value="Tech farmacia">Tech Farmactic</option>
                                     <option value="Make Your Move">Make Your Move</option>
-                                    <option value="One Minute Show">One Minute Show</option>
+                                    <option value="AD Mad Show">One Minute Show</option>
                                     <option value="Quiz Masters">Quiz Masters</option>
                                     <option value="Treasure hunt">Treasure hunt</option>
-                                    <option value="pyi">Pitch Your Idea</option>
-                                    <option value="work">Workshop</option>
+                                    <option value="Digital Marketing">Pitch Your Idea</option>
+                                    <option value="Cyber Security">Workshop</option>
+                                    <option value="Carrer Counselling">Workshop</option>
+                                    <option value="Drug Awareness">Workshop</option>
                                 </select>
                             </div>
                         </div>
@@ -223,7 +232,7 @@ const Group = (props) => {
                                     <option value={40} >40</option>
                                     <option value={80} >80</option>
                                     <option value={100} >100</option>
-                                    {(props.adminData.role && props.adminData.role === 'pladmin' )|| props.adminData.role==='superadmin' ? <option value={2000}>All</option>:null }
+                                    {(props.adminData.role && props.adminData.role === 'pladmin') || props.adminData.role === 'superadmin' ? <option value={2000}>All</option> : null}
 
                                 </select>
                             </div>
@@ -260,11 +269,11 @@ const Group = (props) => {
                                 </tr>
                             </thead>
                             <tbody>
-                                
-                                {filteredData && filteredData.length>0 ? filteredData.map((data, indx) => {
+
+                                {filteredData && filteredData.length > 0 ? filteredData.map((data, indx) => {
 
                                     return (
-                                        <tr key={indx} style={{background:data.selected ? "#5eff89" : ""}}>
+                                        <tr key={indx} style={{ background: data.selected ? "#5eff89" : "" }}>
                                             <td>{indx}</td>
                                             <td>{data.groupid}</td>
                                             <td>{data.groupname}</td>
@@ -293,14 +302,15 @@ const Group = (props) => {
                                             <td>{data.selected ? <p>Selected &nbsp;&nbsp;<FaCheckDouble /></p> : <p>Not Selected&nbsp;&nbsp;<FaTimes /></p>}</td>
                                             <td className='action-btn'>
                                                 {/* <input type="checkbox" /> */}
-                                                <button disabled={data.selected ? true : false} onClick={() => handleGroupUpdate(data._id, { selected: !data.selected })}>{data.selected ? "Selected" : "Select"}</button>
-                                                {editingid === data._id ? <button  onClick={() => handleGroupUpdate(data._id, updateData)}><FaSave /></button> : <button disabled={data.status ? true :false} onClick={() => handleGroupEdit(data)}><FaEdit /></button>}
-                                                {(props.adminData.role && props.adminData.role ==='pladmin') || props.adminData.role==='superadmin' ? <button onClick={() => handleDeleteGroup(data._id)}><MdDeleteForever /></button>:null}
+                                                <button disabled={data.selected ? props.adminData.role==='superadmin' ? false : true : false} onClick={() => handleGroupUpdate(data._id, { selected: !data.selected })}>{data.selected ? "Selected" : "Select"}</button>
+                                                {editingid === data._id ? <button onClick={() => handleGroupUpdate(data._id, updateData)}><FaSave /></button> : <button disabled={data.status ? true : false} onClick={() => handleGroupEdit(data)}><FaEdit /></button>}
+                                                {(props.adminData.role && props.adminData.role === 'pladmin') || props.adminData.role === 'superadmin' ? <button onClick={() => handleDeleteGroup(data._id)}><MdDeleteForever /></button> : null}
                                             </td>
                                         </tr>
                                     )
-                                }):(
+                                }) : (
                                     <tr>
+                                        {isLoading ? <p>Fetching Data <Loader /></p> : null}
                                         <td>No</td>
                                         <td>Data</td>
                                         <td>Avaialable</td>

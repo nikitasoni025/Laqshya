@@ -2,10 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useDownloadExcel } from 'react-export-table-to-excel';
 import { Link } from 'react-router-dom';
 import "./participants.scss";
-import { MdDeleteForever, MdGroupAdd } from "react-icons/md";
+import { MdDeleteForever, MdLoop} from "react-icons/md";
 import { FaEdit, FaSave, FaSearch } from 'react-icons/fa';
+import { FcRefresh } from 'react-icons/fc';
 import { TbArrowWaveLeftDown, TbArrowWaveRightUp } from 'react-icons/tb';
 import { API } from '../../../Services/Api';
+import Loader from '../../../Components/Loader/Loader';
 
 
 
@@ -14,11 +16,11 @@ const initialfiltervalue = {
     events: ""
 }
 
-const initialUserUpdateData={
-    fullname:"",
-    email:"",
-    phonenumber:"",
-    status:false
+const initialUserUpdateData = {
+    fullname: "",
+    email: "",
+    phonenumber: "",
+    status: false
 }
 
 
@@ -33,7 +35,8 @@ const Participants = (props) => {
     const [toggle, setToggle] = useState(true);
     const [itemPerPage, setItemPerPage] = useState(5);
     const [editingid, setEditingId] = useState(null);
-    const [updateData,setUpdateData]=useState(initialUserUpdateData)
+    const [updateData, setUpdateData] = useState(initialUserUpdateData);
+    const [isLoading, setIsLoading] = useState(false);
     const tableRef = useRef(null);
 
 
@@ -41,10 +44,16 @@ const Participants = (props) => {
 
     useEffect(() => {
         const fetchData = async () => {
+            setIsLoading(true);
             const response = await API.getParticipantsWithLimit({ limit: itemPerPage, page: currentPage, status: status });
             if (response.isSuccess) {
                 setTableData(response.data.data);
                 setPageNumbers(Math.ceil(response.data.totalCount / itemPerPage));
+                setIsLoading(false);
+
+            }else{
+            setIsLoading(false);
+
             }
         }
         fetchData();
@@ -113,10 +122,10 @@ const Participants = (props) => {
     const handleUserEdit = async (rowdata) => {
         setEditingId(rowdata._id);
         setUpdateData({
-            fullname:rowdata.fullname,
-            email:rowdata.email,
-            phonenumber:rowdata.phonenumber,
-            status:rowdata.status
+            fullname: rowdata.fullname,
+            email: rowdata.email,
+            phonenumber: rowdata.phonenumber,
+            status: rowdata.status
         });
     }
 
@@ -131,11 +140,11 @@ const Participants = (props) => {
         })
     }
 
-    const handleUpdateUser=async(id,updateData)=>{
+    const handleUpdateUser = async (id, updateData) => {
 
-        const response=await API.updateUsers({id,updateData});
+        const response = await API.updateUsers({ id, updateData });
 
-        if(response.isSuccess){
+        if (response.isSuccess) {
             setToggle(!toggle);
             setEditingId(null)
         }
@@ -147,7 +156,7 @@ const Participants = (props) => {
 
                 <div className="participants-heading">
                     <h1>Participants</h1>
-                    <Link className='adm-main-btn'>Add&nbsp;<MdGroupAdd /></Link>
+                    <button onClick={()=>setToggle(!toggle)} className='adm-main-btn'>Refresh&nbsp;<MdLoop/></button>
                 </div>
 
                 {/*FILTER GROUP */}
@@ -182,7 +191,7 @@ const Participants = (props) => {
                                     <option value={40} >40</option>
                                     <option value={80} >80</option>
                                     <option value={100} >100</option>
-                                    {(props.adminData.role && props.adminData.role === 'pladmin') || props.adminData.role==='superadmin' ? <option value={2000}>All</option>:null }
+                                    {(props.adminData.role && props.adminData.role === 'pladmin') || props.adminData.role === 'superadmin' ? <option value={2000}>All</option> : null}
 
                                 </select>
                             </div>
@@ -202,7 +211,7 @@ const Participants = (props) => {
                 {/* DATABASE TABLE */}
 
                 <div className="participants-table">
-                    <div className="participants-table-wrap" style={{overflowX:'scroll'}}>
+                    <div className="participants-table-wrap" style={{ overflowX: 'scroll' }}>
                         <table ref={tableRef}>
                             <thead>
                                 <tr>
@@ -218,7 +227,7 @@ const Participants = (props) => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {filteredData.map((data, indx) => {
+                                {filteredData && filteredData.length > 0 ? filteredData.map((data, indx) => {
 
                                     return (
                                         <tr key={indx}>
@@ -242,7 +251,7 @@ const Participants = (props) => {
                                                     {data.email}
                                                 </td>
                                             )}
-                                             {editingid === data._id ? (
+                                            {editingid === data._id ? (
                                                 <td>
                                                     <input onChange={handleInputChange} name='phonenumber' type="text" value={updateData.phonenumber} />
                                                 </td>
@@ -251,7 +260,7 @@ const Participants = (props) => {
                                                     {data.phonenumber}
                                                 </td>
                                             )}
-                                            
+
                                             <td>{data.institution}</td>
                                             <td>{data.standard}</td>
                                             {editingid === data._id ? (
@@ -268,13 +277,13 @@ const Participants = (props) => {
                                             )}
                                             <td className='action-btn'>
                                                 {/* <input type="checkbox" /> */}
-                                                {editingid===data._id ? <button onClick={() => handleUpdateUser(data._id,updateData)}><FaSave /></button>: <button onClick={() => handleUserEdit(data)}><FaEdit /></button>}
-                                                {(props.adminData.role && props.adminData.role ==='pladmin') || props.adminData.role==='superadmin' ? <button onClick={() => handleUserDelete(data._id)}><MdDeleteForever /></button>:null}
-                                               
+                                                {editingid === data._id ? <button onClick={() => handleUpdateUser(data._id, updateData)}><FaSave /></button> : <button onClick={() => handleUserEdit(data)}><FaEdit /></button>}
+                                                {(props.adminData.role && props.adminData.role === 'pladmin') || props.adminData.role === 'superadmin' ? <button onClick={() => handleUserDelete(data._id)}><MdDeleteForever /></button> : null}
+
                                             </td>
                                         </tr>
                                     )
-                                })}
+                                }) : <tr>{isLoading ? <p>Fetching Data <Loader /></p> : null}</tr>}
                             </tbody>
                         </table>
                     </div>

@@ -29,7 +29,6 @@ export const API_NOTIFICATION_MESSAGES = {
 // SAMPLE REQUEST
 // NEED SERVICE CALL: {url:'/',method:'POST/GET/UPDATE/DELETE',params:true/false,query:true/false}
 export const SERVICE_URLS = {
-    adminSignup: { url: '/signup', method: 'POST' },
     registerParticipants: { url: "/register", method: "POST" },
     userSignin: { url: "/signin", method: "POST" },
     getAllParticipants: { url: '/participants', method: "GET", params: true },
@@ -42,22 +41,34 @@ export const SERVICE_URLS = {
     getAllIndividuals: { url: "/individuals", method: "GET", params: true },
 
     // Admin Routes
+    adminSignup: { url: '/admin/signup', method: 'POST' },
     adminSignin:{url:'/admin/login',method:'POST'},
     adminCheckSession:{url:'/admin/check-session',method:'GET'},
     adminLogout:{url:'/admin/logout',method:'POST'},
     getLoggedInAdmin:{url:'/admin/get',method:'GET',params:true},
     getAllAdmins:{url:'/admin/all',method:'GET'},
     updateAdmin:{url:'/admin/update',method:'PUT',params:true},
+    deleteAdmin:{url:'/admin/delete',method:'DELETE',query:true},
 
 
 
     // DELETE 
     deleteUser:{url:'/user/delete',method:"DELETE" ,query:true},
     deleteGroup:{url:'/group/delete',method:"DELETE" ,query:true},
+    // DELETE AWS
+    deleteImageFromAWS:{url:'/imageaws/delete',method:'DELETE',query:true},
 
     // UPDATE
     updateUsers:{url:'/user/update',method:"PUT",params:true},
     updateIndividuals:{url:'/indi/update',method:"PUT",params:true},
-    updateGroup:{url:'/group/update',method:"PUT",params:true}
+    updateGroup:{url:'/group/update',method:"PUT",params:true},
 
+    // UPLOAD
+    uploadImg:{url:'/image/upload',method:'POST'},
+
+    // POST
+    addPost:{url:'/addpost',method:'POST'},
+    getPostWithLimit:{url:'/posts',method:'GET',params:true},
+    deletePost:{url:'/post/delete',method:'DELETE',query:true},
+    getOnePost:{url:'/mypost',method:'GET',query:true}
 }

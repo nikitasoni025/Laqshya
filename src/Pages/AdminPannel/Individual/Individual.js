@@ -2,10 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useDownloadExcel } from 'react-export-table-to-excel';
 import { Link } from 'react-router-dom';
 import "./individual.scss";
-import { MdDeleteForever, MdGroupAdd } from "react-icons/md";
+import { MdDeleteForever, MdGroupAdd, MdLoop } from "react-icons/md";
 import { FaCheckDouble, FaEdit, FaSave, FaSearch, FaTimes } from 'react-icons/fa';
 import { TbArrowWaveLeftDown, TbArrowWaveRightUp } from 'react-icons/tb';
 import { API } from '../../../Services/Api';
+import Loader from '../../../Components/Loader/Loader';
 
 
 const initialfiltervalue = {
@@ -13,9 +14,9 @@ const initialfiltervalue = {
     events: ""
 }
 
-const initialIndiUpdateData={
-    status:false,
-    selected:false
+const initialIndiUpdateData = {
+    status: false,
+    selected: false
 }
 
 const Individual = (props) => {
@@ -23,27 +24,34 @@ const Individual = (props) => {
     const [filteredTerm, setFilteredTerm] = useState(initialfiltervalue);
     const [sortBy, setSortBy] = useState("fullname");
     const [status, setStatus] = useState(false);
-    const [searchSelected,setSearchSelected] = useState(false);
+    const [searchSelected, setSearchSelected] = useState(false);
     const [pageNumbers, setPageNumbers] = useState(0);
     const [sortOrder, setSortOrder] = useState("asc");
     let [currentPage, setCurrentPage] = useState(1);
     const [toggle, setToggle] = useState(true);
     const [itemPerPage, setItemPerPage] = useState(5);
     const [editingid, setEditingId] = useState(null);
-    const [updateData,setUpdateData]=useState(initialIndiUpdateData)
+    const [updateData, setUpdateData] = useState(initialIndiUpdateData);
+    const [isLoading, setIsLoading] = useState(false);
     const tableRef = useRef(null);
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await API.getAllIndividuals({ limit: itemPerPage, page: currentPage, status: status ,selected:searchSelected});
+            setIsLoading(true);
+            const response = await API.getAllIndividuals({ limit: itemPerPage, page: currentPage, status: status, selected: searchSelected });
             if (response.isSuccess) {
                 console.log(response);
                 setTableData(response.data.data || []);
                 setPageNumbers(Math.ceil(response.data.totalCount / itemPerPage));
+                setIsLoading(false);
+
+            } else {
+                setIsLoading(true);
+
             }
         }
         fetchData();
-    }, [itemPerPage, currentPage, status, toggle,searchSelected]);
+    }, [itemPerPage, currentPage, status, toggle, searchSelected]);
 
 
 
@@ -96,7 +104,7 @@ const Individual = (props) => {
     }
     );
 
-   
+
 
     const handleDeleteIndividual = async (id) => {
         if (window.confirm("Do You Really Want To Delete This Registartion") === true) {
@@ -111,8 +119,8 @@ const Individual = (props) => {
     const handleIndividualEdit = async (rowdata) => {
         setEditingId(rowdata._id);
         setUpdateData({
-            status:rowdata.status,
-            selected:rowdata.selected
+            status: rowdata.status,
+            selected: rowdata.selected
         });
     }
 
@@ -127,11 +135,11 @@ const Individual = (props) => {
         })
     }
 
-    const handleIndividualUpdate=async(id,updateData)=>{
+    const handleIndividualUpdate = async (id, updateData) => {
 
-        const response=await API.updateIndividuals({id,updateData});
+        const response = await API.updateIndividuals({ id, updateData });
 
-        if(response.isSuccess){
+        if (response.isSuccess) {
             setToggle(!toggle);
             setEditingId(null)
         }
@@ -146,7 +154,7 @@ const Individual = (props) => {
             <div className="individual-wrap">
                 <div className="individual-heading">
                     <h1>Individual Participant</h1>
-                    <Link className='adm-main-btn'>Add&nbsp;<MdGroupAdd /></Link>
+                    <button onClick={()=>setToggle(!toggle)} className='adm-main-btn'>Refresh&nbsp;<MdLoop/></button>
                 </div>
 
                 {/*FILTER GROUP */}
@@ -204,13 +212,15 @@ const Individual = (props) => {
                                     <option value="Lets Play With Bond">Lets Play With Bond</option>
                                     <option value="Bottle jet">Bottle Jet</option>
                                     <option value="Code Crunch">Code Crunch</option>
-                                    <option value="Tech farmactic">Tech Farmactic</option>
+                                    <option value="Tech farmacia">Tech Farmactic</option>
                                     <option value="Make Your Move">Make Your Move</option>
-                                    <option value="One Minute Show">One Minute Show</option>
+                                    <option value="AD Mad Show">One Minute Show</option>
                                     <option value="Quiz Masters">Quiz Masters</option>
                                     <option value="Treasure hunt">Treasure hunt</option>
-                                    <option value="pyi">Pitch Your Idea</option>
-                                    <option value="work">Workshop</option>
+                                    <option value="Digital Marketing">Pitch Your Idea</option>
+                                    <option value="Cyber Security">Workshop</option>
+                                    <option value="Carrer Counselling">Workshop</option>
+                                    <option value="Drug Awareness">Workshop</option>
                                 </select>
                             </div>
                         </div>
@@ -223,7 +233,7 @@ const Individual = (props) => {
                                     <option value={40} >40</option>
                                     <option value={80} >80</option>
                                     <option value={100} >100</option>
-                                    {(props.adminData.role && props.adminData.role === 'pladmin') || props.adminData.role==='superadmin' ? <option value={2000}>All</option>:null }
+                                    {(props.adminData.role && props.adminData.role === 'pladmin') || props.adminData.role === 'superadmin' ? <option value={2000}>All</option> : null}
 
                                 </select>
                             </div>
@@ -243,7 +253,7 @@ const Individual = (props) => {
                 {/* DATABASE TABLE */}
 
                 <div className="individual-table">
-                        <p className='error-mark' >The Select button will be Avaiable Only for once Please Select the Participants After Full Analysis ,There Is No Turning Back Feature</p>
+                    <p className='error-mark' >The Select button will be Avaiable Only for once Please Select the Participants After Full Analysis ,There Is No Turning Back Feature</p>
                     <div className="group-table-wrap">
                         <table ref={tableRef} >
                             <thead>
@@ -262,10 +272,10 @@ const Individual = (props) => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {filteredData && filteredData.length>0 ? filteredData.map((data, indx) => {
+                                {filteredData && filteredData.length > 0 ? filteredData.map((data, indx) => {
 
                                     return (
-                                        <tr key={indx} style={{background:data.selected ? "#5eff89" : ""}}>
+                                        <tr key={indx} style={{ background: data.selected ? "#5eff89" : "" }}>
                                             <td>{indx}</td>
                                             <td>{data.uid}</td>
                                             <td>{data.fullname}</td>
@@ -286,16 +296,17 @@ const Individual = (props) => {
                                                     {data.status ? "Paid" : "Unpaid"}
                                                 </td>
                                             )}
-                                            <td>{data.selected ? <p>Selected &nbsp;&nbsp;<FaCheckDouble/></p> :<p>Not Selected&nbsp;&nbsp;<FaTimes/></p>}</td>
+                                            <td>{data.selected ? <p>Selected &nbsp;&nbsp;<FaCheckDouble /></p> : <p>Not Selected&nbsp;&nbsp;<FaTimes /></p>}</td>
                                             <td className='action-btn'>
-                                                <button disabled={data.selected ? true:false} onClick={() => handleIndividualUpdate(data._id,{selected:!data.selected})}>{data.selected ? "Selected" : "Select"}</button>
-                                                {editingid === data._id ? <button onClick={() => handleIndividualUpdate(data._id,updateData)}><FaSave /></button> : <button disabled={data.status ? true :false} onClick={() => handleIndividualEdit(data)}><FaEdit /></button>}
-                                                {(props.adminData.role && props.adminData.role ==='pladmin') || props.adminData.role==='superadmin' ? <button onClick={() => handleDeleteIndividual(data._id)}><MdDeleteForever /></button>:null}
+                                                <button disabled={data.selected ? props.adminData.role==='superadmin' ? false : true : false} onClick={() => handleIndividualUpdate(data._id, { selected: !data.selected })}>{data.selected ? "Selected" : "Select"}</button>
+                                                {editingid === data._id ? <button onClick={() => handleIndividualUpdate(data._id, updateData)}><FaSave /></button> : <button disabled={data.status ? true : false} onClick={() => handleIndividualEdit(data)}><FaEdit /></button>}
+                                                {(props.adminData.role && props.adminData.role === 'pladmin') || props.adminData.role === 'superadmin' ? <button onClick={() => handleDeleteIndividual(data._id)}><MdDeleteForever /></button> : null}
                                             </td>
                                         </tr>
                                     )
-                                }):(
+                                }) : (
                                     <tr>
+                                        {isLoading ? <p>Fetching Data... <Loader/></p> : null}
                                         <td>No</td>
                                         <td>Data</td>
                                         <td>Availabe</td>

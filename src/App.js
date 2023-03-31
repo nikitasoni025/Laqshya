@@ -74,7 +74,7 @@ function App() {
             <Route path='/signin' element={<Loginpage setIsUserAuthenticated={setIsUserAuthenticated} windowSize={windowSize} />} />
             <Route path='/myevents' element={<MyEventPage setIsUserAuthenticated={setIsUserAuthenticated} windowSize={windowSize} />} />
             <Route path='/posts' element={<PostPage  windowSize={windowSize} />} />
-            <Route path='/mypost' element={<MyPost  windowSize={windowSize} />} />
+            <Route path='/mypost/:id' element={<MyPost  windowSize={windowSize} />} />
 
             {/* ADMIN ROUTE START HERE */}
             <Route path='/admin' element={< Adminlogin setIsAdminAuthenticated={setIsAdminAuthenticated} windowSize={windowSize} />} />
