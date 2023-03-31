@@ -104,7 +104,7 @@ const FormModal = (props) => {
             setGroupedClicked('S1');
             setShowSuccess(true);
             setTimeout(() => {setShowSuccess(false);props.setOpenFormModal(false)}, 4000);
-            let deeplink=`https://upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`;
+            let deeplink=`upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`;
             window.location.href=deeplink;
         }else{
             setIsLoading(false)
@@ -126,7 +126,7 @@ const FormModal = (props) => {
             setGroupedClicked('S1');
             setShowSuccess(true);
             setTimeout(() => setShowSuccess(false), 4000);
-            let deeplink=`https://upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`;
+            let deeplink=`upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`;
             window.location.href=deeplink;
         } else {
             setIsLoading(false);
