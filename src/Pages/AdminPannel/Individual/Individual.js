@@ -108,7 +108,7 @@ const Individual = (props) => {
 
     const handleDeleteIndividual = async (id) => {
         if (window.confirm("Do You Really Want To Delete This Registartion") === true) {
-            const response = await API.deleteGroup({ id });
+            const response = await API.deleteIndividual({ id });
             if (response.isSuccess) {
                 setToggle(!toggle);
             }

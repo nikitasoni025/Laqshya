@@ -55,6 +55,7 @@ export const SERVICE_URLS = {
     // DELETE 
     deleteUser:{url:'/user/delete',method:"DELETE" ,query:true},
     deleteGroup:{url:'/group/delete',method:"DELETE" ,query:true},
+    deleteIndividual:{url:'/indi/delete',method:'DELETE',query:true},
     // DELETE AWS
     deleteImageFromAWS:{url:'/imageaws/delete',method:'DELETE',query:true},
 
