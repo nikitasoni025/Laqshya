@@ -104,7 +104,7 @@ const FormModal = (props) => {
             setGroupedClicked('S1');
             setShowSuccess(true);
             setTimeout(() => {setShowSuccess(false);props.setOpenFormModal(false)}, 4000);
-            navigate(`upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`);
+            window.location.href=`https://upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`
         }else{
             setIsLoading(false)
             setShowError(true);
@@ -125,8 +125,7 @@ const FormModal = (props) => {
             setGroupedClicked('S1');
             setShowSuccess(true);
             setTimeout(() => setShowSuccess(false), 4000);
-            navigate(`upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`);
-
+            window.location.href=`https://upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`
         } else {
             setIsLoading(false);
             setShowError(true);
