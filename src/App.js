@@ -79,9 +79,7 @@ function App() {
             {/* ADMIN ROUTE START HERE */}
             <Route path='/admin' element={< Adminlogin setIsAdminAuthenticated={setIsAdminAuthenticated} windowSize={windowSize} />} />
             <Route path='/admin/dashboard/:dashid' element={< Dashboard setIsAdminAuthenticated={setIsAdminAuthenticated} windowSize={windowSize} />} />
-
-
-
+            <Route path='*' element={<Homepage isUserAuthenticated={isUserAuthenticated} windowSize={windowSize}/>} />
           </Routes>
         </div>
       </Router>
