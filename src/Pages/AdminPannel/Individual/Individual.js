@@ -217,10 +217,10 @@ const Individual = (props) => {
                                     <option value="AD Mad Show">One Minute Show</option>
                                     <option value="Quiz Masters">Quiz Masters</option>
                                     <option value="Treasure hunt">Treasure hunt</option>
-                                    <option value="Digital Marketing">Pitch Your Idea</option>
-                                    <option value="Cyber Security">Workshop</option>
-                                    <option value="Carrer Counselling">Workshop</option>
-                                    <option value="Drug Awareness">Workshop</option>
+                                    <option value="Digital Marketing">Digital Marketing</option>
+                                    <option value="Cyber Security">Cyber Security</option>
+                                    <option value="Carrer Counselling">Carrer Counselling</option>
+                                    <option value="Drug Awareness">Durg Awareness</option>
                                 </select>
                             </div>
                         </div>

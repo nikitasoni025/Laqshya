@@ -58,6 +58,21 @@ const Dashboard = (props) => {
 
     return (
         <div className='dashboard'>
+            {/* bottom navbar */}
+            <div className="bottom-navbar">
+                <div className="bottom-nav-wrap">
+
+                    <ul className="bottom-menu">
+                        <li title='Overview'><Link to="/admin/dashboard/overview">{isSideBarOpened ? "OverView" : <IoAnalyticsOutline />}</Link></li>
+                        <li title='Participants'><Link to="/admin/dashboard/participants">{isSideBarOpened ? "Participants" : <RiUserStarLine />}</Link></li>
+                        <li title='Individuals'><Link to="/admin/dashboard/individuals">{isSideBarOpened ? "Individuals" : <RiUser6Line />}</Link></li>
+                        <li title='Groups'><Link to="/admin/dashboard/groups">{isSideBarOpened ? "Groups" : <FaUsers />}</Link></li>
+                        <li title='Posts'><Link to="/admin/dashboard/showposts">{isSideBarOpened ? "Posts" : <FaImage />}</Link></li>
+                        {adminData.role && adminData.role === 'superadmin' ? (<li title='Posts'><Link to="/admin/dashboard/admins">{isSideBarOpened ? "Admins" : <FaShieldAlt />}</Link></li>) : null}
+                    </ul>
+
+                </div>
+            </div>
             <div className="dashboard-wrap">
 
                 {/* CONTENT SECTION */}
@@ -111,7 +126,7 @@ const Dashboard = (props) => {
                                                 : dashid === "admins" && adminData.role === "superadmin" ? (<Admins />)
                                                     : dashid === 'createpost' ? (<Createpost adminData={adminData} />)
                                                         : dashid === 'showposts' ? (<Postsshow adminData={adminData} />)
-                                                            : dashid === 'createadmin' && adminData.role === "superadmin" ? (<Createadmin adminData={adminData}/>) : null}
+                                                            : dashid === 'createadmin' && adminData.role === "superadmin" ? (<Createadmin adminData={adminData} />) : null}
                                 </div>
                             </div>
                         </div>
@@ -119,6 +134,7 @@ const Dashboard = (props) => {
                 </div>
             </div>
         </div>
+
     )
 }
 

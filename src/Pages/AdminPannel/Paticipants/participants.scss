@@ -110,7 +110,7 @@ $light-green: #06603b;
 
             .participants-table-wrap {
                 width: 100%;
-                height: 50vh;
+                max-height: 50vh;
                 overflow-y: auto;
                 overflow-x: scroll;
 
@@ -133,14 +133,7 @@ $light-green: #06603b;
                         tr {
                             th {
                                 text-align: left;
-                                padding: 10px;
-                                &:nth-last-child(1){
-                                    position: sticky;
-                                    top: 0;
-                                    right: 0;
-                                    background: #064f32;
-                                    z-index: 10;
-                                }
+                                padding: 10px;                               
                             }
                         }
                     }
@@ -236,4 +229,37 @@ $light-green: #06603b;
             }
         }
     }
+}
+
+@media screen and (max-width:991px) {
+    .participants{
+        .participants-wrap{
+            .participants-heading{
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                h1{
+                    font-size: 20px;
+                }
+            }
+            .filter-group{
+                .filter-group-wrap{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 15px;
+                    justify-content: flex-start;
+                }
+            }
+
+            .participants-table{
+                .participants-table-wrap{
+                    max-height: 50vh;
+                }
+            }
+           .table-config{
+            padding-bottom: 60px;
+           }
+        }
+    }
+    
 }
