@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./navbar.scss";
 import { CgUserlane } from "react-icons/cg";
-import { GrTechnology } from "react-icons/gr";
-import { FaAudible, FaBars, FaDiceSix, FaTimes, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
+import { FaBars, FaDiceSix, FaTimes, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
 import { Link } from 'react-router-dom';
 
 const Navbar = (props) => {
@@ -66,7 +65,7 @@ const Navbar = (props) => {
         </div>
         <div className="right-navbar">
           {isUserLogined ? (
-            <Link to={'/myevents'}><span>My Events<FaDiceSix/></span></Link>
+            <Link to={'/'}><span>My Events<FaDiceSix/></span></Link>
           ) : (
             <Link to={'/signin'}><span>Login<CgUserlane /></span></Link>
 
