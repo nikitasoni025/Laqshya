@@ -23,10 +23,10 @@ const initialEventData = {
 
 const Eventpage = (props) => {
 
-  const [isUserAuthenticated, setIsUserAuthenticated] = useState(true);
+  const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
   const [ourIndex, setOurIndex] = useState(0);
   const [isModalOpened, setIsModalOpened] = useState(false);
-  const [openFormModal, setOpenFormModal] = useState(true);
+  const [openFormModal, setOpenFormModal] = useState(false);
   const [eventNameFee, setEventNameFee] = useState(initialEventData);
   const navigate = useNavigate();
 
@@ -39,23 +39,23 @@ const Eventpage = (props) => {
     setIsModalOpened(true);
   }
 
-  // useEffect(() => {
-  //   if (checkTokenExpiration()) {
-  //     setIsUserAuthenticated(false);
-  //   } else {
-  //     setIsUserAuthenticated(true);
-  //   }
-  //   const timer = setInterval(() => {
-  //     if (checkTokenExpiration()) {
-  //       setIsUserAuthenticated(false);
-  //     } else {
-  //       setIsUserAuthenticated(true);
-  //     }
-  //   }, 5000);
+  useEffect(() => {
+    if (checkTokenExpiration()) {
+      setIsUserAuthenticated(false);
+    } else {
+      setIsUserAuthenticated(true);
+    }
+    const timer = setInterval(() => {
+      if (checkTokenExpiration()) {
+        setIsUserAuthenticated(false);
+      } else {
+        setIsUserAuthenticated(true);
+      }
+    }, 5000);
 
-  //   return () => clearInterval(timer);
+    return () => clearInterval(timer);
 
-  // }, [])
+  }, [])
 
   return (
     <div className='Eventpage'>
