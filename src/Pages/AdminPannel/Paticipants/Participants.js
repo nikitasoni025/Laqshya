@@ -221,7 +221,7 @@ const Participants = (props) => {
                                     <th>Email</th>
                                     <th>Number</th>
                                     <th>Institution</th>
-                                    <th>Standard</th>
+                                    <th>Stream</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -262,7 +262,7 @@ const Participants = (props) => {
                                             )}
 
                                             <td>{data.institution}</td>
-                                            <td>{data.standard}</td>
+                                            <td>{data.stream}</td>
                                             {editingid === data._id ? (
                                                 <td>
                                                     <select onChange={handleInputChange} value={updateData.status} name="status" id="">

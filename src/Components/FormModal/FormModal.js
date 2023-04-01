@@ -45,14 +45,14 @@ const FormModal = (props) => {
             const response = await API.getParticipantWithId({ id: userId });
             if (response.isSuccess) {
 
-                let { _id, fullname, email, phonenumber, institution, standard } = response.data;
+                let { _id, fullname, email, phonenumber, institution, stream } = response.data;
                 setIndiFormData({
                     id: userId || "CSIT",
                     fullname: fullname || "Anonymous",
                     email: email || "Anonymous@gmail.com",
                     phonenumber: phonenumber || "XXXXXXXXXX",
                     institution: institution || "Anonymous",
-                    standard: standard || "Anonymous",
+                    stream: stream || "Anonymous",
                     eventname: props.eventNameFee.eventname || "undifined",
                     eventid: props.eventNameFee.eventid,
                     registrationfee: props.eventNameFee.registrationfee || 0,
@@ -235,13 +235,12 @@ const FormModal = (props) => {
                         <div className="form-step-4">
                             <h1>Scan Or Click To Pay</h1>
                             <img src={props.eventNameFee.qrimage} alt="qrcode" width={300} />
-                            <hr />
+                            <hr width={'100%'}/>
                             <p className='note-mark'>Firstly Pay using either of the options, kindly provide the <span>Transaction Id to the event manager</span> for the comfirmation of the payment because after payment there is no refund options.</p>
 
                             <h3>Do you agree our terms & conditions <input type="checkbox" onClick={(e)=>{e.target.checked ? setTermsAgreed(true) : setTermsAgreed(false)}} /></h3>
                             <button onClick={handleUpiPay} disabled={termsAgreed ? false : true}><SiPaytm/> &nbsp; <SiPhonepe/> &nbsp; <SiGooglepay/></button>
-                            {/* <input onChange={handleTransactionInput} type="text" name='transactionid' placeholder='Transaction Id' />
-                            {s3FormType === "indi" ? <button onClick={() => handleIndiTransactionID(transactionid)}>{isLoading ? <Loader /> : "Pay"}</button> : s3FormType === "group" ? <button onClick={() => { handleGroupSubmit(groupFormData) }}>{isLoading ? <Loader /> : "Pay"}</button> : null} */}
+                    
                         </div>
                     ) : null}
                 </div>

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import "./navbar.scss";
 import { CgUserlane } from "react-icons/cg";
-import { FaBars, FaDiceSix, FaTimes, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
-import { Link } from 'react-router-dom';
+import { FaBars, FaDiceSix, FaSignOutAlt, FaTimes, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
+import { Link, useLocation } from 'react-router-dom';
+import { logoutUser } from '../../Utils/commonutil';
 
 const Navbar = (props) => {
   // MAKING STATE (states are nothing but its variable ; we can sture dunamic data to be stored)
@@ -11,17 +12,19 @@ const Navbar = (props) => {
   const [isSideBarOpened, setIsSideBarOpened] = useState(false);
   const [isUserLogined, setIsUserLogined] = useState(false);
 
+  const location=useLocation();
+
 
   useEffect(() => {
     // setAudioPlayed(true);
     // document.getElementById('ouraudio').play();
-    const isLogined = sessionStorage.getItem('isLogined');
+    const isLogined = localStorage.getItem('isLogined');
     if (isLogined) {
       setIsUserLogined(true);
     } else {
       setIsUserLogined(false);
     }
-  }, [])
+  }, [location])
 
 
 
@@ -65,7 +68,10 @@ const Navbar = (props) => {
         </div>
         <div className="right-navbar">
           {isUserLogined ? (
-            <Link to={'/'}><span>My Events<FaDiceSix/></span></Link>
+            <>
+            <Link to={'/myevents'}><span>My Events<FaDiceSix/></span></Link>
+            <button onClick={()=>logoutUser()}><FaSignOutAlt/></button>
+            </>
           ) : (
             <Link to={'/signin'}><span>Login<CgUserlane /></span></Link>
 

@@ -16,13 +16,15 @@ const Homepage = (props) => {
   useEffect(() => {
 
     let timer;
-    let isVisited = sessionStorage.getItem('visited');
-    if (!isVisited) {
+    let isVisited = localStorage.getItem('visited');
+    console.log(isVisited);
+    if (!isVisited || isVisited===undefined || isVisited===null || isVisited==='') {
+      console.log("hua kya ");
       setPreloading(true)
       window.addEventListener('load', () => {
         timer = setTimeout(() => {
           setPreloading(false);
-          sessionStorage.setItem('visited', 'true');
+          localStorage.setItem('visited', 'true');
         }, 3000)
       })
     } else {
@@ -68,7 +70,7 @@ const Homepage = (props) => {
       {/* Preloader */}
       <div className={preloading ? 'preloading' : 'preloading preloadingends'}>
         {props.windowSize[0] <= 991 ? (
-          <button onClick={() => { setPreloading(false); sessionStorage.setItem('visited', 'true') }}>Dive In</button>
+          <button onClick={() => { setPreloading(false); localStorage.setItem('visited', 'true') }}>Dive In</button>
         ) : null}
         <div className="prelogo">
           <h1 className={preloading ? '' : 'fade'}>LAQSHYA</h1>

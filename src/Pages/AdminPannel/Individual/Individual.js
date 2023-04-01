@@ -265,7 +265,7 @@ const Individual = (props) => {
                                     <th>Email</th>
                                     <th>Event</th>
                                     <th>Institution</th>
-                                    <th>Standard</th>
+                                    <th>Stream</th>
                                     <th>Registration Fee</th>
                                     <th>Status</th>
                                     <th>Selection Status</th>
@@ -283,7 +283,7 @@ const Individual = (props) => {
                                             <td>{data.email}</td>
                                             <td>{data.eventname}</td>
                                             <td>{data.institution}</td>
-                                            <td>{data.standard}</td>
+                                            <td>{data.stream}</td>
                                             <td>{data.registrationfee}</td>
                                             {editingid === data._id ? (
                                                 <td>

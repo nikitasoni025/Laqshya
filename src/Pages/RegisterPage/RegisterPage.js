@@ -22,7 +22,12 @@ const initialValue = {
 
 }
 
-const RegisterPage = () => {
+const initialLoginValues={
+    email:'',
+    password:''
+}
+
+const RegisterPage = (props) => {
     const [formData, setFormData] = useState(initialValue)
     const [isEyeOpened, setIsEyeOpened] = useState(false)
     const [isLoading, setIsLoading] = useState(false);
@@ -61,7 +66,29 @@ const RegisterPage = () => {
         console.log(formData);
 
 
-    }
+    };
+
+    const handleLogin = async (email,password) => {
+        setIsLoading(true);
+        let response = await API.userSignin({email:email,password:password});
+
+        if (response.isSuccess) {
+            setIsLoading(false);
+            const { id} = response.data.data;
+            setFormData(initialLoginValues);
+            sessionStorage.setItem('accessToken', `Bearer ${response.data.accessToken}`);
+            sessionStorage.setItem('refreshToken', `Bearer ${response.data.refreshToken}`);
+            sessionStorage.setItem('isLogined', id);
+            props.setIsUserAuthenticated(true);
+            navigate('/events');
+        } else {
+
+            setIsLoading(false);
+            setShowError(true);
+            setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
+            setTimeout(() => setShowError(false), 4000);
+        }
+    };
     
     const handleSubmit = async (e) => {
 
@@ -77,21 +104,17 @@ const RegisterPage = () => {
             setIsLoading(false);
             setShowSuccess(true);
             setTimeout(() => setShowSuccess(false), 4000);
+            handleLogin(formData.email,formData.confirmPassword);
         }
         else {
             setIsLoading(false);
             setShowError(true);            
             setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
-            setTimeout(() => setShowError(false), 4000);
-            
+            setTimeout(() => setShowError(false), 4000);   
         }
+    };
 
-
-
-
-
-
-    }
+   
 
     return (
         <div className='register-page'>
