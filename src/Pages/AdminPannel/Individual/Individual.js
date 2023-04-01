@@ -205,6 +205,7 @@ const Individual = (props) => {
                                     <option value="Futsal">Futsal</option>
                                     <option value="Angry Bird">Angry Bird</option>
                                     <option value="E-Sports">E-Sports</option>
+                                    <option value="One Minute Show">One Minute Show</option>
                                     <option value="Face Of Laqshya">Face Of Laqshya</option>
                                     <option value="Artifex Show">Artifex</option>
                                     <option value="Cinematics">Cinematics</option>

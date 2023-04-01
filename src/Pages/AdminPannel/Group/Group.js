@@ -200,6 +200,7 @@ const Group = (props) => {
                                     <option value="Robo Fire Fight">Robo Fire Fight</option>
                                     <option value="Drone Race">Drone Race</option>
                                     <option value="Cricket">Cricket</option>
+                                    <option value="One Minute Show">One Minute Show</option>
                                     <option value="Arm Wrestling">Arm Wrestling</option>
                                     <option value="Futsal">Futsal</option>
                                     <option value="Angry Bird">Angry Bird</option>

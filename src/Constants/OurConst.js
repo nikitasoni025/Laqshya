@@ -134,7 +134,7 @@ export const kaushalya = [
         img: "https://ik.imagekit.io/egjzyz51e/futsal.jpg?updatedAt=1679426537623",
         isGrouped: true,
         isIndividual:false,
-        maxParticipants: 3,
+        maxParticipants: 7,
         registrationfee: 50,
         eventid: 'FL',
         upiid:'ashutosh8684m@okhdfcbank',
@@ -152,7 +152,7 @@ export const kaushalya = [
         registrationfee: 50,
         eventid: 'AB',
         upiid:'9631492014@cnrb',
-        qrimage: ""
+        qrimage: "https://ik.imagekit.io/egjzyz51e/Angrybird.jpeg?updatedAt=1680341818856"
 
 
     },
@@ -162,7 +162,7 @@ export const kaushalya = [
         img: "https://ik.imagekit.io/egjzyz51e/free_fire.jpg?updatedAt=1679426417642",
         isGrouped: true,
         isIndividual:false,
-        maxParticipants: 2,
+        maxParticipants: 4,
         registrationfee: 50,
         eventid: 'ES',
         upiid:'mrinal.madaria@ibl',
@@ -170,12 +170,22 @@ export const kaushalya = [
 
 
     },
+    {
+        title: "One Minute show",
+        ourIndex: 12,
+        img: "https://ik.imagekit.io/egjzyz51e/WhatsApp_Image_2023-04-01_at_2.57.03_PM.jpeg?updatedAt=1680341456308",
+        isGrouped: false,
+        isIndividual:true,
+        maxParticipants: 1,       
+        eventid: 'OMS',      
+
+    },
 
 ]
 export const bouddhiki = [
     {
         title: "Face Of Laqshya",
-        ourIndex: 12,
+        ourIndex: 13,
         img: "https://ik.imagekit.io/egjzyz51e/face_of_laqshya.jpg?updatedAt=1679426649886",
         isGrouped: false,
         isIndividual:true,
@@ -187,7 +197,7 @@ export const bouddhiki = [
     },
     {
         title: "Artifex Show",
-        ourIndex: 13,
+        ourIndex: 14,
         img: "https://ik.imagekit.io/egjzyz51e/Artifex.jpg?updatedAt=1679426726630",
         isGrouped: true,
         isIndividual:false,
@@ -201,11 +211,11 @@ export const bouddhiki = [
     },
     {
         title: "Cinematics",
-        ourIndex: 14,
+        ourIndex: 15,
         img: "https://ik.imagekit.io/egjzyz51e/cinematics.jpg?updatedAt=1679426808809",
         isGrouped: true,
-        isIndividual:false,
-        maxParticipants: 3,
+        isIndividual:true,
+        maxParticipants: 5,
         registrationfee: 50,
         eventid: 'CS',
         upiid:'9631492014@cnrb',
@@ -219,7 +229,7 @@ export const bouddhiki = [
 export const parakram = [
     {
         title: "Bottle jet",
-        ourIndex: 15,
+        ourIndex: 16,
         img: "https://ik.imagekit.io/egjzyz51e/Bottle_jet.jpg?updatedAt=1679426923380",
         isGrouped: true,
         isIndividual:false,
@@ -233,10 +243,10 @@ export const parakram = [
     },
     {
         title: "Code Crunch",
-        ourIndex: 16,
+        ourIndex: 17,
         img: "https://ik.imagekit.io/egjzyz51e/dbugger.jpg?updatedAt=1679426846085",
         isGrouped: false,
-        isIndividual:false,
+        isIndividual:true,
         maxParticipants: 1,
         registrationfee: 50,
         eventid: 'CC',
@@ -247,11 +257,11 @@ export const parakram = [
     },
     {
         title: "Tech farmacia",
-        ourIndex: 17,
+        ourIndex: 18,
         img: "https://ik.imagekit.io/egjzyz51e/tech_farmacia.jpg?updatedAt=1679426773036",
         isGrouped: true,
-        isIndividual:false,
-        maxParticipants: 3,
+        isIndividual:true,
+        maxParticipants: 2,
         registrationfee: 50,
         eventid: 'TF',
         upiid:' 9907490901@axl',
@@ -262,15 +272,15 @@ export const parakram = [
 
     {
         title: "Lets Play With Bond",
-        ourIndex: 18,
+        ourIndex: 19,
         img: "https://ik.imagekit.io/egjzyz51e/lets_play_with_bond.jpg?updatedAt=1679426883200",
-        isGrouped: true,
-        isIndividual:false,
-        maxParticipants: 3,
+        isGrouped: false,
+        isIndividual:true,
+        maxParticipants: 1,
         registrationfee: 50,
         eventid: 'LPB',
         upiid:'9631492014@cnrb',
-        qrimage: ""
+        qrimage: "https://ik.imagekit.io/egjzyz51e/letsplaywithbond.jpeg?updatedAt=1680341010363"
 
 
     },
@@ -279,11 +289,11 @@ export const parakram = [
 export const natraja = [
     {
         title: "Make Your Move",
-        ourIndex: 19,
+        ourIndex: 20,
         img: "https://ik.imagekit.io/egjzyz51e/make_your_move.jpg?updatedAt=1679426606864",
         isGrouped: true,
-        isIndividual:false,
-        maxParticipants: 3,
+        isIndividual:true,
+        maxParticipants: 50,
         registrationfee: 50,
         eventid: 'MYM',
         upiid:'8815428116@paytm',
@@ -292,14 +302,14 @@ export const natraja = [
 
     },
     {
-        title: "AD Mad Show",
-        ourIndex: 20,
+        title: "Ad Mad Show",
+        ourIndex: 21,
         img: "https://ik.imagekit.io/egjzyz51e/ADD_MAD_SHOW__1_.jpg?updatedAt=1679569325428",
         isGrouped: true,
-        isIndividual:false,
-        maxParticipants: 3,
+        isIndividual:true,
+        maxParticipants: 2,
         registrationfee: 50,
-        eventid: 'TH',
+        eventid: 'AMS',
         upiid:'7974094222597@paytm',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Admadshow.png?updatedAt=1680285834176"
 
@@ -314,7 +324,7 @@ export const natraja = [
 export const Kautilya = [
     {
         title: "Quiz Masters",
-        ourIndex: 21,
+        ourIndex: 22,
         img: "https://ik.imagekit.io/egjzyz51e/quiz_masters.jpg?updatedAt=1679426958564",
         isGrouped: true,
         isIndividual:false,
@@ -328,11 +338,11 @@ export const Kautilya = [
     },
     {
         title: "Treasure hunt",
-        ourIndex: 22,
+        ourIndex: 23,
         img: "https://ik.imagekit.io/egjzyz51e/treasure_hunt.jpg?updatedAt=1679426495577",
         isGrouped: true,
         isIndividual:false,
-        maxParticipants: 3,
+        maxParticipants: 4,
         registrationfee: 50,
         eventid: 'TH',
         upiid:'88158282121@paytm',
@@ -347,7 +357,7 @@ export const workshop = [
 
     {
         title: "Digital Marketing",
-        ourIndex: 23,
+        ourIndex: 24,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped: false,
         isIndividual:true,
@@ -361,7 +371,7 @@ export const workshop = [
     },
     {
         title: "Cyber Security",
-        ourIndex: 24,
+        ourIndex: 25,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped: false,
         isIndividual:true,
@@ -375,7 +385,7 @@ export const workshop = [
     },
     {
         title: "Carrer Counselling",
-        ourIndex: 25,
+        ourIndex: 26,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped: false,
         isIndividual:true,
@@ -389,7 +399,7 @@ export const workshop = [
     },
     {
         title: "Drug Awareness",
-        ourIndex: 26,
+        ourIndex: 27,
         img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
         isGrouped: false,
         isIndividual:true,
