@@ -22,7 +22,7 @@ const FormModal = (props) => {
         status: false,
     }
 
-    const [groupedClicked, setGroupedClicked] = useState("S1");
+    const [groupedClicked, setGroupedClicked] = useState("S4");
     const [s3FormType, setS3FormType] = useState(null);
     const [paticipants, setParticipants] = useState([]);
     const [indiFormData, setIndiFormData] = useState({});
@@ -32,7 +32,7 @@ const FormModal = (props) => {
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [termsAgreed , setTermsAgreed] =useState(false);
-    const [finalFee, setFinalFee] = useState(null);
+    const [finalFee, setFinalFee] = useState(props.eventNameFee.registrationfee);
 
 
     const navigate = useNavigate();
@@ -95,6 +95,7 @@ const FormModal = (props) => {
         setGroupFormData({ ...groupFormData, members: paticipants });
         setS3FormType('group');
         setGroupedClicked('S3');
+        setFinalFee(props.eventNameFee.registrationfee * paticipants.length);
     }
 
     const handleGroupSubmit = async (groupformData) => {
@@ -105,11 +106,9 @@ const FormModal = (props) => {
 
         if (response.isSuccess) {
             setIsLoading(false);
-            setGroupedClicked('S1');
+            setGroupedClicked('S4');
             setShowSuccess(true);
             setTimeout(() => { setShowSuccess(false); props.setOpenFormModal(false) }, 4000);
-            let deeplink = `upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`;
-            window.location.href = deeplink;
         } else {
             setIsLoading(false)
             setShowError(true);
@@ -127,11 +126,9 @@ const FormModal = (props) => {
 
         if (response.isSuccess) {
             setIsLoading(false);
-            setGroupedClicked('S1');
+            setGroupedClicked('S4');
             setShowSuccess(true);
             setTimeout(() => setShowSuccess(false), 4000);
-            let deeplink = `upi://pay?pa=${props.eventNameFee.upiid}&am=${props.eventNameFee.registrationfee}&pn=${'Laqshya'}&cu=INR&tn=Paying`;
-            window.location.href = deeplink;
         } else {
             setIsLoading(false);
             setShowError(true);
@@ -142,11 +139,12 @@ const FormModal = (props) => {
     }
 
     const handleUpiPay = (e)=>{
-        let deepLink = `upi://pay?pa=${props.eventNameFee.upiid}&am=${finalFee}&pn=${'Laqshya'}&cu=INR&tn=Paying`;
-        // window.location.href = deeplink;
-
+        console.log("kaam kar nahi raha kya ber");
+        let deepLink = `upi://pay?pa=${props.eventNameFee.upiid}&am=${finalFee}&pn=${'Laqshya'}&cu=INR&tn=${props.eventNameFee.eventname}`;
+        console.log(deepLink);
+        window.location.href = deepLink;
     }
-    console.log(finalFee);
+
 
 
 
@@ -218,7 +216,7 @@ const FormModal = (props) => {
                         <div className="form-step-3">
                             <h1>Registering For</h1>
                             <h2>Event Name : {props.eventNameFee.eventname}</h2>
-                            <h2>Registration Fee :{s3FormType === 'indi' ?(props.eventNameFee.registrationfee)  : ()=>{setFinalFee((props.eventNameFee.registrationfee * paticipants.length)) ; return (props.eventNameFee.registrationfee * paticipants.length) }  }&nbsp;₹</h2>
+                            <h2>Registration Fee :{s3FormType === 'indi' ?(props.eventNameFee.registrationfee)  : (props.eventNameFee.registrationfee * paticipants.length)   }&nbsp;₹</h2>
                             {s3FormType === "indi" ? <button onClick={() => handleIndividalSubmit(indiFormData)}>{isLoading ? <Loader /> : "Pay"}</button> : s3FormType === "group" ? <button onClick={() => { handleGroupSubmit(groupFormData) }}>{isLoading ? <Loader /> : "Pay"}</button> : null}
 
                             <button onClick={() => setGroupedClicked("S1")}><FaChevronLeft />Back</button>
@@ -226,7 +224,7 @@ const FormModal = (props) => {
                     ) : groupedClicked === "S4" ? (
                         <div className="form-step-4">
                             <h1>Scan Or Click To Pay</h1>
-                            <img src={props.eventNameFee.qrimage} alt="qrcode" />
+                            <img src={props.eventNameFee.qrimage} alt="qrcode" width={300} />
                             <hr />
                             <p className='note-mark'>Firstly Pay using either of the options, kindly provide the <span>Transaction Id</span> in the below field for the comfirmation of the payment because after payment there is no refund options.</p>
                             <h3>Do you agree our terms & conditions <input type="checkbox" onClick={(e)=>{e.target.checked ? setTermsAgreed(true) : setTermsAgreed(false)}} /></h3>

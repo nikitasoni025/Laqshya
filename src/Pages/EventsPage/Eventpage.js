@@ -25,8 +25,8 @@ const Eventpage = (props) => {
 
   const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
   const [ourIndex, setOurIndex] = useState(0);
-  const [isModalOpened, setIsModalOpened] = useState(true);
-  const [openFormModal, setOpenFormModal] = useState(false);
+  const [isModalOpened, setIsModalOpened] = useState(false);
+  const [openFormModal, setOpenFormModal] = useState(true);
   const [eventNameFee, setEventNameFee] = useState(initialEventData);
   const navigate = useNavigate();
 
