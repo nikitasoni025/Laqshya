@@ -16,7 +16,7 @@ const initialValue = {
     "email": "",
     "phonenumber": "",
     "institution": "",
-    "standard": "",
+    "stream": "",
     "password": "",
     "confirmPassword": ""
 
@@ -147,7 +147,7 @@ const RegisterPage = () => {
                         <div className="row">
                             <div className="icon-input-wrap">
                                 <RiPhoneFill />
-                                <input onChange={handleInputChange} type="tel" value={formData.phonenumber} name='phonenumber' placeholder='Phone Number' />
+                                <input onChange={handleInputChange} type="tel" value={formData.phonenumber} name='phonenumber' placeholder='Contact' />
                             </div>
 
 
@@ -155,7 +155,7 @@ const RegisterPage = () => {
                         <div className="row">
                             <div className="icon-input-wrap">
                                 <FaSchool />
-                                <input onChange={handleInputChange} type="text" value={formData.institution} name='institution' placeholder='Institution' />
+                                <input onChange={handleInputChange} type="text" value={formData.institution} name='institution' placeholder='Institution/Organization' />
                             </div>
 
 
@@ -163,10 +163,8 @@ const RegisterPage = () => {
                         <div className="row">
                             <div className="icon-input-wrap">
                                 <IoIosSchool />
-                                <input onChange={handleInputChange} type="text" value={formData.standard} name='standard' placeholder='Standard' />
+                                <input onChange={handleInputChange} type="text" value={formData.stream} name='stream' placeholder='Stream(Eng,Pharma,Science,Others)' />
                             </div>
-
-
                         </div>
                         <div className="row">
                             <div className="password-wrap">
