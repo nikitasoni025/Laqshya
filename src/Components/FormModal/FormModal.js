@@ -74,7 +74,6 @@ const FormModal = (props) => {
         if (!userexist && paticipants.length <= maxParticipants) {
             setParticipants([...paticipants, paticipant]);
             setGroupFormData({ ...groupFormData, members: paticipants });
-            console.log("participants", paticipants);
         } else {
             setShowError(true);
             setErrorMessage("Participant Limit Reached");
