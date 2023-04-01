@@ -139,9 +139,7 @@ const FormModal = (props) => {
     }
 
     const handleUpiPay = (e)=>{
-        console.log("kaam kar nahi raha kya ber");
         let deepLink = `upi://pay?pa=${props.eventNameFee.upiid}&am=${finalFee}&pn=${'Laqshya'}&cu=INR&tn=${props.eventNameFee.eventname}`;
-        console.log(deepLink);
         window.location.href = deepLink;
     }
 
