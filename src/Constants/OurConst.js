@@ -49,7 +49,7 @@ export const Shauryas = [
         maxParticipants: 3,
         registrationfee: 50,
         eventid: 'RS',
-        upiid: 'samikshaprasad84@oksbi',
+        upiid: ' samikshaprasad84@oksbi',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Robosumo.jpg?updatedAt=1680287571150"
 
 
@@ -92,7 +92,7 @@ export const Shauryas = [
         maxParticipants: 3,
         registrationfee: 50,
         eventid: 'DR',
-        upiid:'9109088258@ibl',
+        upiid:' 9109088258@ibl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Dronerace.jpg?updatedAt=1680288006532"
 
 
@@ -123,7 +123,7 @@ export const kaushalya = [
         maxParticipants: 1,
         registrationfee: 50,
         eventid: 'AW',
-        upiid:'9329292861@ybl',
+        upiid:' 9329292861@ybl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Armwrestling.png?updatedAt=1680287230129"
 
 
@@ -264,7 +264,7 @@ export const parakram = [
         maxParticipants: 2,
         registrationfee: 50,
         eventid: 'TF',
-        upiid:'9907490901@axl',
+        upiid:' 9907490901@axl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Techfarmacia.jpg?updatedAt=1680287677208"
 
 
@@ -315,10 +315,6 @@ export const natraja = [
 
 
     },
-
-
-
-
 ]
 
 export const Kautilya = [
@@ -331,7 +327,7 @@ export const Kautilya = [
         maxParticipants: 2,
         registrationfee: 50,
         eventid: 'QM',
-        upiid:'6265231318@paytm',
+        upiid:' 6265231318@paytm',
         qrimage: "https://ik.imagekit.io/egjzyz51e/quizmaster.png?updatedAt=1680285991408"
 
 
