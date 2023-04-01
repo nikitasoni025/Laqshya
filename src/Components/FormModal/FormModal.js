@@ -22,7 +22,7 @@ const FormModal = (props) => {
         status: false,
     }
 
-    const [groupedClicked, setGroupedClicked] = useState("S4");
+    const [groupedClicked, setGroupedClicked] = useState("S1");
     const [s3FormType, setS3FormType] = useState(null);
     const [paticipants, setParticipants] = useState([]);
     const [indiFormData, setIndiFormData] = useState({});
@@ -108,7 +108,7 @@ const FormModal = (props) => {
             setIsLoading(false);
             setGroupedClicked('S4');
             setShowSuccess(true);
-            setTimeout(() => { setShowSuccess(false); props.setOpenFormModal(false) }, 4000);
+            setTimeout(() => { setShowSuccess(false) }, 4000);
         } else {
             setIsLoading(false)
             setShowError(true);
@@ -142,6 +142,7 @@ const FormModal = (props) => {
         let deepLink = `upi://pay?pa=${props.eventNameFee.upiid}&am=${finalFee}&pn=${'Laqshya'}&cu=INR&tn=${props.eventNameFee.eventname}`;
         window.location.href = deepLink;
         setGroupedClicked('S1');
+        props.setOpenFormModal(false);
     }
 
     const handleTransactionInput=(e)=>{
