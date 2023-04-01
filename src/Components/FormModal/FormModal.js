@@ -146,11 +146,13 @@ const FormModal = (props) => {
         // window.location.href = deeplink;
 
     }
+    console.log(finalFee);
 
 
 
 
     return (
+        
         <div className='formModal'>
             <div className="formModal-wrap">
                 {showSuccess && <Toaster message={`Registered Successfully For ${props.eventNameFee.eventname}`} type={"success"} />}
@@ -216,7 +218,7 @@ const FormModal = (props) => {
                         <div className="form-step-3">
                             <h1>Registering For</h1>
                             <h2>Event Name : {props.eventNameFee.eventname}</h2>
-                            <h2>Registration Fee :{s3FormType === 'indi' ?()=>{setFinalFee(props.eventNameFee.registrationfee) ; return props.eventNameFee.registrationfee}  : ()=>{setFinalFee((props.eventNameFee.registrationfee * paticipants.length)) ; return (props.eventNameFee.registrationfee * paticipants.length) }  }&nbsp;₹</h2>
+                            <h2>Registration Fee :{s3FormType === 'indi' ?(props.eventNameFee.registrationfee)  : ()=>{setFinalFee((props.eventNameFee.registrationfee * paticipants.length)) ; return (props.eventNameFee.registrationfee * paticipants.length) }  }&nbsp;₹</h2>
                             {s3FormType === "indi" ? <button onClick={() => handleIndividalSubmit(indiFormData)}>{isLoading ? <Loader /> : "Pay"}</button> : s3FormType === "group" ? <button onClick={() => { handleGroupSubmit(groupFormData) }}>{isLoading ? <Loader /> : "Pay"}</button> : null}
 
                             <button onClick={() => setGroupedClicked("S1")}><FaChevronLeft />Back</button>
