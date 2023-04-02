@@ -56,18 +56,16 @@ const Eventpage = (props) => {
   useEffect(() => {
     if (checkTokenExpiration()) {
       setIsUserAuthenticated(false);
-      navigate('/events');
     } else {
       setIsUserAuthenticated(true);
     }
     const timer = setInterval(() => {
       if (checkTokenExpiration()) {
         setIsUserAuthenticated(false);
-        navigate('/events');
       } else {
         setIsUserAuthenticated(true);
       }
-    }, 5000);
+    }, 100);
 
     return () => clearInterval(timer);
 

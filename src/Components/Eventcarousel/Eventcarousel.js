@@ -17,7 +17,7 @@ const Eventcarousel = (props) => {
 
     return (
         <div className='event-carousel'>
-            <OwlCarousel className='owl-theme' autoplayHoverPause autoplay autoplaySpeed={5000} loop={props.windowSize[0] <= 1025 ? true : props.events.length <= 4 ? false : true} smartSpeed={2500} margin={15} nav items={props.windowSize[0] <= 1025 ? 2 : 4}>
+            <OwlCarousel className='owl-theme' autoplayHoverPause autoplay autoplaySpeed={5000} loop={props.windowSize[0] <= 1025 ? true : props.events.length <= 4 ? false : true} margin={15} nav items={props.windowSize[0] <= 1025 ? 2 : 4}>
                 {props.events ? props.events.map((event, index) => {
                     return (
                         <div key={index} class='item myevent-card'>
