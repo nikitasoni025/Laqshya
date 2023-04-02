@@ -40,7 +40,6 @@ export const checkTokenExpiration = () => {
       return { params: body }
     } else if (value.query) {
       if (typeof body === 'object') {
-        console.log("fromutils",body._id);
         return { query: body.id }
       } else {
         return { query: body._id };

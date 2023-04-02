@@ -308,6 +308,7 @@
         
 
             .left-wrap {
+
                 height: 50px !important;
                 // border: 1px solid;
                 width: 100%;
@@ -338,15 +339,91 @@
             .right-wrap {
                 width: 100%;
                 height: 90vh;
-                margin-bottom: 100px;
+                // margin-bottom: 100px;
                 gap: 10px;
                 overflow-x: hidden;
                 overflow-y: auto;
                 // overflow: scroll;
 
                 form {
-                    margin: 60px;
-                    overflow: hidden;
+                    // margin: 60px;
+                    height: 100%;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    // gap: 15px;
+
+                    .row {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}
+
+
+@media screen and (max-height : 750px) {
+
+    .register-page {
+        height: 100vh;
+
+
+        .register-wrap {
+            width: 100%;
+            height: 100%;
+            justify-content: flex-start;
+            flex-direction: column;
+            background-position: -200px bottom;
+            padding: 0;
+        
+
+            .left-wrap {
+
+                height: 50px !important;
+                // border: 1px solid;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                padding: 15px 0;
+
+                .logo {
+                    padding: 15px 0px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    // height: 200px;
+
+                    img {
+                        width: 100px;
+                    }
+                }
+
+
+                .left-details {
+                    display: none;
+
+                }
+            }
+
+            .right-wrap {
+                width: 100%;
+                height: auto;
+                // margin-bottom: 100px;
+                gap: 30px;
+                overflow-x: hidden;
+                // overflow-y: auto;
+                // overflow: scroll;
+
+                form {
+                    // margin: 60px;
+                    height: auto;
+                    overflow-x: hidden;
+                    // overflow-y: auto;
+                    // gap: 15px;
 
                     .row {
                         width: 90%;

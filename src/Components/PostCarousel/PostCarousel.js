@@ -31,7 +31,6 @@ const PostCarousel = (props) => {
 
 
     <div className='post-carousel'>
-      {console.log(posts)}
       <Swiper
         effect={props.windowSize[0] <= 990 ? "creative" : "coverflow"}
         autoplay={{ delay: 3000, disableOnInteraction: false }}

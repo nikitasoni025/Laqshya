@@ -44,7 +44,6 @@ const Group = (props) => {
             setIsLoading(true);
             const response = await API.getAllGroups({ limit: itemPerPage, page: currentPage, status: status, selected: searchSelected });
             if (response.isSuccess) {
-                console.log(response);
                 setTableData(response.data.data);
                 setPageNumbers(Math.ceil(response.data.totalCount / itemPerPage));
                 setIsLoading(false);
@@ -64,7 +63,6 @@ const Group = (props) => {
     })
 
     const handleSearch = (e) => {
-        // console.log(filteredTerm);
         const { name, value } = e.target;
         if (name === 'status') {
             setStatus(value);
@@ -80,7 +78,6 @@ const Group = (props) => {
         })
     }
     const handleSort = (field) => {
-        console.log(field);
         if (field === sortBy) {
             setSortOrder(sortOrder === "asc" ? "desc" : "asc");
         }
@@ -93,7 +90,6 @@ const Group = (props) => {
 
     const searchedTerms = filteredTerm.searched.toLowerCase().split(' ');
     const filteredData = tableData.filter((item) => {
-        console.log(item.eventname.toLowerCase(), filteredTerm.events.toLowerCase());
         return searchedTerms.every((term) =>
             item.groupname.toLowerCase().includes(term) ||
             item.groupid.includes(term)

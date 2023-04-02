@@ -16,7 +16,6 @@ const Admins = () => {
         const fetchAdmins = async () => {
             setIsLoading(true);
             const response = await API.getAllAdmins();
-            console.log(response);
             if (response.isSuccess) {
                 setAdminsData(response.data);
                 setIsLoading(false);

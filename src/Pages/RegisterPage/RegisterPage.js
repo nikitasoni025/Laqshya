@@ -62,10 +62,6 @@ const RegisterPage = (props) => {
                 [name]: value
             }
         })
-
-        console.log(formData);
-
-
     };
 
     const handleLogin = async (email,password) => {
@@ -98,7 +94,6 @@ const RegisterPage = (props) => {
 
 
         let response = await API.registerParticipants(formData);
-        console.log(response);
         if (response.isSuccess) {
             setFormData(initialValue);
             setIsLoading(false);

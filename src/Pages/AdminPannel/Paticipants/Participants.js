@@ -70,7 +70,6 @@ const Participants = (props) => {
 
 
     const handleSearch = (e) => {
-        // console.log(filteredTerm);
         const { name, value } = e.target;
         if (name === 'status') {
             setStatus(value);
@@ -83,7 +82,6 @@ const Participants = (props) => {
         })
     }
     const handleSort = (field) => {
-        console.log(field);
         if (field === sortBy) {
             setSortOrder(sortOrder === "asc" ? "desc" : "asc");
         }

@@ -12,7 +12,7 @@ const Navbar = (props) => {
   const [isSideBarOpened, setIsSideBarOpened] = useState(false);
   const [isUserLogined, setIsUserLogined] = useState(false);
 
-  const location=useLocation();
+  const location = useLocation();
 
 
   useEffect(() => {
@@ -69,8 +69,8 @@ const Navbar = (props) => {
         <div className="right-navbar">
           {isUserLogined ? (
             <>
-            <Link to={'/myevents'}><span>My Events<FaDiceSix/></span></Link>
-            <button onClick={()=>logoutUser()}><FaSignOutAlt/></button>
+              <Link to={'/myevents'}><span>My Events<FaDiceSix /></span></Link>
+              <button onClick={() => logoutUser()}><FaSignOutAlt /></button>
             </>
           ) : (
             <Link to={'/signin'}><span>Login<CgUserlane /></span></Link>
@@ -94,12 +94,9 @@ const Navbar = (props) => {
           <li><Link className={isSideBarOpened ? "anim3" : ""} to={"/gallery"}>GALLERY</Link></li>
           <li><Link className={isSideBarOpened ? "anim4" : ""} to={"/contact"}>CONTACT</Link></li>
           <li><Link className={isSideBarOpened ? "anim4" : ""} to={"/posts"}>POSTS</Link></li>
-         
+
           {isUserLogined ? (
-            <>
-            <Link className={isSideBarOpened ? "anim5" : ""} to={'/myevents'}><span>My Events<FaDiceSix/></span></Link>
-            <button onClick={()=>logoutUser()}><FaSignOutAlt/></button>
-            </>
+            <li><Link className={isSideBarOpened ? "anim5" : ""} to={'/myevents'}>MY EVENTS</Link></li>
           ) : (
             <li><Link className={isSideBarOpened ? "anim5" : ""} to="/signin">LOGIN</Link></li>
 

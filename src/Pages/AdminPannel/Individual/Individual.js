@@ -40,7 +40,6 @@ const Individual = (props) => {
             setIsLoading(true);
             const response = await API.getAllIndividuals({ limit: itemPerPage, page: currentPage, status: status, selected: searchSelected });
             if (response.isSuccess) {
-                console.log(response);
                 setTableData(response.data.data || []);
                 setPageNumbers(Math.ceil(response.data.totalCount / itemPerPage));
                 setIsLoading(false);
@@ -64,7 +63,6 @@ const Individual = (props) => {
 
 
     const handleSearch = (e) => {
-        // console.log(filteredTerm);
         const { name, value } = e.target;
         if (name === 'status') {
             setStatus(value);
@@ -80,7 +78,6 @@ const Individual = (props) => {
         })
     }
     const handleSort = (field) => {
-        console.log(field);
         if (field === sortBy) {
             setSortOrder(sortOrder === "asc" ? "desc" : "asc");
         }
@@ -93,7 +90,6 @@ const Individual = (props) => {
 
     const searchedTerms = filteredTerm.searched.toLowerCase().split(' ');
     const filteredData = tableData.filter((item) => {
-        console.log(item.eventname.toLowerCase(), filteredTerm.events.toLowerCase());
         return searchedTerms.every((term) =>
             item.fullname.toLowerCase().includes(term) ||
             item.email.includes(term) ||

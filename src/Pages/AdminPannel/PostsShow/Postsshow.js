@@ -27,7 +27,6 @@ const Postsshow = (props) => {
             setIsLoading(true);
             const response = await API.getPostWithLimit({ limit: itemPerPage, page: currentPage, username: props.adminData.role === "superadmin" ? null : username });
             if (response.isSuccess) {
-                console.log(response);
                 setTableData(response.data.data || []);
                 setPageNumbers(Math.ceil(response.data.totalCount / itemPerPage));
                 setIsLoading(false);
