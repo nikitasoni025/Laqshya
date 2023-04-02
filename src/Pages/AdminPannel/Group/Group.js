@@ -264,6 +264,7 @@ const Group = (props) => {
                                     <th>Event</th>
                                     <th>Group Members</th>
                                     <th>Registration Fee</th>
+                                    <th>Transaction Id</th>
                                     <th>Status</th>
                                     <th>Selection Status</th>
                                     <th>Action</th>
@@ -288,6 +289,7 @@ const Group = (props) => {
                                             </td>
 
                                             <td>{data.members.length > 0 ? data.registrationfee * data.members.length : data.registrationfee}</td>
+                                            <td>{data.transactionid}</td>
                                             {editingid === data._id ? (
                                                 <td>
                                                     <select defaultValue={updateData.status} onChange={handleInputChange} name="status" id="">

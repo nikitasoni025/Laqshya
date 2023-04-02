@@ -29,6 +29,8 @@ const Eventpage = (props) => {
   const [isModalOpened, setIsModalOpened] = useState(false);
   const [openFormModal, setOpenFormModal] = useState(false);
   const [eventNameFee, setEventNameFee] = useState(initialEventData);
+  const [logoutTimer,setLogoutTimer]=useState(5);
+  const [logoutText,setLogoutText]=useState('Logout');
   const navigate = useNavigate();
 
 
@@ -38,6 +40,17 @@ const Eventpage = (props) => {
   const openModal = async (ourIndex) => {
     setOurIndex(ourIndex);
     setIsModalOpened(true);
+  }
+
+  const handleLogout=()=>{
+    setLogoutText(`You Will Be Logged Out In ${logoutTimer}s `)
+    let interval = setInterval(()=>{
+      setLogoutTimer(--logoutTimer);
+    }, 1000);
+    setTimeout(() => {
+      clearInterval(interval); // stop running the function after 5 seconds
+    }, 5000);
+    logoutUser();
   }
 
   useEffect(() => {
@@ -67,7 +80,7 @@ const Eventpage = (props) => {
       {openFormModal ? (
         <FormModal eventNameFee={eventNameFee} setOpenFormModal={setOpenFormModal} />
       ) : null}
-      {isUserAuthenticated ? <button className='clktosignout' onClick={()=>logoutUser()} >Logout &nbsp;<FaSignOutAlt/></button> : (
+      {isUserAuthenticated ? <button className='clktosignout' onClick={handleLogout} >{logoutText} &nbsp;<FaSignOutAlt/></button> : (
         <Link to={'/signin'} className='clktosignin'>Sign to enroll for the events</Link>
       )
       }

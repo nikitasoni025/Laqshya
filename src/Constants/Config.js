@@ -39,6 +39,7 @@ export const SERVICE_URLS = {
     getAllGroups: { url: "/groups", method: "GET", params: true },
     getParticipantsWithLimit: { url: "/paticipantsData", method: "GET", params: true },
     getAllIndividuals: { url: "/individuals", method: "GET", params: true },
+    getAllGroupsWithUser:{url:'/groups/user',method:'GET',params:true},
 
     // Admin Routes
     adminSignup: { url: '/admin/signup', method: 'POST' },

@@ -18,7 +18,7 @@ const Navbar = (props) => {
   useEffect(() => {
     // setAudioPlayed(true);
     // document.getElementById('ouraudio').play();
-    const isLogined = localStorage.getItem('isLogined');
+    const isLogined = sessionStorage.getItem('isLogined');
     if (isLogined) {
       setIsUserLogined(true);
     } else {
@@ -94,7 +94,16 @@ const Navbar = (props) => {
           <li><Link className={isSideBarOpened ? "anim3" : ""} to={"/gallery"}>GALLERY</Link></li>
           <li><Link className={isSideBarOpened ? "anim4" : ""} to={"/contact"}>CONTACT</Link></li>
           <li><Link className={isSideBarOpened ? "anim4" : ""} to={"/posts"}>POSTS</Link></li>
-          <li><Link className={isSideBarOpened ? "anim5" : ""} to="/signin">LOGIN</Link></li>
+         
+          {isUserLogined ? (
+            <>
+            <Link className={isSideBarOpened ? "anim5" : ""} to={'/myevents'}><span>My Events<FaDiceSix/></span></Link>
+            <button onClick={()=>logoutUser()}><FaSignOutAlt/></button>
+            </>
+          ) : (
+            <li><Link className={isSideBarOpened ? "anim5" : ""} to="/signin">LOGIN</Link></li>
+
+          )}
 
         </ul>
       </div >
