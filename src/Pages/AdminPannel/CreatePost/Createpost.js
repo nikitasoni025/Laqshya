@@ -65,9 +65,9 @@ const Createpost = (props) => {
           "Content-Type": 'multipart/form-data'
         }
       }).then(async (response) => {
-        setImageUrl(response.data.url);
+        setImageUrl(response.data.imageUrl);
         setFile(null);
-        postData.picture = await response.data.url;
+        postData.picture = await response.data.imageUrl;
         postData.username = await props.adminData.fullname;
         postData.imgkey=await response.data.key;
         let resp = await API.addPost(postData);

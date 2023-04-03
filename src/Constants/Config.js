@@ -59,7 +59,7 @@ export const SERVICE_URLS = {
     deleteGroup:{url:'/group/delete',method:"DELETE" ,query:true},
     deleteIndividual:{url:'/indi/delete',method:'DELETE',query:true},
     // DELETE AWS
-    deleteImageFromAWS:{url:'/imageaws/delete',method:'DELETE',query:true},
+    deleteImageFromIMK:{url:'/imageimk/delete',method:'DELETE',query:true},
 
     // UPDATE
     updateUsers:{url:'/user/update',method:"PUT",params:true},

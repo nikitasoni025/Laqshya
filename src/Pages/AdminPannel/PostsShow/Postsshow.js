@@ -67,7 +67,7 @@ const Postsshow = (props) => {
         if (window.confirm("Do You Really Want To Delete This Post") === true) {
             const response = await API.deletePost({ id });
             if (response.isSuccess) {
-                const resp = await API.deleteImageFromAWS({ id: key });
+                const resp = await API.deleteImageFromIMK({ id: key });
                 if (resp.isSuccess) {
                     setToggle(!toggle);
                 }
