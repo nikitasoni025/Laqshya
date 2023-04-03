@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import "./navbar.scss";
 import { CgUserlane } from "react-icons/cg";
-import { FaBars, FaDiceSix, FaTimes, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
-import { Link } from 'react-router-dom';
+import { FaBars, FaDiceSix, FaSignOutAlt, FaTimes, FaVolumeMute, FaVolumeUp } from "react-icons/fa"
+import { Link, useLocation } from 'react-router-dom';
+import { logoutUser } from '../../Utils/commonutil';
 
 const Navbar = (props) => {
   // MAKING STATE (states are nothing but its variable ; we can sture dunamic data to be stored)
@@ -10,6 +11,8 @@ const Navbar = (props) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSideBarOpened, setIsSideBarOpened] = useState(false);
   const [isUserLogined, setIsUserLogined] = useState(false);
+
+  const location = useLocation();
 
 
   useEffect(() => {
@@ -21,7 +24,7 @@ const Navbar = (props) => {
     } else {
       setIsUserLogined(false);
     }
-  }, [])
+  }, [location])
 
 
 
@@ -65,7 +68,10 @@ const Navbar = (props) => {
         </div>
         <div className="right-navbar">
           {isUserLogined ? (
-            <Link to={'/'}><span>My Events<FaDiceSix/></span></Link>
+            <>
+              <Link to={'/myevents'}><span>My Events<FaDiceSix /></span></Link>
+              <button onClick={() => logoutUser()}><FaSignOutAlt /></button>
+            </>
           ) : (
             <Link to={'/signin'}><span>Login<CgUserlane /></span></Link>
 
@@ -88,7 +94,13 @@ const Navbar = (props) => {
           <li><Link className={isSideBarOpened ? "anim3" : ""} to={"/gallery"}>GALLERY</Link></li>
           <li><Link className={isSideBarOpened ? "anim4" : ""} to={"/contact"}>CONTACT</Link></li>
           <li><Link className={isSideBarOpened ? "anim4" : ""} to={"/posts"}>POSTS</Link></li>
-          <li><Link className={isSideBarOpened ? "anim5" : ""} to="/signin">LOGIN</Link></li>
+
+          {isUserLogined ? (
+            <li><Link className={isSideBarOpened ? "anim5" : ""} to={'/myevents'}>MY EVENTS</Link></li>
+          ) : (
+            <li><Link className={isSideBarOpened ? "anim5" : ""} to="/signin">LOGIN</Link></li>
+
+          )}
 
         </ul>
       </div >

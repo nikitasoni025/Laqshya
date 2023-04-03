@@ -12,7 +12,6 @@ const MyPost = () => {
     useEffect(() => {
         const fetchPost = async () => {
             const response = await API.getOnePost({ id });
-            console.log(response);
 
             if (response.isSuccess) {
                 setOnePost(response.data);

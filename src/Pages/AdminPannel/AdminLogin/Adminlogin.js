@@ -56,7 +56,6 @@ const Adminlogin = (props) => {
             sessionStorage.setItem('adminname',name);
             sessionStorage.setItem('adminrole',role);
             props.setIsAdminAuthenticated(true);
-            console.log(response);
             navigate('/admin/dashboard/participants');
         } else {
 

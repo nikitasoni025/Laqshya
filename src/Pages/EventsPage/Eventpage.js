@@ -7,8 +7,9 @@ import Footer from '../../Components/Footer/Footer';
 import FormModal from '../../Components/FormModal/FormModal';
 import Navbar from '../../Components/Navbar/Navbar';
 import { bannerslide, bouddhiki, kaushalya, Kautilya, natraja, parakram, Shauryas, workshop } from '../../Constants/OurConst';
-import { checkTokenExpiration } from '../../Utils/commonutil';
+import { checkTokenExpiration, logoutUser } from '../../Utils/commonutil';
 import './Eventpage.scss';
+import { FaSignOutAlt } from 'react-icons/fa';
 
 const initialEventData = {
   eventname: "",
@@ -16,9 +17,9 @@ const initialEventData = {
   eventid: "",
   maxParticipants: "",
   isGrouped: true,
-  isIndividual:true,
-  upiid:'',
-  qrimage:''
+  isIndividual: true,
+  upiid: '',
+  qrimage: ''
 }
 
 const Eventpage = (props) => {
@@ -28,6 +29,8 @@ const Eventpage = (props) => {
   const [isModalOpened, setIsModalOpened] = useState(false);
   const [openFormModal, setOpenFormModal] = useState(false);
   const [eventNameFee, setEventNameFee] = useState(initialEventData);
+  const [logoutTimer,setLogoutTimer]=useState(5);
+  const [logoutText,setLogoutText]=useState('Logout');
   const navigate = useNavigate();
 
 
@@ -37,6 +40,17 @@ const Eventpage = (props) => {
   const openModal = async (ourIndex) => {
     setOurIndex(ourIndex);
     setIsModalOpened(true);
+  }
+
+  const handleLogout=()=>{
+    setLogoutText(`You Will Be Logged Out In ${logoutTimer}s `)
+    let interval = setInterval(()=>{
+      setLogoutTimer(--logoutTimer);
+    }, 1000);
+    setTimeout(() => {
+      clearInterval(interval); // stop running the function after 5 seconds
+    }, 5000);
+    logoutUser();
   }
 
   useEffect(() => {
@@ -51,7 +65,7 @@ const Eventpage = (props) => {
       } else {
         setIsUserAuthenticated(true);
       }
-    }, 5000);
+    }, 100);
 
     return () => clearInterval(timer);
 
@@ -59,12 +73,12 @@ const Eventpage = (props) => {
 
   return (
     <div className='Eventpage'>
-      {isModalOpened ? <Eventmodal openModal={setIsModalOpened} ourIndex={ourIndex}/> : null}
-      
+      {isModalOpened ? <Eventmodal openModal={setIsModalOpened} ourIndex={ourIndex} /> : null}
+
       {openFormModal ? (
         <FormModal eventNameFee={eventNameFee} setOpenFormModal={setOpenFormModal} />
       ) : null}
-      {isUserAuthenticated ? null : (
+      {isUserAuthenticated ? <button className='clktosignout' onClick={handleLogout} >{logoutText} &nbsp;<FaSignOutAlt/></button> : (
         <Link to={'/signin'} className='clktosignin'>Sign to enroll for the events</Link>
       )
       }
@@ -185,40 +199,40 @@ const Eventpage = (props) => {
               <div className='row-details'>
                 <p>Kautilya is an academic event that offers a diverse range of activities to engage and challenge participants. The event includes workshops and quiz masters to provide an immersive learning experience. Additionally, there is a hematology camp to promote awareness and education about blood disorders. For those seeking a more adventurous experience, a treasure hunt is also part of the event. Overall, Kautilya promises to be an exciting and educational event for all participants.</p>
               </div>
-                <div className='row-events'>
-                  <Eventcarousel
-                    setOpenFormModal={setOpenFormModal}
-                    isUserAuthenticated={isUserAuthenticated}
-                    events={Kautilya}
-                    openModal={openModal}
-                    setEventNameFee={setEventNameFee}
-                    windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
-                  />
-                </div>
+              <div className='row-events'>
+                <Eventcarousel
+                  setOpenFormModal={setOpenFormModal}
+                  isUserAuthenticated={isUserAuthenticated}
+                  events={Kautilya}
+                  openModal={openModal}
+                  setEventNameFee={setEventNameFee}
+                  windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
+                />
+              </div>
             </div>
 
             {/* workshop */}
             <a href="" id='Workshop'></a>
-            
+
             <div className='event-row'>
               <h1><span className='diff-font'>Workshop</span></h1>
               <h2>Academic</h2>
               <div className='row-details'>
                 <p>A workshop is a collaborative learning experience where a group of individuals come together to actively participate and engage in a particular topic or skill. Workshops can be conducted in-person or online and can range in length from a few hours to several days.</p>
               </div>
-             
-                <div className='row-events'>
-                  <Eventcarousel
-                    setOpenFormModal={setOpenFormModal}
-                    isUserAuthenticated={isUserAuthenticated}
-                    events={workshop}
-                    openModal={openModal}
-                    setEventNameFee={setEventNameFee}
-                    windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
-                  />
-                </div>
+
+              <div className='row-events'>
+                <Eventcarousel
+                  setOpenFormModal={setOpenFormModal}
+                  isUserAuthenticated={isUserAuthenticated}
+                  events={workshop}
+                  openModal={openModal}
+                  setEventNameFee={setEventNameFee}
+                  windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
+                />
+              </div>
             </div>
-            
+
 
 
 

@@ -10,7 +10,7 @@ export const checkTokenExpiration = () => {
       sessionStorage.removeItem('accessToken');
       sessionStorage.removeItem('refreshToken');
       sessionStorage.removeItem('isLogined');
-      sessionStorage.removeItem('visited');
+      localStorage.removeItem('visited');
       return true;
     } else {
       // Token is still valid
@@ -40,7 +40,6 @@ export const checkTokenExpiration = () => {
       return { params: body }
     } else if (value.query) {
       if (typeof body === 'object') {
-        console.log("fromutils",body._id);
         return { query: body.id }
       } else {
         return { query: body._id };
@@ -48,4 +47,10 @@ export const checkTokenExpiration = () => {
     }
     return {};
 
+  }
+
+
+  export const logoutUser=()=>{
+    sessionStorage.clear();
+    localStorage.clear();
   }

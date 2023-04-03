@@ -130,7 +130,7 @@
             }
 
             a {
-                margin-right: 40px;
+                margin-right: 20px;
                 text-decoration: none;
                 color: black;
                 display: inline-block;
@@ -237,6 +237,21 @@
 
 
 
+            }
+
+            button{
+                padding: 5px;
+                margin-right: 40px;
+                border: 1px solid var(--secondary-color);
+                color: var(--secondary-color);
+                background: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover{
+                    background: var(--secondary-color);
+                    color: #2c2c2d;
+                }
             }
         }
 

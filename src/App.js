@@ -14,7 +14,6 @@ import Dashboard from './Pages/AdminPannel/Dashboard/Dashboard';
 import Dataprovider from './Context/Dataprovider';
 import MyEventPage from './Pages/MyEventPage/MyEventPage';
 import Adminlogin from './Pages/AdminPannel/AdminLogin/Adminlogin';
-import { API } from './Services/Api';
 import PostPage from './Pages/PostPage/PostPage';
 import MyPost from './Pages/MyPost/MyPost';
 
@@ -70,7 +69,7 @@ function App() {
             <Route path='/events' element={<Eventpage isUserAuthenticated={isUserAuthenticated} windowSize={windowSize} />} />
             <Route path='/gallery' element={<Gallery windowSize={windowSize} />} />
             <Route path='/contact' element={<ConatctPage isUserAuthenticated={isUserAuthenticated} windowSize={windowSize} />} />
-            <Route path='/register' element={<RegisterPage windowSize={windowSize} />} />
+            <Route path='/register' element={<RegisterPage setIsUserAuthenticated={setIsUserAuthenticated} windowSize={windowSize} />} />
             <Route path='/signin' element={<Loginpage setIsUserAuthenticated={setIsUserAuthenticated} windowSize={windowSize} />} />
             <Route path='/myevents' element={<MyEventPage setIsUserAuthenticated={setIsUserAuthenticated} windowSize={windowSize} />} />
             <Route path='/posts' element={<PostPage  windowSize={windowSize} />} />

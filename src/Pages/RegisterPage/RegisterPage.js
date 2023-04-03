@@ -16,13 +16,18 @@ const initialValue = {
     "email": "",
     "phonenumber": "",
     "institution": "",
-    "standard": "",
+    "stream": "",
     "password": "",
     "confirmPassword": ""
 
 }
 
-const RegisterPage = () => {
+const initialLoginValues={
+    email:'',
+    password:''
+}
+
+const RegisterPage = (props) => {
     const [formData, setFormData] = useState(initialValue)
     const [isEyeOpened, setIsEyeOpened] = useState(false)
     const [isLoading, setIsLoading] = useState(false);
@@ -57,11 +62,29 @@ const RegisterPage = () => {
                 [name]: value
             }
         })
+    };
 
-        console.log(formData);
+    const handleLogin = async (email,password) => {
+        setIsLoading(true);
+        let response = await API.userSignin({email:email,password:password});
 
+        if (response.isSuccess) {
+            setIsLoading(false);
+            const { id} = response.data.data;
+            setFormData(initialLoginValues);
+            sessionStorage.setItem('accessToken', `Bearer ${response.data.accessToken}`);
+            sessionStorage.setItem('refreshToken', `Bearer ${response.data.refreshToken}`);
+            sessionStorage.setItem('isLogined', id);
+            props.setIsUserAuthenticated(true);
+            navigate('/events');
+        } else {
 
-    }
+            setIsLoading(false);
+            setShowError(true);
+            setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
+            setTimeout(() => setShowError(false), 4000);
+        }
+    };
     
     const handleSubmit = async (e) => {
 
@@ -71,27 +94,22 @@ const RegisterPage = () => {
 
 
         let response = await API.registerParticipants(formData);
-        console.log(response);
         if (response.isSuccess) {
             setFormData(initialValue);
             setIsLoading(false);
             setShowSuccess(true);
             setTimeout(() => setShowSuccess(false), 4000);
+            handleLogin(formData.email,formData.confirmPassword);
         }
         else {
             setIsLoading(false);
             setShowError(true);            
             setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
-            setTimeout(() => setShowError(false), 4000);
-            
+            setTimeout(() => setShowError(false), 4000);   
         }
+    };
 
-
-
-
-
-
-    }
+   
 
     return (
         <div className='register-page'>
@@ -147,7 +165,7 @@ const RegisterPage = () => {
                         <div className="row">
                             <div className="icon-input-wrap">
                                 <RiPhoneFill />
-                                <input onChange={handleInputChange} type="tel" value={formData.phonenumber} name='phonenumber' placeholder='Phone Number' />
+                                <input onChange={handleInputChange} type="tel" value={formData.phonenumber} name='phonenumber' placeholder='Contact' />
                             </div>
 
 
@@ -155,7 +173,7 @@ const RegisterPage = () => {
                         <div className="row">
                             <div className="icon-input-wrap">
                                 <FaSchool />
-                                <input onChange={handleInputChange} type="text" value={formData.institution} name='institution' placeholder='Institution' />
+                                <input onChange={handleInputChange} type="text" value={formData.institution} name='institution' placeholder='Institution/Organization' />
                             </div>
 
 
@@ -163,10 +181,8 @@ const RegisterPage = () => {
                         <div className="row">
                             <div className="icon-input-wrap">
                                 <IoIosSchool />
-                                <input onChange={handleInputChange} type="text" value={formData.standard} name='standard' placeholder='Standard' />
+                                <input onChange={handleInputChange} type="text" value={formData.stream} name='stream' placeholder='Stream(Eng,Pharma,Science,Others)' />
                             </div>
-
-
                         </div>
                         <div className="row">
                             <div className="password-wrap">

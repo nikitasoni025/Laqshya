@@ -30,7 +30,6 @@ const Createpost = (props) => {
   const handleFileChange = (event) => {
     event.preventDefault();
     setFile(event.target.files[0]);
-    console.log(event);
   };
 
   const handleInputChange = async (e) => {

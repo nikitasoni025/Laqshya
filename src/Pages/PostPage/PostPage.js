@@ -40,7 +40,6 @@ const PostPage = (props) => {
   },[itemPerPage,currentPage]);
 
   const handleSearch = (e) => {
-    // console.log(filteredTerm);
     const { name, value } = e.target;
     setFilteredTerm((pre) => {
       return {
