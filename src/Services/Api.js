@@ -48,7 +48,7 @@ axiosInstance.interceptors.response.use(
 )
 
 const processResponse = (res) => {
-    console.log("process response got", res);
+    // console.log("process response got", res);
 
     if (res?.status === 200) {
         return { isSuccess: true, data: res.data }
@@ -64,7 +64,7 @@ const processResponse = (res) => {
 
 const processError = (err) => {
     if (err.response) {
-        console.log("Error in response", err.response);
+        // console.log("Error in response", err.response);
         return {
             isError: true,
             msg: API_NOTIFICATION_MESSAGES.responseFailure,
@@ -74,7 +74,7 @@ const processError = (err) => {
         }
 
     } else if (err.request) {
-        console.log("Error in request", err);
+        // console.log("Error in request", err);
         return {
             isError: true,
             msg: API_NOTIFICATION_MESSAGES.requestFailure,
@@ -82,7 +82,7 @@ const processError = (err) => {
         }
 
     } else {
-        console.log("Error in network", err.toJSON());
+        // console.log("Error in network", err.toJSON());
         return {
             isError: true,
             msg: API_NOTIFICATION_MESSAGES.networkError,

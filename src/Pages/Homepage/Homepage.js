@@ -18,9 +18,9 @@ const Homepage = (props) => {
 
     let timer;
     let isVisited = localStorage.getItem('visited');
-    console.log(isVisited);
+    // console.log(isVisited);
     if (!isVisited || isVisited===undefined || isVisited===null || isVisited==='') {
-      console.log("hua kya ");
+      // console.log("hua kya ");
       setPreloading(true)
       window.addEventListener('load', () => {
         timer = setTimeout(() => {
@@ -70,9 +70,8 @@ const Homepage = (props) => {
 
       {/* Preloader */}
       <div className={preloading ? 'preloading' : 'preloading preloadingends'}>
-        {props.windowSize[0] <= 991 ? (
-          <button onClick={() => { setPreloading(false); localStorage.setItem('visited', 'true') }}>Dive In</button>
-        ) : null}
+  
+      
         <div className="prelogo">
           <h1 className={preloading ? '' : 'fade'}>LAQSHYA</h1>
 
@@ -80,6 +79,7 @@ const Homepage = (props) => {
 
           <img className={preloading ? '' : 'fade'} src="https://ik.imagekit.io/dexo68yudb/Tec36_Logo_white_300x.png?updatedAt=1679068816840" alt="" />
 
+          <button onClick={() => { setPreloading(false); localStorage.setItem('visited', 'true') }}>Dive In</button>
 
         </div>
       </div>

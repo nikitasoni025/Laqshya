@@ -28,24 +28,7 @@
             visibility: hidden;
         }
 
-        button {
-            width: 100px;
-            height: 100px;
-            padding: 8px 16px;
-            border-radius: 50%;
-            font-size: 20px;
-            background: rgb(60, 164, 255);
-            border: none;
-            outline: none;
-            position: absolute;
-            color: rgba(0, 0, 0, 0.668);
-            bottom: 30px;
-            color: aliceblue;
-            font-weight: 800;
-            right: -30px;
-
-
-        }
+        
 
         .prelogo {
             // background: #f1f1f1;
@@ -109,6 +92,24 @@
                     visibility: hidden;
 
                 }
+            }
+
+            button {
+                // width: 100px;
+                // height: 100px;
+                padding: 8px 16px;
+                // border-radius: 50%;
+                font-size: 20px;
+                background: rgb(60, 164, 255);
+                border: none;
+                outline: none;
+                color: rgba(0, 0, 0, 0.668);
+                bottom: 30px;
+                color: aliceblue;
+                font-weight: 800;
+               
+    
+    
             }
 
 
