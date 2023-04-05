@@ -8,6 +8,7 @@ import { API } from '../../Services/Api';
 import './loginpage.scss';
 import Loader from '../../Components/Loader/Loader';
 import { Toaster } from '../../Components/Toaster/Toaster';
+import { playErrorsound, playSuccesssound } from '../../Utils/commonutil';
 
 
 const initialLoginValues = {
@@ -61,6 +62,7 @@ const Loginpage = ({ setIsUserAuthenticated }) => {
 
             setIsLoading(false);
             setShowError(true);
+            playErrorsound();
             setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
             setTimeout(() => setShowError(false), 4000);
 

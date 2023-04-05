@@ -4,6 +4,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 import PostCarousel from '../../Components/PostCarousel/PostCarousel';
 import "./homepage.scss";
 import NET from 'vanta/dist/vanta.net.min';
+import { playDataReveal } from '../../Utils/commonutil';
 
 
 const Homepage = (props) => {
@@ -185,9 +186,9 @@ const Homepage = (props) => {
                 <div className="timings">
                   <div className="timing-left">
                     <div className={currentDot === 0 ? "dots initial" : currentDot === 1 ? "dots mid"  : currentDot ===2 ? "dots final" : "dots"}>
-                      <div className={currentDot === 0 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(0) }}>18</button></div>
-                      <div className={currentDot === 1 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(1) }}>19</button></div>
-                      <div className={currentDot === 2 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(2) }}>20</button></div>
+                      <div className={currentDot === 0 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(0);playDataReveal() }}>18</button></div>
+                      <div className={currentDot === 1 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(1);playDataReveal() }}>19</button></div>
+                      <div className={currentDot === 2 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(2);playDataReveal() }}>20</button></div>
                     </div>
                   </div>
                   <div className="timing-right">

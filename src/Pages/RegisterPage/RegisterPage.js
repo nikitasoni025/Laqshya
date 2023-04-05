@@ -8,6 +8,7 @@ import { Toaster } from '../../Components/Toaster/Toaster';
 import { TbArrowNarrowRight } from "react-icons/tb";
 import { IoIosSchool } from "react-icons/io";
 import { RiLockPasswordLine, RiMailSendLine, RiPhoneFill, RiUser6Line } from "react-icons/ri";
+import { playErrorsound, playSuccesssound } from '../../Utils/commonutil';
 
 
 
@@ -98,14 +99,17 @@ const RegisterPage = (props) => {
             setFormData(initialValue);
             setIsLoading(false);
             setShowSuccess(true);
+            playSuccesssound();
             setTimeout(() => setShowSuccess(false), 4000);
             handleLogin(formData.email,formData.confirmPassword);
         }
         else {
             setIsLoading(false);
             setShowError(true);            
+            playErrorsound();
             setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
-            setTimeout(() => setShowError(false), 4000);   
+            setTimeout(() => setShowError(false), 4000);  
+
         }
     };
 

@@ -151,3 +151,18 @@ $light-green: #06603b;
     }
 
 }
+
+
+@media screen and (max-width:991px) {
+    .Adminlogin{
+        .adminlogin-wrap{
+            .login-form{
+                form{
+                    width: 95%;
+                }
+            }
+
+        }
+    }
+    
+}

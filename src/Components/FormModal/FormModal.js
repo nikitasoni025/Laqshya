@@ -8,6 +8,7 @@ import Loader from '../Loader/Loader';
 import { API } from '../../Services/Api';
 import { Toaster } from '../Toaster/Toaster';
 import { useNavigate } from 'react-router-dom';
+import { playErrorsound, playSuccesssound, playclicksound } from '../../Utils/commonutil';
 
 
 
@@ -92,6 +93,7 @@ const FormModal = (props) => {
         setGroupFormData({ ...groupFormData, groupname: value });
     }
     const handleMakeGroup = () => {
+        playclicksound()
         setGroupFormData({ ...groupFormData, members: paticipants });
         setS3FormType('group');
         setGroupedClicked('S3');
@@ -107,10 +109,12 @@ const FormModal = (props) => {
             setIsLoading(false);
             setGroupedClicked('S4');
             setShowSuccess(true);
+            playSuccesssound();
             setTimeout(() => { setShowSuccess(false) }, 4000);
         } else {
             setIsLoading(false)
             setShowError(true);
+            playErrorsound();
             setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
             setTimeout(() => { setShowError(false) }, 4000);
         }
@@ -126,10 +130,12 @@ const FormModal = (props) => {
             setIsLoading(false);
             setGroupedClicked('S4');
             setShowSuccess(true);
+            playSuccesssound();
             setTimeout(() => setShowSuccess(false), 4000);
         } else {
             setIsLoading(false);
             setShowError(true);
+            playErrorsound();
             setErrorMessage(response.valerror || "Error!, Check Your Network Connection");
             setTimeout(() => setShowError(false), 4000);
         }
@@ -137,6 +143,7 @@ const FormModal = (props) => {
     }
 
     const handleUpiPay = (e)=>{
+        playclicksound()
         let deepLink = `upi://pay?pa=${props.eventNameFee.upiid}&am=${finalFee}&pn=${'Laqshya'}&cu=INR&tn=${props.eventNameFee.eventname}`;
         window.location.href = deepLink;
         setGroupedClicked('S1');
@@ -153,7 +160,7 @@ const FormModal = (props) => {
             <div className="formModal-wrap">
                 {showSuccess && <Toaster message={`Registered Successfully For ${props.eventNameFee.eventname}`} type={"success"} />}
                 {showError && <Toaster message={errorMessage} type={"error"} />}
-                <button onClick={() => props.setOpenFormModal(false)} className='cls-btn'><FaTimes /></button>
+                <button onClick={() => {props.setOpenFormModal(false);playclicksound()}} className='cls-btn'><FaTimes /></button>
 
                 <div className="form-wrap">
                     {/* first-step */}
@@ -163,16 +170,16 @@ const FormModal = (props) => {
                             <div className="row">
                                 {props.eventNameFee.isGrouped && props.eventNameFee.isIndividual ? (
                                     <>
-                                        <button onClick={() => { setS3FormType('indi'); setGroupedClicked("S3") }}>Individual</button>
+                                        <button onClick={() => { setS3FormType('indi'); setGroupedClicked("S3");playclicksound() }}>Individual</button>
                                         <span>OR</span>
-                                        <button onClick={() => { setS3FormType('group'); setGroupedClicked("S2") }}>Grouped</button>
+                                        <button onClick={() => { setS3FormType('group'); setGroupedClicked("S2");playclicksound() }}>Grouped</button>
                                     </>
 
                                 ) : props.eventNameFee.isGrouped && !props.eventNameFee.isIndividual ? (
-                                    <button onClick={() => { setS3FormType('group'); setGroupedClicked("S2") }}>Grouped</button>
+                                    <button onClick={() => { setS3FormType('group'); setGroupedClicked("S2");playclicksound() }}>Grouped</button>
 
                                 ) : !props.eventNameFee.isGrouped && props.eventNameFee.isIndividual ? (
-                                    <button onClick={() => { setS3FormType('indi'); setGroupedClicked("S3") }}>Individual</button>
+                                    <button onClick={() => { setS3FormType('indi'); setGroupedClicked("S3");playclicksound() }}>Individual</button>
                                 ) : null}
 
                             </div>
@@ -205,7 +212,7 @@ const FormModal = (props) => {
                             </div>
                             <div className="row2">
                                 <div className="back-cross-btn">
-                                    <button onClick={() => setGroupedClicked("S1")}><FaChevronLeft />Back</button>
+                                    <button onClick={() => {setGroupedClicked("S1");playclicksound()}}><FaChevronLeft />Back</button>
                                     <button onClick={handleMakeGroup}>Make Group</button>
                                 </div>
                             </div>
@@ -215,9 +222,9 @@ const FormModal = (props) => {
                             <h1>Registering For</h1>
                             <h2>Event Name : {props.eventNameFee.eventname}</h2>
                             <h2>Registration Fee :{s3FormType === 'indi' ?(props.eventNameFee.registrationfee)  : (props.eventNameFee.registrationfee * paticipants.length)   }&nbsp;₹</h2>
-                            {s3FormType === "indi" ? <button onClick={() => handleIndividalSubmit(indiFormData)}>{isLoading ? <Loader /> : "Pay"}</button> : s3FormType === "group" ? <button onClick={() => { handleGroupSubmit(groupFormData) }}>{isLoading ? <Loader /> : "Pay"}</button> : null}
+                            {s3FormType === "indi" ? <button onClick={() => {handleIndividalSubmit(indiFormData);playclicksound()}}>{isLoading ? <Loader /> : "Pay"}</button> : s3FormType === "group" ? <button onClick={() => { handleGroupSubmit(groupFormData);playclicksound() }}>{isLoading ? <Loader /> : "Pay"}</button> : null}
 
-                            <button onClick={() => setGroupedClicked("S1")}><FaChevronLeft />Back</button>
+                            <button onClick={() => {setGroupedClicked("S1");playclicksound()}}><FaChevronLeft />Back</button>
                         </div>
                     ) : groupedClicked === "S4" ? (
                         <div className="form-step-4">

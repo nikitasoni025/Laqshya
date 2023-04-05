@@ -128,7 +128,8 @@
 
                     h1 {
                         color: var(--secondary-color);
-                        font-family: var(--secondary-font);
+                        font-family: var(--redriver);
+                        text-transform: uppercase;
                         font-size: 5vw;
                         margin-top: 20px;
                     }
@@ -138,6 +139,7 @@
                         font-size: 2vw;
                         font-family: "Mulish";
                         margin: 20px 0;
+                        text-transform: uppercase;
                     }
 
                     .row-details {
@@ -194,7 +196,6 @@
                         h1 {
                             font-size: 20px;
                             letter-spacing: 6px;
-                            font-family: 'Anurati';
                             text-transform: uppercase;
                             padding: 0 20px;
 

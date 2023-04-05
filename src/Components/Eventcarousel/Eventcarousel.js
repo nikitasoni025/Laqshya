@@ -4,6 +4,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { SlGameController } from "react-icons/sl";
+import { playclicksound } from '../../Utils/commonutil';
 
 
 const Eventcarousel = (props) => {
@@ -26,7 +27,7 @@ const Eventcarousel = (props) => {
                                     <img src={event.img} alt="gallery" loading='lazy' />
                                     <div className="overlay">
                                         {props.isUserAuthenticated ? <button onClick={() => {
-                                            props.setOpenFormModal(true); props.setEventNameFee(
+                                            props.setOpenFormModal(true); playclicksound(); props.setEventNameFee(
                                                 { eventname: event.title, registrationfee: event.registrationfee, isGrouped: event.isGrouped, isIndividual: event.isIndividual, eventid: event.eventid, maxParticipants: event.maxParticipants, upiid: event.upiid, qrimage: event.qrimage }
                                             )
                                         }}>Register</button> : null}
@@ -35,7 +36,7 @@ const Eventcarousel = (props) => {
                                 </div>
                                 <div className="card-bottom">
                                     <h2 className='card-title'><span className='icon-title'><SlGameController /></span>{event.title}</h2>
-                                    <button onClick={() => props.openModal(event.ourIndex)}>Read More</button>
+                                    <button onClick={() => {props.openModal(event.ourIndex);playclicksound()}}>Read More</button>
                                 </div>
                             </div>
                         </div>

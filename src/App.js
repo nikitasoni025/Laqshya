@@ -16,6 +16,10 @@ import MyEventPage from './Pages/MyEventPage/MyEventPage';
 import Adminlogin from './Pages/AdminPannel/AdminLogin/Adminlogin';
 import PostPage from './Pages/PostPage/PostPage';
 import MyPost from './Pages/MyPost/MyPost';
+import Datarevealmusic from './Assets/Audios/data-reveal-sound-6460.mp3';
+import clickmusic from './Assets/Audios/mixkit-click-melodic-tone-1129.wav';
+import errormusic from './Assets/Audios/mixkit-click-error-1110.wav';
+import successSound from './Assets/Audios/mixkit-high-tech-bleep-confirmation-2520.wav';
 
 const PrivateRoute = ({ isAdminAuthenticated, ...props }) => {
   return isAdminAuthenticated ? <><Outlet /></> : <Navigate replace to={'/admin'} />
@@ -34,6 +38,7 @@ function App() {
 
 
   useEffect(() => {
+    document.getElementById('ouraudio').volume=0.2;
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
     };
@@ -63,7 +68,11 @@ function App() {
     <Dataprovider>
       <Router basename='/'>
         <div className="App">
-          <audio id='ouraudio' controls style={{ marginTop: "100px", display: "none" }} src={music}></audio>
+          <audio id='ouraudio' controls  style={{ marginTop: "100px", display: "none" }} src={music}></audio>
+          <audio id='datareveal' controls  style={{ marginTop: "100px", display: "none" }} src={Datarevealmusic}></audio>
+          <audio id='clicksound' controls  style={{ marginTop: "100px", display: "none" }} src={clickmusic}></audio>
+          <audio id='errormusic' controls  style={{ marginTop: "100px", display: "none" }} src={errormusic}></audio>
+          <audio id='successmusic' controls  style={{ marginTop: "100px", display: "none" }} src={successSound}></audio>
           <Routes >
             <Route path='/' element={<Homepage isUserAuthenticated={isUserAuthenticated} windowSize={windowSize} />} />
             <Route path='/events' element={<Eventpage isUserAuthenticated={isUserAuthenticated} windowSize={windowSize} />} />

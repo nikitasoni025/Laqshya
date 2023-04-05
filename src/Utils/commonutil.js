@@ -54,3 +54,17 @@ export const checkTokenExpiration = () => {
     sessionStorage.clear();
     localStorage.clear();
   }
+
+
+  export const playDataReveal=()=>{
+    document.getElementById('datareveal').play();
+  }
+  export const playclicksound=()=>{
+    document.getElementById('clicksound').play();
+  }
+  export const playErrorsound=()=>{
+    document.getElementById('errormusic').play();
+  }
+  export const playSuccesssound=()=>{
+    document.getElementById('successmusic').play();
+  }

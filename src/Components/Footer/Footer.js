@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom"
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import "./footer.scss";
-import RegisterPage from '../../Pages/RegisterPage/RegisterPage';
 
 
 const Footer = (props) => {
@@ -12,7 +11,7 @@ const Footer = (props) => {
         <div className="coloumn-wrap">
           <div className="col">
             <div className="wdth-wrap">
-              <img src="https://ik.imagekit.io/dexo68yudb/output-onlinepngtools__2_.png?updatedAt=1679173248151" alt="" />
+              <img src="https://ik.imagekit.io/dexo68yudb/Picsart_23-04-05_00-59-59-876.png?updatedAt=1680671498745" alt="logo" />
               <p>Copyright © CSIT 2023<br />Techno Management Sports & Cultural Fest</p>
             </div>
           </div>

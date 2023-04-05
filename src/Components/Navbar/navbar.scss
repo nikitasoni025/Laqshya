@@ -41,8 +41,8 @@
 
             .logo {
                 margin-left: 50px;
-                font-family: "Anurati";
-                color: var(--secondary-color);
+                font-family:var(--redriver);
+                color: white;
                 letter-spacing: 3px;
                 font-size: 0.7vw;
                 transition: scale 0.5s ease;
@@ -76,7 +76,7 @@
                     a {
                         color: white;
                         text-decoration: none;
-                        font-family: 'Anurati';
+                        font-family: var(--redriver);
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -135,8 +135,8 @@
                 color: black;
                 display: inline-block;
                 overflow: hidden;
-                color: var(--secondary-color);
-                font-family: 'Anurati';
+                color: white;
+                font-family: var(--redriver);
                 text-transform: uppercase;
                 letter-spacing: 3px;
                 position: relative;
@@ -260,7 +260,7 @@
     // SIDE BAR 
 
     .side-bar {
-        width: 50%;
+        width: 60%;
         padding: 25px;
         position: absolute;
         top: 0;
@@ -328,7 +328,7 @@
                     color: white;
                     text-decoration: none;
                     font-weight: bold;
-                    font-family: 'Anurati';
+                    font-family: var(--redriver);
                     translate: 110% 0 0;
                     letter-spacing: 3px;
 

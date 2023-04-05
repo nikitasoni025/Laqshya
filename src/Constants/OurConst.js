@@ -49,7 +49,7 @@ export const Shauryas = [
         maxParticipants: 3,
         registrationfee: 50,
         eventid: 'RS',
-        upiid: ' samikshaprasad84@oksbi',
+        upiid: 'samikshaprasad84@oksbi',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Robosumo.jpg?updatedAt=1680287571150"
 
 
@@ -92,7 +92,7 @@ export const Shauryas = [
         maxParticipants: 3,
         registrationfee: 50,
         eventid: 'DR',
-        upiid: ' 9109088258@ibl',
+        upiid: '9109088258@ibl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Dronerace.jpg?updatedAt=1680288006532"
 
 
@@ -151,7 +151,7 @@ export const kaushalya = [
         maxParticipants: 1,
         registrationfee: 50,
         eventid: 'AB',
-        upiid: '9631492014@cnrb',
+        upiid: 'bhupendrasahu9907-1@okhdfcbank',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Angrybird.jpeg?updatedAt=1680341818856"
 
 
@@ -279,7 +279,7 @@ export const parakram = [
         maxParticipants: 1,
         registrationfee: 50,
         eventid: 'LPB',
-        upiid: '9631492014@cnrb',
+        upiid: '8770847478@ybl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/letsplaywithbond.jpeg?updatedAt=1680341010363"
 
 

@@ -2,17 +2,18 @@ import React, { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { eventDetails } from '../../Constants/OurConst';
 import './eventmodal.scss';
+import { playclicksound } from '../../Utils/commonutil';
 
 const Eventmodal = (props) => {
     const [infoType, setInfoType] = useState('rul');
     return (
         <div className='Eventmodal'>
             <div className="event-modal-wrap">
-                <div className="close-mod-btn"><button onClick={() => props.openModal(false)}><FaTimes /></button></div>
+                <div className="close-mod-btn"><button onClick={() => {props.openModal(false);playclicksound();}}><FaTimes /></button></div>
                 <div className="info-nav-button">
-                    <button className='nav-btn' onClick={() => setInfoType('rul')}>RULES</button>
-                    <button className='nav-btn' onClick={() => setInfoType('jud')}>JUDGEMENT CRITERA</button>
-                    {eventDetails[props.ourIndex].arena ? <button className='nav-btn' onClick={() => setInfoType('arn')}>ARENA</button> : null}
+                    <button className='nav-btn' onClick={() => {setInfoType('rul');playclicksound()}}>RULES</button>
+                    <button className='nav-btn' onClick={() => {setInfoType('jud');playclicksound()}}>JUDGEMENT CRITERA</button>
+                    {eventDetails[props.ourIndex].arena ? <button className='nav-btn' onClick={() => {setInfoType('arn');playclicksound()}}>ARENA</button> : null}
 
                 </div>
                 <div className="information">

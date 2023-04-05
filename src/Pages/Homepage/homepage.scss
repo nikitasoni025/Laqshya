@@ -155,7 +155,7 @@
                         position: absolute;
                         left: 0;
                         top: 0;
-                        background: url('https://ik.imagekit.io/egjzyz51e/Picsart_23-03-19_11-45-01-405.png?updatedAt=1679207329951');
+                        background: url('https://ik.imagekit.io/dexo68yudb/Picsart_23-04-05_00-55-20-063.png?updatedAt=1680671522654');
                         background-size: cover;
                         background-position: center;
                         // opacity: 1;
@@ -618,7 +618,7 @@
                                     background-size: cover;
                                     font-size: 5vw;
                                     color: rgba(181, 181, 181, 0.634);
-                                    font-family: "Anurati";
+                                    font-family: var(--redriver);
                                     font-weight: 900;
                                     text-align: center;
                                     letter-spacing: 10px;
@@ -730,7 +730,7 @@
                         .headerfade-lft {
                             width: 100%;
                             height: 100%;
-                            background: url('https://ik.imagekit.io/dexo68yudb/Picsart_23-03-19_02-36-06-595.png?updatedAt=1679173595234');
+                            background: url('https://ik.imagekit.io/dexo68yudb/Picsart_23-04-05_00-56-36-594.png?updatedAt=1680671483216');
                             background-size: cover;
                             background-position: center;
                         }
@@ -817,6 +817,7 @@
 
                                     .left-cont {
                                         width: 100%;
+                                        padding: 5px;
 
                                         h1 {
                                             font-size: 10vw;
