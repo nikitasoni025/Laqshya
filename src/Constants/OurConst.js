@@ -5,9 +5,10 @@ export const Shauryas = [
         ourIndex: 0,
         img: "https://ik.imagekit.io/egjzyz51e/xxcelerate-3.jpg?updatedAt=1679561065352",
         isGrouped: true,
-        isIndividual:true,
+        isIndividual: true,
         maxParticipants: 3,
-        registrationfee: 50,
+        minParticipants: 1,
+        registrationfee: 200,
         eventid: 'XX',
         upiid: 'amrit.pathak2@ibl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Xxcelerate.png?updatedAt=1680286992955"
@@ -17,9 +18,10 @@ export const Shauryas = [
         ourIndex: 1,
         img: "https://ik.imagekit.io/egjzyz51e/robo_soccer_league-2.jpg?updatedAt=1679561586951",
         isGrouped: true,
-        isIndividual:true,
+        isIndividual: true,
         maxParticipants: 3,
-        registrationfee: 50,
+        minParticipants: 1,
+        registrationfee: 200,
         eventid: 'RSL',
         upiid: 'rd33550@ybl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Robosoccer.jpg?updatedAt=1680287908038"
@@ -31,9 +33,10 @@ export const Shauryas = [
         ourIndex: 2,
         img: "https://ik.imagekit.io/egjzyz51e/robo_go_karting-3.jpg?updatedAt=1679561476392",
         isGrouped: true,
-        isIndividual:true,
+        isIndividual: true,
         maxParticipants: 3,
-        registrationfee: 50,
+        minParticipants: 1,
+        registrationfee: 200,
         eventid: 'RGC',
         upiid: 'surajharmukh123@okaxis',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Robogocart.jpg?updatedAt=1680287775139"
@@ -45,9 +48,10 @@ export const Shauryas = [
         ourIndex: 3,
         img: "https://ik.imagekit.io/egjzyz51e/robo_sumo-3.jpg?updatedAt=1679561027658",
         isGrouped: true,
-        isIndividual:true,
+        isIndividual: true,
         maxParticipants: 3,
-        registrationfee: 50,
+        minParticipants: 1,
+        registrationfee: 200,
         eventid: 'RS',
         upiid: 'samikshaprasad84@oksbi',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Robosumo.jpg?updatedAt=1680287571150"
@@ -59,9 +63,10 @@ export const Shauryas = [
         ourIndex: 4,
         img: "https://ik.imagekit.io/egjzyz51e/deep_blue-3.jpg?updatedAt=1679561562493",
         isGrouped: true,
-        isIndividual:true,
+        isIndividual: true,
         maxParticipants: 3,
-        registrationfee: 50,
+        minParticipants: 1,
+        registrationfee: 200,
         eventid: 'DB',
         upiid: '9131723338@axl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/deepblue.jpg?updatedAt=1680286235194"
@@ -74,9 +79,10 @@ export const Shauryas = [
         ourIndex: 5,
         img: "https://ik.imagekit.io/egjzyz51e/robofire_fighting-2.jpg?updatedAt=1679561211419",
         isGrouped: true,
-        isIndividual:true,
+        isIndividual: true,
         maxParticipants: 3,
-        registrationfee: 50,
+        minParticipants: 1,
+        registrationfee: 200,
         eventid: 'RFF',
         upiid: '7879750544@ibl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/robofirefight.jpg?updatedAt=1680286295179"
@@ -88,9 +94,10 @@ export const Shauryas = [
         ourIndex: 6,
         img: "https://ik.imagekit.io/egjzyz51e/drone_race-3.jpg?updatedAt=1679561139257",
         isGrouped: true,
-        isIndividual:true,
+        isIndividual: true,
         maxParticipants: 3,
-        registrationfee: 50,
+        minParticipants: 1,
+        registrationfee: 200,
         eventid: 'DR',
         upiid: '9109088258@ibl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Dronerace.jpg?updatedAt=1680288006532"
@@ -105,8 +112,9 @@ export const kaushalya = [
         img: "https://ik.imagekit.io/egjzyz51e/cricket.jpg?updatedAt=1679422202934",
         isGrouped: true,
         isIndividual: false,
-        maxParticipants: 7,
-        registrationfee: 50,
+        maxParticipants: 11,
+        minParticipants: 11,
+        registrationfee: 500,
         eventid: 'CT',
         upiid: 'khanrumman31@oksbi',
         qrimage: "https://ik.imagekit.io/egjzyz51e/cricket12.jpg?updatedAt=1680287385041"
@@ -121,6 +129,7 @@ export const kaushalya = [
         isGrouped: false,
         isIndividual: true,
         maxParticipants: 1,
+        minParticipants: 1,
         registrationfee: 50,
         eventid: 'AW',
         upiid: ' 9329292861@ybl',
@@ -135,7 +144,8 @@ export const kaushalya = [
         isGrouped: true,
         isIndividual: false,
         maxParticipants: 7,
-        registrationfee: 50,
+        minParticipants: 7,
+        registrationfee: 300,
         eventid: 'FL',
         upiid: 'ashutosh8684m@okhdfcbank',
         qrimage: "https://ik.imagekit.io/egjzyz51e/futsal123.jpg?updatedAt=1680287451011"
@@ -149,6 +159,7 @@ export const kaushalya = [
         isGrouped: false,
         isIndividual: true,
         maxParticipants: 1,
+        minParticipants: 1,
         registrationfee: 50,
         eventid: 'AB',
         upiid: 'bhupendrasahu9907-1@okhdfcbank',
@@ -162,8 +173,9 @@ export const kaushalya = [
         img: "https://ik.imagekit.io/egjzyz51e/free_fire.jpg?updatedAt=1679426417642",
         isGrouped: true,
         isIndividual: false,
-        maxParticipants: 4,
-        registrationfee: 50,
+        maxParticipants: 1,
+        minParticipants: 1,
+        registrationfee: 200,
         eventid: 'ES',
         upiid: 'mrinal.madaria@ibl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/esports.png?updatedAt=1680286844651"
@@ -177,6 +189,8 @@ export const kaushalya = [
         isGrouped: false,
         isIndividual: true,
         maxParticipants: 1,
+        minParticipants: 1,
+        registrationfee: "Free",
         eventid: 'OMS',
 
     },
@@ -190,19 +204,19 @@ export const bouddhiki = [
         isGrouped: false,
         isIndividual: true,
         maxParticipants: 1,
+        minParticipants: 1,
+        registrationfee: "Free",
         eventid: 'FOL',
-
-
-
     },
     {
         title: "Artifex Show",
         ourIndex: 14,
         img: "https://ik.imagekit.io/egjzyz51e/Artifex.jpg?updatedAt=1679426726630",
         isGrouped: true,
-        isIndividual: false,
-        maxParticipants: 3,
-        registrationfee: 50,
+        isIndividual: true,
+        maxParticipants: 2,
+        minParticipants: 1,
+        registrationfee: 100,
         eventid: 'AS',
         upiid: '7440350204@ybl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Artifexshow.png?updatedAt=1680287105271"
@@ -215,8 +229,9 @@ export const bouddhiki = [
         img: "https://ik.imagekit.io/egjzyz51e/cinematics.jpg?updatedAt=1679426808809",
         isGrouped: true,
         isIndividual: true,
-        maxParticipants: 5,
-        registrationfee: 50,
+        maxParticipants: 2,
+        minParticipants: 1,
+        registrationfee: 100,
         eventid: 'CS',
         upiid: 'adityadewangan019@oksbi',
         qrimage: "https://ik.imagekit.io/egjzyz51e/cinematics123.jpg?updatedAt=1680533868528"
@@ -232,9 +247,10 @@ export const parakram = [
         ourIndex: 16,
         img: "https://ik.imagekit.io/egjzyz51e/Bottle_jet.jpg?updatedAt=1679426923380",
         isGrouped: true,
-        isIndividual: false,
-        maxParticipants: 3,
-        registrationfee: 50,
+        isIndividual: true,
+        maxParticipants: 2,
+        minParticipants: 1,
+        registrationfee: 100,
         eventid: 'BJ',
         upiid: '9631492014@cnrb',
         qrimage: "https://ik.imagekit.io/egjzyz51e/bottlejet.jpg?updatedAt=1680285146540"
@@ -248,6 +264,7 @@ export const parakram = [
         isGrouped: false,
         isIndividual: true,
         maxParticipants: 1,
+        minParticipants: 1,
         registrationfee: 50,
         eventid: 'CC',
         upiid: '8770575418@paytm',
@@ -262,7 +279,8 @@ export const parakram = [
         isGrouped: true,
         isIndividual: true,
         maxParticipants: 2,
-        registrationfee: 50,
+        minParticipants: 1,
+        registrationfee: 100,
         eventid: 'TF',
         upiid: ' 9907490901@axl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Techfarmacia.jpg?updatedAt=1680287677208"
@@ -277,6 +295,7 @@ export const parakram = [
         isGrouped: false,
         isIndividual: true,
         maxParticipants: 1,
+        minParticipants: 1,
         registrationfee: 50,
         eventid: 'LPB',
         upiid: '8770847478@ybl',
@@ -294,6 +313,7 @@ export const natraja = [
         isGrouped: true,
         isIndividual: true,
         maxParticipants: 50,
+        minParticipants: 1,
         registrationfee: 50,
         eventid: 'MYM',
         upiid: '8815428116@paytm',
@@ -301,31 +321,19 @@ export const natraja = [
 
 
     },
-    {
-        title: "Ad Mad Show",
-        ourIndex: 21,
-        img: "https://ik.imagekit.io/egjzyz51e/ADD_MAD_SHOW__1_.jpg?updatedAt=1679569325428",
-        isGrouped: true,
-        isIndividual: true,
-        maxParticipants: 2,
-        registrationfee: 50,
-        eventid: 'AMS',
-        upiid: '7974094222597@paytm',
-        qrimage: "https://ik.imagekit.io/egjzyz51e/Admadshow.png?updatedAt=1680285834176"
 
-
-    },
 ]
 
 export const Kautilya = [
     {
         title: "Quiz Masters",
-        ourIndex: 22,
+        ourIndex: 21,
         img: "https://ik.imagekit.io/egjzyz51e/quiz_masters.jpg?updatedAt=1679426958564",
         isGrouped: true,
-        isIndividual: false,
+        isIndividual: true,
         maxParticipants: 2,
-        registrationfee: 50,
+        minParticipants: 1,
+        registrationfee: 100,
         eventid: 'QM',
         upiid: ' 6265231318@paytm',
         qrimage: "https://ik.imagekit.io/egjzyz51e/quizmaster.png?updatedAt=1680285991408"
@@ -334,15 +342,31 @@ export const Kautilya = [
     },
     {
         title: "Treasure hunt",
-        ourIndex: 23,
+        ourIndex: 22,
         img: "https://ik.imagekit.io/egjzyz51e/treasure_hunt.jpg?updatedAt=1679426495577",
         isGrouped: true,
         isIndividual: false,
         maxParticipants: 4,
-        registrationfee: 50,
+        minParticipants: 4,
+        registrationfee: 200,
         eventid: 'TH',
         upiid: '88158282121@paytm',
         qrimage: "https://ik.imagekit.io/egjzyz51e/TreasureHunt.jpg?updatedAt=1680285637907"
+
+
+    },
+    {
+        title: "Ad Mad Show",
+        ourIndex: 23,
+        img: "https://ik.imagekit.io/egjzyz51e/ADD_MAD_SHOW__1_.jpg?updatedAt=1679569325428",
+        isGrouped: true,
+        isIndividual: true,
+        maxParticipants: 2,
+        minParticipants: 1,
+        registrationfee: 100,
+        eventid: 'AMS',
+        upiid: '7974094222597@paytm',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/Admadshow.png?updatedAt=1680285834176"
 
 
     },
@@ -352,12 +376,13 @@ export const Kautilya = [
 export const workshop = [
 
     {
-        title: "Digital Marketing",
+        title: "Social Media Awareness",
         ourIndex: 24,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/IMG_20230406_003748.jpg?updatedAt=1680721882375",
         isGrouped: false,
         isIndividual: true,
         maxParticipants: 1,
+        minParticipants: 1,
         registrationfee: 50,
         eventid: 'DM',
         upiid: 'surukant30@oksbi',
@@ -368,10 +393,11 @@ export const workshop = [
     {
         title: "Cyber Security",
         ourIndex: 25,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/IMG_20230406_004049.jpg?updatedAt=1680721911293",
         isGrouped: false,
         isIndividual: true,
         maxParticipants: 1,
+        minParticipants: 1,
         registrationfee: 50,
         eventid: 'CS',
         upiid: 'surukant30@oksbi',
@@ -382,10 +408,11 @@ export const workshop = [
     {
         title: "Carrer Counselling",
         ourIndex: 26,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/IMG_20230406_004158.jpg?updatedAt=1680722187068",
         isGrouped: false,
         isIndividual: true,
         maxParticipants: 1,
+        minParticipants: 1,
         registrationfee: 50,
         eventid: 'CC',
         upiid: 'surukant30@oksbi',
@@ -396,10 +423,11 @@ export const workshop = [
     {
         title: "Drug Awareness",
         ourIndex: 27,
-        img: "https://ik.imagekit.io/dexo68yudb/625581fdda54f874b9152a6b_shutterstock_1683847615.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676362306320",
+        img: "https://ik.imagekit.io/egjzyz51e/IMG_20230406_003654.jpg?updatedAt=1680721871683",
         isGrouped: false,
         isIndividual: true,
         maxParticipants: 1,
+        minParticipants: 1,
         registrationfee: 50,
         eventid: 'DA',
         upiid: 'surukant30@oksbi',
@@ -447,9 +475,34 @@ export const eventDetails = [
     {
         title: "Xxcelerate",
         intro: "introduction",
-        rules: [],
+        rules: [
+            [
+                "",
+                "At a time three teams will compete.",
+                "The bot should be checked before the race.",
+                "The winners will be selected on the basis of the ‘finish first and win’ criteria.",
+                "There will be three rounds- preliminary, semifinal and final.",
+                "If touched ones the bot will start from last checkpoint it passed.",
+                "During the match both the team member can enter the arena for handling the bot.",
+                "All the decisions made by Event Manager will be final and irreversible. ",
+                "There will be three calls for a team to come arena. If the team will not be present till the third call.  They will be disqualified.",
+            ]
+        ],
+
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "First round will be time based round in which the first one to reach the final point  will be qualified for next round.",
+                "Participants who were unable to complete the 1st round due to any technical fault can participate again by re-registration.",
+                "In all the rounds a team will be provided with maximum of 3 touches with addition of 5 seconds per touch. (after 3 touches team will be disqualified)",
+            ],
+            [
+                "The first one to reach the final point will be qualified for next round.",
+                "If the two bots reach at same instant then the time required to complete the bot to various checkpoints and number of touches will be considered to select the winner of the round.",
+            ],
+            [
+                "Third round will be knock out round. Timing of various checkpoints and number of touches will be noted and in case if two bots reaches the finish point at the same time. Then, winner will be decided according to the timings of crossing the checkpoints. ",
+
+            ],
         ],
         arena: 'https://ik.imagekit.io/dexo68yudb/kautilya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678017925010',
         registrationfee: 50,
@@ -474,11 +527,65 @@ export const eventDetails = [
         title: "Robo Soccer League",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "A team shall consist of only one robot.",
+                "Measurement of the bot will be done before the start of event by a panel of referee.",
+                "No changes in the bot will be entertained after the registeration.",
+                "The robot should not damage the arena by any means.",
+                "If both robots are immobile for 5 sec, the ball will be replaced at the starting points.",
+                "If two fouls are committed by a team a penalty shootout will be given to the opponent team.",
+                "Points will be given for goals only.",
+                "If both team can’t score within the time periods of match then the winner will be decided by the 5 penalty shoot ou",
+            ],
+            [
+                "Ball Movement:",
+                'A robot cannot "block” the ball for more than 5 sec (Hint: Holding a ball means taking full control over the ball by removing all the degrees of freedom).',
+                "The ball cannot be held underneath a robot. If found so match will resume from starting position.",
+                "The ball must be visible at all times.",
+                "Opponent must be able to access the bal",
+                "All the participants will bring their own robotics kit.",
+                "Decision of the judges and the event organizers shall be treated as final.",
+                "Own goals will be treated as a goal of the opposition and the point will be given to the opponent",
+            ],
+            [
+                "Points Criteria:",
+                "One goal one point.",
+                "Dragging the opponent bot will lead to a foul.",
+                "On the 2nd Foul opponent will get a chance of a penalty.",
+                "If any robot makes a Penalty, it will have to start with starting position.",
+                "Points can be scored only by putting the ball into the goal.",
+                "There is no negative points for own goal instead of awarding the point to the opponent.",
+
+            ],
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "This will be a knockout round.",
+                "Two teams will play against each other.",
+                "The maximum time allotted for the match is 4 minutes (2+2).",
+                "The time break between two halves is 2 minutes.",
+                "Timeout of 3 min. can be taken by each team during the match for once.",
+                "In case of tie, penalty shootout will be given.",
+                "The judge's decision will be final and abiding.",
+                "The number of phases for round one will depend on the number of participating team",
+            ],
+            [
+                "This is also a knockout match.",
+                "After getting winners of round 1, round-2 will be played between them.",
+                "The maximum time allotted for the match will be 4 minutes(2+2).",
+                "The time break between two halves will be 2 minute.",
+                "Winner of round 2 will play a match in round -3 i.e. final round",
+            ],
+            [
+                "The rules will be informed before the start of match.",
+                "The maximum time allotted for the match will be 4 minutes(2+2).     ",
+                "The time break between two halves will be 2 minute.",
+                "Team scoring maximum goals will win.",
+                "If a match get draw,than the winner will be selected by 5 penalty shoot out.",
+                "Winner of this round will be the winner of the “Robo Soccer  Leagu",
+            ],
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -502,11 +609,38 @@ export const eventDetails = [
         title: "Robo Go Carting",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "Winner of this round will be the winner of the “Robo Soccer  League”",
+                "Only wireless robots are allowed.",
+                "For each fall from track and touch in bridge’s border, a penalty of 5 seconds will be added to the total time of completing laps (bridge will not be used in 1st round, it is for 2nd and final round).",
+                "For each touching of robot from hand, a penalty of 5 seconds will be added to the total time of completing laps.",
+                "Maximum Timeout of 6 minutes are allowed for completing the laps without considering the fouls.",
+                "In case of tie, one extra lap will be given to the participants.",
+                "The robot which will complete their laps in minimum time will be declared as winner.",
+                "Top 4 teams will be selected for final round.",
+            ]
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "There will be threelaps in this round around Route No. 1.",
+                "Qualifiers for the second round will be selected on the time basis.",
+
+            ],
+            [
+                "There will be twolaps in this round around Route No. 2.",
+                "Qualifiers for the final round will be selected on the time basis.",
+
+            ],
+            [
+                "Top 4 teams will be selected for this round.",
+                "There will be again Three laps in this round.",
+                "First lap will be around Route No. 1.",
+                "Second lap will be around Route No. 2.",
+                "Third lap will be around Route No. 3.",
+                "Winners will be selected on the time basis.",
+            ],
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -530,11 +664,44 @@ export const eventDetails = [
         title: "Robo Sumo",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "Out:",
+                "The first robot goes outside of the ring loses, even if the second robot subsequently touches outside of the ring. If the referee determines that both robots touched outside of the ring at the same time the round is nullified and started over.",
+
+            ],
+            [
+                "General:",
+                "Fair chance will be given to all participants.",
+                "The right spirit of participation is expected from the participants.",
+                "The robots must not harm the arena in any way. If it does so, a penalty will imposed on the team. The magnitude of the penalty will be decided by referee.",
+                "The decision of the referee will be final.",
+            ],
+            [
+                "Referee Stoppage:",
+                "Five minutes are provided to a team for repairing their robots.",
+                "The robot fails to touch each other for some period of time.",
+                "The robots are hopelessly entangled or otherwise deadlocked.",
+                "At the referee’s discretion, the referee may choose to end a round and choose the round winner if smoke, fire, damage, or any other violation has occurre",
+            ],
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "Each match will be of 3 sub rounds. ",
+                "A robot loses a round when any portion of the robot goes outside of the ring. It doesn’t matter if the robot falls out on its own or is pushed out.",
+                "In the case when both the robots are unable to push their opponent outside of the ring, then their positions are measured from the centre within the ring & the, robot nearest to the centre of the ring will be declared as winner of that round.",
+                "The winner will be declared by the best of the 3 rounds.",
+
+            ],
+            [
+                "Each match will be of 3 sub- rounds.",
+                "A robot loses a round when any portion of the robot goes outside of the ring. It doesn’t matter if the robot falls out on its own or is pushed out.",
+                "In any round if no robot touches outside the ring the winner will be selected by below methods.",
+                "If a robot touches/crosses white colored circle, 5 points will be given to the opponent. It doesn’t matter if the robot touches/crosses out on its own or is pushed out.",
+                "If a robot touches/crosses red colored circle, 10 points will be given to the opponent. It doesn’t matter if the robot touches/crosses out on its own or is pushed out.",
+                "The winner will be declared by the best of the 3 rounds.",
+            ],
+
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -558,11 +725,27 @@ export const eventDetails = [
         title: "Deep Blue",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "There will be 3 Round:",
+            ]
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "First round will be knockout round, there will be 1 lap in which team needs to clear the 1 lap, who complete the lap first will be qualified for the 2nd  round and other will be disqualified.",
+                "Participants unable to complete the 1st round can participate again after Re-Registration.",
+
+            ],
+            [
+                "2nd round will be drag round in which 4 ping pong balls are to be dragged from different position in arena to final position.",
+                "The team which drags all balls in final position first, will qualify for next round.",
+                "NOTE-  For this round team add a jaw in front of boat.",
+            ],
+            [
+                "Final round will be of poke balloon round, poke all balloons and complete 1 lap and  who poke maximum balloons first will be declared as Winner of DEEP BLUE.",
+
+            ],
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -586,11 +769,35 @@ export const eventDetails = [
         title: "Robo Fire Fighting",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "Bot should be wire and wireless.",
+                "Only fans and motor are of auxiliary/peripheral attachment to the bot will be allowed.",
+                "The last Decision/Rules will be made by the Judges according to the situation.",
+                "Touches to the walls & arena will add 5 seconds/touch to the total time.",
+                "For each touching of robot from hand, a penalty of 5 seconds will be added to the total time of completing the task.",
+                "In case of tie, one extra lap will be given to the participants.",
+                "The robot which will complete their laps in minimum time will be declared as winner.",
+                "Top 4 teams will be selected for final round.",
+            ],
+
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "Robot has to Blow Candles of the first allotted room and return to the start point.",
+                "Qualifiers for the second round will be selected on the time basis.",
+
+            ],
+            [
+                "Robot has to Blow Candles of the Second room and return to the start point.",
+                "Qualifiers for the second round will be selected on the time basis.",
+            ],
+            [
+                "Top 4 teams will be selected for this round.",
+                "Robot has to Blow Candles from all Three  rooms.",
+                "Winners will be selected on the time basis.",
+            ],
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -614,11 +821,28 @@ export const eventDetails = [
         title: "Drone Race",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "Winners will be selected on the time basis.",
+                "All the Pilot & the team must wear helmets, glasses and other safty gears.",
+                "Any team or team member that will not physically present on the flight line fully prepared to race within the 10 minutes announcement will be considered as disqualified. ",
+
+            ]
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "In this round, pilots have to fly their drones to a specified height and then land back on the ground.",
+
+            ],
+            [
+                "In this round, one stage will be given on a height pilots have to fly their drones to that stage and then land.",
+                "In this round, pilots have to fly their drones and one full circle have to be completed of the arena.",
+            ],
+            [
+                "In this round, carry a ball in the drone and fly and put that ball on the target and then land back on the ground. ",
+
+            ],
+
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -642,11 +866,32 @@ export const eventDetails = [
         title: "Cricket",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "Each team will be consisting of 11 players.",
+                "Each team will carry their own equipments (Bats etc.) ",
+                "The Ball Used for Match will be Tetron Tennis Ball.",
+                "Every match of 1st Round will be of 6 overs.",
+                "Semi_finals and Final Matches will be of 8 Overs.",
+                "There will be free hit for every no ball.",
+                "A bowler can bowl maximum of two overs.",
+                "There will be a run given for every single wide, no ball.",
+                "Umpire decision is the final decision.",
+                "If match tied then a “SUPER OVER” decides a winner.",
+            ],
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "Team wins will directly goes to the next round. ",
+            ],
+            [
+                "Each Round will be According to knockout basis.",
+                "After knockout round There will be Qualifier round.",
+                "Then 4 teams will be directed semi finals round from the Qualifier round. ",
+                "Top Two Teams will compete each for Finals.",
+
+            ],
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -674,11 +919,40 @@ export const eventDetails = [
         title: "Arm Wrestling",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "One leg should remain on the ground always and other can be lifted .",
+                "Grabbing pad with one hand is necessary. ",
+                "1 minute will be given to both the opponents for the grip .",
+                "If both the opponents are not ready within 1 minute then there will be referee grip.",
+                "If a  competitor touches his body to his hand there will be  a restart and a foul will be given.",
+                "If a Competitor intentionally open his/her hand the match will restart and foul will be  given.",
+                "If a Competitor uplift  his elbow from the table during the match the match will restart and a foul will be  given.",
+                "After two foul the participants will disqualify.",
+                "The participants should not wear any ring and other things in hand.",
+                "Any player caught using any objectionable item or using any unfair means will be   disqualify.",
+                "Time limit is 2 minutes .",
+
+            ],
+            [
+                "Weight category:-",
+                "For girls :- 40kg -70kg",
+                "For boys :- above 60kg",
+            ]
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "Match will follow a knockout format.",
+                "To make a winning pin you must touch your opponent hand to the touch pad.",
+                "If both participants are not able to touch their opponent hand to the touch pad then they both are disqualify.",
+
+            ],
+            [
+                "The match will follow a knock out format.",
+                "If the both participants are not able to touch their opponent hand to the touch pad within the given interval of time then the decision will be done on the basis of angle of hand made by the participants",
+            ],
+
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -702,11 +976,33 @@ export const eventDetails = [
         title: "Futsal",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "There will be 5 onfield players in each team including goalkeeper.Each team may consist 2  more players for subsitutions.",
+                "Goalkeeper can be also elect himself as a free player.",
+                "Penalty is provided from 1.5m from goalkeeper’s area.",
+                "1.	There will be two halfs each of9 minutes including a 2 min halftime<qualication round>",
+                "2.	There will be two halfs each of 13 minutes including a 4 min halftime<final round>",
+                "While taking free kick it should be taken within 7 seconds & the opponents must be 4M away from the ball.",
+                "Kick in  is used  in place of throw-in in case of outside.",
+                "Ball used in Futsal is smaller than the normal FIFA ball ",
+                "Studds are not allowed",
+            ],
+            [],
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "Each and every game is knockout round and fixture depends on number of registration",
+
+            ],
+            [
+                "Last 4 teams will qualify to participate in the semi final.",
+
+            ],
+            [
+                "The winner team of semi-final will qualify for final match.",
+            ],
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -730,11 +1026,44 @@ export const eventDetails = [
         title: "Angry Bird",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "•	The participant will be allowed to play as an individual. ",
+                "•	Two trials will be given each of 15 seconds.  ",
+                "•	In 1st round two trials and in 2nd round only one trial will be given.",
+                "•	Damage should not be done by the players. Otherwise participant consider as disqualified.",
+
+            ],
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "There will be 5 boxes in one column. ",
+                "Points for the boxes from top to bottom will be 10,20,30,40& 50 respectively. ",
+                "Among all boxes there is also a Jackpot box between them which not only contains heavy point i.e. 60 but also allows the participant to shoot one extra shot. ",
+                "There will be total 5 columns in 1st round. ",
+                "First round will be of 720 points. ",
+                "Participants will have to score minimum 300 points to qualify for the next round. ",
+                "Total duration for this round is 2 minutes. ",
+                "Every participant will get 3 balls. Participants will have to pull and shoot 1 ball at a time. ",
+
+            ],
+            [
+                "There will be 4 boxes in columns. Points allotted for the boxes from top to bottom are 10,20,30,40 respectively. ",
+                "There will be a heavy box placed between the light boxes (points containing boxes) which will have zero points. ",
+                "There will be also a Jackpot box between them which not only contains heavy points i.e. 60 but also allows one extra shoot to the participant to gain more points to qualify to the final round. ",
+                "Second round is of 400 points. ",
+                "Participants will have to score minimum 200 points to qualify for the 3rd round. ",
+                "Total duration for this round is 2 minutes . ",
+                "Every participant will get 3 ball,1 ball can only be used at a time. ",
+            ],
+            [
+                "In this round, it is essential that ball has to pass through the ring while shooting. ",
+                "There will be 4 boxes in 4 columns. Out of all boxes any five boxes will have the sketch of each angry bird and one box will be a jackpot box. NOTE:-In these round no extra shoot will be given if the participant shoots the jackpot box. ",
+                "Participants gaining maximum points will be the winner. ",
+                "Total duration for this round is 2 minutes. ",
+                "Every participant will get 2ball. Each ball can be used at a time. ",
+            ],
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -758,11 +1087,51 @@ export const eventDetails = [
         title: "E Sports",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "Game Mode: Battle Royale (multiplayer)",
+                "Time: 20 minutes (each match)",
+                "Map will be decided by the organizers round wise; all the maps must be downloaded before attending the event.",
+                "A WhatsApp group will be created for the participants to provide information about rounds and events, it is the participant’s responsibility to stay up to date with all the latest details.",
+                "Each team may choose a variety of weapons and loadouts according to their needs.",
+                "If one of the players of a team is found using any types of cheats or hacks his/her entire team will be disqualified.",
+                "The tournament organizers reserve the right to cancel or modify the tournament rules if technical difficulties or any other factor beyond reasonable control impairs the integrity of the tournament.",
+                "Participants should make sure they have good internet connectivity and if there are any issues then it must be reported to the organizers before the start of a match.",
+                "All the participants of the current round must join the custom room as soon as the room code is shared and report to the organizers if there are any issues.",
+                "Only the participants that will be present in the campus will be allowed to play.",
+                "Actions will be taken against the teams that infringe the rules.",
+                "Each round is of knockout basis.",
+                "Team ranking will be provided according to the total number of kills of the team.",
+
+            ],
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "First round will be played in Bermuda Remastered Map.",
+                "Depending on the number of registration of players, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
+                "Total number of kills per team will be counted and teams will be provided rank according to it.",
+                "In the first round, the teams that are in the top 70% will be selected for the second round (if divided into different rooms teams that are in top 70% from each room will be selected).",
+
+            ],
+            [
+                "Second round will be played in Nexterra Map.",
+                "Depending on the number of selected players from the first round, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
+                "Total number of kills per team will be counted and teams will be provided rank according to it.",
+                "In the second round, the teams that are in the top 50% will be selected for the third round (if divided into different rooms teams that are in top 60% from each room will be selected).",
+
+            ],
+            [
+                "Third round will be played in Purgatory Map.",
+                "Depending on the number of selected players from the second round, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
+                "Total number of kills per team will be counted and teams will be provided rank according to it.",
+                "Here all the teams will fight for the top positions and the top teams will be declared winners of the event.",
+                "Maximum Timeout of 6 minutes are allowed for completing the laps without considering the fouls.",
+                "In case of tie, one extra lap will be given to the participants.",
+                "The robot which will complete their laps in minimum time will be declared as winner.",
+                "Top 4 teams will be selected for final round.",
+            ],
+
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -814,11 +1183,30 @@ export const eventDetails = [
         title: "Face Of Laqshya",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "First round is free.",
+                "Registration for first round will start round will start from 15th March 2023.",
+                "First round will end on 8th April at 10 PM.",
+                "Top 20 photos with maximum shares will qualify for second round.",
+                "Registration fee for second round is Rs. 200/- (Only for second round).",
+                "Second round is based on offline voting.",
+                "You can send your pictures between 6 AM to 6 PM.",
+                "Participant should send only and only 1 Photo.",
+                "Participant should be above 15 years of Age.",
+                "Mail your photographs with Name, contact number and institute name in: laqshya@csitdurg.in",
+            ],
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "First round is free.",
+
+            ],
+            [
+                "Top 20 photos with maximum shares will qualify for second round."
+            ],
+
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -842,7 +1230,16 @@ export const eventDetails = [
         title: "Artifex Show",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "Short film has maximum limit of 5 mins.",
+                "The video format of your film should be in (mp4, mpeg, avi, mkv, flv).",
+                "Short movie could be any video relating to documentary, animation, Drama etc. movie of all themes is acceptable.",
+                "The video file can be submitted in pen drive or your can mail videos with Name, Contact Number & Institute Name.",
+                "Top 20 videos selected on second round.",
+                "Selection based on highest sharing and video content.",
+                "Second round is based on offline voting.",
+                "You can send your videos between 07:00 AM to 07:00 PM.   ",
+            ],
         ],
         arena: '',
         judgement: [
@@ -870,7 +1267,17 @@ export const eventDetails = [
         title: "Cinematics",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "Short film has maximum limit of 5 mins.",
+                "The video format of your film should be in (mp4, mpeg, avi, mkv, flv).",
+                "Short movie could be any video relating to documentary, animation, Drama etc. movie of all themes is acceptable.",
+                "The video file can be submitted in pen drive or your can mail videos with Name, Contact Number & Institute Name.",
+                "Top 20 videos selected on second round.",
+                "Selection based on highest sharing and video content.",
+                "Second round is based on offline voting.",
+                "You can send your videos between 07:00 AM to 07:00 PM.   ",
+            ],
         ],
         arena: '',
         judgement: [
@@ -898,7 +1305,24 @@ export const eventDetails = [
         title: "Bottle jet",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "EVENT RULES:",
+                "The participant will be asked to make a bottle of their own, which they will launch via the launcher, and distance will be the criteria of winning.",
+                "The arena will only indulge a space of 110 meters approximately, and can be easily incorporated in a limitation of space. The arena will be a divergent arc of angle equal to 60o.",
+                "Two chances will be given to each team in all rounds, and best of the two reading will be taken.",
+
+            ],
+            [
+                "RULES  AND REGULATIONS:",
+                "The teams will not argue with the volunteers on judgement basis, one unnecessary   argument will result in disqualification.",
+                "The team whose bottle will fall outside of marked area will be considered disqualified.",
+                "Two chances will be given to each team in all rounds, and best of the two reading will be taken.",
+                "The arena specifications may change due to the condition.",
+                "If bottle get damaged after launching participants can fix the damages.  ",
+                "Judgement criteria will be based on distance travelled by the bottle or rocket in different rounds.",
+
+            ],
         ],
         arena: '',
         judgement: [
@@ -926,11 +1350,50 @@ export const eventDetails = [
         title: "Code Crunch",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "The organizers' decisions concerning the event will be deemed final and binding.",
+                "Participants are not allowed to use external resources (like the internet or books) or seek assistance from others during the event.",
+                "Any form of cheating will result in disqualification from the competition without any warning.",
+                "The necessary tools and resources required for the event will be provided by the organizers.",
+                "During the event, all participants must follow a code of conduct and display respect towards others at all times.",
+
+            ],
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "Multiple – choice questions (MCQs) to be answered.",
+                "The maximum time limit for this round is 20 minutes.",
+                "A total of 20 questions will be asked in this round, which means that the maximum score achievable is 20 marks.",
+                "Participants will be awarded 1 mark for each correct answer they provide.",
+                "Those who achieve 50% or more marks within the stipulated time will be promoted to the next round of the competition.",
+
+            ],
+            [
+                "The participants will receive problem statements that they are required to solve.",
+                "Participants are not allowed to modify the given logic for debugging questions.",
+                "The problem statements will fall under the following categories:",
+                "Pattern based",
+                "Array basics",
+                "Debugging",
+                "Fill in missing code",
+                "Basic DSA related",
+                "The time limit for this round will be 50 minutes.",
+                "There will be a total of 10 questions, with a total score of 50 marks.",
+                "Participants will receive 5 marks for each correct answer.",
+                "Only the top 10 participants from all groups in the second round will be promoted to the next round.",
+                "In the event of at ie, priority will be given to the participant who has taken the least amount of time to solve the problems.",
+
+            ],
+            [
+                "Participants will receive story-based problem statements that they are required to solve according to the given specifications.",
+                "The time limit for this round will be 60 minutes.",
+                "There will be a total of 5 questions, with a total score of 50 marks.",
+                "Participants will receive 10 marks for each correct answer.",
+                "In the event of a tie, priority will be given to the participant who has taken the least amount of time to solve the problems.",
+                "The participant with the highest score and the shortest time taken will be selected as the winner.",
+            ],
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -954,11 +1417,35 @@ export const eventDetails = [
         title: "Tech farmacia",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "AUDITI0N [SUBMISSION OF PRODUCT]	",
+                "The audition round is on 18-04-23.",
+                "The group should contain 1-2 members.",
+                "The presentation should be submitted in soft copy by naming the file with a proper name and title.",
+                "Candidates shouldjustify the credibility of your product.",
+                "Candidates shouldjustify the product is made by themselves.",
+                "Candidate should mention the reference that you have used while making the product.",
+
+            ],
+            [
+                "EXPLANATION {FORMULATION OF THE PRODUCT}",
+                "The procedure should be explained in detailed manner (Detailing Procedure is necessary).",
+                "The candidate should explain all the information if any question is asked upon. ",
+
+            ],
+            [
+                "EVALUATION {CROSS EXAMINATION OF EVALUATIUON PARAMETERS USED}",
+                "Labelling should be according to IP (Indian Pharmacopeia).",
+                "The labelling of product should be properand attractive.",
+                "Candidates should mention the limitations of the evaluation parameters used.",
+                "Note: All the above-mentioned criteria and rules are based on the general understanding and are compulsory and can be modified later based on the situational need"
+
+            ],
+
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -982,11 +1469,41 @@ export const eventDetails = [
         title: "Lets Play With Bond",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "Mobile phones and smart watches are strictly restricted.",
+                "Participants should have to bring one pen and blank paper.",
+                "All the rounds will start in a given time slot and no extra time will be given so just be on time.",
+                "If any kind of misbehave is there then the participant should be directly disqualified.",
+                "If in case of any breakage then the participant should have to pay the cost of the whole set.",
+                "Participants cannot use any kind of alternatives for any type of bond or structures.",
+
+            ],
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "THE ALKANES",
+                "Round 1is based on simple structure of alkanes and correct structure in less time.",
+                "Then we will record your timing in which you have completed the structure.",
+                "One table and model atomic set will be given to the participants for making the structure.",
+
+            ],
+            [
+                "THE FUNCTIONAL GROUP",
+                "Similarly, in the second round the structure is related to functional  group.",
+                "The picture will be shown for 5 seconds.",
+                "And then the timing will be recorded with stopwatch.",
+                "The correct structure with less timing will be qualified for the 3rd Round.",
+
+            ],
+            [
+                "THE MYSTERY OF BOND",
+                "In the 3rd round the paper with word puzzle will be given and all the participants will have to find the 5 correct elements or compounds.",
+                "Then participants have to make the structure of that element whose first letter is mention in the paper.",
+                "This round is also time based.",
+            ],
+
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -1010,11 +1527,46 @@ export const eventDetails = [
         title: "Make Your Move",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "Registration fees for individual performer is Rs50/-.",
+                "Team size can be solo, duo or group.",
+                "The whole event is divided into two parts.",
+                "Audition round(14th & 15th April 2023)",
+                "Final round (19th April 2023)",
+
+            ],
+
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "---Audition (Round 1)---",
+                "Song should be submitted before 13th April 2023 and it should be in between 2:00 min to 2:30 min.",
+                "The competition will be from 10:00 AM to 4:00 PM at CSIT Campus SMH Hall.",
+                "The participants must report to the venue 1 hour before the commencement of the event.",
+                "Song can be of any language.",
+                "Any form of exhibitionism, disrespect culture, ethnicity, sexuality or gender will be grounds for disqualification.",
+                "Props are allowed as long as they can be arranged by the participant themselves.",
+                "No sort of flammable items, fluid or powder will be allowed.",
+                "Exceeding the time limit will lead to deduction in points.",
+                "The judge decision will be final and binding.",
+                "The participants can also re-register themselves by paying half of the registration fees, then they will get another chance to perform (Only applicable in Audition round).",
+
+            ],
+            [
+                "---Main event (Final round)---",
+                "Song should be submitted before 18th April 2023 and it should be in between 4:00 min to 4:30 min.",
+                "The competition will be from 4:00 PM to 9:00 PM at CSIT Campus open auditorium.",
+                "The reporting time of participants will be 2 PM 2:00 PM.",
+                "Song can be of any language.",
+                "Any form of exhibitionism, disrespect culture, ethnicity, sexuality or gender will be grounds for disqualification.",
+                "Props are allowed as long as they can be arranged by the participant themselves.",
+                "No sort of flammable items, fluid or powder will be allowed.",
+                "Exceeding the time limit will lead to deduction in points.",
+                "The judge decision will be final and binding.",
+            ],
+
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -1055,42 +1607,55 @@ export const eventDetails = [
         ]
     },
     {
-        title: "Ad Mad Show",
-        intro: "introduction",
-        rules: [
-            "1", "2", "3", "4"
-        ],
-        arena: '',
-        judgement: [
-            "1", "2", "3", "4"
-        ],
-        registrationfee: 50,
-        eventIncharges: [
-            {
-                name: "DRx. BISHESAR SAHU",
-                contactno: 9098323554,
-            }
-        ],
-        eventManagers: [
-            {
-                name: "Aditya Thakur",
-                contactno: 123456789,
-            },
-            {
-                name: "Ragini Sahu",
-                contactno: 123456789,
-            },
-        ]
-    },
-    {
         title: "Quiz Masters",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "Team may consist of maximum of 2 members.",
+                "No electronic devices and any equipment are allowed.",
+                "The game will follow a knockout format.",
+                "Re-registration is allowed only for round 1.",
+                "In any case the decision of the jury member would be considered final.",
+
+            ],
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "- ’MULTIPLE CHOICE QUESTION’-",
+                "20 questions will be there in this round.",
+                "Software will be given for the answers",
+                "20 min is given for this round.",
+
+            ],
+            [
+                "CONSIST OF 3 SUBROUNDS.",
+                "Vision mania",
+                "Audio visual ",
+                "Rapid fire",
+                "VISION MANIA \n\n",
+                "In this round, participants will be shown picture and they have to identify the picture.",
+                "Question will be displayed for 60 seconds (1 minute).",
+                "There will be 5 questions in this round.",
+                "AUDIO VISUAL\n\n",
+                "In this round any audio or short video will be projected.",
+                "Question will be related to the video or audio.",
+                "RAPIDFIRE\n\n",
+                "Questionswillbea5kedrapidlyforoneminute.",
+                "If participant does not know the answer they can jump for the next question.",
+
+
+            ],
+            [
+                "FINAL QUIZ ROUND",
+                "In this round participants will select their interest of field among the different field like: -sports, current affairs, entertainment, business & economics, History and technology.",
+                "Maximum 2 minutes will be provided for each question.",
+                "Negative marking will be there in this round.",
+                "5 questions will their in 3rd round.",
+
+            ],
+
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -1114,11 +1679,45 @@ export const eventDetails = [
         title: "Treasure hunt",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "There will be a total 3 rounds in this event, and the 3rd round will be the final round.",
+                "Re-Registration will be applicable only for going to round 2, not for final round.",
+                "All participants will have to submit their phones.",
+                "Team members do not have to play apart from their team, if any member is found apart from their team then that team will be disqualified(For Round 1&3)",
+                "The whole team will be known by its team name, which will be on the basis of color.",
+                "There will be a leader from each team.",
+                "Each round will be of 30 minutes.",
+                "Volunteers can be anywhere in the entire college campus, so if anyone is found with a phone, that team will be disqualified.",
+                "Whichever team reaches the treasure by solving the puzzle, will have to take that object and reach the event manager.",
+                "This event will cover the entire college campus.",
+                "If a team gets the treasure of another team by mistake, then no one will remove that treasure from there.",
+                "All the team members have to be present at the given time. In case of absence of any team member, that team has to complete the game with less members.",
+                "It is compulsory to all team members to have a Watch.",
+            ],
         ],
         arena: '',
         judgement: [
-            "1", "2", "3", "4"
+            [
+                "This round will be based on reasoning and riddle.",
+                "No team members will be separated from their team on this round.",
+                "In this round you have to find or collect those cards which will be mentioned on clue card.",
+                "if by mistake another card is found, then it should not be removed from there. ",
+                "After finding taash cards they will have to reach to the manager.",
+            ],
+            [
+                "This round will neither be based on riddle nor on reasoning.",
+                "In this round, everyone has to find pieces of the map, which can be anywhere on the campus.",
+                "On this round, all the members have to find map pieces and all team members can separate from their team in this round.",
+
+            ],
+            [
+                "This round will based on clues .",
+                "No team members will be separated from their team on this round. ",
+                "In this all teams will have to reach theto map by solving the riddle, which will lead you to the final treasure box.",
+                "(NOTE : After Registering 15 teams, the Registration will be closed.)",
+            ],
+
         ],
         registrationfee: 50,
         eventIncharges: [
@@ -1139,10 +1738,77 @@ export const eventDetails = [
         ]
     },
     {
-        title: "Digital Marketing",
+        title: "Ad Mad Show",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "The event/competition is open to all students currently studying at college.",
+                "There will be a total 3 rounds in this event, and the 3rd round will be the final round.",
+                "No electronic device & equipment allowed. college will provide paper and pen.",
+                "In every round, teams will be given points on the basis of their performance.",
+                "In any case, the decision of the jury members/judges would be considered final.",
+                "All the participants will have to abide by the rules.",
+
+            ],
+        ],
+        arena: '',
+        judgement: [
+            [
+                "Logos and flags will be displayed on projector for 15 sec.",
+                "Logos and flags will be of different companies, products, brand or countries.",
+                "Only one participant from a team will be allowed do see the logos and flags or memorize it.",
+                "Later he/she will be supposed to tell the of foreseen logos to his /her partner.",
+                "Those teams will be qualified for next round who will identified maximum number of logos and flags.",
+                "Time limit for writing the names will be 30 seconds.",
+
+            ],
+            [
+                "Participants will be supposed to identify the product name by watching the video and write a tagline for it.",
+                "Videos/pictures will be displayed for 1 minutes only.",
+                "Later the will have to write it in the paper and time allotted will be 1 minutes only.",
+                "Those teams will be qualified for next round who will identify and write the correct and maximum number of product names and their tagline.",
+            ],
+            [
+                "This is a “pick -a-chit” round.",
+                "The chit will contain a product name and he/she can pick only 1 chit.",
+                "In a group of 2, one participant will have to pick a chit and draw a picture and act related to that product and other one will have to recognise and tell the name of the same.",
+                "The partner will have to tell the product name straight away.",
+                "Only one product names written in the chit will be considered correct.",
+                "Time limit will be 3 minutes. "
+            ],
+
+
+        ],
+        registrationfee: 50,
+        eventIncharges: [
+            {
+                name: "DRx. BISHESAR SAHU",
+                contactno: 9098323554,
+            }
+        ],
+        eventManagers: [
+            {
+                name: "Aditya Thakur",
+                contactno: 123456789,
+            },
+            {
+                name: "Ragini Sahu",
+                contactno: 123456789,
+            },
+        ]
+    },
+    {
+        title: "Social Media Awareness",
+        intro: "introduction",
+        rules: [
+            [
+                "",
+                "Everyone has to come 10 minutes before  given time.",
+                "After starting the session no one can be enter inside.",
+                "Your hone should be in silent mode. ",
+
+            ],
         ],
         arena: '',
         judgement: [
@@ -1182,7 +1848,13 @@ export const eventDetails = [
         title: "Cyber Security",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "Everyone has to come 10 minutes before  given time.",
+                "After starting the session no one can be enter inside.",
+                "Your hone should be in silent mode. ",
+
+            ],
         ],
         arena: '',
         judgement: [
@@ -1222,7 +1894,13 @@ export const eventDetails = [
         title: "Carrer Counselling",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "Everyone has to come 10 minutes before  given time.",
+                "After starting the session no one can be enter inside.",
+                "Your hone should be in silent mode. ",
+
+            ],
         ],
         arena: '',
         judgement: [
@@ -1262,7 +1940,13 @@ export const eventDetails = [
         title: "Drug Awareness",
         intro: "introduction",
         rules: [
-            "1", "2", "3", "4"
+            [
+                "",
+                "Everyone has to come 10 minutes before  given time.",
+                "After starting the session no one can be enter inside.",
+                "Your hone should be in silent mode. ",
+
+            ],
         ],
         arena: '',
         judgement: [
