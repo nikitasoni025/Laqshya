@@ -126,7 +126,7 @@ const Homepage = (props) => {
                         </p>
                         <p>Sports enthusiasts had a chance to participate in various indoor and outdoor sports competitions, such as cricket, Futsal, Arm Wrestling ,Angry Birds. These events not only promoted physical fitness and healthy competition but also provided an opportunity for students to showcase their teamwork and sportsmanship skills.
                         </p>
-                        <p>Apart from technical, management, and sports events, the cultural events were the highlights of the festival. There were music and dance performances, and various other cultural activities that showcased the diverse talents and cultural heritage of the region.</p>
+                        {/* <p>Apart from technical, management, and sports events, the cultural events were the highlights of the festival. There were music and dance performances, and various other cultural activities that showcased the diverse talents and cultural heritage of the region.</p> */}
                       </div>
                     </div>
                     <div className="right-cont">
