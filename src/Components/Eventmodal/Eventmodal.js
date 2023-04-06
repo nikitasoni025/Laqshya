@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaTimes } from 'react-icons/fa';
+import { FaPhone, FaTimes } from 'react-icons/fa';
 import { eventDetails } from '../../Constants/OurConst';
 import './eventmodal.scss';
 import { playclicksound } from '../../Utils/commonutil';
@@ -8,6 +8,10 @@ import { SiGooglepay, SiPaytm, SiPhonepe } from 'react-icons/si';
 const Eventmodal = (props) => {
     const [infoType, setInfoType] = useState('rul');
     const [finalFee, setFinalFee] = useState(0);
+
+    useState(() => {
+       
+    }, [infoType])
 
 
     const handleUpiPay = (e) => {
@@ -20,14 +24,44 @@ const Eventmodal = (props) => {
         <div className='Eventmodal'>
             <div className="event-modal-wrap">
                 <div className="close-mod-btn"><button onClick={() => { props.openModal(false); playclicksound(); }}><FaTimes /></button></div>
+                <div className="event-managers">
+                    <div className="col">
+                        <h3>Event Managers</h3>
+                        <ul>
+                            {eventDetails[props.ourIndex].eventManagers && eventDetails[props.ourIndex].eventManagers.length > 0 ? eventDetails[props.ourIndex].eventManagers.map((manager, indx) => {
+                                return (
+                                    <li key={indx}>{manager.name}&nbsp;&nbsp;&nbsp;<a href={`tel:${manager.contactno}`}>{manager.contactno}<FaPhone/></a></li>
+                                )
+                            }) : null}
+                        </ul>
+                    </div>
+                    <div className="col">
+                        <h3>Event Incharges</h3>
+                        <ul>
+                            {eventDetails[props.ourIndex].eventIncharges && eventDetails[props.ourIndex].eventIncharges.length > 0 ? eventDetails[props.ourIndex].eventIncharges.map((incharge, indx) => {
+                                return (
+                                    <li key={indx}>{incharge.name}&nbsp;&nbsp;&nbsp;<a href={`tel:${incharge.contactno}`}>{incharge.contactno}<FaPhone/></a></li>
+                                )
+                            }) : null}
+                        </ul>
+                    </div>
+                    <div className="col">
+                        <h3>Event</h3>
+                        <ul>
+                            <li>Name : {eventDetails[props.ourIndex].title}</li>
+                            <li>Registration Fee : {eventDetails[props.ourIndex].fixed ? eventDetails[props.ourIndex].registrationfee + "₹ Fixed" : eventDetails[props.ourIndex].registrationfee + "₹ Per Person"}</li>
+                        </ul>
+                    </div>
+
+                </div>
                 <div className="info-nav-button">
-                    {eventDetails[props.ourIndex].rules ?  <button className='nav-btn' onClick={() => { setInfoType('rul'); playclicksound() }}>RULES</button> : null}
+                    {eventDetails[props.ourIndex].rules ? <button className='nav-btn' onClick={() => { setInfoType('rul'); playclicksound() }}>RULES</button> : null}
                     {eventDetails[props.ourIndex].judgement ? <button className='nav-btn' onClick={() => { setInfoType('jud'); playclicksound() }}>ROUND RULES</button> : null}
                     {eventDetails[props.ourIndex].arena ? <button className='nav-btn' onClick={() => { setInfoType('arn'); playclicksound() }}>ARENA</button> : null}
                     <button className='nav-btn' onClick={() => { setInfoType('pay'); playclicksound() }}>PAYMENT</button>
 
                 </div>
-                <div className="information">
+                <div className="information" id='information'>
                     {infoType === 'rul' ? (
                         <div className="rule-wrap">
                             <h1>RULES</h1>
@@ -95,7 +129,7 @@ const Eventmodal = (props) => {
                                     <div className="qr">
                                         <img width={300} src={eventDetails[props.ourIndex].qrimage} alt="qr image" />
                                     </div>
-                                    <div className="amnt">Amount:{eventDetails[props.ourIndex].fixed ? eventDetails[props.ourIndex].registrationfee + "₹ Fixed" :eventDetails[props.ourIndex].registrationfee + "₹ Per Person"}</div>
+                                    <div className="amnt">Amount:{eventDetails[props.ourIndex].fixed ? eventDetails[props.ourIndex].registrationfee + "₹ Fixed" : eventDetails[props.ourIndex].registrationfee + "₹ Per Person"}</div>
                                     <div className="pay-btn">
                                         <button onClick={handleUpiPay}><SiPaytm /> &nbsp; <SiPhonepe /> &nbsp; <SiGooglepay /></button>
                                     </div>

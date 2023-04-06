@@ -202,7 +202,7 @@ export const kaushalya = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
-        registrationfee: "Free",
+        registrationfee:0,
         eventid: 'OMS',
 
     },
@@ -217,7 +217,7 @@ export const bouddhiki = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
-        registrationfee: "Free",
+        registrationfee: 0,
         eventid: 'FOL',
     },
     {
@@ -396,7 +396,7 @@ export const Kautilya = [
 export const workshop = [
 
     {
-        title: "Social Media Awareness",
+        title: "AI in Drug Discovery and New Education Policy And Its Career",
         ourIndex: 24,
         img: "https://ik.imagekit.io/egjzyz51e/IMG_20230406_003748.jpg?updatedAt=1680721882375",
         isGrouped: false,
@@ -412,7 +412,7 @@ export const workshop = [
 
     },
     {
-        title: "Cyber Security",
+        title: "Cyber Security And Digital Marketing",
         ourIndex: 25,
         img: "https://ik.imagekit.io/egjzyz51e/IMG_20230406_004049.jpg?updatedAt=1680721911293",
         isGrouped: false,
@@ -427,39 +427,6 @@ export const workshop = [
 
 
     },
-    {
-        title: "Carrer Counselling",
-        ourIndex: 26,
-        img: "https://ik.imagekit.io/egjzyz51e/IMG_20230406_004158.jpg?updatedAt=1680722187068",
-        isGrouped: false,
-        isIndividual: true,
-        maxParticipants: 1,
-        minParticipants: 1,
-        fixed:true,
-        registrationfee: 50,
-        eventid: 'CC',
-        upiid: 'surukant30@oksbi',
-        qrimage: "https://ik.imagekit.io/egjzyz51e/workshop.jpg?updatedAt=1680286118346"
-
-
-    },
-    {
-        title: "Drug Awareness",
-        ourIndex: 27,
-        img: "https://ik.imagekit.io/egjzyz51e/IMG_20230406_003654.jpg?updatedAt=1680721871683",
-        isGrouped: false,
-        isIndividual: true,
-        maxParticipants: 1,
-        minParticipants: 1,
-        fixed:true,
-        registrationfee: 50,
-        eventid: 'DA',
-        upiid: 'surukant30@oksbi',
-        qrimage: "https://ik.imagekit.io/egjzyz51e/workshop.jpg?updatedAt=1680286118346"
-
-
-    },
-
 ]
 export const bannerslide = [
     {
@@ -501,15 +468,41 @@ export const eventDetails = [
         intro: "introduction",
         rules: [
             [
-                "",
-                "At a time three teams will compete.",
-                "The bot should be checked before the race.",
-                "The winners will be selected on the basis of the ‘finish first and win’ criteria.",
-                "There will be three rounds- preliminary, semifinal and final.",
-                "If touched ones the bot will start from last checkpoint it passed.",
-                "During the match both the team member can enter the arena for handling the bot.",
-                "All the decisions made by Event Manager will be final and irreversible. ",
-                "There will be three calls for a team to come arena. If the team will not be present till the third call.  They will be disqualified.",
+                "Introduction",
+                'Being second is to be the first of the ones who lose - AyrtonSenna “Life is a race and the need is to win. Life seems easy but is full of hurdles. If you have the zeal, the chances of winning get boosts. Here we provide budding engineers to show there robotic skills i.e. skills in handling, in designing and in competing of hurdle clearing challenge.It’s a great opportunity for you to show how tough is your robot to survive all the hurdles and win with a will, of fire. So the last question which exists is Can you win?'
+            ],
+            [
+                "Specifications",
+                'Team : 3 participants per team.',
+                'Arena :',
+                'There will be three checkpoints.',
+                'Third check point will be the finishing point.',
+                'The arena will be made up of cement and will have various hurdles like:-',
+                'Bricks',
+                'Elevation',
+                'Small wooden blocks',
+                'Gravels',
+                'Hay',
+                'Sand',
+                'Inclination + Blocks',
+                'Robot :',
+                'The bot should be fit in the box of 300mmX300mmX300mm.',
+                'The bot can be wire or wireless (wireless bot will not be given advantages).',
+                'Maximum 24V DC supply should be used.',
+                'The wire must be of 5 m in length for wire robots.',
+                'Weight Limit of Bot should be 3 KG.',
+                'In Different rounds there will be little change in Hurdles. ',
+            ],
+            [
+                "General Rules",
+                'At a time three teams will compete.',
+                'The bot should be checked before the race.',
+                'The winners will be selected on the basis of the ‘finish first and win’ criteria.',
+                'There will be three rounds- preliminary, semifinal and final.',
+                'If touched ones the bot will start from last checkpoint it passed.',
+                'During the match both the team member can enter the arena for handling the bot.',
+                'All the decisions made by Event Manager will be final and irreversible. ',
+                'There will be three calls for a team to come arena. If the team will not be present till the third call.  They will be disqualified.',
             ]
         ],
 
@@ -528,7 +521,7 @@ export const eventDetails = [
 
             ],
         ],
-        arena: 'https://ik.imagekit.io/dexo68yudb/kautilya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678017925010',
+        arena: 'https://ik.imagekit.io/nnfduuxgl/xcelleratearena.png?updatedAt=1680815001024',
         registrationfee: 200,
         fixed:true,
         eventIncharges: [
@@ -555,38 +548,61 @@ export const eventDetails = [
         intro: "introduction",
         rules: [
             [
-                "",
-                "A team shall consist of only one robot.",
-                "Measurement of the bot will be done before the start of event by a panel of referee.",
-                "No changes in the bot will be entertained after the registeration.",
-                "The robot should not damage the arena by any means.",
-                "If both robots are immobile for 5 sec, the ball will be replaced at the starting points.",
-                "If two fouls are committed by a team a penalty shootout will be given to the opponent team.",
-                "Points will be given for goals only.",
-                "If both team can’t score within the time periods of match then the winner will be decided by the 5 penalty shoot ou",
+                "Introduction",
+                'One of the most popular games played in the world is soccer. It has a history that dates back to almost 3000 years. This Game has  evolved with time and has minor changes, though sticking to its initial game principles. With technological advancement, soccer is not just a game, rather it became a technology with the use of robot known as “Robo Soccer”.',
             ],
             [
-                "Ball Movement:",
+                "Specifications",
+                'Team =>',
+                'A Team should consist of 3 participants.',
+                'A member should not be common in other team.',
+                'Arena =>',
+                'Area of Arena will be of (3000 x 2000) mm',
+                'It is made up of concrete with cemented flooring.',
+                'It has two goal posts of dimension (400 x 200 x 250) mm.',
+                'Robot =>',
+                'Dimensions should not exceed 300mm x 300mm x 300mm (L x B x H).',
+                'Weight of robots depends on participant’s choice, but should not exceed 3 kg.',
+                'The control of robots can be wired or wireless.',
+                'The power supply should not exceed 12/24 volts, and should be on board.',
+                'Wire should be slack during the course of match. It should be of minimum 4 meter.',
+                'Lego kits are strictly prohibited.',
+                'Ball =>',
+                'The ball will be standard tennis ball. ',
+            ],
+            [
+                "Ball Movement",
                 'A robot cannot "block” the ball for more than 5 sec (Hint: Holding a ball means taking full control over the ball by removing all the degrees of freedom).',
                 "The ball cannot be held underneath a robot. If found so match will resume from starting position.",
                 "The ball must be visible at all times.",
-                "Opponent must be able to access the bal",
+                "Opponent must be able to access the ball.",
                 "All the participants will bring their own robotics kit.",
                 "Decision of the judges and the event organizers shall be treated as final.",
-                "Own goals will be treated as a goal of the opposition and the point will be given to the opponent",
-            ],
-            [
-                "Points Criteria:",
-                "One goal one point.",
-                "Dragging the opponent bot will lead to a foul.",
-                "On the 2nd Foul opponent will get a chance of a penalty.",
-                "If any robot makes a Penalty, it will have to start with starting position.",
-                "Points can be scored only by putting the ball into the goal.",
-                "There is no negative points for own goal instead of awarding the point to the opponent.",
+                "Own goals will be treated as a goal of the opposition and the point will be given to the opponent .",
 
             ],
+            [
+                "Points Criteria",
+                'One goal one point.',
+                'Dragging the opponent bot will lead to a foul.',
+                'On the 2nd Foul opponent will get a chance of a penalty.',
+                'If any robot makes a Penalty, it will have to start with starting position.',
+                'Points can be scored only by putting the ball into the goal.',
+                'There is no negative points for own goal instead of awarding the point to the opponent. '
+            ],
+            [
+                "General Rules",
+                'A team shall consist of only one robot.',
+                'Measurement of the bot will be done before the start of event by a panel of referee.',
+                'No changes in the bot will be entertained after the registeration.',
+                'The robot should not damage the arena by any means',
+                'If both robots are immobile for 5 sec, the ball will be replaced at the starting points.',
+                'If two fouls are committed by a team a penalty shootout will be given to the opponent team.',
+                'Points will be given for goals only.',
+                'If both team can’t score within the time periods of match then the winner will be decided by the 5 penalty shoot out.',
+            ]
         ],
-        arena: '',
+        arena: 'https://ik.imagekit.io/nnfduuxgl/Robo_Soccer_2_page-0001.jpg?updatedAt=1680815361455',
         judgement: [
             [
                 "This will be a knockout round.",
@@ -640,18 +656,33 @@ export const eventDetails = [
         intro: "introduction",
         rules: [
             [
-                "",
-                "Winner of this round will be the winner of the “Robo Soccer  League”",
-                "Only wireless robots are allowed.",
-                "For each fall from track and touch in bridge’s border, a penalty of 5 seconds will be added to the total time of completing laps (bridge will not be used in 1st round, it is for 2nd and final round).",
-                "For each touching of robot from hand, a penalty of 5 seconds will be added to the total time of completing laps.",
-                "Maximum Timeout of 6 minutes are allowed for completing the laps without considering the fouls.",
-                "In case of tie, one extra lap will be given to the participants.",
-                "The robot which will complete their laps in minimum time will be declared as winner.",
-                "Top 4 teams will be selected for final round.",
+                "Introduction",
+                'A kart racing game, also known as cart racing game or go-kart racing game, is a subgenre of racing games. Kart racing games have simplified driving mechanics while including unusual racetrack designs, obstacles, and vehicular combat. Robo go-karting is a great full event of laQshya.',
+            ],
+            [
+                "Specifications",
+                'Team =>',
+                '3 participants per team.',
+                'Arena =>',
+                'Arena will be of 6mX6m.',
+                'Width of track will be of 35cm.',
+                'Robot =>',
+                'The robot should fit in the box of dimension (30cmX30cmX30cm).',
+                'Maximum 12V DC supply is allowed.',
+            ],
+            [
+                "General Rules",
+                'Single robot will run in the arena.',
+                'Only wireless robots are allowed.',
+                'For each fall from track and touch in bridge’s border, a penalty of 5 seconds will be added to the total time of completing laps (bridge will not be used in 1st round, it is for 2nd and final round).',
+                'For each touching of robot from hand, a penalty of 5 seconds will be added to the total time of completing laps.',
+                'Maximum Timeout of 6 minutes are allowed for completing the laps without considering the fouls.',
+                'In case of tie, one extra lap will be given to the participants.',
+                'The robot which will complete their laps in minimum time will be declared as winner.',
+                'Top 4 teams will be selected for final round.',
             ]
         ],
-        arena: '',
+        arena: 'https://ik.imagekit.io/nnfduuxgl/Robo_gocart_2_page-0001.jpg?updatedAt=1680815143222',
         judgement: [
             [
                 "There will be threelaps in this round around Route No. 1.",
@@ -698,26 +729,43 @@ export const eventDetails = [
         intro: "introduction",
         rules: [
             [
-                "Out:",
+                "Introduction",
+                'With the proliferation of sports channels it’s more than likely you’ve clicked across a sumo match and wondered at this strange sport. But there’s more to sumo than just two men wrestling in the ring- in fact, it’s an ancient and treasured sport in Japan. And it’s becoming more and more popular outside of its homeland as the world grows ever smaller in this new age technology',
+            ],
+            [
+                "Problem Statement",
+                'Build wired/wireless controlled ROBOT that will avoid falling out or avoid being pushed out by the opponent robot.'
+            ],
+            [
+                "Specifications",
+                'Team =>',
+                '3 participants per team.',
+                'Each team should have unique participants i.e. no two teams can have even a single participant common',
+                'Arena =>',
+                'Diameter of arena will be 200 cm.',
+                'Concrete base will be placed at 150 mm above.',
+            ],
+            [
+                "Out",
                 "The first robot goes outside of the ring loses, even if the second robot subsequently touches outside of the ring. If the referee determines that both robots touched outside of the ring at the same time the round is nullified and started over.",
 
             ],
             [
-                "General:",
-                "Fair chance will be given to all participants.",
-                "The right spirit of participation is expected from the participants.",
-                "The robots must not harm the arena in any way. If it does so, a penalty will imposed on the team. The magnitude of the penalty will be decided by referee.",
-                "The decision of the referee will be final.",
-            ],
-            [
-                "Referee Stoppage:",
+                "Referee Stoppage",
                 "Five minutes are provided to a team for repairing their robots.",
                 "The robot fails to touch each other for some period of time.",
                 "The robots are hopelessly entangled or otherwise deadlocked.",
                 "At the referee’s discretion, the referee may choose to end a round and choose the round winner if smoke, fire, damage, or any other violation has occurre",
             ],
+            [
+                "General Rules",
+                "Fair chance will be given to all participants.",
+                "The right spirit of participation is expected from the participants.",
+                "The robots must not harm the arena in any way. If it does so, a penalty will imposed on the team. The magnitude of the penalty will be decided by referee.",
+                "The decision of the referee will be final.",
+            ],
         ],
-        arena: '',
+        arena: 'https://ik.imagekit.io/nnfduuxgl/Robo_Sumo_1_page-0001.jpg?updatedAt=1680815260210',
         judgement: [
             [
                 "Each match will be of 3 sub rounds. ",
@@ -760,13 +808,35 @@ export const eventDetails = [
     {
         title: "Deep Blue",
         intro: "introduction",
-        rules: [
+        arena: 'https://ik.imagekit.io/nnfduuxgl/Deep_Blue_2_page-0001.jpg?updatedAt=1680815651526',
+        rules:[
             [
-                "",
-                "There will be 3 Round:",
+                "Introduction",
+                'It seems the usual race of robots…but the race won’t be on any arena. Use the concept of buoyancy and race your machine on water. Make a fish out of your machine.So many people along the ways, whatever it is you aspire to do, will tell you it can’t be done. But all it takes is imagination. You dream. You plan. You reach.”       – Michael Phelps',
+            ],
+            [
+                "Problem Statement",
+                'Participant has to build a Robot that can float over the water for racing under specification.'
+            ],
+            [
+                "Specifications",
+                'Team =>',
+                '3 participants per team.',
+                'Arena =>',
+                'Arena will be of 8mX4m',
+                'Depth of the arena will be 2 feet',
+                'Some hurdles',
+                'Diameter of ball 40mm',
+                'Balloon.',
+                'Robot =>',
+                'The robot should fix in the box of dimensions 35cm*30cm*30cm (L*B*H).',
+                'The robot can be controlled with wire or wireless remote',
+                'If a team uses wired remote then the wire must be minimum 5m.',
+                'Robot can’t be expanded and it should remain under its dimension constrain at any time during the game.',
+                'If the robot is wired control then the wire of the robot remain stack under the circumstances during the competition.',
+                'Maximum 12volt DC supply should be used.',
             ]
         ],
-        arena: '',
         judgement: [
             [
                 "First round will be knockout round, there will be 1 lap in which team needs to clear the 1 lap, who complete the lap first will be qualified for the 2nd  round and other will be disqualified.",
@@ -807,21 +877,35 @@ export const eventDetails = [
     {
         title: "Robo Fire Fighting",
         intro: "introduction",
-        rules: [
+        arena: 'https://ik.imagekit.io/nnfduuxgl/Fire_fight_1_page-0001.jpg?updatedAt=1680815091839',
+        rules:[
             [
-                "",
-                "Bot should be wire and wireless.",
-                "Only fans and motor are of auxiliary/peripheral attachment to the bot will be allowed.",
-                "The last Decision/Rules will be made by the Judges according to the situation.",
-                "Touches to the walls & arena will add 5 seconds/touch to the total time.",
-                "For each touching of robot from hand, a penalty of 5 seconds will be added to the total time of completing the task.",
-                "In case of tie, one extra lap will be given to the participants.",
-                "The robot which will complete their laps in minimum time will be declared as winner.",
-                "Top 4 teams will be selected for final round.",
+                "Introduction",
+                'Robo fire fight racing is a concept that involves racing firefighting robots through a designated course or obstacle course. The objective of the race is to complete the course in the shortest amount of time possible while also demonstrating the robots ability to navigate through challenging environments, locate and extinguish simulated fires, and perform other firefighting tasks.'
             ],
-
+            [
+                "Specifications",
+                'Team =>',
+                '3 participants per team.',
+                'Arena =>',
+                'Arena will be of 6mX6m.',
+                'Arena is having a total number of rooms is 3.',
+                'Robot =>',
+                'The robot should fit in the box of dimension (30cmX30cmX30cm).',
+                'Maximum 12V DC supply is allowed.'
+            ],
+            [
+                "General Rules",
+                'Bot should be wire and wireless.',
+                'Only fans and motor are of auxiliary/peripheral attachment to the bot will be allowed.',
+                'The last Decision/Rules will be made by the Judges according to the situation.',
+                'Touches to the walls & arena will add 5 seconds/touch to the total time.',
+                'For each touching of robot from hand, a penalty of 5 seconds will be added to the total time of completing the task.',
+                'In case of tie, one extra lap will be given to the participants.',
+                'The robot which will complete their laps in minimum time will be declared as winner.',
+                'Top 4 teams will be selected for final round.',
+            ]
         ],
-        arena: '',
         judgement: [
             [
                 "Robot has to Blow Candles of the first allotted room and return to the start point.",
@@ -862,15 +946,29 @@ export const eventDetails = [
     {
         title: "Drone Race",
         intro: "introduction",
-        rules: [
+        arena: '',
+        rules:[
             [
-                "Winners will be selected on the time basis.",
-                "All the Pilot & the team must wear helmets, glasses and other safty gears.",
-                "Any team or team member that will not physically present on the flight line fully prepared to race within the 10 minutes announcement will be considered as disqualified. ",
-
+                "Introduction",
+                'Drones, also known as remote-controlled aircraft, are flown at high speeds across an obstacle-filled course in drone racing, an exhilarating sport. Drone racings goal is to complete the course in the quickest amount of time while also dodging hazards and performing accurate manoeuvres. drone racing, is a sport where participants control "drones",Similar to full size air racing, the goal is to complete a set course as quickly as possible'
+            ],
+            [
+                "Specifications",
+                'Team =>',
+                '3 participants per team.',
+                'Arena =>',
+                'Open Round Track',
+                'Drone =>',
+                'Drone Battery should not exceed 20V DC.',
+                'Only Quadcopters are allowed with diagonal dimensions of 49cm. '
+            ],
+            [
+                "General Rules",
+                'Only 5 touches (30 sec per touch) will be allowed per round. ',
+                'All the Pilot & the team must wear helmets, glasses and other safty gears.',
+                'Any team or team member that will not physically present on the flight line fully prepared to race within the 10 minutes announcement will be considered as disqualified. ',
             ]
         ],
-        arena: '',
         judgement: [
             [
                 "In this round, pilots have to fly their drones to a specified height and then land back on the ground.",
@@ -1881,7 +1979,7 @@ export const eventDetails = [
         qrimage: "https://ik.imagekit.io/egjzyz51e/Admadshow.png?updatedAt=1680285834176"
     },
     {
-        title: "Social Media Awareness",
+        title: "AI in Drug Discovery and New Education Policy And Its Career",
         intro: "introduction",
         rules: [
             [
@@ -1927,7 +2025,7 @@ export const eventDetails = [
         qrimage: "https://ik.imagekit.io/egjzyz51e/workshop.jpg?updatedAt=1680286118346"
     },
     {
-        title: "Cyber Security",
+        title: "Cyber Security And Digital Marketing",
         intro: "introduction",
         rules: [
             [
@@ -1972,96 +2070,8 @@ export const eventDetails = [
         upiid: 'surukant30@oksbi',
         qrimage: "https://ik.imagekit.io/egjzyz51e/workshop.jpg?updatedAt=1680286118346"
     },
-    {
-        title: "Carrer Counselling",
-        intro: "introduction",
-        rules: [
-            [
-                "",
-                "Everyone has to come 10 minutes before  given time.",
-                "After starting the session no one can be enter inside.",
-                "Your hone should be in silent mode. ",
-
-            ],
-        ],
-        arena: '',
-        registrationfee: 50,
-        fixed:false,
-        eventIncharges: [
-            {
-                name: "Er. PRADEEP AGRAWAL",
-                contactno: 9993608092,
-            },
-            {
-                name: "CHETNA SINGH THAKUR",
-                contactno: 7970128233,
-            },
-        ],
-        eventManagers: [
-            {
-                name: "Suryakant Deshmukh",
-                contactno: 123456789,
-            },
-            {
-                name: "Nidhi Sharma",
-                contactno: 7000032972,
-            },
-            {
-                name: "Vikas Sahu",
-                contactno: 123456789,
-            },
-            {
-                name: "devendra Yadav",
-                contactno: 123456789,
-            },
-        ]
-    },
-    {
-        title: "Drug Awareness",
-        intro: "introduction",
-        rules: [
-            [
-                "",
-                "Everyone has to come 10 minutes before  given time.",
-                "After starting the session no one can be enter inside.",
-                "Your hone should be in silent mode. ",
-
-            ],
-        ],
-        arena: '',
-        registrationfee: 50,
-        fixed:false,
-        eventIncharges: [
-            {
-                name: "Er. PRADEEP AGRAWAL",
-                contactno: 9993608092,
-            },
-            {
-                name: "CHETNA SINGH THAKUR",
-                contactno: 7970128233,
-            },
-        ],
-        eventManagers: [
-            {
-                name: "Suryakant Deshmukh",
-                contactno: 123456789,
-            },
-            {
-                name: "Nidhi Sharma",
-                contactno: 7000032972,
-            },
-            {
-                name: "Vikas Sahu",
-                contactno: 123456789,
-            },
-            {
-                name: "devendra Yadav",
-                contactno: 123456789,
-            },
-        ],
-        upiid: 'surukant30@oksbi',
-        qrimage: "https://ik.imagekit.io/egjzyz51e/workshop.jpg?updatedAt=1680286118346"
-    },
+   
+  
 ]
 
 

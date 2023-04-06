@@ -59,7 +59,7 @@ const Loginpage = ({ setIsUserAuthenticated }) => {
             await setAccount({ id: id, username: name, email: email, phonenumber: phonenumber, institution: institution, standard: standard });
             navigate('/events');
         } else {
-
+            console.log(response);
             setIsLoading(false);
             setShowError(true);
             playErrorsound();
