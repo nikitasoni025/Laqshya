@@ -9,58 +9,10 @@ import "animate.css";
 
 const Bannercarousel = (props) => {
 
-    const handleSlideChange = (e) => {
-        let indx = e.item.index;
-
-        let overlayDetails = document.getElementsByClassName('overlay-deatils');
-
-        if (indx === 3) {
-            overlayDetails[3].classList.add('details-active');
-            overlayDetails[4].classList.remove('details-active');
-            overlayDetails[5].classList.remove('details-active');
-            overlayDetails[6].classList.remove('details-active');
-            overlayDetails[7].classList.remove('details-active');
-            overlayDetails[8].classList.remove('details-active');
-        } else if (indx === 4) {
-            overlayDetails[3].classList.remove('details-active');
-            overlayDetails[4].classList.add('details-active');
-            overlayDetails[5].classList.remove('details-active');
-            overlayDetails[6].classList.remove('details-active');
-            overlayDetails[7].classList.remove('details-active');
-            overlayDetails[8].classList.remove('details-active');
-        } else if (indx === 5) {
-            overlayDetails[3].classList.remove('details-active');
-            overlayDetails[4].classList.remove('details-active');
-            overlayDetails[5].classList.add('details-active');
-            overlayDetails[6].classList.remove('details-active');
-            overlayDetails[7].classList.remove('details-active');
-            overlayDetails[8].classList.remove('details-active');
-        } else if (indx === 6) {
-            overlayDetails[3].classList.remove('details-active');
-            overlayDetails[4].classList.remove('details-active');
-            overlayDetails[5].classList.remove('details-active');
-            overlayDetails[6].classList.add('details-active');
-            overlayDetails[7].classList.remove('details-active');
-            overlayDetails[8].classList.remove('details-active');
-        } else if (indx === 7) {
-            overlayDetails[3].classList.remove('details-active');
-            overlayDetails[4].classList.remove('details-active');
-            overlayDetails[5].classList.remove('details-active');
-            overlayDetails[6].classList.remove('details-active');
-            overlayDetails[7].classList.add('details-active');
-            overlayDetails[8].classList.remove('details-active');
-        } else if (indx === 8) {
-            overlayDetails[3].classList.remove('details-active');
-            overlayDetails[4].classList.remove('details-active');
-            overlayDetails[5].classList.remove('details-active');
-            overlayDetails[6].classList.remove('details-active');
-            overlayDetails[7].classList.remove('details-active');
-            overlayDetails[8].classList.add('details-active');
-        }
-    }
+    
     return (
         <div className='bannercarousel'>
-            <OwlCarousel onChanged={handleSlideChange} className='owl-theme' autoplay={true} autoplaySpeed={5000} loop nav={false} items={1}>
+            <OwlCarousel  className='owl-theme' autoplay={true} autoplayTimeout={5000} autoplaySpeed={5000} loop nav={false} items={1}>
                 {props.bannerSlides ? props.bannerSlides.map((slides, index) => {
                     return (
                         <div key={index} className="item banner-slide">

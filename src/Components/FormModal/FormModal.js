@@ -28,13 +28,14 @@ const FormModal = (props) => {
     const [paticipants, setParticipants] = useState([]);
     const [indiFormData, setIndiFormData] = useState({});
     const [groupFormData, setGroupFormData] = useState(initialGroupFormData);
-    const [transactionid,setTransactionId]=useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [termsAgreed , setTermsAgreed] =useState(false);
-    const [finalFee, setFinalFee] = useState(props.eventNameFee.registrationfee);
+    const [finalFee, setFinalFee] = useState(props.eventNameFee.fixed ? props.eventNameFee.registrationfee : props.eventNameFee.registrationfee);
+
+    console.log("sdhfuisefe",props.eventNameFee.fixed);
 
 
     const navigate = useNavigate();
@@ -97,7 +98,7 @@ const FormModal = (props) => {
         setGroupFormData({ ...groupFormData, members: paticipants });
         setS3FormType('group');
         setGroupedClicked('S3');
-        setFinalFee(props.eventNameFee.registrationfee * paticipants.length);
+        setFinalFee(props.eventNameFee.fixed ? props.eventNameFee.registrationfee : props.eventNameFee.registrationfee * paticipants.length);
     }
 
     const handleGroupSubmit = async (groupformData) => {
@@ -221,7 +222,7 @@ const FormModal = (props) => {
                         <div className="form-step-3">
                             <h1>Registering For</h1>
                             <h2>Event Name : {props.eventNameFee.eventname}</h2>
-                            <h2>Registration Fee :{s3FormType === 'indi' ?(props.eventNameFee.registrationfee)  : (props.eventNameFee.registrationfee * paticipants.length)   }&nbsp;₹</h2>
+                            <h2>Registration Fee :{s3FormType === 'indi' ?(props.eventNameFee.registrationfee)  : (props.eventNameFee.fixed ?  props.eventNameFee.registrationfee :props.eventNameFee.registrationfee * paticipants.length)   }&nbsp;₹</h2>
                             {s3FormType === "indi" ? <button onClick={() => {handleIndividalSubmit(indiFormData);playclicksound()}}>{isLoading ? <Loader /> : "Pay"}</button> : s3FormType === "group" ? <button onClick={() => { handleGroupSubmit(groupFormData);playclicksound() }}>{isLoading ? <Loader /> : "Pay"}</button> : null}
 
                             <button onClick={() => {setGroupedClicked("S1");playclicksound()}}><FaChevronLeft />Back</button>

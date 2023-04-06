@@ -38,6 +38,7 @@ const RegisterPage = (props) => {
 
 
     const navigate = useNavigate();
+    console.log("chala");
 
     useEffect(() => {
         const handleBackButton = () => {

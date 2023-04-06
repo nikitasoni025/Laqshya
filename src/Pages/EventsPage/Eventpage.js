@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Bannercarousel from '../../Components/Bannercarousel/Bannercarousel';
 import Eventcarousel from '../../Components/Eventcarousel/Eventcarousel';
 import Eventmodal from '../../Components/Eventmodal/Eventmodal';
@@ -16,10 +16,13 @@ const initialEventData = {
   registrationfee: "",
   eventid: "",
   maxParticipants: "",
+  minParticipants: "",
   isGrouped: true,
   isIndividual: true,
   upiid: '',
-  qrimage: ''
+  qrimage: '',
+  fixed:true,
+
 }
 
 const Eventpage = (props) => {
@@ -29,9 +32,8 @@ const Eventpage = (props) => {
   const [isModalOpened, setIsModalOpened] = useState(false);
   const [openFormModal, setOpenFormModal] = useState(false);
   const [eventNameFee, setEventNameFee] = useState(initialEventData);
-  const [logoutTimer,setLogoutTimer]=useState(5);
+  let [logoutTimer,setLogoutTimer]=useState(5);
   const [logoutText,setLogoutText]=useState('Logout');
-  const navigate = useNavigate();
 
 
 
@@ -97,7 +99,7 @@ const Eventpage = (props) => {
         <div className=' event-detail'>
           <div className="event-wrapdetail">
             {/* event shaurya stars here */}
-            <a href="" id='Shaurya'></a>
+            <a href="/" id='Shaurya'></a>
             <div className='event-row'>
               <h1> <span className='diff-font'>Shaurya</span> </h1>
               <h2>ROBOTICS</h2>
@@ -251,5 +253,3 @@ const Eventpage = (props) => {
 }
 
 export default Eventpage;
-
-// https://github.com/Artificier7010

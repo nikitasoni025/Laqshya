@@ -9,6 +9,7 @@ export const Shauryas = [
         maxParticipants: 3,
         minParticipants: 1,
         registrationfee: 200,
+        fixed:true,
         eventid: 'XX',
         upiid: 'amrit.pathak2@ibl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Xxcelerate.png?updatedAt=1680286992955"
@@ -21,6 +22,7 @@ export const Shauryas = [
         isIndividual: true,
         maxParticipants: 3,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 200,
         eventid: 'RSL',
         upiid: 'rd33550@ybl',
@@ -36,6 +38,7 @@ export const Shauryas = [
         isIndividual: true,
         maxParticipants: 3,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 200,
         eventid: 'RGC',
         upiid: 'surajharmukh123@okaxis',
@@ -50,6 +53,7 @@ export const Shauryas = [
         isGrouped: true,
         isIndividual: true,
         maxParticipants: 3,
+        fixed:true,
         minParticipants: 1,
         registrationfee: 200,
         eventid: 'RS',
@@ -66,6 +70,7 @@ export const Shauryas = [
         isIndividual: true,
         maxParticipants: 3,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 200,
         eventid: 'DB',
         upiid: '9131723338@axl',
@@ -82,6 +87,7 @@ export const Shauryas = [
         isIndividual: true,
         maxParticipants: 3,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 200,
         eventid: 'RFF',
         upiid: '7879750544@ibl',
@@ -97,6 +103,7 @@ export const Shauryas = [
         isIndividual: true,
         maxParticipants: 3,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 200,
         eventid: 'DR',
         upiid: '9109088258@ibl',
@@ -114,6 +121,7 @@ export const kaushalya = [
         isIndividual: false,
         maxParticipants: 11,
         minParticipants: 11,
+        fixed:true,
         registrationfee: 500,
         eventid: 'CT',
         upiid: 'khanrumman31@oksbi',
@@ -130,6 +138,7 @@ export const kaushalya = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 50,
         eventid: 'AW',
         upiid: ' 9329292861@ybl',
@@ -145,6 +154,7 @@ export const kaushalya = [
         isIndividual: false,
         maxParticipants: 7,
         minParticipants: 7,
+        fixed:true,
         registrationfee: 300,
         eventid: 'FL',
         upiid: 'ashutosh8684m@okhdfcbank',
@@ -160,6 +170,7 @@ export const kaushalya = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 50,
         eventid: 'AB',
         upiid: 'bhupendrasahu9907-1@okhdfcbank',
@@ -173,8 +184,9 @@ export const kaushalya = [
         img: "https://ik.imagekit.io/egjzyz51e/free_fire.jpg?updatedAt=1679426417642",
         isGrouped: true,
         isIndividual: false,
-        maxParticipants: 1,
+        maxParticipants: 2,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 200,
         eventid: 'ES',
         upiid: 'mrinal.madaria@ibl',
@@ -216,6 +228,7 @@ export const bouddhiki = [
         isIndividual: true,
         maxParticipants: 2,
         minParticipants: 1,
+        fixed:false,
         registrationfee: 100,
         eventid: 'AS',
         upiid: '7440350204@ybl',
@@ -231,6 +244,7 @@ export const bouddhiki = [
         isIndividual: true,
         maxParticipants: 2,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 100,
         eventid: 'CS',
         upiid: 'adityadewangan019@oksbi',
@@ -250,6 +264,7 @@ export const parakram = [
         isIndividual: true,
         maxParticipants: 2,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 100,
         eventid: 'BJ',
         upiid: '9631492014@cnrb',
@@ -265,6 +280,7 @@ export const parakram = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 50,
         eventid: 'CC',
         upiid: '8770575418@paytm',
@@ -280,6 +296,7 @@ export const parakram = [
         isIndividual: true,
         maxParticipants: 2,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 100,
         eventid: 'TF',
         upiid: ' 9907490901@axl',
@@ -296,6 +313,7 @@ export const parakram = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 50,
         eventid: 'LPB',
         upiid: '8770847478@ybl',
@@ -304,7 +322,6 @@ export const parakram = [
 
     },
 ]
-
 export const natraja = [
     {
         title: "Make Your Move",
@@ -314,6 +331,7 @@ export const natraja = [
         isIndividual: true,
         maxParticipants: 50,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 50,
         eventid: 'MYM',
         upiid: '8815428116@paytm',
@@ -323,7 +341,6 @@ export const natraja = [
     },
 
 ]
-
 export const Kautilya = [
     {
         title: "Quiz Masters",
@@ -333,6 +350,7 @@ export const Kautilya = [
         isIndividual: true,
         maxParticipants: 2,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 100,
         eventid: 'QM',
         upiid: ' 6265231318@paytm',
@@ -348,6 +366,7 @@ export const Kautilya = [
         isIndividual: false,
         maxParticipants: 4,
         minParticipants: 4,
+        fixed:true,
         registrationfee: 200,
         eventid: 'TH',
         upiid: '88158282121@paytm',
@@ -363,6 +382,7 @@ export const Kautilya = [
         isIndividual: true,
         maxParticipants: 2,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 100,
         eventid: 'AMS',
         upiid: '7974094222597@paytm',
@@ -383,6 +403,7 @@ export const workshop = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 50,
         eventid: 'DM',
         upiid: 'surukant30@oksbi',
@@ -398,6 +419,7 @@ export const workshop = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 50,
         eventid: 'CS',
         upiid: 'surukant30@oksbi',
@@ -413,6 +435,7 @@ export const workshop = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 50,
         eventid: 'CC',
         upiid: 'surukant30@oksbi',
@@ -428,6 +451,7 @@ export const workshop = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
+        fixed:true,
         registrationfee: 50,
         eventid: 'DA',
         upiid: 'surukant30@oksbi',
@@ -505,7 +529,8 @@ export const eventDetails = [
             ],
         ],
         arena: 'https://ik.imagekit.io/dexo68yudb/kautilya.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678017925010',
-        registrationfee: 50,
+        registrationfee: 200,
+        fixed:true,
         eventIncharges: [
             {
                 name: "Er. SHASHIKANT AGRAWAL",
@@ -521,7 +546,9 @@ export const eventDetails = [
                 name: "Amrit Pathak",
                 contactno: 7461064668,
             },
-        ]
+        ],
+        upiid: 'amrit.pathak2@ibl',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/Xxcelerate.png?updatedAt=1680286992955"
     },
     {
         title: "Robo Soccer League",
@@ -587,7 +614,8 @@ export const eventDetails = [
                 "Winner of this round will be the winner of the “Robo Soccer  Leagu",
             ],
         ],
-        registrationfee: 50,
+        registrationfee: 200,
+        fixed:true,
         eventIncharges: [
             {
                 name: "Er. SHASHIKANT AGRAWAL",
@@ -603,7 +631,9 @@ export const eventDetails = [
                 name: "Priyanshu",
                 contactno: 123456789,
             },
-        ]
+        ],
+        upiid: 'rd33550@ybl',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/Robosoccer.jpg?updatedAt=1680287908038"
     },
     {
         title: "Robo Go Carting",
@@ -642,7 +672,8 @@ export const eventDetails = [
                 "Winners will be selected on the time basis.",
             ],
         ],
-        registrationfee: 50,
+        registrationfee: 200,
+        fixed:true,
         eventIncharges: [
             {
                 name: "Er. DEEPAK SHARMA",
@@ -658,7 +689,9 @@ export const eventDetails = [
                 name: "Mohit Sinha",
                 contactno: 123456789,
             },
-        ]
+        ],
+        upiid: 'surajharmukh123@okaxis',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/Robogocart.jpg?updatedAt=1680287775139"
     },
     {
         title: "Robo Sumo",
@@ -703,7 +736,8 @@ export const eventDetails = [
             ],
 
         ],
-        registrationfee: 50,
+        registrationfee: 200,
+        fixed:true,
         eventIncharges: [
             {
                 name: "Er. RAJNIKANT",
@@ -719,7 +753,9 @@ export const eventDetails = [
                 name: "Piyush ",
                 contactno: 123456789,
             },
-        ]
+        ],
+        upiid: 'samikshaprasad84@oksbi',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/Robosumo.jpg?updatedAt=1680287571150"
     },
     {
         title: "Deep Blue",
@@ -747,7 +783,8 @@ export const eventDetails = [
 
             ],
         ],
-        registrationfee: 50,
+        registrationfee: 200,
+        fixed:true,
         eventIncharges: [
             {
                 name: "Er. DEEPAK SHARMA",
@@ -763,7 +800,9 @@ export const eventDetails = [
                 name: "Vishal Reddy",
                 contactno: 9131723338,
             },
-        ]
+        ],
+        upiid: '9131723338@axl',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/deepblue.jpg?updatedAt=1680286235194"
     },
     {
         title: "Robo Fire Fighting",
@@ -799,7 +838,8 @@ export const eventDetails = [
                 "Winners will be selected on the time basis.",
             ],
         ],
-        registrationfee: 50,
+        registrationfee: 200,
+        fixed:true,
         eventIncharges: [
             {
                 name: "Er. DEEPAK SHARMA",
@@ -815,7 +855,9 @@ export const eventDetails = [
                 name: "Mohammad Sheesh",
                 contactno: 8877604785,
             },
-        ]
+        ],
+        upiid: '7879750544@ibl',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/robofirefight.jpg?updatedAt=1680286295179"
     },
     {
         title: "Drone Race",
@@ -844,7 +886,8 @@ export const eventDetails = [
             ],
 
         ],
-        registrationfee: 50,
+        registrationfee: 200,
+        fixed:true,
         eventIncharges: [
             {
                 name: "Er. RAJNIKANT",
@@ -860,7 +903,9 @@ export const eventDetails = [
                 name: "Aryan Kuril",
                 contactno: 123456789,
             },
-        ]
+        ],
+        upiid: '9109088258@ibl',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/Dronerace.jpg?updatedAt=1680288006532"
     },
     {
         title: "Cricket",
@@ -893,7 +938,8 @@ export const eventDetails = [
 
             ],
         ],
-        registrationfee: 50,
+        registrationfee: 500,
+        fixed:true,
         eventIncharges: [
             {
                 name: "Er. PRAVEEN MAHAPATRA",
@@ -913,7 +959,9 @@ export const eventDetails = [
                 name: "Mohit Kumar",
                 contactno: 123456789,
             }
-        ]
+        ],
+        upiid: 'khanrumman31@oksbi',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/cricket12.jpg?updatedAt=1680287385041"
     },
     {
         title: "Arm Wrestling",
@@ -955,6 +1003,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "Er. RITESH KUMAR KAMBLE",
@@ -970,7 +1019,10 @@ export const eventDetails = [
                 name: "Yeetesh Kumar Sinha",
                 contactno: 123456789,
             }
-        ]
+        ],
+        upiid: ' 9329292861@ybl',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/Armwrestling.png?updatedAt=1680287230129"
+
     },
     {
         title: "Futsal",
@@ -1004,7 +1056,8 @@ export const eventDetails = [
                 "The winner team of semi-final will qualify for final match.",
             ],
         ],
-        registrationfee: 50,
+        registrationfee: 300,
+        fixed:true,
         eventIncharges: [
             {
                 name: "DRx. DHANESH KUMAR",
@@ -1020,7 +1073,9 @@ export const eventDetails = [
                 name: "Himanshu Deshlahriya",
                 contactno: 123456789,
             }
-        ]
+        ],
+        upiid: 'ashutosh8684m@okhdfcbank',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/futsal123.jpg?updatedAt=1680287451011"
     },
     {
         title: "Angry Bird",
@@ -1066,6 +1121,7 @@ export const eventDetails = [
             ],
         ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "DRx. SUNIL SAHU",
@@ -1081,7 +1137,9 @@ export const eventDetails = [
                 name: "Uma Sahu",
                 contactno: 123456789,
             }
-        ]
+        ],
+        upiid: 'bhupendrasahu9907-1@okhdfcbank',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/Angrybird.jpeg?updatedAt=1680341818856"
     },
     {
         title: "E Sports",
@@ -1133,7 +1191,8 @@ export const eventDetails = [
             ],
 
         ],
-        registrationfee: 50,
+        registrationfee: 100,
+        fixed:false,
         eventIncharges: [
             {
                 name: "Er. NIRMAL KUMAR PANDEY",
@@ -1149,7 +1208,9 @@ export const eventDetails = [
                 name: "Dumeshwari",
                 contactno: 7000358324,
             }
-        ]
+        ],
+        upiid: 'mrinal.madaria@ibl',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/esports.png?updatedAt=1680286844651"
     },
     {
         title: "One Minute show",
@@ -1158,10 +1219,8 @@ export const eventDetails = [
             "1", "2", "3", "4"
         ],
         arena: '',
-        judgement: [
-            "1", "2", "3", "4"
-        ],
-        registrationfee: 50,
+        registrationfee: "free",
+        fixed:true,
         eventIncharges: [
             {
                 name: "Er. NIDHI SINDHU",
@@ -1208,7 +1267,8 @@ export const eventDetails = [
             ],
 
         ],
-        registrationfee: 50,
+        registrationfee: "free",
+        fixed:true,
         eventIncharges: [
             {
                 name: "Mr. ALOK KUMAR MOHANTY",
@@ -1242,10 +1302,8 @@ export const eventDetails = [
             ],
         ],
         arena: '',
-        judgement: [
-            "1", "2", "3", "4"
-        ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "DRx. JHANNA BELCHANDAN",
@@ -1261,7 +1319,9 @@ export const eventDetails = [
                 name: "Chetana Belchandan",
                 contactno: 123456789,
             },
-        ]
+        ],
+        upiid: '7440350204@ybl',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/Artifexshow.png?updatedAt=1680287105271"
     },
     {
         title: "Cinematics",
@@ -1280,10 +1340,9 @@ export const eventDetails = [
             ],
         ],
         arena: '',
-        judgement: [
-            "1", "2", "3", "4"
-        ],
+        
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "DRx. MONIKA  CHANDRAKAR",
@@ -1299,7 +1358,9 @@ export const eventDetails = [
                 name: "Aditya Dewangan",
                 contactno: 6266976233,
             },
-        ]
+        ],
+        upiid: 'adityadewangan019@oksbi',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/cinematics123.jpg?updatedAt=1680533868528"
     },
     {
         title: "Bottle jet",
@@ -1325,10 +1386,8 @@ export const eventDetails = [
             ],
         ],
         arena: '',
-        judgement: [
-            "1", "2", "3", "4"
-        ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "Er. REVENDRA KR. DESHMUKH",
@@ -1344,7 +1403,9 @@ export const eventDetails = [
                 name: "Mohammad Danish",
                 contactno: 9685023375,
             },
-        ]
+        ],
+        upiid: '9631492014@cnrb',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/bottlejet.jpg?updatedAt=1680285146540"
     },
     {
         title: "Code Crunch",
@@ -1396,6 +1457,7 @@ export const eventDetails = [
             ],
         ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "Mr. KRANTI KUMAR JAIN",
@@ -1411,7 +1473,9 @@ export const eventDetails = [
                 name: "Harshvardhan Pipariya",
                 contactno: 9754011992,
             },
-        ]
+        ],
+        upiid: '8770575418@paytm',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/codecrunch.png?updatedAt=1680285743010"
     },
     {
         title: "Tech farmacia",
@@ -1448,6 +1512,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "DRx. AJAY KUMAR SONI",
@@ -1463,7 +1528,9 @@ export const eventDetails = [
                 name: "Ayush Dewangan",
                 contactno: 123456789,
             },
-        ]
+        ],
+        upiid: ' 9907490901@axl',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/Techfarmacia.jpg?updatedAt=1680287677208"
     },
     {
         title: "Lets Play With Bond",
@@ -1506,6 +1573,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "Dr. SHAILENDRA KR. KUSHAWAHA",
@@ -1521,7 +1589,9 @@ export const eventDetails = [
                 name: "Prateek Soni",
                 contactno: 123456789,
             },
-        ]
+        ],
+        upiid: '8770847478@ybl',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/letsplaywithbond.jpeg?updatedAt=1680341010363"
     },
     {
         title: "Make Your Move",
@@ -1569,6 +1639,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "Dr. PADMINI SHARMA",
@@ -1604,7 +1675,9 @@ export const eventDetails = [
                 name: "Asmi Soni",
                 contactno: 123456789,
             },
-        ]
+        ],
+        upiid: '8815428116@paytm',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/makeyourmove.png?updatedAt=1680285349778"
     },
     {
         title: "Quiz Masters",
@@ -1658,6 +1731,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "DRx. DEEPA THAKUR",
@@ -1673,7 +1747,9 @@ export const eventDetails = [
                 name: "Bhaskar Dewangan",
                 contactno: 123456789,
             },
-        ]
+        ],
+        upiid: ' 6265231318@paytm',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/quizmaster.png?updatedAt=1680285991408"
     },
     {
         title: "Treasure hunt",
@@ -1720,6 +1796,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "Er. ANMOL BHARDWAJ ",
@@ -1735,7 +1812,9 @@ export const eventDetails = [
                 name: "Piyush Sahu",
                 contactno: 123456789,
             },
-        ]
+        ],
+        upiid: '88158282121@paytm',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/TreasureHunt.jpg?updatedAt=1680285637907"
     },
     {
         title: "Ad Mad Show",
@@ -1781,6 +1860,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "DRx. BISHESAR SAHU",
@@ -1796,7 +1876,9 @@ export const eventDetails = [
                 name: "Ragini Sahu",
                 contactno: 123456789,
             },
-        ]
+        ],
+        upiid: '7974094222597@paytm',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/Admadshow.png?updatedAt=1680285834176"
     },
     {
         title: "Social Media Awareness",
@@ -1811,10 +1893,8 @@ export const eventDetails = [
             ],
         ],
         arena: '',
-        judgement: [
-            "1", "2", "3", "4"
-        ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "Er. PRADEEP AGRAWAL",
@@ -1842,7 +1922,9 @@ export const eventDetails = [
                 name: "Devendra Yadav",
                 contactno: 123456789,
             },
-        ]
+        ],
+        upiid: 'surukant30@oksbi',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/workshop.jpg?updatedAt=1680286118346"
     },
     {
         title: "Cyber Security",
@@ -1857,10 +1939,8 @@ export const eventDetails = [
             ],
         ],
         arena: '',
-        judgement: [
-            "1", "2", "3", "4"
-        ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "Er. PRADEEP AGRAWAL",
@@ -1888,7 +1968,9 @@ export const eventDetails = [
                 name: "devendra Yadav",
                 contactno: 123456789,
             },
-        ]
+        ],
+        upiid: 'surukant30@oksbi',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/workshop.jpg?updatedAt=1680286118346"
     },
     {
         title: "Carrer Counselling",
@@ -1903,10 +1985,8 @@ export const eventDetails = [
             ],
         ],
         arena: '',
-        judgement: [
-            "1", "2", "3", "4"
-        ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "Er. PRADEEP AGRAWAL",
@@ -1949,10 +2029,8 @@ export const eventDetails = [
             ],
         ],
         arena: '',
-        judgement: [
-            "1", "2", "3", "4"
-        ],
         registrationfee: 50,
+        fixed:false,
         eventIncharges: [
             {
                 name: "Er. PRADEEP AGRAWAL",
@@ -1980,7 +2058,9 @@ export const eventDetails = [
                 name: "devendra Yadav",
                 contactno: 123456789,
             },
-        ]
+        ],
+        upiid: 'surukant30@oksbi',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/workshop.jpg?updatedAt=1680286118346"
     },
 ]
 

@@ -12,34 +12,6 @@
     align-items: center;
     font-family: var(--secondary-font);
 
-    .cust-heading {
-        color: rgba(162, 162, 162, 0.56);
-        display: inline;
-        padding: 7px 0;
-        position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50%;
-            height: 2px;
-            background: rgba(255, 215, 71, 0.638);
-
-
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 50%;
-            height: 2px;
-            background: rgba(255, 215, 71, 0.638);
-        }
-    }
 
     .event-modal-wrap {
         background: rgb(49, 48, 52);
@@ -149,7 +121,6 @@
 
                 h1 {
                     color: var(--secondary-color);
-
                 }
 
                 ol {
@@ -165,11 +136,13 @@
                     li {
                         width: 100%;
                         list-style: none;
-                       
-                        ol{
+
+                        ol {
+
                             // list-style: lower-roman;
-                            li{
+                            li {
                                 list-style: circle;
+
                                 &:nth-child(1) {
                                     margin: 20px 0;
                                     font-weight: 700;
@@ -243,6 +216,57 @@
                 }
 
             }
+
+            .pay-wrap {
+                width: 100%;
+
+                h1 {
+                    color: var(--secondary-color);
+
+                }
+
+                .qr {
+                    margin: 15px 0;
+                }
+                .amnt{
+                    margin: 15px 0;
+                }
+
+                .pay-btn {
+                    button {
+                        padding: 8px 16px;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid var(--secondary-color);
+                        outline: none;
+                        color: var(--secondary-color);
+                        background: transparent;
+                        font-weight: 700;
+                        font-size: 20px;
+                        transition: 0.5s ease-in-out;
+                        gap: 10px;
+
+                        &:disabled {
+                            border: 1px solid gray;
+                            color: gray;
+
+                            &:hover {
+                                color: gray;
+                                background: transparent;
+                            }
+                        }
+
+                        &:hover {
+                            background: var(--secondary-color);
+                            color: rgb(70, 70, 70);
+                            transition: 0.5s ease-in-out;
+                        }
+                    }
+                }
+
+            }
         }
 
         // Introduction section styling
@@ -250,4 +274,45 @@
         // Basic information section
 
     }
+}
+
+
+@media screen and (max-width:991px) {
+    .Eventmodal{
+        .event-modal-wrap{
+            width: 95%;
+            .info-nav-button{
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 5px;
+                .nav-btn{
+                    font-size: 8px;
+                }
+            }
+            .information{
+                .rule-wrap{
+                    ol{
+                        margin-left: 0;
+                        li{
+                            ol{
+                                li{
+                                    text-align: justify;
+                                }
+                            }
+                        }
+                    }
+                }
+                .judgement-wrap{
+                    padding: 0;
+                    ul{
+                        margin-left: 0px;
+                        li{
+                            word-wrap: break-word;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }
