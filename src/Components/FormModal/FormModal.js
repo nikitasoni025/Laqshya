@@ -23,7 +23,7 @@ const FormModal = (props) => {
         status: false,
     }
 
-    const [groupedClicked, setGroupedClicked] = useState("S2");
+    const [groupedClicked, setGroupedClicked] = useState("S1");
     const [s3FormType, setS3FormType] = useState(null);
     const [paticipants, setParticipants] = useState([]);
     const [indiFormData, setIndiFormData] = useState({});

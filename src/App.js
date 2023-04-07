@@ -20,6 +20,7 @@ import Datarevealmusic from './Assets/Audios/data-reveal-sound-6460.mp3';
 import clickmusic from './Assets/Audios/mixkit-click-melodic-tone-1129.wav';
 import errormusic from './Assets/Audios/mixkit-click-error-1110.wav';
 import successSound from './Assets/Audios/mixkit-high-tech-bleep-confirmation-2520.wav';
+import Forgotpass from './Pages/ForgotPass/Forgotpass';
 
 const PrivateRoute = ({ isAdminAuthenticated, ...props }) => {
   return isAdminAuthenticated ? <><Outlet /></> : <Navigate replace to={'/admin'} />
@@ -83,6 +84,7 @@ function App() {
             <Route path='/myevents' element={<MyEventPage setIsUserAuthenticated={setIsUserAuthenticated} windowSize={windowSize} />} />
             <Route path='/posts' element={<PostPage  windowSize={windowSize} />} />
             <Route path='/mypost/:id' element={<MyPost  windowSize={windowSize} />} />
+            <Route path='/forgotpass' element={<Forgotpass  windowSize={windowSize} />} />
 
             {/* ADMIN ROUTE START HERE */}
             <Route path='/admin' element={< Adminlogin setIsAdminAuthenticated={setIsAdminAuthenticated} windowSize={windowSize} />} />
