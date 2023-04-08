@@ -533,7 +533,7 @@ export const eventDetails = [
         eventManagers: [
             {
                 name: "Roshan Sao",
-                contactno: 123456789,
+                contactno: 7067215050,
             },
             {
                 name: "Amrit Pathak",
@@ -644,8 +644,8 @@ export const eventDetails = [
                 contactno: 7646944066,
             },
             {
-                name: "Priyanshu",
-                contactno: 123456789,
+                name: "Priyanshu Sahu",
+                contactno: 9098603537,
             },
         ],
         upiid: 'rd33550@ybl',
@@ -714,11 +714,11 @@ export const eventDetails = [
         eventManagers: [
             {
                 name: "Suraj Harmukh",
-                contactno: 123456789,
+                contactno: 9131272737,
             },
             {
                 name: "Mohit Sinha",
-                contactno: 123456789,
+                contactno: 6265018091,
             },
         ],
         upiid: 'surajharmukh123@okaxis',
@@ -798,8 +798,8 @@ export const eventDetails = [
                 contactno: 8719996021,
             },
             {
-                name: "Piyush ",
-                contactno: 123456789,
+                name: "Piyush Sahu ",
+                contactno: 9340154194,
             },
         ],
         upiid: 'samikshaprasad84@oksbi',
@@ -864,7 +864,7 @@ export const eventDetails = [
         eventManagers: [
             {
                 name: "Ishwar Sahu",
-                contactno: 123456789,
+                contactno: 7389162149,
             },
             {
                 name: "Vishal Reddy",
@@ -933,7 +933,7 @@ export const eventDetails = [
         eventManagers: [
             {
                 name: "Numesh Kumar Sahu",
-                contactno: 123456789,
+                contactno: 7067215050,
             },
             {
                 name: "Mohammad Sheesh",
@@ -995,11 +995,11 @@ export const eventDetails = [
         eventManagers: [
             {
                 name: "Sartaj Singh",
-                contactno: 123456789,
+                contactno: 7771096439,
             },
             {
                 name: "Aryan Kuril",
-                contactno: 123456789,
+                contactno: 9109088258,
             },
         ],
         upiid: '9109088258@ibl',
@@ -1011,30 +1011,35 @@ export const eventDetails = [
         rules: [
             [
                 "",
-                "Each team will be consisting of 11 players.",
-                "Each team will carry their own equipments (Bats etc.) ",
-                "The Ball Used for Match will be Tetron Tennis Ball.",
+                "Each Team will be consist of 11 players (8+3 Substitute).",
+                "Round arm bowling should be compulsory.",
+                "❖ Each Team will carry their own equipment (Bat, Guards, etc.).",
+                "The Ball used for Match will be Tetron Tennis Ball.",
                 "Every match of 1st Round will be of 6 overs.",
-                "Semi_finals and Final Matches will be of 8 Overs.",
+                "Semi Finals And Final Match will be of 8 Overs.",
                 "There will be free hit for every no ball.",
-                "A bowler can bowl maximum of two overs.",
+                "Only Two bowler in each match can bowl maximum of two overs.",
+                "Only Three bowler in each semi final and final match can bowl maximum of two overs.",
                 "There will be a run given for every single wide, no ball.",
+                " There will be a leg bye.",
+                "There will be no LBW",
+                "Overthrow is allowed.",
+                "The first two over be Power Play and two fielders are permitted in the outfield (15m circle).",
+                "After Power Play, 4 Players are permitted in the outfield.",
                 "Umpire decision is the final decision.",
-                "If match tied then a “SUPER OVER” decides a winner.",
+                "Arguing with the umpire results in immediate loss and the end of play.",
+                "If the Match is tied the winner will be determined by a 'Super Over'.",
             ],
         ],
         arena: '',
         judgement: [
             [
-                "Team wins will directly goes to the next round. ",
-            ],
-            [
+                "Winner team will directly go to the next round.",
                 "Each Round will be According to knockout basis.",
-                "After knockout round There will be Qualifier round.",
-                "Then 4 teams will be directed semi finals round from the Qualifier round. ",
-                "Top Two Teams will compete each for Finals.",
-
+                "After knockout round, there will be Qualifier round.",
+                "Then 4 teams will directly play semi final round from the Qualifier round.",
             ],
+           
         ],
         registrationfee: 500,
         fixed:true,
@@ -1047,16 +1052,13 @@ export const eventDetails = [
         eventManagers: [
             {
                 name: "Md Ruman Raza Khan",
-                contactno: 123456789,
+                contactno: 8959786788,
             },
             {
                 name: "Rajeev Sao",
-                contactno: 123456789,
+                contactno: 7803954514,
             },
-            {
-                name: "Mohit Kumar",
-                contactno: 123456789,
-            }
+            
         ],
         upiid: 'khanrumman31@oksbi',
         qrimage: "https://ik.imagekit.io/egjzyz51e/cricket12.jpg?updatedAt=1680287385041"
@@ -1104,18 +1106,18 @@ export const eventDetails = [
         fixed:false,
         eventIncharges: [
             {
-                name: "Er. RITESH KUMAR KAMBLE",
+                name: "Er. Anmol Bhardwaj",
                 contactno: 7828025777,
             }
         ],
         eventManagers: [
             {
                 name: "Vanshika Nashine",
-                contactno: 123456789,
+                contactno: 9685111708,
             },
             {
                 name: "Yeetesh Kumar Sinha",
-                contactno: 123456789,
+                contactno: 9329292861,
             }
         ],
         upiid: ' 9329292861@ybl',
@@ -1165,11 +1167,11 @@ export const eventDetails = [
         eventManagers: [
             {
                 name: "Ashutosh Mishra",
-                contactno: 123456789,
+                contactno: 8888684313,
             },
             {
                 name: "Himanshu Deshlahriya",
-                contactno: 123456789,
+                contactno: 8265644979,
             }
         ],
         upiid: 'ashutosh8684m@okhdfcbank',
@@ -1229,11 +1231,11 @@ export const eventDetails = [
         eventManagers: [
             {
                 name: "Bhupendra Sahu",
-                contactno: 123456789,
+                contactno: 8223898304,
             },
             {
                 name: "Uma Sahu",
-                contactno: 123456789,
+                contactno: 8319678671,
             }
         ],
         upiid: 'bhupendrasahu9907-1@okhdfcbank',
@@ -1300,7 +1302,7 @@ export const eventDetails = [
         eventManagers: [
             {
                 name: "Mrinal Mandaria",
-                contactno: 7067615459,
+                contactno: 7064615459,
             },
             {
                 name: "Dumeshwari",
@@ -1380,7 +1382,11 @@ export const eventDetails = [
             },
             {
                 name: "Rahul Kumar Sahu",
-                contactno: 123456789,
+                contactno: 8966831948,
+            },
+            {
+                name: "Vrishank Agashe",
+                contactno: 7587281129,
             },
         ]
     },
@@ -1411,11 +1417,11 @@ export const eventDetails = [
         eventManagers: [
             {
                 name: "Dimple Manikpuri",
-                contactno: 123456789,
+                contactno: 8253074484,
             },
             {
                 name: "Chetana Belchandan",
-                contactno: 123456789,
+                contactno: 7440350204,
             },
         ],
         upiid: '7440350204@ybl',
@@ -1443,14 +1449,14 @@ export const eventDetails = [
         fixed:false,
         eventIncharges: [
             {
-                name: "DRx. MONIKA  CHANDRAKAR",
-                contactno: 7587196675,
+                name: "DRx. POOJA SAHU",
+                contactno: 97552056760,
             }
         ],
         eventManagers: [
             {
                 name: "Siddhant Nonia",
-                contactno: 123456789,
+                contactno: 8109672330,
             },
             {
                 name: "Aditya Dewangan",
@@ -1495,7 +1501,7 @@ export const eventDetails = [
         eventManagers: [
             {
                 name: "Vikas Kumar",
-                contactno: 123456789,
+                contactno: 9631492014,
             },
             {
                 name: "Mohammad Danish",
@@ -1619,12 +1625,12 @@ export const eventDetails = [
         ],
         eventManagers: [
             {
-                name: "Tanya",
-                contactno: 123456789,
+                name: "Tanya Noor",
+                contactno: 9301912400,
             },
             {
                 name: "Ayush Dewangan",
-                contactno: 123456789,
+                contactno: 9907490901,
             },
         ],
         upiid: ' 9907490901@axl',
@@ -1681,11 +1687,11 @@ export const eventDetails = [
         eventManagers: [
             {
                 name: "Aditi Shukla",
-                contactno: 123456789,
+                contactno: 8770847478,
             },
             {
                 name: "Prateek Soni",
-                contactno: 123456789,
+                contactno: 8815550994,
             },
         ],
         upiid: '8770847478@ybl',
@@ -1743,18 +1749,12 @@ export const eventDetails = [
                 name: "Dr. PADMINI SHARMA",
                 contactno: 9329639384,
             },
-            {
-                name: "Er. PRABHAS KUMAR GUPTA",
-                contactno: 9826721229,
-            },
+          
             {
                 name: "Dr PARAG JAIN",
                 contactno: 7415211131,
             },
-            {
-                name: "DRx PRAGYA GUPTA",
-                contactno: 9753254189,
-            },
+           
         ],
         eventManagers: [
             {
@@ -1767,11 +1767,11 @@ export const eventDetails = [
             },
             {
                 name: "Kshipra Mishra",
-                contactno: 123456789,
+                contactno: 9114323562,
             },
             {
                 name: "Asmi Soni",
-                contactno: 123456789,
+                contactno: 6267396868,
             },
         ],
         upiid: '8815428116@paytm',
@@ -1839,11 +1839,11 @@ export const eventDetails = [
         eventManagers: [
             {
                 name: "Arijitesh Shrivastava",
-                contactno: 123456789,
+                contactno: 6265231318,
             },
             {
                 name: "Bhaskar Dewangan",
-                contactno: 123456789,
+                contactno: 6266294865,
             },
         ],
         upiid: ' 6265231318@paytm',
@@ -1897,18 +1897,18 @@ export const eventDetails = [
         fixed:false,
         eventIncharges: [
             {
-                name: "Er. ANMOL BHARDWAJ ",
+                name: "Er. Ritesh Kumar Kamble",
                 contactno: 7898310486,
             }
         ],
         eventManagers: [
             {
                 name: "Dhananjay Verma",
-                contactno: 123456789,
+                contactno: 7647855276,
             },
             {
-                name: "Piyush Sahu",
-                contactno: 123456789,
+                name: "Aditi Sahu",
+                contactno: 8815828212,
             },
         ],
         upiid: '88158282121@paytm',
@@ -1967,12 +1967,12 @@ export const eventDetails = [
         ],
         eventManagers: [
             {
-                name: "Aditya Thakur",
-                contactno: 123456789,
+                name: "Aditya Singh Thakur",
+                contactno: 7974094222,
             },
             {
-                name: "Ragini Sahu",
-                contactno: 123456789,
+                name: "Ragni Bhatpahri",
+                contactno: 6262634677,
             },
         ],
         upiid: '7974094222597@paytm',
@@ -1999,14 +1999,14 @@ export const eventDetails = [
                 contactno: 9993608092,
             },
             {
-                name: "CHETNA SINGH THAKUR",
-                contactno: 7970128233,
+                name: "Ms.Pooja Sahu",
+                contactno: 9752056760,
             },
         ],
         eventManagers: [
             {
                 name: "Suryakant Deshmukh",
-                contactno: 123456789,
+                contactno: 9575366560,
             },
             {
                 name: "Nidhi Sharma",
@@ -2014,11 +2014,11 @@ export const eventDetails = [
             },
             {
                 name: "Vikas Sahu",
-                contactno: 123456789,
+                contactno: 6267756434,
             },
             {
                 name: "Devendra Yadav",
-                contactno: 123456789,
+                contactno: 6266062467,
             },
         ],
         upiid: 'surukant30@oksbi',
@@ -2045,14 +2045,14 @@ export const eventDetails = [
                 contactno: 9993608092,
             },
             {
-                name: "CHETNA SINGH THAKUR",
-                contactno: 7970128233,
+                name: "Ms.Pooja Sahu",
+                contactno: 9752056760,
             },
         ],
         eventManagers: [
             {
                 name: "Suryakant Deshmukh",
-                contactno: 123456789,
+                contactno: 9575366560,
             },
             {
                 name: "Nidhi Sharma",
@@ -2060,11 +2060,11 @@ export const eventDetails = [
             },
             {
                 name: "Vikas Sahu",
-                contactno: 123456789,
+                contactno: 6267756434,
             },
             {
-                name: "devendra Yadav",
-                contactno: 123456789,
+                name: "Devendra Yadav",
+                contactno: 6266062467,
             },
         ],
         upiid: 'surukant30@oksbi',
