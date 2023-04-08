@@ -1013,7 +1013,7 @@ export const eventDetails = [
                 "",
                 "Each Team will be consist of 11 players (8+3 Substitute).",
                 "Round arm bowling should be compulsory.",
-                "❖ Each Team will carry their own equipment (Bat, Guards, etc.).",
+                "Each Team will carry their own equipment (Bat, Guards, etc.).",
                 "The Ball used for Match will be Tetron Tennis Ball.",
                 "Every match of 1st Round will be of 6 overs.",
                 "Semi Finals And Final Match will be of 8 Overs.",
@@ -1183,10 +1183,10 @@ export const eventDetails = [
         rules: [
             [
                 "",
-                "•	The participant will be allowed to play as an individual. ",
-                "•	Two trials will be given each of 15 seconds.  ",
-                "•	In 1st round two trials and in 2nd round only one trial will be given.",
-                "•	Damage should not be done by the players. Otherwise participant consider as disqualified.",
+                "The participant will be allowed to play as an individual. ",
+                "Two trials will be given each of 15 seconds.  ",
+                "In 1st round two trials and in 2nd round only one trial will be given.",
+                "Damage should not be done by the players. Otherwise participant consider as disqualified.",
 
             ],
         ],
@@ -1395,6 +1395,7 @@ export const eventDetails = [
         intro: "introduction",
         rules: [
             [
+                "",
                 "Short film has maximum limit of 5 mins.",
                 "The video format of your film should be in (mp4, mpeg, avi, mkv, flv).",
                 "Short movie could be any video relating to documentary, animation, Drama etc. movie of all themes is acceptable.",
@@ -1584,9 +1585,7 @@ export const eventDetails = [
     {
         title: "Tech farmacia",
         intro: "introduction",
-        rules: [
-
-        ],
+        
         arena: '',
         judgement: [
             [
