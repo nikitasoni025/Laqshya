@@ -150,7 +150,7 @@ const Individual = (props) => {
             <div className="individual-wrap">
                 <div className="individual-heading">
                     <h1>Individual Participant</h1>
-                    <button onClick={()=>setToggle(!toggle)} className='adm-main-btn'>Refresh&nbsp;<MdLoop/></button>
+                    <button onClick={() => setToggle(!toggle)} className='adm-main-btn'>Refresh&nbsp;<MdLoop /></button>
                 </div>
 
                 {/*FILTER GROUP */}
@@ -214,10 +214,8 @@ const Individual = (props) => {
                                     <option value="AD Mad Show">One Minute Show</option>
                                     <option value="Quiz Masters">Quiz Masters</option>
                                     <option value="Treasure hunt">Treasure hunt</option>
-                                    <option value="Digital Marketing">Digital Marketing</option>
-                                    <option value="Cyber Security">Cyber Security</option>
-                                    <option value="Carrer Counselling">Carrer Counselling</option>
-                                    <option value="Drug Awareness">Durg Awareness</option>
+                                    <option value="Cyber Security & Digital Marketing">Cyber Security & Digital Marketing</option>
+                                    <option value="AI In Durg Discovery and New Education policy And Its Carrer">AI In Durg Discovery and New Education policy And Its Carrer</option>
                                 </select>
                             </div>
                         </div>
@@ -295,7 +293,7 @@ const Individual = (props) => {
                                             )}
                                             <td>{data.selected ? <p>Selected &nbsp;&nbsp;<FaCheckDouble /></p> : <p>Not Selected&nbsp;&nbsp;<FaTimes /></p>}</td>
                                             <td className='action-btn'>
-                                                <button disabled={data.selected ? props.adminData.role==='superadmin' ? false : true : false} onClick={() => handleIndividualUpdate(data._id, { selected: !data.selected })}>{data.selected ? "Selected" : "Select"}</button>
+                                                <button disabled={data.selected ? props.adminData.role === 'superadmin' ? false : true : false} onClick={() => handleIndividualUpdate(data._id, { selected: !data.selected })}>{data.selected ? "Selected" : "Select"}</button>
                                                 {editingid === data._id ? <button onClick={() => handleIndividualUpdate(data._id, updateData)}><FaSave /></button> : <button disabled={data.status ? true : false} onClick={() => handleIndividualEdit(data)}><FaEdit /></button>}
                                                 {(props.adminData.role && props.adminData.role === 'pladmin') || props.adminData.role === 'superadmin' ? <button onClick={() => handleDeleteIndividual(data._id)}><MdDeleteForever /></button> : null}
                                             </td>
@@ -303,7 +301,7 @@ const Individual = (props) => {
                                     )
                                 }) : (
                                     <tr>
-                                        {isLoading ? <p>Fetching Data... <Loader/></p> : null}
+                                        {isLoading ? <p>Fetching Data... <Loader /></p> : null}
                                         <td>No</td>
                                         <td>Data</td>
                                         <td>Availabe</td>

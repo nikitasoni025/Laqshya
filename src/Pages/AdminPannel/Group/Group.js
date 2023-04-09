@@ -48,7 +48,7 @@ const Group = (props) => {
                 setPageNumbers(Math.ceil(response.data.totalCount / itemPerPage));
                 setIsLoading(false);
 
-            }else{
+            } else {
                 setIsLoading(false);
             }
         }
@@ -149,7 +149,7 @@ const Group = (props) => {
 
                 <div className="group-heading">
                     <h1>Groups Participant</h1>
-                    <button onClick={()=>setToggle(!toggle)} className='adm-main-btn'>Refresh&nbsp;<MdLoop/></button>
+                    <button onClick={() => setToggle(!toggle)} className='adm-main-btn'>Refresh&nbsp;<MdLoop /></button>
                 </div>
 
                 {/*FILTER GROUP */}
@@ -215,8 +215,8 @@ const Group = (props) => {
                                     <option value="Treasure hunt">Treasure hunt</option>
                                     <option value="Digital Marketing">Digital Marketing</option>
                                     <option value="Cyber Security">Cyber Security</option>
-                                    <option value="Carrer Counselling">Carrer Counselling</option>
-                                    <option value="Drug Awareness">Durg Awareness</option>
+                                    <option value="Cyber Security & Digital Marketing">Cyber Security & Digital Marketing</option>
+                                    <option value="AI In Durg Discovery and New Education policy And Its Carrer">AI In Durg Discovery and New Education policy And Its Carrer</option>
                                 </select>
                             </div>
                         </div>
@@ -301,7 +301,7 @@ const Group = (props) => {
                                             <td>{data.selected ? <p>Selected &nbsp;&nbsp;<FaCheckDouble /></p> : <p>Not Selected&nbsp;&nbsp;<FaTimes /></p>}</td>
                                             <td className='action-btn'>
                                                 {/* <input type="checkbox" /> */}
-                                                <button disabled={data.selected ? props.adminData.role==='superadmin' ? false : true : false} onClick={() => handleGroupUpdate(data._id, { selected: !data.selected })}>{data.selected ? "Selected" : "Select"}</button>
+                                                <button disabled={data.selected ? props.adminData.role === 'superadmin' ? false : true : false} onClick={() => handleGroupUpdate(data._id, { selected: !data.selected })}>{data.selected ? "Selected" : "Select"}</button>
                                                 {editingid === data._id ? <button onClick={() => handleGroupUpdate(data._id, updateData)}><FaSave /></button> : <button disabled={data.status ? true : false} onClick={() => handleGroupEdit(data)}><FaEdit /></button>}
                                                 {(props.adminData.role && props.adminData.role === 'pladmin') || props.adminData.role === 'superadmin' ? <button onClick={() => handleDeleteGroup(data._id)}><MdDeleteForever /></button> : null}
                                             </td>
