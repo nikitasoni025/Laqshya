@@ -173,7 +173,7 @@ export const kaushalya = [
         fixed:true,
         registrationfee: 50,
         eventid: 'AB',
-        upiid:'bhupendrasahu99071@okhdfcbank',
+        upiid:'8223898304@ibl',
         qrimage:"https://ik.imagekit.io/egjzyz51e/Angrybird.jpeg?updatedAt=1680341818856"
 
 
@@ -353,7 +353,7 @@ export const Kautilya = [
         fixed:true,
         registrationfee: 100,
         eventid: 'QM',
-        upiid: ' 6265231318@paytm',
+        upiid: '6265231318@paytm',
         qrimage: "https://ik.imagekit.io/egjzyz51e/quizmaster.png?updatedAt=1680285991408"
 
 
@@ -1238,7 +1238,7 @@ export const eventDetails = [
                 contactno: 8319678671,
             }
         ],
-        upiid: 'bhupendrasahu99071@okhdfcbank',
+        upiid:'8223898304@ibl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Angrybird.jpeg?updatedAt=1680341818856"
     },
     {
@@ -1845,7 +1845,7 @@ export const eventDetails = [
                 contactno: 6266294865,
             },
         ],
-        upiid: ' 6265231318@paytm',
+        upiid: '6265231318@paytm',
         qrimage: "https://ik.imagekit.io/egjzyz51e/quizmaster.png?updatedAt=1680285991408"
     },
     {
