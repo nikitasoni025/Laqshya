@@ -184,10 +184,10 @@ export const kaushalya = [
         img: "https://ik.imagekit.io/egjzyz51e/free_fire.jpg?updatedAt=1679426417642",
         isGrouped: true,
         isIndividual: false,
-        maxParticipants: 2,
-        minParticipants: 1,
+        maxParticipants: 4,
+        minParticipants: 4,
         fixed:true,
-        registrationfee: 200,
+        registrationfee:200,
         eventid: 'ES',
         upiid: 'mrinal.madaria@ibl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/esports.png?updatedAt=1680286844651"
@@ -331,7 +331,7 @@ export const natraja = [
         isIndividual: true,
         maxParticipants: 50,
         minParticipants: 1,
-        fixed:true,
+        fixed:false,
         registrationfee: 50,
         eventid: 'MYM',
         upiid: '8815428116@paytm',
@@ -1291,8 +1291,8 @@ export const eventDetails = [
             ],
 
         ],
-        registrationfee: 100,
-        fixed:false,
+        registrationfee: 200,
+        fixed:true,
         eventIncharges: [
             {
                 name: "Er. NIRMAL KUMAR PANDEY",
