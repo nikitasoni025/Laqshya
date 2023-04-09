@@ -173,8 +173,8 @@ export const kaushalya = [
         fixed:true,
         registrationfee: 50,
         eventid: 'AB',
-        upiid: 'bhupendrasahu9907-1@okhdfcbank',
-        qrimage: "https://ik.imagekit.io/egjzyz51e/Angrybird.jpeg?updatedAt=1680341818856"
+        upiid:'bhupendrasahu99071@okhdfcbank',
+        qrimage:"https://ik.imagekit.io/egjzyz51e/Angrybird.jpeg?updatedAt=1680341818856"
 
 
     },
@@ -1238,7 +1238,7 @@ export const eventDetails = [
                 contactno: 8319678671,
             }
         ],
-        upiid: 'bhupendrasahu9907-1@okhdfcbank',
+        upiid: 'bhupendrasahu99071@okhdfcbank',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Angrybird.jpeg?updatedAt=1680341818856"
     },
     {
