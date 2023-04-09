@@ -141,7 +141,7 @@ export const kaushalya = [
         fixed:true,
         registrationfee: 50,
         eventid: 'AW',
-        upiid: ' 9329292861@ybl',
+        upiid: '9329292861@ybl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Armwrestling.png?updatedAt=1680287230129"
 
 
@@ -1120,7 +1120,7 @@ export const eventDetails = [
                 contactno: 9329292861,
             }
         ],
-        upiid: ' 9329292861@ybl',
+        upiid: '9329292861@ybl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Armwrestling.png?updatedAt=1680287230129"
 
     },
