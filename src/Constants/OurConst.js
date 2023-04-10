@@ -347,7 +347,7 @@ export const Kautilya = [
         ourIndex: 21,
         img: "https://ik.imagekit.io/egjzyz51e/quiz_masters.jpg?updatedAt=1679426958564",
         isGrouped: true,
-        isIndividual: true,
+        isIndividual: false,
         maxParticipants: 2,
         minParticipants: 2,
         fixed:true,
@@ -1828,7 +1828,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 100,
-        fixed:ture,
+        fixed:true,
         eventIncharges: [
             {
                 name: "DRx. DEEPA THAKUR",
