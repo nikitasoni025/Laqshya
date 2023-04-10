@@ -299,7 +299,7 @@ export const parakram = [
         fixed:true,
         registrationfee: 100,
         eventid: 'TF',
-        upiid: ' 9907490901@axl',
+        upiid: '9907490901@axl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Techfarmacia.jpg?updatedAt=1680287677208"
 
 
@@ -1632,7 +1632,7 @@ export const eventDetails = [
                 contactno: 9907490901,
             },
         ],
-        upiid: ' 9907490901@axl',
+        upiid: '9907490901@axl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Techfarmacia.jpg?updatedAt=1680287677208"
     },
     {
