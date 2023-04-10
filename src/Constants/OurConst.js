@@ -349,7 +349,7 @@ export const Kautilya = [
         isGrouped: true,
         isIndividual: true,
         maxParticipants: 2,
-        minParticipants: 1,
+        minParticipants: 2,
         fixed:true,
         registrationfee: 100,
         eventid: 'QM',
@@ -1827,8 +1827,8 @@ export const eventDetails = [
             ],
 
         ],
-        registrationfee: 50,
-        fixed:false,
+        registrationfee: 100,
+        fixed:ture,
         eventIncharges: [
             {
                 name: "DRx. DEEPA THAKUR",
