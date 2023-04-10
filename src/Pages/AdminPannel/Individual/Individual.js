@@ -214,6 +214,7 @@ const Individual = (props) => {
                                     <option value="AD Mad Show">One Minute Show</option>
                                     <option value="Quiz Masters">Quiz Masters</option>
                                     <option value="Treasure hunt">Treasure hunt</option>
+                                    <option value="Ad Mad Show">Ad Mad Show</option>
                                     <option value="Cyber Security & Digital Marketing">Cyber Security & Digital Marketing</option>
                                     <option value="AI In Durg Discovery and New Education policy And Its Carrer">AI In Durg Discovery and New Education policy And Its Carrer</option>
                                 </select>

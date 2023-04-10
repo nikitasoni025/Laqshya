@@ -213,6 +213,7 @@ const Group = (props) => {
                                     <option value="AD Mad Show">One Minute Show</option>
                                     <option value="Quiz Masters">Quiz Masters</option>
                                     <option value="Treasure hunt">Treasure hunt</option>
+                                    <option value="Ad Mad Show">Ad Mad Show</option>
                                     <option value="Digital Marketing">Digital Marketing</option>
                                     <option value="Cyber Security">Cyber Security</option>
                                     <option value="Cyber Security & Digital Marketing">Cyber Security & Digital Marketing</option>
