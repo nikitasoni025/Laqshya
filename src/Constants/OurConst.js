@@ -1247,47 +1247,55 @@ export const eventDetails = [
         rules: [
             [
                 "",
-                "Game Mode: Battle Royale (multiplayer)",
-                "Time: 20 minutes (each match)",
+                "Game Mode : Battle Royale (multiplayer)",
+                "Time : 20 minutes (each match)",
+                "The players can either play from any place of their liking or can play from the CSIT campus.",
                 "Map will be decided by the organizers round wise; all the maps must be downloaded before attending the event.",
-                "A WhatsApp group will be created for the participants to provide information about rounds and events, it is the participant’s responsibility to stay up to date with all the latest details.",
+                "A WhatsApp group will be created for the participants  to provide information about rounds and events, it is the participant’s responsibility to stay up to date with all the latest details.",
                 "Each team may choose a variety of weapons and loadouts according to their needs.",
                 "If one of the players of a team is found using any types of cheats or hacks his/her entire team will be disqualified.",
-                "The tournament organizers reserve the right to cancel or modify the tournament rules if technical difficulties or any other factor beyond reasonable control impairs the integrity of the tournament.",
+                "The tournament organizers reserve the right to cancel or modify the tournament rules if technical difficulties or any other factor beyond reasonable control  impairs the integrity of the tournament.",
                 "Participants should make sure they have good internet connectivity and if there are any issues then it must be reported to the organizers before the start of a match.",
                 "All the participants of the current round must join the custom room as soon as the room code is shared and report to the organizers if there are any issues.",
-                "Only the participants that will be present in the campus will be allowed to play.",
                 "Actions will be taken against the teams that infringe the rules.",
                 "Each round is of knockout basis.",
-                "Team ranking will be provided according to the total number of kills of the team.",
-
-            ],
+                "Team ranking will be provided according to the total number of kills of the team.",          
+                
+           ],
+           [
+            "Registration Details :",
+            "Rs. 200 per team (4 members)"
+           ],
+           [
+            "Re-Registration Details :",
+            "Re-registration opens after 1st round ",
+            "Re-registration fee : Rs. 100 per team (4 members)"
+           ],
+          
         ],
         arena: '',
         judgement: [
             [
-                "First round will be played in Bermuda Remastered Map.",
-                "Depending on the number of registration of players, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
-                "Total number of kills per team will be counted and teams will be provided rank according to it.",
-                "In the first round, the teams that are in the top 70% will be selected for the second round (if divided into different rooms teams that are in top 70% from each room will be selected).",
+               "First round will be played in Bermuda Remastered Map.",
+               "Depending on the number of registration of players, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
+               "Total number of kills per team will be counted and teams will be provided rank according to it.",
+               "In the first round, the teams that are in the top 70% will be selected for the second round (if divided into different rooms teams that are in top 70% from each room will be selected).",
+              
 
             ],
             [
-                "Second round will be played in Nexterra Map.",
-                "Depending on the number of selected players from the first round, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
-                "Total number of kills per team will be counted and teams will be provided rank according to it.",
-                "In the second round, the teams that are in the top 50% will be selected for the third round (if divided into different rooms teams that are in top 60% from each room will be selected).",
+               "Second round will be played in Nexterra Map.",
+               "Depending on the number of selected players from the first round, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
+               "Total number of kills per team will be counted and teams will be provided rank according to it.",
+               "In the second round, the teams that are in the top 50% will be selected for the third round (if divided into different rooms teams that are in top 60% from each room will be selected).",
+               
 
             ],
             [
-                "Third round will be played in Purgatory Map.",
-                "Depending on the number of selected players from the second round, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
-                "Total number of kills per team will be counted and teams will be provided rank according to it.",
-                "Here all the teams will fight for the top positions and the top teams will be declared winners of the event.",
-                "Maximum Timeout of 6 minutes are allowed for completing the laps without considering the fouls.",
-                "In case of tie, one extra lap will be given to the participants.",
-                "The robot which will complete their laps in minimum time will be declared as winner.",
-                "Top 4 teams will be selected for final round.",
+               "Third round will be played in Purgatory Map.",
+               "Depending on the number of selected players from the second round, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
+               "Total number of kills per team will be counted and teams will be provided rank according to it.",
+               "Here all the teams will fight for the top positions and the top teams will be declared winners of the event.",
             ],
 
         ],
@@ -1307,6 +1315,7 @@ export const eventDetails = [
             {
                 name: "Dumeshwari",
                 contactno: 7000358324,
+
             }
         ],
         upiid: 'mrinal.madaria@ibl',
