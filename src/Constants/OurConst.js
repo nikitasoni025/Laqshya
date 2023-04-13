@@ -267,7 +267,7 @@ export const parakram = [
         fixed: true,
         registrationfee: 100,
         eventid: 'BJ',
-        upiid: '9631492014@paytm',
+        upiid: '9631492014805@paytm',
         qrimage: "https://ik.imagekit.io/dexo68yudb/IMG_20230413_225305.jpg?updatedAt=1681406822930"
 
 
@@ -1518,7 +1518,7 @@ export const eventDetails = [
                 contactno: 9685023375,
             },
         ],
-        upiid: '9631492014@paytm',
+        upiid: '9631492014805@paytm',
         qrimage: "https://ik.imagekit.io/dexo68yudb/IMG_20230413_225305.jpg?updatedAt=1681406822930"
     },
     {
