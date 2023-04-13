@@ -9,7 +9,7 @@ export const Shauryas = [
         maxParticipants: 3,
         minParticipants: 1,
         registrationfee: 200,
-        fixed:true,
+        fixed: true,
         eventid: 'XX',
         upiid: 'amrit.pathak2@ibl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Xxcelerate.png?updatedAt=1680286992955"
@@ -22,7 +22,7 @@ export const Shauryas = [
         isIndividual: true,
         maxParticipants: 3,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 200,
         eventid: 'RSL',
         upiid: 'rd33550@ybl',
@@ -38,7 +38,7 @@ export const Shauryas = [
         isIndividual: true,
         maxParticipants: 3,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 200,
         eventid: 'RGC',
         upiid: 'surajharmukh123@okaxis',
@@ -53,7 +53,7 @@ export const Shauryas = [
         isGrouped: true,
         isIndividual: true,
         maxParticipants: 3,
-        fixed:true,
+        fixed: true,
         minParticipants: 1,
         registrationfee: 200,
         eventid: 'RS',
@@ -70,7 +70,7 @@ export const Shauryas = [
         isIndividual: true,
         maxParticipants: 3,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 200,
         eventid: 'DB',
         upiid: '9131723338@axl',
@@ -87,7 +87,7 @@ export const Shauryas = [
         isIndividual: true,
         maxParticipants: 3,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 200,
         eventid: 'RFF',
         upiid: '7879750544@ibl',
@@ -103,7 +103,7 @@ export const Shauryas = [
         isIndividual: true,
         maxParticipants: 3,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 200,
         eventid: 'DR',
         upiid: '9109088258@ibl',
@@ -121,7 +121,7 @@ export const kaushalya = [
         isIndividual: false,
         maxParticipants: 11,
         minParticipants: 11,
-        fixed:true,
+        fixed: true,
         registrationfee: 500,
         eventid: 'CT',
         upiid: 'khanrumman31@oksbi',
@@ -138,7 +138,7 @@ export const kaushalya = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 50,
         eventid: 'AW',
         upiid: '9329292861@ybl',
@@ -154,7 +154,7 @@ export const kaushalya = [
         isIndividual: false,
         maxParticipants: 7,
         minParticipants: 7,
-        fixed:true,
+        fixed: true,
         registrationfee: 300,
         eventid: 'FL',
         upiid: 'ashutosh8684m@okhdfcbank',
@@ -170,11 +170,11 @@ export const kaushalya = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 50,
         eventid: 'AB',
-        upiid:'8223898304@ibl',
-        qrimage:"https://ik.imagekit.io/egjzyz51e/Angrybird.jpeg?updatedAt=1680341818856"
+        upiid: '8223898304@ibl',
+        qrimage: "https://ik.imagekit.io/egjzyz51e/Angrybird.jpeg?updatedAt=1680341818856"
 
 
     },
@@ -186,8 +186,8 @@ export const kaushalya = [
         isIndividual: false,
         maxParticipants: 4,
         minParticipants: 4,
-        fixed:true,
-        registrationfee:200,
+        fixed: true,
+        registrationfee: 200,
         eventid: 'ES',
         upiid: 'mrinal.madaria@ibl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/esports.png?updatedAt=1680286844651"
@@ -202,7 +202,7 @@ export const kaushalya = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
-        registrationfee:0,
+        registrationfee: 0,
         eventid: 'OMS',
 
     },
@@ -228,7 +228,7 @@ export const bouddhiki = [
         isIndividual: true,
         maxParticipants: 2,
         minParticipants: 1,
-        fixed:false,
+        fixed: false,
         registrationfee: 100,
         eventid: 'AS',
         upiid: '7440350204@ybl',
@@ -244,7 +244,7 @@ export const bouddhiki = [
         isIndividual: true,
         maxParticipants: 2,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 100,
         eventid: 'CS',
         upiid: 'adityadewangan019@oksbi',
@@ -264,11 +264,11 @@ export const parakram = [
         isIndividual: true,
         maxParticipants: 2,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 100,
         eventid: 'BJ',
-        upiid: '9631492014@cnrb',
-        qrimage: "https://ik.imagekit.io/egjzyz51e/bottlejet.jpg?updatedAt=1680285146540"
+        upiid: '9631492014@paytm',
+        qrimage: "https://ik.imagekit.io/dexo68yudb/IMG_20230413_225305.jpg?updatedAt=1681406822930"
 
 
     },
@@ -280,7 +280,7 @@ export const parakram = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 50,
         eventid: 'CC',
         upiid: '8770575418@paytm',
@@ -296,7 +296,7 @@ export const parakram = [
         isIndividual: true,
         maxParticipants: 2,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 100,
         eventid: 'TF',
         upiid: '9907490901@axl',
@@ -313,7 +313,7 @@ export const parakram = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 50,
         eventid: 'LPB',
         upiid: '8770847478@ybl',
@@ -331,7 +331,7 @@ export const natraja = [
         isIndividual: true,
         maxParticipants: 50,
         minParticipants: 1,
-        fixed:false,
+        fixed: false,
         registrationfee: 50,
         eventid: 'MYM',
         upiid: '8815428116@paytm',
@@ -350,7 +350,7 @@ export const Kautilya = [
         isIndividual: false,
         maxParticipants: 2,
         minParticipants: 2,
-        fixed:true,
+        fixed: true,
         registrationfee: 100,
         eventid: 'QM',
         upiid: '6265231318@paytm',
@@ -366,7 +366,7 @@ export const Kautilya = [
         isIndividual: false,
         maxParticipants: 4,
         minParticipants: 4,
-        fixed:true,
+        fixed: true,
         registrationfee: 200,
         eventid: 'TH',
         upiid: '88158282121@paytm',
@@ -382,7 +382,7 @@ export const Kautilya = [
         isIndividual: true,
         maxParticipants: 2,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 100,
         eventid: 'AMS',
         upiid: '7974094222597@paytm',
@@ -403,7 +403,7 @@ export const workshop = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 50,
         eventid: 'DM',
         upiid: 'surukant30@oksbi',
@@ -419,7 +419,7 @@ export const workshop = [
         isIndividual: true,
         maxParticipants: 1,
         minParticipants: 1,
-        fixed:true,
+        fixed: true,
         registrationfee: 50,
         eventid: 'CS',
         upiid: 'surukant30@oksbi',
@@ -523,7 +523,7 @@ export const eventDetails = [
         ],
         arena: 'https://ik.imagekit.io/nnfduuxgl/xcelleratearena.png?updatedAt=1680815001024',
         registrationfee: 200,
-        fixed:true,
+        fixed: true,
         eventIncharges: [
             {
                 name: "Er. SHASHIKANT AGRAWAL",
@@ -631,7 +631,7 @@ export const eventDetails = [
             ],
         ],
         registrationfee: 200,
-        fixed:true,
+        fixed: true,
         eventIncharges: [
             {
                 name: "Er. SHASHIKANT AGRAWAL",
@@ -704,7 +704,7 @@ export const eventDetails = [
             ],
         ],
         registrationfee: 200,
-        fixed:true,
+        fixed: true,
         eventIncharges: [
             {
                 name: "Er. DEEPAK SHARMA",
@@ -785,7 +785,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 200,
-        fixed:true,
+        fixed: true,
         eventIncharges: [
             {
                 name: "Er. RAJNIKANT",
@@ -809,7 +809,7 @@ export const eventDetails = [
         title: "Deep Blue",
         intro: "introduction",
         arena: 'https://ik.imagekit.io/nnfduuxgl/Deep_Blue_2_page-0001.jpg?updatedAt=1680815651526',
-        rules:[
+        rules: [
             [
                 "Introduction",
                 'It seems the usual race of robots…but the race won’t be on any arena. Use the concept of buoyancy and race your machine on water. Make a fish out of your machine.So many people along the ways, whatever it is you aspire to do, will tell you it can’t be done. But all it takes is imagination. You dream. You plan. You reach.”       – Michael Phelps',
@@ -854,7 +854,7 @@ export const eventDetails = [
             ],
         ],
         registrationfee: 200,
-        fixed:true,
+        fixed: true,
         eventIncharges: [
             {
                 name: "Er. DEEPAK SHARMA",
@@ -878,7 +878,7 @@ export const eventDetails = [
         title: "Robo Fire Fighting",
         intro: "introduction",
         arena: 'https://ik.imagekit.io/nnfduuxgl/Fire_fight_1_page-0001.jpg?updatedAt=1680815091839',
-        rules:[
+        rules: [
             [
                 "Introduction",
                 'Robo fire fight racing is a concept that involves racing firefighting robots through a designated course or obstacle course. The objective of the race is to complete the course in the shortest amount of time possible while also demonstrating the robots ability to navigate through challenging environments, locate and extinguish simulated fires, and perform other firefighting tasks.'
@@ -923,7 +923,7 @@ export const eventDetails = [
             ],
         ],
         registrationfee: 200,
-        fixed:true,
+        fixed: true,
         eventIncharges: [
             {
                 name: "Er. DEEPAK SHARMA",
@@ -947,7 +947,7 @@ export const eventDetails = [
         title: "Drone Race",
         intro: "introduction",
         arena: '',
-        rules:[
+        rules: [
             [
                 "Introduction",
                 'Drones, also known as remote-controlled aircraft, are flown at high speeds across an obstacle-filled course in drone racing, an exhilarating sport. Drone racings goal is to complete the course in the quickest amount of time while also dodging hazards and performing accurate manoeuvres. drone racing, is a sport where participants control "drones",Similar to full size air racing, the goal is to complete a set course as quickly as possible'
@@ -985,7 +985,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 200,
-        fixed:true,
+        fixed: true,
         eventIncharges: [
             {
                 name: "Er. RAJNIKANT",
@@ -1039,10 +1039,10 @@ export const eventDetails = [
                 "After knockout round, there will be Qualifier round.",
                 "Then 4 teams will directly play semi final round from the Qualifier round.",
             ],
-           
+
         ],
         registrationfee: 500,
-        fixed:true,
+        fixed: true,
         eventIncharges: [
             {
                 name: "Er. PRAVEEN MAHAPATRA",
@@ -1058,7 +1058,7 @@ export const eventDetails = [
                 name: "Rajeev Sao",
                 contactno: 7803954514,
             },
-            
+
         ],
         upiid: 'khanrumman31@oksbi',
         qrimage: "https://ik.imagekit.io/egjzyz51e/cricket12.jpg?updatedAt=1680287385041"
@@ -1103,7 +1103,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 50,
-        fixed:false,
+        fixed: false,
         eventIncharges: [
             {
                 name: "Er. Anmol Bhardwaj",
@@ -1157,7 +1157,7 @@ export const eventDetails = [
             ],
         ],
         registrationfee: 300,
-        fixed:true,
+        fixed: true,
         eventIncharges: [
             {
                 name: "DRx. DHANESH KUMAR",
@@ -1221,7 +1221,7 @@ export const eventDetails = [
             ],
         ],
         registrationfee: 50,
-        fixed:false,
+        fixed: false,
         eventIncharges: [
             {
                 name: "DRx. SUNIL SAHU",
@@ -1238,7 +1238,7 @@ export const eventDetails = [
                 contactno: 8319678671,
             }
         ],
-        upiid:'8223898304@ibl',
+        upiid: '8223898304@ibl',
         qrimage: "https://ik.imagekit.io/egjzyz51e/Angrybird.jpeg?updatedAt=1680341818856"
     },
     {
@@ -1259,48 +1259,48 @@ export const eventDetails = [
                 "All the participants of the current round must join the custom room as soon as the room code is shared and report to the organizers if there are any issues.",
                 "Actions will be taken against the teams that infringe the rules.",
                 "Each round is of knockout basis.",
-                "Team ranking will be provided according to the total number of kills of the team.",          
-                
-           ],
-           [
-            "Registration Details :",
-            "Rs. 200 per team (4 members)"
-           ],
-           [
-            "Re-Registration Details :",
-            "Re-registration opens after 1st round ",
-            "Re-registration fee : Rs. 100 per team (4 members)"
-           ],
-          
+                "Team ranking will be provided according to the total number of kills of the team.",
+
+            ],
+            [
+                "Registration Details :",
+                "Rs. 200 per team (4 members)"
+            ],
+            [
+                "Re-Registration Details :",
+                "Re-registration opens after 1st round ",
+                "Re-registration fee : Rs. 100 per team (4 members)"
+            ],
+
         ],
         arena: '',
         judgement: [
             [
-               "First round will be played in Bermuda Remastered Map.",
-               "Depending on the number of registration of players, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
-               "Total number of kills per team will be counted and teams will be provided rank according to it.",
-               "In the first round, the teams that are in the top 70% will be selected for the second round (if divided into different rooms teams that are in top 70% from each room will be selected).",
-              
+                "First round will be played in Bermuda Remastered Map.",
+                "Depending on the number of registration of players, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
+                "Total number of kills per team will be counted and teams will be provided rank according to it.",
+                "In the first round, the teams that are in the top 70% will be selected for the second round (if divided into different rooms teams that are in top 70% from each room will be selected).",
+
 
             ],
             [
-               "Second round will be played in Nexterra Map.",
-               "Depending on the number of selected players from the first round, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
-               "Total number of kills per team will be counted and teams will be provided rank according to it.",
-               "In the second round, the teams that are in the top 50% will be selected for the third round (if divided into different rooms teams that are in top 60% from each room will be selected).",
-               
+                "Second round will be played in Nexterra Map.",
+                "Depending on the number of selected players from the first round, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
+                "Total number of kills per team will be counted and teams will be provided rank according to it.",
+                "In the second round, the teams that are in the top 50% will be selected for the third round (if divided into different rooms teams that are in top 60% from each room will be selected).",
+
 
             ],
             [
-               "Third round will be played in Purgatory Map.",
-               "Depending on the number of selected players from the second round, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
-               "Total number of kills per team will be counted and teams will be provided rank according to it.",
-               "Here all the teams will fight for the top positions and the top teams will be declared winners of the event.",
+                "Third round will be played in Purgatory Map.",
+                "Depending on the number of selected players from the second round, the players will be divided into different custom rooms if required for this round and further selection will be made accordingly.",
+                "Total number of kills per team will be counted and teams will be provided rank according to it.",
+                "Here all the teams will fight for the top positions and the top teams will be declared winners of the event.",
             ],
 
         ],
         registrationfee: 200,
-        fixed:true,
+        fixed: true,
         eventIncharges: [
             {
                 name: "Er. NIRMAL KUMAR PANDEY",
@@ -1329,7 +1329,7 @@ export const eventDetails = [
         ],
         arena: '',
         registrationfee: "free",
-        fixed:true,
+        fixed: true,
         eventIncharges: [
             {
                 name: "Er. NIDHI SINDHU",
@@ -1377,7 +1377,7 @@ export const eventDetails = [
 
         ],
         registrationfee: "free",
-        fixed:true,
+        fixed: true,
         eventIncharges: [
             {
                 name: "Mr. ALOK KUMAR MOHANTY",
@@ -1417,7 +1417,7 @@ export const eventDetails = [
         ],
         arena: '',
         registrationfee: 50,
-        fixed:false,
+        fixed: false,
         eventIncharges: [
             {
                 name: "DRx. JHANNA BELCHANDAN",
@@ -1454,9 +1454,9 @@ export const eventDetails = [
             ],
         ],
         arena: '',
-        
+
         registrationfee: 50,
-        fixed:false,
+        fixed: false,
         eventIncharges: [
             {
                 name: "DRx. POOJA SAHU",
@@ -1501,7 +1501,7 @@ export const eventDetails = [
         ],
         arena: '',
         registrationfee: 50,
-        fixed:false,
+        fixed: false,
         eventIncharges: [
             {
                 name: "Er. REVENDRA KR. DESHMUKH",
@@ -1518,8 +1518,8 @@ export const eventDetails = [
                 contactno: 9685023375,
             },
         ],
-        upiid: '9631492014@cnrb',
-        qrimage: "https://ik.imagekit.io/egjzyz51e/bottlejet.jpg?updatedAt=1680285146540"
+        upiid: '9631492014@paytm',
+        qrimage: "https://ik.imagekit.io/dexo68yudb/IMG_20230413_225305.jpg?updatedAt=1681406822930"
     },
     {
         title: "Code Crunch",
@@ -1571,7 +1571,7 @@ export const eventDetails = [
             ],
         ],
         registrationfee: 50,
-        fixed:false,
+        fixed: false,
         eventIncharges: [
             {
                 name: "Mr. KRANTI KUMAR JAIN",
@@ -1594,7 +1594,7 @@ export const eventDetails = [
     {
         title: "Tech farmacia",
         intro: "introduction",
-        
+
         arena: '',
         judgement: [
             [
@@ -1624,7 +1624,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 50,
-        fixed:false,
+        fixed: false,
         eventIncharges: [
             {
                 name: "DRx. AJAY KUMAR SONI",
@@ -1685,7 +1685,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 50,
-        fixed:false,
+        fixed: false,
         eventIncharges: [
             {
                 name: "Dr. SHAILENDRA KR. KUSHAWAHA",
@@ -1751,18 +1751,18 @@ export const eventDetails = [
 
         ],
         registrationfee: 50,
-        fixed:false,
+        fixed: false,
         eventIncharges: [
             {
                 name: "Dr. PADMINI SHARMA",
                 contactno: 9329639384,
             },
-          
+
             {
                 name: "Dr PARAG JAIN",
                 contactno: 7415211131,
             },
-           
+
         ],
         eventManagers: [
             {
@@ -1837,7 +1837,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 100,
-        fixed:true,
+        fixed: true,
         eventIncharges: [
             {
                 name: "DRx. DEEPA THAKUR",
@@ -1902,7 +1902,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 50,
-        fixed:false,
+        fixed: false,
         eventIncharges: [
             {
                 name: "Er. Ritesh Kumar Kamble",
@@ -1966,7 +1966,7 @@ export const eventDetails = [
 
         ],
         registrationfee: 50,
-        fixed:false,
+        fixed: false,
         eventIncharges: [
             {
                 name: "DRx. BISHESAR SAHU",
@@ -2000,7 +2000,7 @@ export const eventDetails = [
         ],
         arena: '',
         registrationfee: 50,
-        fixed:false,
+        fixed: false,
         eventIncharges: [
             {
                 name: "Er. PRADEEP AGRAWAL",
@@ -2046,7 +2046,7 @@ export const eventDetails = [
         ],
         arena: '',
         registrationfee: 50,
-        fixed:false,
+        fixed: false,
         eventIncharges: [
             {
                 name: "Er. PRADEEP AGRAWAL",
@@ -2078,8 +2078,8 @@ export const eventDetails = [
         upiid: 'surukant30@oksbi',
         qrimage: "https://ik.imagekit.io/egjzyz51e/workshop.jpg?updatedAt=1680286118346"
     },
-   
-  
+
+
 ]
 
 
