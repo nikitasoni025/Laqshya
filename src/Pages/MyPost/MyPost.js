@@ -14,7 +14,6 @@ const MyPost = () => {
             const response = await API.getOnePost({ id });
 
             if (response.isSuccess) {
-                console.log("sdbuidbubuwe",response.data);
                 setOnePost(response.data);
             }
         }
