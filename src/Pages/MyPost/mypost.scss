@@ -67,18 +67,20 @@
                         width: 340px;
                         height: 400px;
                         display: flex;
-                        justify-content: center;
+                        justify-content: left;
                         align-items: center;
                         position: absolute;
                         translate: 70px 50px 0;
+                        overflow-x: scroll;
+                        overflow-y: hidden;
 
                         z-index: 3;
 
                         // border: 1px solid maroon;
                         img {
-                            width: 400px;
-                            height: 450px;
-                            object-fit: cover;
+                            width: 340px;
+                            height: 400px;
+                            // object-fit: cover;
 
                         }
 
@@ -175,11 +177,14 @@
                         // border: 2px solid red;
                         .img-cnt1{
                             position: relative;
+                            display: none;
                         }
                         .img-cnt2{
                             position: relative;
                             translate: 0;
-                            display: none;
+                            overflow-x: scroll;
+                            overflow-y: hidden;
+                            justify-content: left;
                         }
 
                     }

@@ -195,7 +195,7 @@ export const kaushalya = [
 
     },
     {
-        title: "One Minute show",
+        title: "One Minute Show",
         ourIndex: 12,
         img: "https://ik.imagekit.io/egjzyz51e/WhatsApp_Image_2023-04-01_at_2.57.03_PM.jpeg?updatedAt=1680341456308",
         isGrouped: false,
@@ -2140,6 +2140,7 @@ export const galleryData = [
         link: "https://ik.imagekit.io/egjzyz51e/IMG_20230313_061227.jpg?updatedAt=1679563363175"
     },
 ]
+
 
 
 

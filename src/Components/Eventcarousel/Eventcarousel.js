@@ -64,4 +64,4 @@ const Eventcarousel = (props) => {
     )
 }
 
-export default Eventcarousel
+export default Eventcarousel;

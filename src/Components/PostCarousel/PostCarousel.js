@@ -20,6 +20,7 @@ const PostCarousel = (props) => {
       const response = await API.getPostWithLimit({ limit: 10 });
 
       if (response.isSuccess) {
+        console.log(response.data.data);
         setPosts(response.data.data || []);
       }
 
@@ -71,15 +72,15 @@ const PostCarousel = (props) => {
             <SwiperSlide key={index}>
 
               <div className="my-post-card">
-                <Link to={`/myposts/${item._id}`} className="overlay">
+                <Link to={`/mypost/${item._id}`} className="overlay">
                   <div className="numberi">{index + 1}</div>
                   <div className="over-details">
-                    <div className="badge"><span>Category</span></div>
+                    <div className="badge"><span>{item.category}</span></div>
                     <h1>{item.title.length > 20 ? item.title.slice(0, 20) + "..." : item.title}</h1>
                   </div>
 
                 </Link>
-                <img src={item.picture} />
+                <img src={item.picture[0]} alt='dbdb' />
               </div>
 
             </SwiperSlide>
@@ -91,8 +92,8 @@ const PostCarousel = (props) => {
               <div className="overlay">
                 <div className="numberi">{0}</div>
                 <div className="over-details">
-                  <div className="badge"><span>No Posts</span></div>
-                  <h1>No Posts Available</h1>
+                  <div className="badge"><span>Recent Posts</span></div>
+                  <h1>Swipe To See More Posts</h1>
                 </div>
 
               </div>

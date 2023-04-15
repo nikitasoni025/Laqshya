@@ -111,7 +111,7 @@ const PostPage = (props) => {
             {filteredData && filteredData.length > 0 ? filteredData.map((post,indx) => {
               return (
                 <div className="post-item-card" key={indx}>
-                  <img src={post.picture} alt="" />
+                  <img src={post.picture[0]} alt="post" />
                   <div className="overlay">
                     <span>{post.category}</span>
                     <span>{post.title.length>15 ? post.title.slice(0,14)+'...' : post.title}</span>
@@ -121,7 +121,7 @@ const PostPage = (props) => {
 
               )
             }):(
-              <p>Every Thing Is Fake</p>
+              <p>Every Thing Is Imagination</p>
             )}
           </div>
         </div>
