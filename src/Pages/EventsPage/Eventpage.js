@@ -101,10 +101,10 @@ const Eventpage = (props) => {
             {/* event shaurya stars here */}
             <a href="/" id='Shaurya'></a>
             <div className='event-row'>
-              <h1> <span className='diff-font'>Shaurya</span> </h1>
-              <h2>ROBOTICS</h2>
+              <h1> <span className='diff-font'>ROBOTICS</span> </h1>
+              {/* <h2>ROBOTICS</h2> */}
               <div className='row-details'>
-                <p>Shaurya is an exciting robotic event that brings together various competitions, including xxcelerate, robo soccer league, robo go-karting, robo sumo, deep blue, and robo fire fighting. Participants showcase their innovative designs and programming skills as they compete in these challenging and thrilling events. Whether you're a robotics enthusiast or just looking for some high-tech entertainment, Shaurya is an event that's sure to impress.</p>
+                <p>It is an exciting event that brings together various competitions, including Robo Go-karting, and Sand Rover. Participants showcase their innovative designs and programming skills as they compete in these challenging and thrilling events. Whether you're a robotics enthusiast or just looking for some high-tech entertainment, Shaurya is an event that's sure to impress.</p>
               </div>
               <div className='row-events'>
                 <Eventcarousel
@@ -120,10 +120,10 @@ const Eventpage = (props) => {
             {/* event kaushalya starts here */}
             <a href="" id='kaushalya'></a>
             <div className='event-row' >
-              <h1><span className='diff-font'>Kaushalya</span></h1>
-              <h2>SPORTS</h2>
+              <h1><span className='diff-font'>SPORTS</span></h1>
+              {/* <h2>SPORTS</h2> */}
               <div className='row-details'>
-                <p>Kaushalya is a multi-sport event that brings together athletes and enthusiasts from various backgrounds to compete in four exciting disciplines - cricket, arm wrestling, futsal, and Angry Bird. This event promises to be a thrilling display of strength, skill, and strategy, as participants battle it out in each sport to claim the coveted Kautilya trophy. Whether you're a seasoned athlete or a casual fan, Kautilya is sure to provide an unforgettable experience for all who participate.</p>
+                <p>Multi-sport event that brings together athletes and enthusiasts from various backgrounds to compete in four exciting disciplines - cricket, futsal, BGMI, Escape Room and Angry Bird. This event promises to be a thrilling display of strength, skill, and strategy, as participants battle it out in each sport to claim the coveted Kautilya trophy. Whether you're a seasoned athlete or a casual fan, Kautilya is sure to provide an unforgettable experience for all who participate.</p>
               </div>
               <div className='row-events'>
                 <Eventcarousel
@@ -137,7 +137,7 @@ const Eventpage = (props) => {
               </div>
             </div>
             {/* event bouddhiki starts here */}
-            <a href="" id='Bouddhiki'></a>
+            {/* <a href="" id='Bouddhiki'></a>
             <div className='event-row'>
               <h1><span className='diff-font'>Bouddhiki</span></h1>
               <h2>Brain Teaser</h2>
@@ -154,14 +154,14 @@ const Eventpage = (props) => {
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
               </div>
-            </div>
+            </div> */}
             {/* event parakram starts here */}
             <a href="" id='Parakram'></a>
             <div className='event-row'>
-              <h1><span className='diff-font'>Parakram</span></h1>
-              <h2>Technical</h2>
+              <h1><span className='diff-font'>TECHNICAL</span></h1>
+              {/* <h2>Technical</h2> */}
               <div className='row-details'>
-                <p>Parakram is a dynamic technical event that showcases a range of cutting-edge competitions. The event features four exciting competitions, including Bottle Jet, CAD Master, D Bugger, and Pharma. Each competition challenges participants to demonstrate their technical expertise and problem-solving skills in different areas such as aerodynamics, computer-aided design, debugging, and pharmaceuticals. With a high-energy atmosphere and talented participants, Parakram is a must-attend event for anyone interested in the latest technological advancements.</p>
+                <p>Technical event that showcases a range of cutting-edge competitions. The event features four exciting competitions, including Bottle Jet, D Bugger, Lets Play with Bond, and TEch Formulation. Each competition challenges participants to demonstrate their technical expertise and problem-solving skills in different areas such as aerodynamics, computer-aided design, debugging, and pharmaceuticals. With a high-energy atmosphere and talented participants, Parakram is a must-attend event for anyone interested in the latest technological advancements.</p>
               </div>
               <div className='row-events'>
                 <Eventcarousel
@@ -177,10 +177,10 @@ const Eventpage = (props) => {
             {/* event natraj starts here */}
             <a href="" id='Natraja'></a>
             <div className='event-row' >
-              <h1><span className='diff-font'>Natraja</span></h1>
-              <h2>Cultural</h2>
+              <h1><span className='diff-font'>Cultural</span></h1>
+              {/* <h2>Cultural</h2> */}
               <div className='row-details'>
-                <p>Nataraja" is a cultural event that celebrates the art of dance and the spirit of spontaneity through the popular game "Just a Minute". This event brings together dancers from different genres and backgrounds to showcase their skills and creativity in front of an enthusiastic audience. The participants are challenged to perform impromptu dances to various themes and music styles, while also being tested on their ability to articulate their thoughts in a minute or less. Nataraja promises to be a vibrant and entertaining evening that celebrates the beauty and diversity of dance and the power of words.</p>
+                <p>Event that celebrates the art of dance. This event brings together dancers from different genres and backgrounds to showcase their skills and creativity in front of an enthusiastic audience. The participants are challenged to perform impromptu dances to various themes and music styles, while also being tested on their ability to articulate their thoughts in a minute or less. Nataraja promises to be a vibrant and entertaining evening that celebrates the beauty and diversity of dance and the power of words.</p>
               </div>
               <div className='row-events'>
                 <Eventcarousel
@@ -194,7 +194,7 @@ const Eventpage = (props) => {
               </div>
             </div>
             {/* event kautilya */}
-            <a href="" id='Kautilya'></a>
+            {/* <a href="" id='Kautilya'></a>
             <div className='event-row'>
               <h1><span className='diff-font'>Kautilya</span></h1>
               <h2>Academic</h2>
@@ -211,12 +211,12 @@ const Eventpage = (props) => {
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* workshop */}
             <a href="" id='Workshop'></a>
 
-            <div className='event-row'>
+            {/* <div className='event-row'>
               <h1><span className='diff-font'>Workshop</span></h1>
               <h2>Academic</h2>
               <div className='row-details'>
@@ -233,7 +233,7 @@ const Eventpage = (props) => {
                   windowSize={props.windowSize.length > 0 && props.windowSize ? props.windowSize : undefined}
                 />
               </div>
-            </div>
+            </div> */}
 
 
 
