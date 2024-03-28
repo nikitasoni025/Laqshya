@@ -5,6 +5,7 @@ import PostCarousel from '../../Components/PostCarousel/PostCarousel';
 import "./homepage.scss";
 import NET from 'vanta/dist/vanta.net.min';
 import { playDataReveal } from '../../Utils/commonutil';
+import Animation from '../../Components/Animation/Animation';
 
 
 const Homepage = (props) => {
@@ -42,8 +43,8 @@ const Homepage = (props) => {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0x58fffa,
-        backgroundColor: 0x0,
+        color: 0xff00e6 ,
+        background: 0x120012,
         points: 9.00,
         maxDistance: 23.00,
         spacing: 25.00
@@ -56,8 +57,8 @@ const Homepage = (props) => {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0x58fffa,
-        backgroundColor: 0x0,
+        color: 0xff00e6,
+        backgroundColor: 0x120012,
       }))
     }
     return () => {
@@ -96,21 +97,24 @@ const Homepage = (props) => {
           <div className="wrap-section">
 
             {/* HEADER */}
-
+          <div className='header-wrap'>
+            <div className='header-1'> </div>
             <div className="header" ref={myRef}>
               {/* <img className='headerfade-lft' src={smokeimg} alt="smokeimg" /> */}
               <div className='headerfade-lft'></div>
               <span className='shadow-logo'>LAQSHYA</span>
+              
             </div>
-
+            
+            </div>
             {/* SECTION 1 start here */}
 
             <div className="section-1">
               <div className="banner">
-                <h1> <span>#</span>BOLSHIVAJIHALLABOL</h1>
+                <h1> <span>#</span>BOL_SHIVAJI_HALLA_BOL</h1>
               </div>
             </div>
-
+            <Animation/>
             {/* SECTION 2 */}
 
             <div className="section-2">
@@ -118,11 +122,11 @@ const Homepage = (props) => {
                 <div className="details-wrap">
                   <div className="content">
                     <div className="left-cont">
-                      <h1>LAQSHYA <br /> <span>2K23</span></h1>
+                      <h1>LAQSHYA <br /> <span>2K24</span></h1>
                       <div className="about-wrap">
-                        <p><span className='main-highlight'>Laqshya 2k23</span> is a highly anticipated annual event which will take place in <span className="main-highlight"> Chhattrapati Shivaji Institute of Technology</span>. This event is a combination of techno, management, sports, and cultural activities, which brought together students from all over the region to showcase their skills and talents.</p>
+                        <p><span className='main-highlight'>Laqshya 2k24</span> is a highly anticipated annual event which will take place in <span className="main-highlight"> Chhattrapati Shivaji Institute of Technology</span>. This event is a combination of techno, management, sports, and cultural activities, which brought together students from all over the region to showcase their skills and talents.</p>
                         <p>The event will being with a grand opening ceremony, which included a colorful procession of students dressed in traditional attire. This was followed by various technical competitions such as coding challenges, robotics contests, and hackathons, which tested the students' problem-solving skills and technical knowledge.</p>
-                        <p>In addition to technical events,<span className="main-highlight"> Laqshya 2k23</span>will also feature a range of management games and simulations that aimed to challenge the participants' leadership and decision-making abilities. These activities included quizzes, case studies, and business plan competitions, which will judged by industry experts and renowned academics.
+                        <p>In addition to technical events,<span className="main-highlight"> Laqshya 2k24</span>will also feature a range of management games and simulations that aimed to challenge the participants' leadership and decision-making abilities. These activities included quizzes, case studies, and business plan competitions, which will judged by industry experts and renowned academics.
                         </p>
                         <p>Sports enthusiasts will be given a chance to participate in various indoor and outdoor sports competitions, such as cricket, Futsal, Arm Wrestling ,Angry Birds. These events will not only promote physical fitness and healthy competition but also provides an opportunity for students to showcase their teamwork and sportsmanship skills.
                         </p>
@@ -186,9 +190,9 @@ const Homepage = (props) => {
                 <div className="timings">
                   <div className="timing-left">
                     <div className={currentDot === 0 ? "dots initial" : currentDot === 1 ? "dots mid"  : currentDot ===2 ? "dots final" : "dots"}>
-                      <div className={currentDot === 0 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(0);playDataReveal() }}>18</button></div>
-                      <div className={currentDot === 1 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(1);playDataReveal() }}>19</button></div>
-                      <div className={currentDot === 2 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(2);playDataReveal() }}>20</button></div>
+                      <div className={currentDot === 0 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(0);playDataReveal() }}>11</button></div>
+                      <div className={currentDot === 1 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(1);playDataReveal() }}>12</button></div>
+                      <div className={currentDot === 2 ? "dot active" : "dot"}><button onClick={() => { setCurrentDot(2);playDataReveal() }}>13</button></div>
                     </div>
                   </div>
                   <div className="timing-right">
