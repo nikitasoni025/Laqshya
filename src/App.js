@@ -21,6 +21,7 @@ import clickmusic from './Assets/Audios/mixkit-click-melodic-tone-1129.wav';
 import errormusic from './Assets/Audios/mixkit-click-error-1110.wav';
 import successSound from './Assets/Audios/mixkit-high-tech-bleep-confirmation-2520.wav';
 import Forgotpass from './Pages/ForgotPass/Forgotpass';
+import Animation from './Components/Animation/Animation';
 
 const PrivateRoute = ({ isAdminAuthenticated, ...props }) => {
   return isAdminAuthenticated ? <><Outlet /></> : <Navigate replace to={'/admin'} />
@@ -85,7 +86,7 @@ function App() {
             <Route path='/posts' element={<PostPage  windowSize={windowSize} />} />
             <Route path='/mypost/:id' element={<MyPost  windowSize={windowSize} />} />
             <Route path='/forgotpass' element={<Forgotpass  windowSize={windowSize} />} />
-
+            {/* <Route path='/animation' element={<Animation />} /> */}
             {/* ADMIN ROUTE START HERE */}
             <Route path='/admin' element={< Adminlogin setIsAdminAuthenticated={setIsAdminAuthenticated} windowSize={windowSize} />} />
             <Route path='/admin/dashboard/:dashid' element={< Dashboard setIsAdminAuthenticated={setIsAdminAuthenticated} windowSize={windowSize} />} />
