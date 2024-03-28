@@ -10,7 +10,7 @@
 
 
     &.scroll-effect{
-        background: black;
+        background: var(--main-color);//yatish
         transition: 1s ease;
     }
 
@@ -278,7 +278,7 @@
             position: absolute;
             top: 0;
             right: 0px;
-            background: linear-gradient(-239.59deg, #4bbbd1 -44.65%, #1a1a1e 75.57%);
+            background: linear-gradient(-239.59deg, #d14bbd -44.65%, #1a1a1e 75.57%);//yatish
             z-index: 1;
 
 
